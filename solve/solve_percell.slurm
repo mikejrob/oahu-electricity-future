@@ -7,8 +7,11 @@
 #SBATCH --partition=kill-shared
 #SBATCH --time=2-00:00:00
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=12G
+# 1 CPU: the solver options pass threads=1 (deliberate — CPLEX branch-and-bound
+# parallelizes poorly on these cliff-degenerate models, and warm-starts, not
+# cores, are what close the hard cells). Allocating more idles the extra cores.
 #SBATCH --output=logs/%x_%A_%a.out
 #SBATCH --error=logs/%x_%A_%a.err
 #SBATCH --open-mode=append

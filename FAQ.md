@@ -11,7 +11,10 @@ and preserving the Enhanced Geothermal option is cheap with meaningful
 upside. Close: the JERA LNG bundle versus building no new fuel plant is a
 modest but consistent penalty for LNG — about $0.54 billion, or two-tenths
 of a cent per kilowatt-hour, at the reference-oil midpoint, and a cost
-increase in every oil-price case. The
+increase in every oil-price case. If Hawaiʻi wants the LNG fuel saving, the
+cheap way to get it is converting existing plants, not building new: net of
+the full 2016 conversion-program estimate, conversions save about $0.70
+billion (report §4.6a). The
 decisions that actually move Hawaiʻi's bills are procurement, permitting,
 and interconnection reform; the fuel choice moves them by an order of
 magnitude less. (Executive Summary.)

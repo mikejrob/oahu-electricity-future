@@ -19,7 +19,10 @@ decades of investment.
    price near mainland benchmarks.
 2. **Building the JERA LNG bundle costs modestly more than building no new
    fuel plant** — about $0.54 billion at reference oil (roughly two-tenths of
-   a cent per kilowatt-hour), and more in every oil-price case. The gap is
+   a cent per kilowatt-hour), and more in every oil-price case. The cheapest
+   use of the same LNG is converting existing plants with no new construction:
+   charged with the entire 2016 conversion-program estimate ($450M in 2024$),
+   conversions still save about $0.70 billion (report §4.6a). The gap is
    small, so contract structure, timing of the clean transition, upstream
    emissions, and risk carry the decision — and they point the same way as
    the cost.

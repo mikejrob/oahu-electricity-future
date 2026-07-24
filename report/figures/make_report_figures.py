@@ -47,19 +47,40 @@ def fig_es1():
     lsfo = [cost(f"C1_LSFO250_{b}") - nt[b] for b in brents]
     waiau = [cost(f"wr_C4_NOTHERMAL_{b}") - nt[b] for b in brents]
 
+    # LNG conversions, no new plant (solved at reference oil only), net of the
+    # full 2016 conversion-program charge ($0.45B); whisker down to the gross
+    # saving and up to the stricter bound adding the 2016 onshore package.
+    conv_gross = cost("lngconv_heco_refbrent") - nt["refbrent"]
+    conv_net = conv_gross + 0.45
+    conv_bound = conv_gross + 0.45 + 0.26
+
     x = range(len(brents))
-    w = 0.25
-    fig, ax = plt.subplots(figsize=(7.6, 4.8))
-    b1 = ax.bar([i - w for i in x], lsfo, w,
+    w = 0.19
+    fig, ax = plt.subplots(figsize=(7.9, 5.0))
+    b1 = ax.bar([i - 1.5 * w for i in x], lsfo, w,
                 label="Modern LSFO plant (250 MW)", color="#8c6d31")
-    b2 = ax.bar(x, mid, w, label="JERA LNG 500 MW (capital midpoint)",
-                color="#31708c")
-    ax.errorbar(x, mid, yerr=[[m - b for m, b in zip(mid, bare)],
-                              [j - m for m, j in zip(mid, j120)]],
+    b2 = ax.bar([i - 0.5 * w for i in x], mid, w,
+                label="JERA LNG 500 MW (capital midpoint)", color="#31708c")
+    ax.errorbar([i - 0.5 * w for i in x], mid,
+                yerr=[[m - b for m, b in zip(mid, bare)],
+                      [j - m for m, j in zip(mid, j120)]],
                 fmt="none", ecolor="black", capsize=5, lw=1.4,
                 label="JERA bare-EPC to +20% band")
-    b3 = ax.bar([i + w for i in x], waiau, w, label="Waiau Repower",
+    b3 = ax.bar([i + 0.5 * w for i in x], waiau, w, label="Waiau Repower",
                 color="#843c39")
+    iref = brents.index("refbrent")
+    b4 = ax.bar([iref + 1.5 * w], [conv_net], w,
+                label="LNG conversions, no new plant\n(net of 2016 conversion capital)",
+                color="#4a7c59")
+    ax.errorbar([iref + 1.5 * w], [conv_net],
+                yerr=[[conv_net - conv_gross], [conv_bound - conv_net]],
+                fmt="none", ecolor="black", capsize=5, lw=1.4)
+    ax.annotate(f"{conv_net:+.2f}", (iref + 1.5 * w, conv_net),
+                ha="left", va="center", fontsize=9,
+                xytext=(14, 0), textcoords="offset points")
+    ax.annotate(f"gross {conv_gross:+.2f}", (iref + 1.5 * w, conv_gross),
+                ha="center", va="top", fontsize=8, color="0.35",
+                xytext=(0, -3), textcoords="offset points")
     ax.axhline(0, color="black", lw=0.8)
     for bars in (b1, b3):
         for r in bars:
@@ -68,10 +89,10 @@ def fig_es1():
                         ha="center", va="bottom", fontsize=9,
                         xytext=(0, 2), textcoords="offset points")
     for i, (m, j) in enumerate(zip(mid, j120)):
-        ax.annotate(f"{m:+.2f}", (i, j), ha="center", va="bottom",
+        ax.annotate(f"{m:+.2f}", (i - 0.5 * w, j), ha="center", va="bottom",
                     fontsize=9, xytext=(0, 4), textcoords="offset points")
     ax.set_xticks(list(x)); ax.set_xticklabels(labels)
-    ax.set_ylim(-0.55, 1.62)
+    ax.set_ylim(-1.35, 1.62)
     ax.set_ylabel("System cost vs no-new-plant (billion 2024$, PV 2027)")
     ax.set_title("Total 2027–2050 system cost against building no new fuel plant",
                  pad=46)

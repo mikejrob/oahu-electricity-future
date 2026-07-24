@@ -69,7 +69,13 @@ plant burning today's fuel oil raises system cost further, while LNG burned in
 existing plants lowers it — converting the existing independent Kalaeloa plant 
 alone saves more than building JERA's proposed plant, and converting Hawaiian 
 Electric's Kahe 5 and 6 and their CIP turbine as well saves several times as much, 
-with no new construction (excluding conversion capital; Sections 4.3, 4.6a). 
+with no new construction. These conversion savings survive realistic conversion 
+costs: HECO's own 2016 program priced its entire multi-island conversion 
+package at $341 million ($450 million in 2024$), and charging that full amount 
+against the converted units still leaves a net saving of about $0.70 billion, 
+or at least $0.44 billion if the entire 2016 onshore-pipeline package is added 
+on top (Sections 4.3, 4.6a). The cheapest use of LNG is Oʻahu's existing 
+plants, not a new one. 
 The case for LNG, but not necessarily a new power plant, is stronger if solar 
 deployment costs stay near today's procurement reality, or if existing storage tax 
 credits are denied — while the clean-energy mandate itself is inexpensive to keep 
@@ -100,18 +106,23 @@ installations could be had for the same per-MW cost.
 (present value, billions of 2024$; difference vs. no new fuel plant in
 parentheses; current-law base case, 0.1% solve tolerance).** JERA rows show
 the midpoint of the bare-EPC and +20% capital cases; the band spans the two
-(Figure ES.1). The Waiau + JERA bundle was solved at reference oil only.
+(Figure ES.1). The Waiau + JERA bundle and the conversion configurations were
+solved at reference oil only. The conversion row nets out the full 2016
+conversion-program estimate ($450M in 2024$) as conversion capital; its
+bracketed value also adds the entire 2016 onshore-pipeline package ($260M),
+a deliberately extreme charge (Section 4.6a).
 
 ![Figure ES.1 — system cost vs no new plant, with the JERA capital band](figures/fig_ES1_jera_bracket.png)
 
 | Trajectory | Low oil | Reference | High oil |
 |---|---:|---:|---:|
-| No new fuel plant | 26.31 | 26.70 | 27.18 |
-| Modern LSFO plant (250 MW) | 26.65 (+0.34) | 27.10 (+0.40) | 27.66 (+0.48) |
-| JERA LNG 500 MW — midpoint | 26.78 (+0.47) | 27.24 (+0.54) | 27.88 (+0.70) |
-| *…JERA band [bare-EPC, +20%]* | *[+0.25, +0.68]* | *[+0.33, +0.75]* | *[+0.49, +0.91]* |
-| Waiau Repower only | 27.67 (+1.35) | 28.07 (+1.38) | 28.58 (+1.40) |
-| Waiau + LSFO plant | 28.08 (+1.77) | 28.54 (+1.84) | 29.10 (+1.92) |
+| No new fuel plant | 26.30 | 26.70 | 27.18 |
+| LNG conversions, no new plant — net of conversion capital | — | 26.00 (−0.70) *[−0.44]* | — |
+| Modern LSFO plant (250 MW) | 26.65 (+0.35) | 27.10 (+0.40) | 27.66 (+0.48) |
+| JERA LNG 500 MW — midpoint | 26.78 (+0.48) | 27.24 (+0.54) | 27.88 (+0.70) |
+| *…JERA band [bare-EPC, +20%]* | *[+0.27, +0.69]* | *[+0.33, +0.75]* | *[+0.49, +0.91]* |
+| Waiau Repower only | 27.67 (+1.36) | 28.07 (+1.38) | 28.58 (+1.40) |
+| Waiau + LSFO plant | 28.08 (+1.78) | 28.54 (+1.84) | 29.10 (+1.92) |
 | Waiau + JERA LNG — midpoint | — | 28.71 (+2.01) | — |
 
 **Reliability.** Every scenario considered meets load and operating reserves at
@@ -231,7 +242,7 @@ At the baseline cost basis — NREL ATB 2024 Moderate for solar and battery,
 plus a 20 percent Hawaiʻi premium, with the battery's co-location saving taken
 from NREL's own PV-plus-battery hybrid — total 2027–2050 system cost is $26.70
 billion at reference oil prices. Holding solar and battery costs 50 percent
-above that baseline for the full horizon raises system cost to $28.92 billion
+above that baseline for the full horizon raises system cost to $28.91 billion
 (+$2.2B); 70 percent above raises it to $29.63 billion (+$2.9B). (Because the
 baseline already includes the 20 percent Hawaiʻi premium, these correspond to
 roughly 1.8× and 2.0× the mainland ATB benchmark — the 1.5× case
@@ -929,11 +940,13 @@ billions of 2024$ at reference oil:
 
 | | Burns LSFO (today's fuel) | Burns LNG (terminal built) |
 |---|---:|---:|
-| **Existing plants only** | baseline (0) | −0.39 (Kalaeloa converted) to −1.15 (also Kahe 5 & 6, CIP CT) |
+| **Existing plants only** | baseline (0) | −0.40 (Kalaeloa converted) to −1.15 (also Kahe 5 & 6, CIP CT); −0.70 net of the full 2016 conversion-program charge |
 | **New 500 MW combined cycle** | +1.15 | +0.33 bare-EPC; +0.54 at the capital midpoint |
 
-*Conversion capital is set to zero in the conversion cells — an upper bound
-on the saving; caveats in Section 4.6a.*
+*Conversion capital is set to zero in the solved conversion cells; the −0.70
+net figure charges the entire 2016 conversion-program estimate ($450M in
+2024$) against the converted units as a capital adjustment, the same
+treatment as the EGS cost sensitivity. Details and caveats in Section 4.6a.*
 
 **Reading down the left column isolates the plant.** Capital is effectively
 a wash between the sisters (our LSFO combined cycle carries $2,900/kW
@@ -955,7 +968,7 @@ $16.7 at reference Brent (Table 1.1): roughly a third cheaper per unit of
 heat, an edge as large as the new plant's heat-rate advantage and available
 (up to conversion feasibility and cost) without building anything but the
 terminal. Burned in the existing fleet
-alone it saves $0.39 billion through Kalaeloa and $1.15 billion when Kahe 5
+alone it saves $0.40 billion through Kalaeloa and $1.15 billion when Kahe 5
 and 6 and the CIP combustion turbine convert as well. The model even routes
 gas through the CIP turbine at 11.7 MMBtu/MWh: at these prices, cheap fuel is
 worth burning even in the least efficient unit on the island, while expensive
@@ -1193,8 +1206,10 @@ combustion turbine.
 | Configuration (reference oil) | System cost ($B) | vs no-new-plant |
 |---|---:|---:|
 | No new fuel plant, no LNG | 26.70 | — |
-| FSRU + Kalaeloa conversion, no new plant | 26.30 | −0.39 |
+| FSRU + Kalaeloa conversion, no new plant | 26.29 | −0.40 |
 | FSRU + Kalaeloa, Kahe 5 & 6, CIP CT conversions, no new plant | 25.55 | **−1.15** |
+| *…same, net of the full 2016 conversion-program charge ($0.45B)* | *26.00* | ***−0.70*** |
+| *…same, also charging the entire 2016 onshore package ($0.26B)* | *26.26* | *−0.44* |
 | JERA 500 (bare-EPC), no conversions | 27.03 | +0.33 |
 | JERA 500 (bare-EPC) + Kalaeloa conversion | 26.57 | −0.13 |
 
@@ -1230,6 +1245,24 @@ has a 2016 benchmark too: HECO's own May 2016 PUC request implied about
 $341 million across four sites on three islands ($450 million in 2024$).
 Both sit an order of magnitude inside the budgets. (The terminal, mooring, and regasification infrastructure is
 already charged in these runs; plant laterals and conversions are not.)
+
+These 2016 estimates permit a direct net-of-capital assessment without
+re-running anything, exactly as the EGS cost sensitivity is handled: a
+capital charge against the solved saving. The table's net rows charge the
+**entire** 2016 conversion program — all four sites on three islands, $450
+million in 2024 dollars at face value — against our three-unit Oʻahu
+configuration alone, although the 2016 program covered far more capacity
+(Kahe 1–6 and Waiau 5–10 among others). The full conversion set still nets
+**−$0.70 billion**. The stricter bound adds the entire 2016 onshore package
+($260 million: buoy, subsea pipeline, and all extensions) on top, even
+though the JERA runs already charge $460 million of import infrastructure
+that covers most of the same functions; the saving is still **−$0.44
+billion**. Both charges are deliberately conservative: the 2016 program's
+$450 million covered roughly 1,300 MW of conversions (≈$0.35M per MW), so
+charging it all against our 590 MW set implies about $0.76M per MW, roughly
+twice the program's own rate, and over $1.2M per MW with the onshore
+package added. Every direction of approximation here overstates conversion
+cost.
 On the credited basis the central ranking is not fragile: "Kalaeloa
 conversion beats building JERA's plant" rests on a margin of $0.73 billion
 at bare-EPC capital — about $3,300/kW of converted capacity — which
@@ -1242,11 +1275,11 @@ Waiau through pipeline extensions, no new plant, and the vessel gone at
 the end of the contract.
 
 Three caveats temper the result further: no per-unit Oʻahu conversion
-figures were ever published, so the $341 million is scale context rather
-than a project estimate, and the zero-capex assumption binds hardest for
-the oldest units — Kahe 5 and 6 are
-1970s-era steam plants whose conversion and remaining-life costs would
-claim some of the $1.15 billion. Conversion is effectively one-way,
+figures were ever published, so the $341 million is a program total rather
+than a project estimate, and the units most likely to exceed their share
+of the charged allowance are the oldest — Kahe 5 and 6 are 1970s-era steam
+plants whose refurbishment and remaining-life costs are the least
+predictable part of the package. Conversion is effectively one-way,
 since dual-fuel combustors pair gas with distillate rather than with
 residual oil, so converted units would give up their LSFO capability. And
 ownership and contract status shape who captures the saving — Kalaeloa is
