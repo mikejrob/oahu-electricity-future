@@ -132,8 +132,8 @@ November day with an evening peak (Section 5). The constructed systems can run
 an indefinite number of even this most-difficult day.
 
 **Land.** Under the 2045 mandate, an LNG plant changes little about the solar
-buildout: in our optimal solutions the LNG path uses about 30,600 acres of 
-utility solar by 2050 against the clean path's 30,300, a difference under one 
+buildout: in our optimal solutions the LNG path uses about 25,500 acres of 
+utility solar by 2050 against the clean path's 25,300, a difference under one 
 percent, built about a decade later, with gas-fired generation filling the interim. 
 Hawaiian Electric's and the State Energy Office's own studies build less 
 grid-scale solar overall but show the same pattern within their scenarios: 
@@ -436,8 +436,17 @@ Hawaiʻi adds is time, queues, and risk premia — all of which policy can reduc
 
 ### 2.5 Does Oʻahu have enough land?
 
-The model's least-cost build reaches 5,054 MW of utility-scale solar by 2050,
-about 30,300 acres at a conservative six acres per MW. The screen's rule is
+The model's least-cost build reaches 5,054 MW of utility-scale solar by 2050.
+How much land a solar farm needs per megawatt has fallen steadily as panels
+have grown more efficient. The conventional figure is about six acres per
+megawatt, which counts the full site — the spacing between rows, access roads,
+and setbacks, not the panels alone; the panels' own footprint is smaller,
+under five acres, and tracking arrays use more land than fixed-tilt ones
+(Bolinger and Bolinger, *Land Requirements for Utility-Scale PV*, Lawrence
+Berkeley National Laboratory, emp.lbl.gov/publications/land-requirements-utility-scale-pv).
+Because that density keeps improving, we use five acres per megawatt
+throughout, a reasonable value for a 2030s-and-later buildout, which puts the
+2050 build at about 25,300 acres. The screen's rule is
 fully documented: it admits agricultural/country-zoned 
 land only; subtracts Class A soils, golf courses, road buffers, slopes above 10 
 percent, and (via the zoning filter) military installations; and caps prime 
@@ -473,10 +482,10 @@ pathways themselves, then from the land records.
 
 **Every mandate-compliant pathway builds nearly the same solar with and 
 without LNG.** In our solutions the no-new-fuel-plant path reaches 5,054 MW 
-of utility-scale solar by 2050 (about 30,300 acres); the JERA LNG path reaches 
-5,097 MW on 30,582 acres — a difference under one percent, and in this solution 
+of utility-scale solar by 2050 (about 25,300 acres); the JERA LNG path reaches 
+5,097 MW on 25,500 acres — a difference under one percent, and in this solution 
 the LNG path ends slightly *higher*. What changes is timing and what fills the gap:
-in 2035 the JERA path has about 900 MW less solar built (roughly 5,400
+in 2035 the JERA path has about 1,100 MW less solar built (roughly 5,400
 acres less land then in use), with gas-fired generation supplying the
 difference until the mandate closes the gap by 2045 (Figure 2.1). 
 
@@ -577,14 +586,8 @@ surfaces; and two categories the companion study is now investigating
 parcel by parcel — federal landholdings (where tenure, mission constraints,
 and the 2029 state-land lease questions require careful treatment) and
 closed golf acreage (which the screen subtracts regardless of operating
-status). None of these is counted in the 27,256 eligible acres. (That eligible
-figure and the roughly 30,300-acre build footprint are stated on different
-area-per-MW conventions, so they are not read against each other directly. The
-screen sizes its 5,451 MW solar resource cap at 5.0 acres per MW, which gives
-the 27,256 acres; the footprint above applies a more conservative 6.0 acres per
-MW to the 5,054 MW actually built. Restated on a common 6.0-acre basis the
-eligible inventory is about 32,700 acres, above the build, and the relaxed
-terrain rule raises it further.) The
+status). None of these is counted in the 27,256 eligible acres, which itself
+exceeds the roughly 25,300 acres the least-cost build actually uses. The
 companion land study (github.com/mikejrob/solar-wind-landuse) is the living
 inventory where these categories are being mapped and characterized, and
 contributions — corrections, parcels, local knowledge — are welcome there.
@@ -738,7 +741,7 @@ cases; see docs/SOLVER_NOTES.md in the repository.
 
 Enhanced Geothermal also saves land. Comparing the solved base case against
 its no-EGS counterpart, the 100 MW block displaces 394 MW of utility solar,
-about 2,400 acres at six acres per MW, along with 145 MW (1,250 MWh) of
+about 2,000 acres at five acres per MW, along with 145 MW (1,250 MWh) of
 storage. And if the developable resource on Oʻahu proves larger than the
 roughly 100 MW modeled here, both cost and land requirements fall further.
 

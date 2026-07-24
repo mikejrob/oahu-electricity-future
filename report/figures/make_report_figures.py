@@ -132,8 +132,8 @@ def fig_land():
     ax.plot(years, series(je), marker="s", color="#843c39",
             label="JERA LNG (bare-EPC)")
     ax2 = ax.twinx()
-    ax2.set_ylabel("Approx. land in use (acres at 6 ac/MW)")
-    ax2.set_ylim(ax.get_ylim()[0] * 6, ax.get_ylim()[1] * 6)
+    ax2.set_ylabel("Approx. land in use (acres at 5 ac/MW)")
+    ax2.set_ylim(ax.get_ylim()[0] * 5, ax.get_ylim()[1] * 5)
     ax.set_ylabel("Cumulative utility solar (MW)")
     ax.set_xlabel("Investment period")
     ax.set_xticks(years)
