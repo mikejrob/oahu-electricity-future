@@ -236,8 +236,8 @@ def fig_reliability():
 
 def fig_solar_sensitivity():
     """New-plant options vs no-new-plant as solar cost rises (reference oil).
-    240.4 TWh undiscounted lifetime energy is the report's per-kWh denominator."""
-    TWH = 240.4
+    165 TWh PV delivered energy (3% discount) is the report's per-kWh denominator."""
+    TWH = 164.6
     def cents(dB):
         return dB * 1e9 / (TWH * 1e9) * 100
     levels = [("Baseline\n(1.2x mainland)", ""),

@@ -56,8 +56,8 @@ JERA bundle comes in $0.54 billion above building no new fuel plant at
 reference oil, with the range spanning $0.33 to $0.75 billion above (Table
 ES.1). The gap is smaller at low oil ($0.47 billion) and larger at high oil
 ($0.70 billion), and positive in every case. Differences of this size amount
-to roughly two tenths of a cent per kilowatt-hour — under one percent of a
-typical bill, so other considerations might tilt the balance. Considerations 
+to roughly a third of a cent per kilowatt-hour (Appendix A.1) — under one
+percent of a typical bill, so other considerations might tilt the balance. Considerations 
 the cost model does not capture push the same way, however: a twenty-year 
 single-supplier contract whose price formula should be read as a floor rather 
 than a ceiling; a decade of delayed clean-energy deployment; debatable upstream 
@@ -78,7 +78,7 @@ plants, not a new one.
 The case for LNG, but not necessarily a new power plant, is stronger if solar 
 deployment costs stay near today's procurement reality, or if existing storage tax 
 credits are denied — while the clean-energy mandate itself is inexpensive to keep 
-(about $0.3 billion, or 0.12 cents per kilowatt-hour; Section 4.6b) if the Hawaii
+(about $0.3 billion, or 0.18 cents per kilowatt-hour; Section 4.6b) if the Hawaii
 solar premium is limited to 20% above national midline projections.
 
 **Finding 3. Under current law, Enhanced Geothermal is in the least-cost
@@ -886,8 +886,8 @@ Figure 4.2 puts numbers on this for the reader who expects solar to stay
 expensive. If solar deployment stays at today's procurement cost (the 1.5×
 case, about 1.8× the mainland benchmark), building the JERA plant and building
 no new fuel plant cost about the same. At the 1.7× case (about 2.0× mainland),
-the JERA plant saves about $0.2 billion, which is 0.09 cents per kilowatt-hour
-spread over 2027–2050 delivered energy. A new LSFO plant stays more expensive
+the JERA plant saves about $0.2 billion, which is 0.12 cents per kilowatt-hour
+of delivered energy (Appendix A.1). A new LSFO plant stays more expensive
 than no new plant at every solar cost, from +$0.40 billion at the baseline to
 +$0.17 billion at 1.7×. Two things bound how much weight this deserves. The
 saving appears only under solar costs we argue are a policy choice, not a
@@ -1341,10 +1341,10 @@ available, and 4,616 MW (91 percent) without it.
 
 The more striking number is how little is at stake. With no gas option on
 the menu, dropping the rule saves just $0.28 billion (26.70 against 26.41)
-— about 0.12 cents per kilowatt-hour; the larger figure arises only because
+— about 0.17 cents per kilowatt-hour; the larger figure arises only because
 abandonment also unlocks unrestricted gas: **abandoning the
-mandate saves at most $1.16 billion over twenty-four years — about half a
-cent per kilowatt-hour — and even that requires building 1,125 MW of new gas
+mandate saves at most $1.16 billion over twenty-four years — about seven
+tenths of a cent per kilowatt-hour — and even that requires building 1,125 MW of new gas
 plants and an import terminal and running LNG through 2050.** For
 comparison, letting solar-and-storage deployment costs persist at today's
 procurement-implied level costs $2.22 billion (Section 2.1; the 1.5×
@@ -1360,7 +1360,7 @@ is in fixing procurement — with the mandate or without it.
 Two readings follow. For LNG proponents: the proposal's economics improve
 several-fold in a no-mandate world, and candor about that dependence would
 clarify the debate. For policy: what the mandate buys — a fully clean grid
-five to ten years sooner — costs about a tenth of a cent per kilowatt-hour,
+five to ten years sooner — costs about two tenths of a cent per kilowatt-hour,
 and the decisions that dominate bills lie elsewhere.
 
 ### 4.7 Emissions and the pace of decarbonization
@@ -1565,9 +1565,9 @@ proposal costs modestly more than building no new fuel plant. Taking the
 midpoint of JERA's own cost range — their bare-EPC estimate and their +20%
 sensitivity, which restores the customs, insurance, design-allowance and
 contingency items the estimate itself says it excludes — the JERA bundle is
-about $0.56 billion more expensive over twenty-four years, and more expensive
+about $0.54 billion more expensive over twenty-four years, and more expensive
 in every oil-price case tested. Per kilowatt-hour delivered, the difference is
-about two-tenths of a cent — small against a bill of thirty-plus cents, so the
+about a third of a cent — small against a bill of thirty-plus cents, so the
 cost gap alone does not decide the question, but it no longer favors LNG in any
 case, and every consideration outside the cost model points the same way. The
 findings that are larger: the Waiau Repower is uneconomic under every oil price
@@ -1842,6 +1842,18 @@ life; the resulting payment streams are discounted at 3 percent. These
 conventions and every constant behind them are in the repository conventions
 file, and `verify_claims.py` re-derives each headline input from the vendored
 sources on a bare clone.
+
+**Cents per kilowatt-hour.** Per-kilowatt-hour figures in this report are a
+present-value ratio: the present value of the cost difference divided by the
+present value of delivered electricity, both discounted to 2027 at the same 3
+percent social rate. Discounting only the dollars while leaving energy
+undiscounted would overstate the denominator and understate the per-unit cost;
+we discount both. Delivered energy is the system's served load, about 8.1 TWh
+per year rising to about 9.0 TWh by 2050, whose present value over 2027–2050
+is about 165 TWh (undiscounted, it is about 240 TWh). At this present-value
+denominator, a $1 billion difference in system cost equals about 0.61 cents
+per kilowatt-hour. Both numerator and denominator come from the same solved
+run, so the ratio is internally consistent with every dollar figure quoted.
 
 ### A.2 Capacity-expansion modeling versus lifecycle cost analysis
 

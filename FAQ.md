@@ -9,7 +9,7 @@ deployment is worth several times any fuel decision on the table; the Waiau
 Repower raises system cost ~$1.3–1.4 billion under every assumption tested;
 and preserving the Enhanced Geothermal option is cheap with meaningful
 upside. Close: the JERA LNG bundle versus building no new fuel plant is a
-modest but consistent penalty for LNG — about $0.54 billion, or two-tenths
+modest but consistent penalty for LNG — about $0.54 billion, or a third
 of a cent per kilowatt-hour, at the reference-oil midpoint, and a cost
 increase in every oil-price case. If Hawaiʻi wants the LNG fuel saving, the
 cheap way to get it is converting existing plants, not building new: net of
