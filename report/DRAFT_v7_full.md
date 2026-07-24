@@ -9,8 +9,7 @@ note: "This report supersedes the authors' 2026 working paper; corrections and e
   cells at 0.15% pending tighter re-solves (docs/HARD_CELLS.md) and the EGS
   cost sensitivity carried as a documented capital reprice
   (docs/SOLVER_NOTES.md). [X] marks a number awaiting an input;
-  [verify] marks a citation or fact to pin before release. Notes on differences
-  from the withdrawn edition appear as footnotes so they do not interrupt the text."
+  [verify] marks a citation or fact to pin before release."
 ---
 
 ## Executive Summary
@@ -228,9 +227,8 @@ A five-dollar-per-MMBtu saving on the fuel is real. Whether it justifies the
 terminal, the contract, and the plant, against an alternative that burns
 steadily less fuel of any kind, is the system question Section 4 answers.
 
-*Table 1.1 and the fuel-price regressions are carried from the prior edition
-(Roberts 2026 brief; R3 LSFO contract regression; AEO 2025 Brent paths); all
-values now expressed in 2024$.*
+*Table 1.1 and the fuel-price regressions use the R3 LSFO contract regression
+and AEO 2025 Brent paths (Roberts 2026 brief); values in 2024$.*
 
 ---
 
@@ -897,7 +895,7 @@ consider this fair and still conservative: across 401 electricity projects
 studied, three in four exceeded their cost estimates, with thermal plants
 averaging about 13 percent overruns (Sovacool, Gilbert & Nugent 2014). The
 band's +20 percent top therefore sits above the thermal-plant average, on an
-estimate that itself excludes contingency.⁴
+estimate that itself excludes contingency.
 
 The quoted price deserves comment in the current market. Gas-turbine supply
 chains are strained: Lazard's June 2025 review reports the cost of a new
@@ -922,24 +920,16 @@ risk or how fuel-price risk passes through. The fuel price we carry
 well below current Pacific spot and Qatar-linked term markets, and Section 4.5
 discusses why a contract floor at that level should not be read as a ceiling.
 
-⁴ *Footnote: the withdrawn edition carried a JERA capital cost derived from
-HECO's 2016 planning assumptions (~$4,229/kW in 2027$), which overstated the
-case against the proposal; this edition prices the plant from JERA's own
-documents and treats the 2016 figure as corroborating context only. 2016 also
-predates the current gas-turbine market tightness, so it is not a clean
-comparator in either direction.*
-
 ### 4.3 Plant or fuel? Where the LNG advantage comes from
 
 The proposal combines two things that need not go together: a modern, efficient
 plant and a cheaper fuel. Their effects can be separated. If the advantage lies
 in the fuel, it can be captured by burning LNG in the plants Oʻahu already has.
 If it lies in the plant, the same plant can be built to burn the low-sulfur fuel
-oil Oʻahu already imports. The earlier UHERO brief posed this as a "sister"
-comparison, the same modern plant burning low-sulfur fuel oil instead of LNG,
-and the corrected scenario set now answers every cell of it.⁵ The table
-shows total-system-cost differences against building no new fuel plant, in
-billions of 2024$ at reference oil:
+oil Oʻahu already imports. Our scenarios span both choices at once — LSFO
+against LNG, and the existing fleet against a new combined-cycle plant — so
+each can be read directly. The table shows total-system-cost differences
+against building no new fuel plant, in billions of 2024$ at reference oil:
 
 | | Burns LSFO (today's fuel) | Burns LNG (terminal built) |
 |---|---:|---:|
@@ -952,9 +942,9 @@ net figure charges the entire 2016 conversion-program estimate ($450M in
 treatment as the EGS cost sensitivity. Details and caveats in Section 4.6a.*
 
 **Reading down the left column isolates the plant.** Capital is effectively
-a wash between the sisters (our LSFO combined cycle carries $2,900/kW
-against JERA's $2,863/kW in 2024$), so the LSFO plant is JERA's plant on
-today's fuel. It raises system cost, and raises it more the larger it is:
+a wash between the LSFO and LNG versions of the plant (our LSFO combined cycle
+carries $2,900/kW against JERA's $2,863/kW in 2024$), so the LSFO plant is
+JERA's plant on today's fuel. It raises system cost, and raises it more the larger it is:
 +$0.40 billion at 250 MW, +$0.74 billion at 375, +$1.15 billion at 500. The
 new plant is more efficient, with a full-load heat rate near
 6.9 MMBtu/MWh against roughly 8.6 for Kalaeloa's combined-cycle units and
@@ -998,12 +988,6 @@ existing in-state supply chain with its established biofuel transition path, and
 no single-supplier exposure. Whether that structure is worth the fuel premium
 at reference oil (less at low oil, more at high) is a judgement the Commission
 can now make with the tradeoff stated in dollars.
-
-⁵ *Footnote: the withdrawn edition found the LSFO version cheaper. Two
-corrections drive the reversal: the LNG plant's capital no longer carries a
-double-counted import-infrastructure charge, and the fuel-price series are
-now on a consistent real-dollar basis. The sister-plant comparison in this
-edition uses the corrected numbers throughout.*
 
 ### 4.3a LNG was tried a decade ago and abandoned. What changed?
 
@@ -1450,10 +1434,9 @@ is the low-renewable one. On the November 22 profile, solar output falls to
 roughly a quarter of the peak day's, wind to a third, and the system carries
 the day with the thermal fleet run harder, the new plant (in trajectories
 that build one) near-continuous, and storage shifting the reduced midday
-solar into the evening. The corrected basis carries ≈2,100 MWh of bulk storage (modern-plant
+solar into the evening. The build carries ≈2,100 MWh of bulk storage (modern-plant
 trajectory) to ≈6,200 MWh (no-new-plant) by 2035, reaching ≈13,700–18,100
-MWh by 2050. (The prior edition's ≈9,500 MWh by 2035 reflected its
-erroneous cheap-solar basis. Storage totals are loosely pinned: they move
+MWh by 2050. (Storage totals are loosely pinned: they move
 by up to ~40 percent between the 0.25% and 0.1% solutions while total cost
 moves under 0.2 percent, so read them as indicative of scale.) Because each
 sample day starts from a reset battery state, the configuration meets
@@ -1486,8 +1469,7 @@ resource cost of building it — while the Commission's recoverable-cost cap
 who pays: roughly $220–310 million falls to shareholders. The plant runs at 51 percent capacity factor in 2030, falls to 27–32
 percent through the late 2030s, and drops below 1 percent from 2045 as
 renewables and more efficient units displace it. The ratepayer/shareholder NPV
-decomposition of the prior edition carries forward [table to be restated on
-the 2024$/PV-2027 convention].
+decomposition [table to be restated on the 2024$/PV-2027 convention].
 
 ### 6.2 The scope alternative
 
@@ -1765,8 +1747,7 @@ which case the thermal case strengthens on our own numbers; or upstream
 leakage evidence that resolves toward the low end under a verifiable
 supply-chain commitment. The model, inputs, and every number in this report are
 public; we invite anyone — including those who disagree — to change our minds
-with better evidence, and we commit to publishing whatever the corrected
-numbers say.
+with better evidence, and we commit to publishing whatever the numbers say.
 
 *[Section 8 above is the working conclusions text under author revision;
 the bracketed employment ranges and fleet-utilization figures will be
@@ -1850,9 +1831,7 @@ NPV than its capital alone.
 At the final 0.1% solve (no-new-plant, reference oil), fuel is the
 following share of total annual system cost: 43 percent (2027 period), 38
 percent (2030), 19 percent (2035 and 2040), 5 percent (2045), 4 percent
-(2050). The prior edition's schedule (~37 percent late-2020s falling to ~8
-percent) came from a narrower generating-cost denominator; the shares here
-use total system cost and tell the same story: the fuel bill starts near
+(2050). These shares use total system cost as the denominator: the fuel bill starts near
 two-fifths of costs and nearly vanishes as the mandate binds.
 
 ### A.5 Sample-day design and the most difficult day
@@ -1880,8 +1859,7 @@ $514M "Avoided Hydrogen Capital Costs" credit and its role in Alternative
 2045); the ~56/44 efficiency-versus-price split of the fuel saving; the
 implied-Brent inconsistency between the LSFO and LNG tracks; and the
 PLEXOS-priced full-scenario fuel gap ($8–11B undiscounted, ~70 percent of it
-from the post-2044 fuel assignment). Carried from the prior edition; all
-figures are HSEO's own.
+from the post-2044 fuel assignment); all figures are HSEO's own.
 
 ### A.7 EGS demonstration arithmetic
 
@@ -1941,7 +1919,7 @@ production-weighted 2.95% across six measured regions. GWP values: IPCC AR6 WG1,
 
 ## Appendix B — references
 
-[The prior edition's reference list carries over with these changes: add ENR,
+[Reference list to finalize. Include: ENR,
 POWER, Star-Advertiser, and the JERA notice (public cost record); the HECO
 IGP Supplemental Response (Docket 2018-0088, Nov 2023); the cost-overrun
 literature and Utility Dive reporting used in Section 4.2; the methane
@@ -1971,9 +1949,7 @@ Philippine installer survey +70% weekly installations); Newser/Ember (55
 countries at record Chinese-solar purchases, March 2026);
 The
 Narwhal and Maui Now reporting on the 2016 FortisBC contract termination).
-Remove citations
-that existed only to support the superseded cost basis. Every entry is
-verified against the source before release.]
+Every entry is verified against the source before release.]
 
 ## Appendix C — data and reproducibility
 
@@ -1984,5 +1960,4 @@ definitions, the solve scripts, and `verify_claims.py`, which re-derives
 every headline input from the vendored sources and fails loudly on any
 mismatch. Scenario results are aggregated in `results/RESULTS_SUMMARY.csv`
 (0.25 percent tolerance, with the 0.1 percent refinement superseding it cell
-by cell as it lands). The withdrawn edition's results files are retired; no
-number in this report depends on them.
+by cell as it lands).
