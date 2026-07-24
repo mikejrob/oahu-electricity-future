@@ -234,6 +234,52 @@ def fig_reliability():
     fig.savefig(FIG / "fig_5_1_reliability_days.png", dpi=200, bbox_inches="tight")
 
 
+def fig_solar_sensitivity():
+    """New-plant options vs no-new-plant as solar cost rises (reference oil).
+    240.4 TWh undiscounted lifetime energy is the report's per-kWh denominator."""
+    TWH = 240.4
+    def cents(dB):
+        return dB * 1e9 / (TWH * 1e9) * 100
+    levels = [("Baseline\n(1.2x mainland)", ""),
+              ("Solar x1.5\n(~1.8x mainland)", "be_pv15_"),
+              ("Solar x1.7\n(~2.0x mainland)", "be_pv17_")]
+    lsfo, jmid, jbare, jj120 = [], [], [], []
+    for _, pre in levels:
+        nt = cost(f"{pre}C4_NOTHERMAL_refbrent")
+        lsfo.append(cost(f"{pre}C1_LSFO250_refbrent") - nt)
+        b = cost(f"{pre}wb_C6_LNG500_refbrent") - nt
+        j = cost(f"{pre}wb_C6_LNG500_refbrent_j120") - nt
+        jbare.append(b); jj120.append(j); jmid.append((b + j) / 2)
+    x = range(len(levels)); w = 0.34
+    fig, ax = plt.subplots(figsize=(7.8, 4.8))
+    ax.bar([i - w/2 for i in x], lsfo, w, color="#8c6d31",
+           label="New LSFO plant (250 MW)")
+    ax.bar([i + w/2 for i in x], jmid, w, color="#31708c",
+           label="New JERA LNG plant (500 MW, capital midpoint)")
+    ax.errorbar([i + w/2 for i in x], jmid,
+                yerr=[[m - b for m, b in zip(jmid, jbare)],
+                      [j - m for m, j in zip(jmid, jj120)]],
+                fmt="none", ecolor="black", capsize=5, lw=1.4,
+                label="JERA bare-EPC to +20% band")
+    ax.axhline(0, color="black", lw=1.0)
+    ax.text(0.02, 0.02, "0 line = build no new fuel plant", transform=ax.transAxes,
+            fontsize=8.5, color="0.35", va="bottom")
+    for i, m in enumerate(jmid):
+        ax.annotate(f"{m:+.2f}B\n{cents(m):+.2f}c/kWh", (i + w/2, m),
+                    ha="center", va="bottom" if m >= 0 else "top", fontsize=8.5,
+                    xytext=(0, 4 if m >= 0 else -4), textcoords="offset points")
+    for i, m in enumerate(lsfo):
+        ax.annotate(f"{m:+.2f}B", (i - w/2, m), ha="center", va="bottom",
+                    fontsize=8.5, xytext=(0, 2), textcoords="offset points")
+    ax.set_xticks(list(x)); ax.set_xticklabels([l for l, _ in levels])
+    ax.set_ylabel("System cost vs no new fuel plant (billion 2024$, PV 2027)")
+    ax.set_title("As solar costs rise, a new plant's penalty shrinks;\n"
+                 "the JERA plant crosses to a saving only at today's procurement cost", pad=8)
+    ax.legend(frameon=False, loc="upper right", fontsize=9)
+    fig.tight_layout()
+    fig.savefig(FIG / "fig_4_2_solar_sensitivity.png", dpi=200)
+
+
 if __name__ == "__main__":
-    fig_es1(); fig_land(); fig_emissions(); fig_reliability()
+    fig_es1(); fig_land(); fig_emissions(); fig_reliability(); fig_solar_sensitivity()
     print("wrote:", ", ".join(p.name for p in sorted(FIG.glob("fig_*.png"))))

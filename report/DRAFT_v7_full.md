@@ -880,6 +880,22 @@ the comparison returns toward the near-tie of the no-credit sensitivity. The
 LNG comparison and the procurement-reform question therefore turn largely on
 the same variable, the solar premium.
 
+![Figure 4.2 — new-plant options vs no new plant as solar cost rises (reference oil)](figures/fig_4_2_solar_sensitivity.png)
+
+Figure 4.2 puts numbers on this for the reader who expects solar to stay
+expensive. If solar deployment stays at today's procurement cost (the 1.5×
+case, about 1.8× the mainland benchmark), building the JERA plant and building
+no new fuel plant cost about the same. At the 1.7× case (about 2.0× mainland),
+the JERA plant saves about $0.2 billion, which is 0.09 cents per kilowatt-hour
+spread over 2027–2050 delivered energy. A new LSFO plant stays more expensive
+than no new plant at every solar cost, from +$0.40 billion at the baseline to
++$0.17 billion at 1.7×. Two things bound how much weight this deserves. The
+saving appears only under solar costs we argue are a policy choice, not a
+fixed condition (Section 2); and a new plant is in any case the costliest way
+to use LNG, since converting existing plants captures the same fuel saving
+more cheaply (Section 4.6a), so even the 1.7× figure understates how favorable
+LNG becomes through conversion if solar costs persist.
+
 ### 4.2 The JERA capital cost
 
 The proposal (17 March 2026, p. 30) prices the plant at $1,510M for 500 MW
