@@ -1434,7 +1434,29 @@ is the low-renewable one. On the November 22 profile, solar output falls to
 roughly a quarter of the peak day's, wind to a third, and the system carries
 the day with the thermal fleet run harder, the new plant (in trajectories
 that build one) near-continuous, and storage shifting the reduced midday
-solar into the evening. The build carries ≈2,100 MWh of bulk storage (modern-plant
+solar into the evening. Figure 5.1 shows both days for the no-new-plant base
+case.
+
+![Figure 5.1 — hourly generation on the easy and hard sample days, no-new-plant base case, 2035](figures/fig_5_1_reliability_days.png)
+
+**What firm capacity actually has to cover.** A common claim is that a
+renewables-dominant grid needs enough thermal capacity to meet peak demand.
+The model shows otherwise. What firm generation has to cover is closer to the
+highest *daily-average net load* — demand minus solar and wind, averaged over
+the day — because batteries move energy within the day from surplus hours to
+deficit hours. In 2035 the annual peak demand is about 1,271 MW, but the
+largest daily-average net load across all sample days is about 610 MW, less
+than half of it, and it falls on the low-renewable November day (right panel),
+where the existing thermal fleet runs at a nearly flat ~600 MW while storage
+and the day's smaller solar output handle the peaks. Three things drive the
+gap between peak demand and the net load that sizes firm capacity: batteries
+smooth within-day variation, so firm generation follows the daily average
+rather than the momentary peak; low-sun, low-wind days tend to be cooler,
+lower-demand days (the hard day's peak demand, ~1,040 MW, is the lowest of the
+year, not the highest); and even the cloudiest days still deliver meaningful
+solar. This metric is conservative for Oʻahu, where storage could in principle
+draw on neighboring days, which the sample-day design does not allow (Section
+5.4). The build carries ≈2,100 MWh of bulk storage (modern-plant
 trajectory) to ≈6,200 MWh (no-new-plant) by 2035, reaching ≈13,700–18,100
 MWh by 2050. (Storage totals are loosely pinned: they move
 by up to ~40 percent between the 0.25% and 0.1% solutions while total cost

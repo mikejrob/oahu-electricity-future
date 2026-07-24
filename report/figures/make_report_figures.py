@@ -182,6 +182,58 @@ def fig_emissions():
     fig.savefig(FIG / "fig_4_1_emissions.png", dpi=200)
 
 
+def fig_reliability():
+    """Hourly generation on the easy and hard sample days (2035, base case)."""
+    D = outdir("C4_NOTHERMAL_refbrent")
+    EASY, HARD = "2035-08-18", "2035-11-22"
+    cen = defaultdict(lambda: defaultdict(float))
+    for r in csv.DictReader(open(D / "dispatch.csv")):
+        ts = r["timestamp"]
+        if ts[:10] in (EASY, HARD):
+            cen[ts][r["gen_energy_source"]] += float(r["DispatchGen_MW"])
+    dem, dist, charge = {}, {}, {}
+    for r in csv.DictReader(open(D / "load_balance.csv")):
+        ts = r["timestamp"]
+        if ts[:10] in (EASY, HARD):
+            dem[ts] = float(r["zone_demand_mw"])
+            dist[ts] = float(r["ZoneTotalDistributedDispatch"])
+            charge[ts] = float(r["StorageNetCharge"])
+    bands = [("Geothermal", "Geothermal", "#756bb1"),
+             ("Waste-to-energy", "MSW", "#7f7f7f"),
+             ("Thermal (oil/LNG)", "multiple", "#843c39"),
+             ("Wind", "WND", "#5fa2ce"),
+             ("Utility solar", "SUN", "#f2c744"),
+             ("Rooftop solar", "DIST", "#f7e08a"),
+             ("Battery discharge", "Battery", "#2ca02c")]
+    fig, axes = plt.subplots(1, 2, figsize=(11.2, 4.8), sharey=True)
+    for ax, day, title in [(axes[0], EASY, "Easy day: summer peak demand (Aug 18)"),
+                           (axes[1], HARD, "Hard day: low sun, low wind (Nov 22)")]:
+        ts = sorted(t for t in dem if t.startswith(day))
+        x = [int(t[11:13]) for t in ts]
+        stacks, labels, colors = [], [], []
+        for label, es, c in bands:
+            y = ([max(dist[t], 0.0) for t in ts] if es == "DIST"
+                 else [max(cen[t].get(es, 0.0), 0.0) for t in ts])
+            if sum(y) > 1:
+                stacks.append(y); labels.append(label); colors.append(c)
+        ax.stackplot(x, *stacks, labels=labels, colors=colors, alpha=0.9)
+        ax.plot(x, [dem[t] for t in ts], color="black", lw=2.2, label="Demand")
+        ax.fill_between(x, [-max(charge[t], 0.0) for t in ts], 0,
+                        color="#2ca02c", alpha=0.35, hatch="//", lw=0,
+                        label="Battery charging")
+        ax.axhline(0, color="black", lw=0.6)
+        ax.set_title(title, fontsize=11)
+        ax.set_xlabel("Hour of day")
+        ax.set_xticks(range(0, 24, 4)); ax.set_xlim(0, 22)
+    axes[0].set_ylabel("MW")
+    h, l = axes[1].get_legend_handles_labels()
+    fig.legend(h, l, loc="lower center", ncol=5, frameon=False, fontsize=8.5,
+               bbox_to_anchor=(0.5, -0.02))
+    fig.suptitle("Hourly generation, no-new-plant base case, 2035", fontsize=12.5)
+    fig.tight_layout(rect=(0, 0.06, 1, 0.97))
+    fig.savefig(FIG / "fig_5_1_reliability_days.png", dpi=200, bbox_inches="tight")
+
+
 if __name__ == "__main__":
-    fig_es1(); fig_land(); fig_emissions()
+    fig_es1(); fig_land(); fig_emissions(); fig_reliability()
     print("wrote:", ", ".join(p.name for p in sorted(FIG.glob("fig_*.png"))))
