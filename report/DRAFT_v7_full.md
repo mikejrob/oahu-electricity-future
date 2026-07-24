@@ -1222,9 +1222,9 @@ turbine makes the no-new-plant configuration the cheapest LNG arrangement
 tested; on the credited basis the bare-EPC plant does not save at all
 (+0.33). And the terminal needs no mandate to be used this way: in a variant
 where LNG import is offered as an option rather than forced, the model
-activates the terminal and the Kalaeloa conversion on its own (−0.28) — at
-the quoted fuel price, the terminal pays for itself through conversions
-alone.
+activates the terminal and the Kalaeloa conversion on its own, reaching the
+same −0.40 as the forced-Kalaeloa case. At the quoted fuel price, the terminal
+pays for itself through conversions alone.
 
 Because conversion capital is set to zero, each saving doubles as a
 break-even budget: the most that conversion, refurbishment, remaining-life,
