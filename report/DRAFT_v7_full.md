@@ -135,7 +135,7 @@ buildout: in our optimal solutions the LNG and clean paths both use about
 20,400 acres of utility solar by 2050, a difference under one percent, with
 the LNG path building about a decade later and gas-fired generation filling
 the interim. These figures credit rooftop solar and storage with continuing
-on a conservative growth trajectory (Section 6); without that growth the
+on a conservative growth trajectory (Section 2.7); without that growth the
 2050 build would be roughly a quarter larger. 
 Hawaiian Electric's and the State Energy Office's own studies build less 
 grid-scale solar overall but show the same pattern within their scenarios: 
@@ -439,7 +439,7 @@ Hawaiʻi adds is time, queues, and risk premia — all of which policy can reduc
 
 The model's least-cost build reaches about 4,100 MW of utility-scale solar by
 2050, with rooftop systems continuing on the conservative trajectory of
-Section 6 (about 1,000 MW installed by 2050); faster rooftop growth reduces
+Section 2.7 (about 1,000 MW installed by 2050); faster rooftop growth reduces
 the utility-scale build further, to about 3,600 MW on the realistic
 trajectory.
 How much land a solar farm needs per megawatt has fallen steadily as panels
@@ -463,7 +463,29 @@ percent at a 5 percent cost premium, 20–30 percent at a 10 percent premium,
 and slopes above 30 percent are excluded. The premiums matter in practice:
 about a third of the least-cost build lands on slopes above 15 percent, so a
 flat-land-only reading of the inventory would misstate both the acreage and
-where it sits — 27,256 eligible acres across 653 sites, 91 percent of 
+where it sits.
+
+Building at scale on 15–30 percent slopes is less settled practice than the
+cost premiums alone suggest. Tracker foundations, grading, and stormwater
+management on those grades carry engineering and permitting questions that a
+capacity-expansion model does not resolve, and some of that terrain may prove
+harder to develop than a 5–10 percent cost adder implies. Two observations
+bound the concern. First, the model is not short of flatter land it has been
+told not to use: the companion land inventory maps about 25,500 acres of
+Class B/C cropland under 15 percent slope that current law admits only
+through special use permits (the modeled screen draws just 3,500 of those
+acres), roughly 30,000 acres of military-controlled land in categories that
+range from plausible (explosive-safety buffers compatible with unoccupied
+solar, following the Kupono precedent) to discretionary, about 5,900 acres of
+durable non-agricultural sites — closed golf courses, quarries, landfills,
+brownfields — and reservoir surfaces suited to floating solar. Each category
+carries its own institutional path and none is assumed in the base
+inventory. Second, if steep-slope construction disappoints, the substitution
+runs toward these flatter categories rather than toward more total land: the
+question the map settles is availability, not siting certainty for any single
+parcel (Figure 2.3).
+
+![Figure 2.3 — plausibly available solar land, the modeled subset, and transmission](figures/fig_2_3_available_land_map.png) — 27,256 eligible acres across 653 sites, 91 percent of 
 it marginal or non-agricultural. Relaxed terrain rules raise the inventory 
 to 49,181 acres. The companion land study quantifies the statutory B/C cap
 directly at the parcel level (its `notes/cap-quantification.md`, run July
@@ -510,7 +532,7 @@ gone by 2045, utility-scale solar becomes the dominant source, and rooftop
 solar (netted from demand in the model, shown here as its own band) grows on
 the conservative trajectory. The right panel compares the path's renewable
 share with the statutory milestones: the least-cost path runs ahead of the
-RPS through 2040, a point Section 6 returns to in pricing the mandate
+RPS through 2040, a point Section 2.7 returns to in pricing the mandate
 itself.
 
 ![Figure 2.2 — generation mix over time, no-new-plant least-cost path, and renewable share against RPS milestones](figures/fig_genmix.png)
@@ -737,6 +759,58 @@ directly on the solar-cost lever.
    because it requires building nothing and rezoning nothing.
 
 ---
+
+### 2.7 Rooftop solar and storage
+
+Distributed solar is Oʻahu's other large solar resource, and how fast it
+grows changes how much utility-scale land the island needs. The island's
+rooftops carry about 793 MW today, installed at about 42 MW per year over
+2020–2024 despite the 2015 end of retail net metering and shrinking export
+credits. Section A.11 describes how we estimate what this fleet does to
+demand from the metered record: each installed MW removes about 0.61 MW of
+midday grid load, batteries move about 0.45 MWh per installed MWh into the
+19:00–22:00 window each day, and about a quarter of rooftop generation now
+serves demand that never crosses the meter.
+
+We run three installed-capacity trajectories (A.12, A.13). The conservative
+one, about 1,000 MW by 2050, roughly continues the recent installation rate
+in gross terms; the realistic one reaches about 1,560 MW; the accelerated
+one, about 2,120 MW, is our projection of what unleashing the resource could
+look like — unlimited sellback at avoided cost, the recommendation this
+report develops in Section 2.6, with new installs pairing two megawatt-hours
+of storage per megawatt (a 6.5 kW system with one 13.5 kWh battery, already
+a typical configuration). Each step of rooftop growth displaces
+utility-scale build: 2050 utility solar falls from about 4,100 MW
+(conservative) to 3,600 (realistic) to about 3,000 (accelerated), or from
+about 20,400 acres of land to roughly 15,000.
+
+Two findings from running these trajectories both ways — as a fixed
+demand-side profile reflecting today's battery scheduling, and as resources
+the optimizer dispatches against price — bear on the policy case. First, at
+today's trajectories the two representations agree closely (within about 50
+MW of 2050 utility solar on the conservative path, about 90 on the
+realistic): predictable evening-shifted battery behavior is close enough to
+optimal that the grid can plan around it. Second, at accelerated scale the
+value of coordination grows. With two gigawatts of distributed PV backed by
+storage, the optimizer treats the rooftop battery fleet as a system asset,
+absorbing midday output and firming evenings, and distributed curtailment
+stays below one percent even at 2.1 GW. Real-time pricing, or any tariff
+that approximates it, is what turns today's clock-driven battery behavior
+into that coordinated resource; the same policy that accelerates adoption
+also raises the value of each installed system.
+
+**The cost of the mandate, priced directly.** Removing the 100 percent RPS
+constraint and letting the model choose freely, the no-new-plant least-cost
+path still reaches about 3,860 MW of utility solar by 2050 — 95 percent of
+the mandated build — and oil's share of generation falls to about 4 percent
+by 2050 on economics alone. What the mandate buys is pace at the end: without
+it the model keeps about 24 percent oil in 2040 and 10 percent in 2045,
+retiring it over the following decade as solar and storage costs decline.
+The system-cost difference is about $0.26 billion in present value, roughly
+0.2 cents per kilowatt-hour. Achieved efficiently, the mandate is cheap
+insurance on pace; the paths converge to nearly the same place either way
+(these figures are at the current solve tolerance and will tighten slightly
+with the final refinements).
 
 ## 3. Enhanced Geothermal is in the least-cost build
 
