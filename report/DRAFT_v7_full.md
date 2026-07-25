@@ -52,11 +52,11 @@ new fuel plant, and the considerations outside the cost model also point away
 from it.** Solved at the midpoint of JERA's own cost range — their bare-EPC
 estimate and their +20 percent sensitivity, which restores the customs,
 insurance, design-allowance, and contingency items the estimate excludes — the
-JERA bundle comes in $0.54 billion above building no new fuel plant at
-reference oil, with the range spanning $0.33 to $0.75 billion above (Table
-ES.1). The gap is smaller at low oil ($0.47 billion) and larger at high oil
-($0.70 billion), and positive in every case. Differences of this size amount
-to roughly a third of a cent per kilowatt-hour (Appendix A.1) — under one
+JERA bundle comes in $0.75 billion above building no new fuel plant at
+reference oil, with the range spanning $0.54 to $0.96 billion above (Table
+ES.1). The gap is smaller at low oil ($0.67 billion) and larger at high oil
+($0.85 billion), and positive in every case. Differences of this size amount
+to roughly half a cent per kilowatt-hour (Appendix A.1) — under two
 percent of a typical bill, so other considerations might tilt the balance. Considerations 
 the cost model does not capture push the same way, however: a twenty-year 
 single-supplier contract whose price formula should be read as a floor rather 
@@ -78,7 +78,7 @@ plants, not a new one.
 The case for LNG, but not necessarily a new power plant, is stronger if solar 
 deployment costs stay near today's procurement reality, or if existing storage tax 
 credits are denied — while the clean-energy mandate itself is inexpensive to keep 
-(about $0.3 billion, or 0.18 cents per kilowatt-hour; Section 4.6b) if the Hawaii
+(about $0.26 billion, or about 0.2 cents per kilowatt-hour; Section 4.6b) if the Hawaii
 solar premium is limited to 20% above national midline projections.
 
 **Finding 3. Under current law, Enhanced Geothermal is in the least-cost
@@ -115,13 +115,13 @@ a deliberately extreme charge (Section 4.6a).
 
 | Trajectory | Low oil | Reference | High oil |
 |---|---:|---:|---:|
-| No new fuel plant | 26.30 | 26.70 | 27.18 |
-| LNG conversions, no new plant — net of conversion capital | — | 26.00 (−0.70) *[−0.44]* | — |
-| Modern LSFO plant (250 MW) | 26.65 (+0.35) | 27.10 (+0.40) | 27.66 (+0.48) |
-| JERA LNG 500 MW — midpoint | 26.78 (+0.48) | 27.24 (+0.54) | 27.88 (+0.70) |
-| *…JERA band [bare-EPC, +20%]* | *[+0.27, +0.69]* | *[+0.33, +0.75]* | *[+0.49, +0.91]* |
-| Waiau Repower only | 27.67 (+1.36) | 28.07 (+1.38) | 28.58 (+1.40) |
-| Waiau + LSFO plant | 28.08 (+1.78) | 28.54 (+1.84) | 29.10 (+1.92) |
+| No new fuel plant | 25.49 | 25.86 | 26.32 |
+| LNG conversions, no new plant — net of conversion capital | — | 25.25 (−0.61) *[−0.35]* | — |
+| Modern LSFO plant (250 MW) | 25.90 (+0.40) | 26.27 (+0.41) | 26.81 (+0.49) |
+| JERA LNG 500 MW — midpoint | 26.17 (+0.67) | 26.60 (+0.75) | 27.17 (+0.85) |
+| *…JERA band [bare-EPC, +20%]* | *[+0.46, +0.89]* | *[+0.54, +0.96]* | *[+0.64, +1.07]* |
+| Waiau Repower only | 26.87 (+1.38) | 27.25 (+1.39) | 27.76 (+1.44) |
+| Waiau + LSFO plant | 27.34 (+1.85) | 27.74 (+1.88) | 28.28 (+1.96) |
 | Waiau + JERA LNG — midpoint | — | 28.71 (+2.01) | — |
 
 **Reliability.** Every scenario considered meets load and operating reserves at
@@ -954,8 +954,8 @@ billion on its own, and every bundle containing it inherits the penalty. This
 result is robust to every sensitivity in the report.
 
 **A right-sized plant costs less than the proposal.** At the midpoint of
-JERA's cost range, a 375 MW version comes in $0.25 billion above no-new-plant
-against $0.54 billion for the 500 MW version, smaller but still a cost
+JERA's cost range, a 375 MW version comes in $0.38 billion above no-new-plant
+against $0.75 billion for the 500 MW version, smaller but still a cost
 increase. One caution attaches. We price the smaller plant at the same
 dollars-per-kilowatt as the 500 MW proposal, while JERA attributes its
 attractive unit cost partly to scale (proposal p. 17), so the 375 MW figure
@@ -963,8 +963,8 @@ may understate what a smaller plant would actually cost.
 
 **The JERA-500 versus no-new-plant comparison favors no new plant, and the
 margin moves with solar costs.** At the midpoint of JERA's capital range the
-bundle is $0.54 billion more expensive at reference oil (band +0.33 to +0.75),
-$0.47 billion at low oil, and $0.69 billion at high oil, a cost increase in
+bundle is $0.75 billion more expensive at reference oil (band +0.54 to +0.96),
+$0.67 billion at low oil, and $0.85 billion at high oil, a cost increase in
 every case. The margin is sensitive to the solar premium in the direction one
 would expect: firm gas capacity substitutes for solar-plus-storage, so the
 more Hawaiʻi pays for solar and storage, the better LNG looks. At our baseline
@@ -1049,10 +1049,10 @@ against building no new fuel plant, in billions of 2024$ at reference oil:
 
 | | Burns LSFO (today's fuel) | Burns LNG (terminal built) |
 |---|---:|---:|
-| **Existing plants only** | baseline (0) | −0.40 (Kalaeloa converted) to −1.15 (also Kahe 5 & 6, CIP CT); −0.70 net of the full 2016 conversion-program charge |
-| **New 500 MW combined cycle** | +1.15 | +0.33 bare-EPC; +0.54 at the capital midpoint |
+| **Existing plants only** | baseline (0) | −0.40 (Kalaeloa converted) to −1.06 (also Kahe 5 & 6, CIP CT); −0.61 net of the full 2016 conversion-program charge |
+| **New 500 MW combined cycle** | +1.22 | +0.54 bare-EPC; +0.75 at the capital midpoint |
 
-*Conversion capital is set to zero in the solved conversion cells; the −0.70
+*Conversion capital is set to zero in the solved conversion cells; the −0.61
 net figure charges the entire 2016 conversion-program estimate ($450M in
 2024$) against the converted units as a capital adjustment, the same
 treatment as the EGS cost sensitivity. Details and caveats in Section 4.6a.*
@@ -1097,8 +1097,8 @@ only the fuel-price channel survives.
 
 The reverse question, whether to prefer an LSFO plant available at the LNG
 plant's price, has the same answer with the sign reversed. On fuel cost alone
-the LSFO plant loses by $0.61 billion at matched 500 MW size and the capital
-midpoint ($0.82 billion at bare-EPC). What the LSFO version buys instead is
+the LSFO plant loses by $0.47 billion at matched 500 MW size and the capital
+midpoint ($0.68 billion at bare-EPC). What the LSFO version buys instead is
 structure: no import terminal, no 20-year take-or-pay commitment, fuel from the
 existing in-state supply chain with its established biofuel transition path, and
 no single-supplier exposure. Whether that structure is worth the fuel premium
@@ -1309,12 +1309,12 @@ combustion turbine.
 | Configuration (reference oil) | System cost ($B) | vs no-new-plant |
 |---|---:|---:|
 | No new fuel plant, no LNG | 26.70 | — |
-| FSRU + Kalaeloa conversion, no new plant | 26.29 | −0.40 |
-| FSRU + Kalaeloa, Kahe 5 & 6, CIP CT conversions, no new plant | 25.55 | **−1.15** |
-| *…same, net of the full 2016 conversion-program charge ($0.45B)* | *26.00* | ***−0.70*** |
-| *…same, also charging the entire 2016 onshore package ($0.26B)* | *26.26* | *−0.44* |
-| JERA 500 (bare-EPC), no conversions | 27.03 | +0.33 |
-| JERA 500 (bare-EPC) + Kalaeloa conversion | 26.57 | −0.13 |
+| FSRU + Kalaeloa conversion, no new plant | 25.46 | −0.40 |
+| FSRU + Kalaeloa, Kahe 5 & 6, CIP CT conversions, no new plant | 24.80 | **−1.06** |
+| *…same, net of the full 2016 conversion-program charge ($0.45B)* | *25.25* | ***−0.61*** |
+| *…same, also charging the entire 2016 onshore package ($0.26B)* | *25.51* | *−0.35* |
+| JERA 500 (bare-EPC), no conversions | 26.39 | +0.54 |
+| JERA 500 (bare-EPC) + Kalaeloa conversion | 25.93 | +0.07 |
 
 At the vendor's cost quote, the conversion configurations beat building the
 new plant. Kalaeloa alone saves more than JERA's plant does: the model
@@ -1323,7 +1323,7 @@ running them at 80–90 percent capacity factor through 2044 — with no new
 construction at all. Extending conversion to Kahe 5 and 6 and the CIP
 turbine makes the no-new-plant configuration the cheapest LNG arrangement
 tested; on the credited basis the bare-EPC plant does not save at all
-(+0.33). And the terminal needs no mandate to be used this way: in a variant
+(+0.54). And the terminal needs no mandate to be used this way: in a variant
 where LNG import is offered as an option rather than forced, the model
 activates the terminal and the Kalaeloa conversion on its own, reaching the
 same −0.40 as the forced-Kalaeloa case. At the quoted fuel price, the terminal
@@ -1667,9 +1667,9 @@ proposal costs modestly more than building no new fuel plant. Taking the
 midpoint of JERA's own cost range — their bare-EPC estimate and their +20%
 sensitivity, which restores the customs, insurance, design-allowance and
 contingency items the estimate itself says it excludes — the JERA bundle is
-about $0.54 billion more expensive over twenty-four years, and more expensive
+about $0.75 billion more expensive over twenty-four years, and more expensive
 in every oil-price case tested. Per kilowatt-hour delivered, the difference is
-about a third of a cent — small against a bill of thirty-plus cents, so the
+about half a cent — small against a bill of thirty-plus cents, so the
 cost gap alone does not decide the question, but it no longer favors LNG in any
 case, and every consideration outside the cost model points the same way. The
 findings that are larger: the Waiau Repower is uneconomic under every oil price
@@ -1953,7 +1953,7 @@ undiscounted would overstate the denominator and understate the per-unit cost;
 we discount both. Delivered energy is the system's served load, about 8.1 TWh
 per year rising to about 9.0 TWh by 2050, whose present value over 2027–2050
 is about 165 TWh (undiscounted, it is about 240 TWh). At this present-value
-denominator, a $1 billion difference in system cost equals about 0.61 cents
+denominator, a $1 billion difference in system cost equals about 0.74 cents
 per kilowatt-hour. Both numerator and denominator come from the same solved
 run, so the ratio is internally consistent with every dollar figure quoted.
 
