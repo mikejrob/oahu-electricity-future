@@ -131,9 +131,12 @@ November day with an evening peak (Section 5). The constructed systems can run
 an indefinite number of even this most-difficult day.
 
 **Land.** Under the 2045 mandate, an LNG plant changes little about the solar
-buildout: in our optimal solutions the LNG path uses about 25,500 acres of 
-utility solar by 2050 against the clean path's 25,300, a difference under one 
-percent, built about a decade later, with gas-fired generation filling the interim. 
+buildout: in our optimal solutions the LNG and clean paths both use about
+20,400 acres of utility solar by 2050, a difference under one percent, with
+the LNG path building about a decade later and gas-fired generation filling
+the interim. These figures credit rooftop solar and storage with continuing
+on a conservative growth trajectory (Section 6); without that growth the
+2050 build would be roughly a quarter larger. 
 Hawaiian Electric's and the State Energy Office's own studies build less 
 grid-scale solar overall but show the same pattern within their scenarios: 
 adding LNG leaves solar nearly unchanged (93–100 percent year by year). 
@@ -434,7 +437,11 @@ Hawaiʻi adds is time, queues, and risk premia — all of which policy can reduc
 
 ### 2.5 Does Oʻahu have enough land?
 
-The model's least-cost build reaches 5,054 MW of utility-scale solar by 2050.
+The model's least-cost build reaches about 4,100 MW of utility-scale solar by
+2050, with rooftop systems continuing on the conservative trajectory of
+Section 6 (about 1,000 MW installed by 2050); faster rooftop growth reduces
+the utility-scale build further, to about 3,600 MW on the realistic
+trajectory.
 How much land a solar farm needs per megawatt has fallen steadily as panels
 have grown more efficient. The conventional figure is about six acres per
 megawatt, which counts the full site — the spacing between rows, access roads,
@@ -444,12 +451,19 @@ under five acres, and tracking arrays use more land than fixed-tilt ones
 Berkeley National Laboratory, emp.lbl.gov/publications/land-requirements-utility-scale-pv).
 Because that density keeps improving, we use five acres per megawatt
 throughout, a reasonable value for a 2030s-and-later buildout, which puts the
-2050 build at about 25,300 acres. The screen's rule is
+2050 build at about 20,400 acres (about 18,000 on the realistic rooftop
+trajectory). The screen's rule is
 fully documented: it admits agricultural/country-zoned 
-land only; subtracts Class A soils, golf courses, road buffers, slopes above 10 
-percent, and (via the zoning filter) military installations; and caps prime 
+land only; subtracts Class A soils, golf courses, road buffers, and (via the
+zoning filter) military installations; and caps prime 
 Class B/C land at 10 percent per cluster while admitting all Class D/E and 
-non-agricultural land — 27,256 eligible acres across 653 sites, 91 percent of 
+non-agricultural land. Terrain enters through a graduated screen rather than
+a single cutoff: land up to 15 percent slope builds at reference cost, 15–20
+percent at a 5 percent cost premium, 20–30 percent at a 10 percent premium,
+and slopes above 30 percent are excluded. The premiums matter in practice:
+about a third of the least-cost build lands on slopes above 15 percent, so a
+flat-land-only reading of the inventory would misstate both the acreage and
+where it sits — 27,256 eligible acres across 653 sites, 91 percent of 
 it marginal or non-agricultural. Relaxed terrain rules raise the inventory 
 to 49,181 acres. The companion land study quantifies the statutory B/C cap
 directly at the parcel level (its `notes/cap-quantification.md`, run July
@@ -479,15 +493,27 @@ the land. The concern is genuine and deserves a direct answer — first from the
 pathways themselves, then from the land records.
 
 **Every mandate-compliant pathway builds nearly the same solar with and 
-without LNG.** In our solutions the no-new-fuel-plant path reaches 5,054 MW 
-of utility-scale solar by 2050 (about 25,300 acres); the JERA LNG path reaches 
-5,097 MW on 25,500 acres — a difference under one percent, and in this solution 
-the LNG path ends slightly *higher*. What changes is timing and what fills the gap:
-in 2035 the JERA path has about 1,100 MW less solar built (roughly 5,400
-acres less land then in use), with gas-fired generation supplying the
-difference until the mandate closes the gap by 2045 (Figure 2.1). 
+without LNG.** In our solutions the no-new-fuel-plant path reaches about
+4,100 MW of utility-scale solar by 2050 (about 20,400 acres); the JERA LNG
+path reaches essentially the same level — a difference under one percent,
+and in this solution the LNG path ends slightly *higher*. What changes is
+timing and what fills the gap: in 2035 the JERA path has about 860 MW less
+solar built (roughly 4,300 acres less land then in use), with gas-fired
+generation supplying the difference until the mandate closes the gap by
+2045 (Figure 2.1). 
 
 ![Figure 2.1 — cumulative utility solar, both pathways](figures/fig_2_1_land_timing.png)
+
+The generation mix behind those builds is shown in Figure 2.2 for the
+no-new-plant least-cost path: oil declines through the 2030s and is largely
+gone by 2045, utility-scale solar becomes the dominant source, and rooftop
+solar (netted from demand in the model, shown here as its own band) grows on
+the conservative trajectory. The right panel compares the path's renewable
+share with the statutory milestones: the least-cost path runs ahead of the
+RPS through 2040, a point Section 6 returns to in pricing the mandate
+itself.
+
+![Figure 2.2 — generation mix over time, no-new-plant least-cost path, and renewable share against RPS milestones](figures/fig_genmix.png)
 
 **The State's own study shows the same pattern within its scenarios.** In
 HSEO's generation tables, adding LNG changes its solar hardly at all — the
@@ -585,7 +611,7 @@ parcel by parcel — federal landholdings (where tenure, mission constraints,
 and the 2029 state-land lease questions require careful treatment) and
 closed golf acreage (which the screen subtracts regardless of operating
 status). None of these is counted in the 27,256 eligible acres, which itself
-exceeds the roughly 25,300 acres the least-cost build actually uses. The
+exceeds the roughly 20,400 acres the least-cost build actually uses. The
 companion land study (github.com/mikejrob/solar-wind-landuse) is the living
 inventory where these categories are being mapped and characterized, and
 contributions — corrections, parcels, local knowledge — are welcome there.
@@ -1479,6 +1505,8 @@ by up to ~40 percent between the 0.25% and 0.1% solutions while total cost
 moves under 0.2 percent, so read them as indicative of scale.) Because each
 sample day starts from a reset battery state, the configuration meets
 back-to-back recurrences of the worst day without inter-day banking.
+
+One offsetting effect appears in the demand data and is worth stating. As rooftop systems have grown, grid demand on very low-sun days has begun to run above what installed capacity alone would predict — about 11 MW at 2021–2024 penetration — because households that self-supply on ordinary days draw from the grid on dark ones (Appendix A.11). The effect offsets roughly a sixth of the low-sun demand relief described above and grows with the distributed fleet; the sample-day tests in this section use net loads that carry the full distributed profile, so the mechanism is inside the model rather than an unmodeled risk.
 
 ### 5.4 What the test does and does not cover
 

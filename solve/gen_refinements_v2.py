@@ -52,8 +52,14 @@ for pre in PREFIXES:
         if os.path.exists(r010 + ".queued") and not os.path.isdir(r010):
             n_skip += 1
             continue
-        if os.path.isdir(r010) and not os.path.isfile(os.path.join(r010, "total_cost.txt")) \
-           and os.path.exists(r010 + ".queued"):
+        import time
+        r010_stale = (os.path.isdir(r010) and not os.path.isfile(os.path.join(r010, "total_cost.txt"))
+                      and os.path.exists(r010 + ".queued")
+                      and time.time() - os.path.getmtime(r010 + ".queued") > 26 * 3600)
+        if os.path.exists(r010 + ".queued") and not r010_stale:
+            n_skip += 1        # 0.1% queued or still running; leave it alone
+            continue
+        if r010_stale:
             # 0.1% was attempted and died -> stage 0.15% (unless already done/queued)
             if os.path.isfile(os.path.join(r0015, "total_cost.txt")) or os.path.exists(r0015 + ".queued"):
                 n_skip += 1

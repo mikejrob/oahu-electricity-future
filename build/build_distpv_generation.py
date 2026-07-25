@@ -90,8 +90,22 @@ def main(traj, outdir):
 
     tgt = TRAJ[traj]
     by_year, by_proj = existing_distpv()
-    proj_total = sum(by_proj.values())
-    shares = {g: c / proj_total for g, c in by_proj.items()}
+    # per-project tranche capacity limits (gen_capacity_limit_mw): new builds must
+    # respect cap - surviving_existing at every period, or the model is infeasible
+    caps = {}
+    for r in csv.DictReader(open(SRC / "gen_info.csv")):
+        g = r["GENERATION_PROJECT"]
+        if "DistPV" in g:
+            try: caps[g] = float(r["gen_capacity_limit_mw"])
+            except ValueError: caps[g] = float("inf")
+    # per-project surviving existing by period
+    ex_by = defaultdict(lambda: defaultdict(float))
+    for r in csv.DictReader(open(SRC / "gen_build_predetermined.csv")):
+        row = list(r.values())
+        if "DistPV" in row[0]:
+            ex_by[row[0]][int(row[1])] += float(row[2])
+    def surv_g(g, p):
+        return sum(mw for y, mw in ex_by[g].items() if p < y + DISTPV_MAX_AGE)
 
     # cumulative new PV needed at each period = target - surviving existing
     new_cum = {p: max(tgt[p] - surviving(by_year, p), 0.0) for p in PERIODS}
@@ -106,15 +120,23 @@ def main(traj, outdir):
     pre_rows = list(csv.reader(open(SRC / "gen_build_predetermined.csv")))
     hdr = pre_rows[0]
     add = []
+    alloc = {}   # cumulative new MW per project (for headroom tracking)
     for p in PERIODS:
         pv = new_bld[p]
         if pv <= 0:
             continue
-        # allocate this period's new PV across existing DistPV projects by share
-        for g, sh in shares.items():
-            mw = pv * sh
+        # allocate this period's new PV across DistPV projects proportional to
+        # remaining HEADROOM (cap - surviving existing - new already allocated),
+        # so no tranche exceeds its capacity limit at any period
+        head = {g: max(caps[g] - surv_g(g, p) - alloc.get(g, 0.0), 0.0) for g in caps}
+        hsum = sum(head.values())
+        if pv > hsum + 1e-6:
+            raise SystemExit(f"insufficient DistPV tranche headroom at {p}: need {pv:.0f}, have {hsum:.0f}")
+        for g, hd in head.items():
+            mw = pv * hd / hsum
             if mw <= 1e-9:
                 continue
+            alloc[g] = alloc.get(g, 0.0) + mw
             add.append([g, p, f"{mw:.6f}", "."])   # PV: no energy column
         # paired distributed battery on the existing DistBattery project
         be = pv * BATT_MWH_PER_MW[traj]

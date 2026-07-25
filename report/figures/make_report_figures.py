@@ -25,12 +25,15 @@ FIG = Path(__file__).resolve().parent
 
 
 def outdir(name):
-    """Refined (0.1/0.15%) output dir when solved; 0.25% fallback otherwise."""
-    d = REPO / f"outputs_p001_{name}"
-    if (d / "total_cost.txt").exists():
-        return d
-    print(f"  note: {name} not yet refined; using 0.25% output")
-    return REPO / f"outputs_{name}"
+    """v2 net-load (conservative distributed) output dir: 0.1% refinement when
+    solved, 0.25% fallback; legacy gross-load dirs as a last resort."""
+    for d in (REPO / f"R010_outputs_nlv2b_{name}", REPO / f"R0015_outputs_nlv2b_{name}",
+              REPO / f"outputs_nlv2b_{name}"):
+        if (d / "total_cost.txt").exists():
+            return d
+    # NO legacy fallback: mixing v2 net-load and gross-load solves in one figure
+    # silently corrupts comparisons. Figures skip until their v2 inputs land.
+    raise FileNotFoundError(f"{name}: no v2 (nlv2b) output yet")
 
 
 def cost(name):
@@ -236,8 +239,8 @@ def fig_reliability():
 
 def fig_solar_sensitivity():
     """New-plant options vs no-new-plant as solar cost rises (reference oil).
-    165 TWh PV delivered energy (3% discount) is the report's per-kWh denominator."""
-    TWH = 164.6
+    135.6 TWh PV net grid energy (3% discount) is the report's per-kWh denominator."""
+    TWH = 135.6   # PV(net grid energy) at 3% to 2027, v2 conservative-distributed load
     def cents(dB):
         return dB * 1e9 / (TWH * 1e9) * 100
     levels = [("Baseline\n(1.2x mainland)", ""),
@@ -280,6 +283,78 @@ def fig_solar_sensitivity():
     fig.savefig(FIG / "fig_4_2_solar_sensitivity.png", dpi=200)
 
 
-if __name__ == "__main__":
-    fig_es1(); fig_land(); fig_emissions(); fig_reliability(); fig_solar_sensitivity()
     print("wrote:", ", ".join(p.name for p in sorted(FIG.glob("fig_*.png"))))
+
+
+def fig_genmix():
+    """Generation mix over time (base case, conservative distributed): stacked
+    annual energy by source through 2050, with renewable share vs RPS milestones.
+    Distributed PV is netted from load in the model; its grid-visible energy is
+    shown as its own band, computed from the trajectory and the DistPV capacity
+    factor, so the figure shows total generation serving Oahu load."""
+    import numpy as np
+    # no-new-plant least-cost path: no LNG anywhere, so dual-fuel "multiple"
+    # unambiguously burns oil (in LNG scenarios the fuel split needs GenFuelUseRate)
+    d = REPO / "outputs_nlv2b_C4_NOTHERMAL_refbrent"
+    r010 = REPO / "R010_outputs_nlv2b_C4_NOTHERMAL_refbrent"
+    if (r010 / "dispatch_annual_summary.csv").exists():
+        d = r010   # prefer the 0.1% refinement when it lands
+    rows = list(csv.DictReader(open(d / "dispatch_annual_summary.csv")))
+    periods = sorted({int(r["period"]) for r in rows})
+
+    def energy(pred):
+        return {p: sum(float(r["Energy_GWh_typical_yr"]) for r in rows
+                       if int(r["period"]) == p and pred(r)) for p in periods}
+
+    oil = energy(lambda r: r["gen_energy_source"] in ("LSFO", "Diesel", "multiple"))
+    lng = energy(lambda r: r["gen_energy_source"] == "LNG")
+    usol = energy(lambda r: r["gen_tech"].startswith("CentralTrackingPV"))
+    wind = energy(lambda r: "Wind" in r["gen_tech"])
+    msw = energy(lambda r: r["gen_tech"] in ("H-Power",))
+    egs = energy(lambda r: r["gen_tech"] == "EGS")
+    # grid-visible distributed energy: effective MW x DistPV CF x 8760
+    TRAJ = {2027: 800, 2030: 850, 2035: 890, 2040: 930, 2045: 965, 2050: 1000}
+    CF, WEDGE, EXIST = 0.1822, 0.24, 674.0
+    dist = {p: (WEDGE * EXIST + (1 - WEDGE) * TRAJ[p]) * CF * 8.760 for p in periods}
+
+    bands = [("Oil", oil, "#8c564b"), ("LNG", lng, "#7f7f7f"),
+             ("Waste-to-energy", msw, "#bcbd22"), ("Geothermal (EGS)", egs, "#d62728"),
+             ("Wind", wind, "#1f77b4"), ("Utility solar", usol, "#ff7f0e"),
+             ("Distributed solar (netted)", dist, "#ffbb78")]
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 4.4),
+                                   gridspec_kw={"width_ratios": [3, 2]})
+    ys = np.zeros(len(periods))
+    for lab, ser, col in bands:
+        vals = np.array([ser[p] for p in periods])
+        ax1.fill_between(periods, ys, ys + vals, label=lab, color=col, alpha=0.9)
+        ys = ys + vals
+    ax1.set_ylabel("GWh per year")
+    ax1.set_title("Generation mix, least-cost path, no new fossil plant")
+    ax1.legend(loc="upper left", fontsize=7.5, frameon=False)
+    ax1.set_xticks(periods)
+
+    total = ys
+    fossil = np.array([oil[p] + lng[p] for p in periods])
+    rshare = 100 * (total - fossil) / total
+    ax2.plot(periods, rshare, "o-", color="#2ca02c", label="model renewable share")
+    for yr, tgt in [(2030, 40), (2040, 70), (2045, 100)]:
+        ax2.plot(yr, tgt, "s", color="k", ms=6)
+    ax2.plot([], [], "ks", label="RPS milestone")
+    ax2.set_ylabel("percent of generation")
+    ax2.set_ylim(0, 105)
+    ax2.set_title("Renewable share vs RPS")
+    ax2.legend(loc="lower right", fontsize=8, frameon=False)
+    ax2.set_xticks([2030, 2040, 2050])
+    fig.tight_layout()
+    fig.savefig(FIG / "fig_genmix.png", dpi=200)
+    plt.close(fig)
+    print("fig_genmix.png written")
+
+
+if __name__ == "__main__":
+    for f in (fig_es1, fig_land, fig_emissions, fig_reliability,
+              fig_solar_sensitivity, fig_genmix):
+        try:
+            f()
+        except FileNotFoundError as e:
+            print(f"SKIPPED {f.__name__}: awaiting v2 solve ({e})")
