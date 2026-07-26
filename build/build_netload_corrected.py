@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""build_netload_v2.py -- net-load from distributed PV+storage, SYNCHRONIZED to
+"""build_netload_corrected.py -- net-load from distributed PV+storage, SYNCHRONIZED
+to site capacity factors and the firmed empirical estimates.
+
+NAMING: this is the CORRECTED v1 distributed-solar treatment (v1 initially let
+rooftop PV retire to zero). It is NOT the "v2" model -- v2 is reserved for the
+regional/nodal grid model (see V2.md). Internal artifact prefixes "nlv2*" in
+inputs_/outputs_/scenarios/ mean "net-load, revision 2 of the v1 distributed
+treatment" and predate this note; they are frozen because solve fleets
+reference them.
+
+Synchronized to
 the model's per-timepoint site capacity factors and calibrated to the firmed
 empirical estimates (analysis/, radiation-identified from FERC 714 + NSRDB).
 
@@ -24,7 +34,7 @@ Improvements over build_netload_distributed.py (the first-fleet version):
      (radiation-identified, passes the physics cap 0.62), spread over 19-22h by
      the estimated weights; charged midday from own PV (reduces midday export).
 
-Usage: python build/build_netload_v2.py {base|sensitivity} <out_inputs_dir> [source_dir]
+Usage: python build/build_netload_corrected.py {base|sensitivity} <out_inputs_dir> [source_dir]
 """
 import csv, shutil, sys
 from collections import defaultdict

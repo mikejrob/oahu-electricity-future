@@ -36,3 +36,13 @@ arrays drain. Final results use the 0.1% value wherever it exists.
 - The supplement lists (`jera120`, `advsolar`, `norps`, `lngconv*`, `pvjera`)
   were generated from the core lists by the documented transformations in the
   repository history and are committed as data; each line is self-describing.
+
+## Naming note: "nlv2" is not the v2 model
+
+Scenario lists `netload_v2b.txt`/`netload_v2s.txt` and directory prefixes
+`inputs_nlv2*`, `outputs_nlv2*` (with `dgb/dgs/dga` for the dispatched-generator
+variants and `R010_`/`R0015_` for gap refinements) belong to the CORRECTED v1
+distributed-solar treatment: v1 as first released let rooftop PV retire to zero
+by 2050, and these runs fix that. "v2" proper is reserved for the regional
+(nodal) grid model described in `V2.md`. The prefixes are frozen because solve
+fleets and refinement machinery reference them.

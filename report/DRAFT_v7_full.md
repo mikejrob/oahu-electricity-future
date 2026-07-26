@@ -1929,6 +1929,21 @@ pass.]*
   screen, the rooftop-potential derivation, the Par contract structure, HEI
   ownership shares, and the remaining [verify] flags in this draft.
 
+**The distributed results are the argument for the next model.** Getting
+rooftop solar and storage right changed real numbers in this report: about a
+fifth less utility-scale land, a weaker case for every new-plant
+configuration, a mandate priced at two-tenths of a cent. All of that came
+from treating the island as a single node with one load. But rooftop
+capacity is not at one node. It sits on particular circuits behind
+particular substations, its value depends on which transmission necks it
+relieves, and the next two gigawatts of it will concentrate wherever roofs,
+tariffs, and interconnection queues allow. Those are questions a single-node
+model cannot ask. The regional model outlined in V2.md — zone-level demand
+built from the same records used here, the island's transmission interfaces,
+and distributed resources located where they actually are — is where they
+get answered, and the size of the distributed effects found in this report
+is the reason to build it.
+
 The model, inputs, code, and every number here are public. We invite
 specific, sourced challenges to any input or finding — from Hawaiian
 Electric, HSEO, JERA, and every other reader — and we will investigate each

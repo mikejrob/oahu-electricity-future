@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""gen_refinements_v2.py -- staged gap refinement for the v2 fleets.
+"""gen_refinements.py -- staged gap refinement for the corrected-distributed fleets.
+(Dir prefixes nlv2*/dg* are internal labels for the corrected v1 distributed
+treatment; "v2" proper is the nodal grid model, see V2.md.)
 
 Scans completed 0.25% solves in outputs_{nlv2b,nlv2s,nlv2a,dgb,dgs,dga}_* and
 emits refinement scenario lines, warmstarted from the scenario's OWN 0.25%
@@ -12,7 +14,7 @@ Refined outputs go to R010_<dir> / R0015_<dir>. Promotion/certification is
 handled by solve/promote_retries.py (mechanical: promote if retry <= prior,
 certify if prior better and retry bound proves <=0.1%).
 
-Usage: python solve/gen_refinements_v2.py <listfile-out>
+Usage: python solve/gen_refinements.py <listfile-out>
 Emits only NEW work (skips scenarios already refined or in flight per marker
 files R*/.queued). Prints a summary; exits 0 with an empty file if nothing new.
 """
