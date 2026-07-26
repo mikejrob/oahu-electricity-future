@@ -343,11 +343,15 @@ solar commonly elects the production tax credit, worth 2.75 cents per
 kilowatt-hour in 2024 and 3.0 cents in 2025 for wage-qualified projects
 (§45Y inflation adjustment, Federal Register 2025-16249), with the
 battery taking the 30 percent investment tax credit; the 2019/20-vintage
-projects had the 30 percent ITC alone [verify: election shares between PTC
-and ITC]. Adding the credits back to both ends of the mainland
-series, the increase in gross (pre-subsidy) cost is less than double.
-Hawaiʻi projects likely claim the 30 percent ITC on both solar and battery
-rather than the PTC [verify], and because Hawaiʻi's contract prices are much
+projects had the 30 percent ITC alone. Election shares between the PTC and
+ITC are not published at the project level, so the add-back is an
+approximation; adding the credits back to both ends of the mainland series,
+the increase in gross (pre-subsidy) cost is less than double. The battery
+share of a hybrid takes the investment credit in either case (storage has no
+production-credit option under Section 48E), and the production credit favors
+low-cost, high-output projects — the opposite of Hawaiʻi's high-cost,
+battery-heavy configurations — so Hawaiʻi hybrids plausibly claim the 30
+percent ITC on both components. Because Hawaiʻi's contract prices are much
 higher, federal support covers a smaller share of the price there. (ii)
 Battery size. Hawaiʻi hybrids pair four-to-five-hour batteries sized near
 100 percent of PV capacity, far larger than the typical mainland hybrid,
@@ -398,9 +402,11 @@ streamlined interconnection policies and similar labor costs have seen even lowe
 prices for solar, especially when IRA subsidies are taken into account. These 
 squandered savings present a warning and incentive for reform (Section 2.6). There is 
 also a remote chance of reviving recently canceled solar projects in time to take 
-advantage of the IRA subsidies. Projects that begin construction in 2027 can 
-still qualify, and might be enticed to do so under "connect and manage" interconnection
-rule with avoided cost pricing [verify], as described below.
+advantage of the IRA subsidies. Under the 2025 federal tax law, a revived
+project qualifies if it was under construction before July 2026 or reaches
+service by the end of 2027 — a tight but not impossible window that a
+"connect and manage" interconnection rule, described below, is the kind of
+reform that could open.
 
 ### 2.4 Interconnection
 
