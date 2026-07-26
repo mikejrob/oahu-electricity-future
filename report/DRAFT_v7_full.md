@@ -71,8 +71,8 @@ Electric's Kahe 5 and 6 and their CIP turbine as well saves several times as muc
 with no new construction. These conversion savings survive realistic conversion 
 costs: HECO's own 2016 program priced its entire multi-island conversion 
 package at $341 million ($450 million in 2024$), and charging that full amount 
-against the converted units still leaves a net saving of about $0.70 billion, 
-or at least $0.44 billion if the entire 2016 onshore-pipeline package is added 
+against the converted units still leaves a net saving of about $0.61 billion, 
+or at least $0.35 billion if the entire 2016 onshore-pipeline package is added 
 on top (Sections 4.3, 4.6a). The cheapest use of LNG is Oʻahu's existing 
 plants, not a new one. 
 The case for LNG, but not necessarily a new power plant, is stronger if solar 
@@ -241,10 +241,10 @@ and AEO 2025 Brent paths (Roberts 2026 brief); values in 2024$.*
 
 At the baseline cost basis — NREL ATB 2024 Moderate for solar and battery,
 plus a 20 percent Hawaiʻi premium, with the battery's co-location saving taken
-from NREL's own PV-plus-battery hybrid — total 2027–2050 system cost is $26.70
+from NREL's own PV-plus-battery hybrid — total 2027–2050 system cost is $25.86
 billion at reference oil prices. Holding solar and battery costs 50 percent
-above that baseline for the full horizon raises system cost to $28.91 billion
-(+$2.2B); 70 percent above raises it to $29.63 billion (+$2.9B). (Because the
+above that baseline for the full horizon raises system cost to $27.97 billion
+(+$2.1B); 70 percent above raises it to $28.67 billion (+$2.8B). (Because the
 baseline already includes the 20 percent Hawaiʻi premium, these correspond to
 roughly 1.8× and 2.0× the mainland ATB benchmark — the 1.5× case
 approximating the effective cost level implied by recently approved contracts,
@@ -253,7 +253,7 @@ for grid-scale solar stems mainly from exceptionally high soft costs that can
 respond to policy reform, rather than in hardware, labor, or land.
 
 For scale: the Waiau Repower decision moves system cost by about $1.4
-billion; the LNG-versus-no-new-plant decision moves it by about $0.5
+billion; the LNG-versus-no-new-plant decision moves it by about $0.8
 billion at its reference-oil midpoint. Solar-and-storage procurement reform is
 worth several times any fuel decision in this report. 
 
@@ -674,8 +674,8 @@ development for the next edition is designed to assess exactly this tradeoff.
 
 **Even without the mandate, most of the solar gets built.** Removing the
 clean-energy requirement entirely (Section 4.6b), the least-cost system still
-builds 4,616 MW of utility solar by 2050 — 91 percent of the mandated build —
-when no gas option exists, and 2,966 MW (58 percent) even when LNG is freely
+builds 3,860 MW of utility solar by 2050 — 95 percent of the mandated build —
+when no gas option exists, and 2,185 MW (54 percent) even when LNG is freely
 available and the model expands gas to its economic limit. Sunshine on Oʻahu
 out-competes imported fuel for most of the load under any policy; the mandate
 determines the remainder and the pace.
@@ -823,14 +823,14 @@ resource in the base case.
 
 | EGS cost case (credited) | System cost, no LNG ($B) | EGS built | Saving vs no-EGS |
 |---|---:|---|---:|
-| Option off / none | 27.26 | 0 MW | — |
-| High ($14.7M/MW gross) | 27.26 | 0 MW | ~$0 |
-| Reference ($10M/MW gross) | 26.70 | 100 MW | $0.56B |
-| Low ($6.2M/MW gross) | ~26.28 | 100 MW | ~$1.0B |
+| Option off / none | 26.40 | 0 MW | — |
+| High ($14.7M/MW gross) | ~26.40 | 0 MW | ~$0 |
+| Reference ($10M/MW gross) | 25.87 | 100 MW | $0.53B |
+| Low ($6.2M/MW gross) | ~25.4 | 100 MW | ~$1.0B |
 
 At reference cost — the base-case assumption — Enhanced Geothermal is part of
-the cheapest build: the no-new-plant baseline of $26.70 billion already contains 
-100 MW of it, and blocking it would raise that baseline by $0.56 billion. At the 
+the cheapest build: the no-new-plant baseline of $25.86 billion already contains 
+100 MW of it, and blocking it would raise that baseline by $0.53 billion. At the 
 optimistic cost, the saving roughly doubles. At the pessimistic cost, the model builds 
 nothing and loses nothing, so the downside is bounded. Because Enhanced Geothermal 
 builds all-or-nothing at its resource cap and its dispatch does not change with its 
@@ -1308,7 +1308,7 @@ combustion turbine.
 
 | Configuration (reference oil) | System cost ($B) | vs no-new-plant |
 |---|---:|---:|
-| No new fuel plant, no LNG | 26.70 | — |
+| No new fuel plant, no LNG | 25.86 | — |
 | FSRU + Kalaeloa conversion, no new plant | 25.46 | −0.40 |
 | FSRU + Kalaeloa, Kahe 5 & 6, CIP CT conversions, no new plant | 24.80 | **−1.06** |
 | *…same, net of the full 2016 conversion-program charge ($0.45B)* | *25.25* | ***−0.61*** |
@@ -1356,10 +1356,10 @@ capital charge against the solved saving. The table's net rows charge the
 million in 2024 dollars at face value — against our three-unit Oʻahu
 configuration alone, although the 2016 program covered far more capacity
 (Kahe 1–6 and Waiau 5–10 among others). The full conversion set still nets
-**−$0.70 billion**. The stricter bound adds the entire 2016 onshore package
+**−$0.61 billion**. The stricter bound adds the entire 2016 onshore package
 ($260 million: buoy, subsea pipeline, and all extensions) on top, even
 though the JERA runs already charge $460 million of import infrastructure
-that covers most of the same functions; the saving is still **−$0.44
+that covers most of the same functions; the saving is still **−$0.35
 billion**. Both charges are deliberately conservative: the 2016 program's
 $450 million covered roughly 1,300 MW of conversions (≈$0.35M per MW), so
 charging it all against our 590 MW set implies about $0.76M per MW, roughly
@@ -1428,26 +1428,32 @@ past 2044, and the model chooses plant size and fuel volumes freely.
 
 | No-mandate configuration (reference oil) | System cost ($B) | vs no-mandate baseline |
 |---|---:|---:|
-| No new fuel plant (no gas available) | 26.43 | — |
-| LNG unrestricted (model's choice) | 26.13 | −0.29 |
-| JERA 500 forced — midpoint [band] | 26.60 [26.31, 26.88] | −0.16 [−0.44, +0.11] |
+| No new fuel plant (no gas available) | 25.60 | — |
+| LNG unrestricted (model's choice) | 25.45 | −0.15 |
+| JERA 500 forced — bare-EPC / +20% | 25.62 / 26.16 | +0.02 / +0.56 |
 
-Without the mandate, the model builds 1,125 MW of gas capacity, imports
-21–26 million MMBtu of LNG per year through 2050, and the LNG advantage grows
-to $0.6–0.9 billion — several times its size under the mandate. Even then,
-sunshine keeps most of the market: the no-mandate system still builds 2,966
-MW of utility solar (59 percent of the mandated build) with gas fully
-available, and 4,616 MW (91 percent) without it.
+Without the mandate, the model builds 500 MW of gas capacity, imports 15–21
+million MMBtu of LNG per year through 2050, and the LNG advantage is $0.15
+billion against the no-gas baseline. Notably, even with the mandate gone,
+*forcing* the JERA bundle does not pay: at the vendor's own bare-EPC quote it
+roughly breaks even (+$0.02 billion), and at the +20 percent sensitivity it
+costs $0.56 billion. Sunshine keeps most of the market either way: the
+no-mandate system still builds 2,185 MW of utility solar (54 percent of the
+mandated build) with gas fully available, and 3,860 MW (95 percent) without
+it.
 
 The more striking number is how little is at stake. With no gas option on
-the menu, dropping the rule saves just $0.28 billion (26.70 against 26.41)
-— about 0.17 cents per kilowatt-hour; the larger figure arises only because
+the menu, dropping the rule saves just $0.26 billion (25.86 against 25.60)
+— about 0.19 cents per kilowatt-hour; the larger figure arises only because
 abandonment also unlocks unrestricted gas: **abandoning the
-mandate saves at most $1.16 billion over twenty-four years — about seven
-tenths of a cent per kilowatt-hour — and even that requires building 1,125 MW of new gas
-plants and an import terminal and running LNG through 2050.** For
+mandate saves at most $0.41 billion over twenty-four years — about three
+tenths of a cent per kilowatt-hour — and even that requires a 500 MW gas
+plant, an import terminal, and running LNG through 2050.** Rooftop growth is
+part of why the stake shrank: distributed solar and storage reduce the
+energy any new plant would serve, and the no-mandate gas build is half what
+it was on a gross-load basis. For
 comparison, letting solar-and-storage deployment costs persist at today's
-procurement-implied level costs $2.22 billion (Section 2.1; the 1.5×
+procurement-implied level costs $2.11 billion (Section 2.1; the 1.5×
 sensitivity, i.e. roughly 1.8× the mainland ATB benchmark once the baseline's
 20 percent Hawaiʻi premium is included — approximately the effective level
 implied by the contract prices approved since 2024, Section 2.3). Walking away from the
