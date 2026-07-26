@@ -286,75 +286,72 @@ def fig_solar_sensitivity():
     print("wrote:", ", ".join(p.name for p in sorted(FIG.glob("fig_*.png"))))
 
 
-def fig_genmix():
-    """Generation mix over time (base case, conservative distributed): stacked
-    annual energy by source through 2050, with renewable share vs RPS milestones.
-    Distributed PV is netted from load in the model; its grid-visible energy is
-    shown as its own band, computed from the trajectory and the DistPV capacity
-    factor, so the figure shows total generation serving Oahu load."""
+
+def _mix(outdir_path, traj):
+    """bands (GWh by period) for one pathway; LNG split from oil via fuel MMBtu."""
     import numpy as np
-    # no-new-plant least-cost path: no LNG anywhere, so dual-fuel "multiple"
-    # unambiguously burns oil (in LNG scenarios the fuel split needs GenFuelUseRate)
-    d = REPO / "outputs_nlv2b_C4_NOTHERMAL_refbrent"
-    r010 = REPO / "R010_outputs_nlv2b_C4_NOTHERMAL_refbrent"
-    if (r010 / "dispatch_annual_summary.csv").exists():
-        d = r010   # prefer the 0.1% refinement when it lands
+    d = Path(outdir_path)
     rows = list(csv.DictReader(open(d / "dispatch_annual_summary.csv")))
     periods = sorted({int(r["period"]) for r in rows})
-
-    def energy(pred):
+    def en(pred):
         return {p: sum(float(r["Energy_GWh_typical_yr"]) for r in rows
                        if int(r["period"]) == p and pred(r)) for p in periods}
+    fossil = en(lambda r: r["gen_energy_source"] in ("LSFO", "Diesel", "LNG", "multiple"))
+    # LNG share of fossil fuel burn, by period (proportional MMBtu allocation)
+    lngsh = {p: 0.0 for p in periods}
+    f = d / "ConsumeFuelTier.csv"
+    if f.exists():
+        tot = {p: 0.0 for p in periods}; lng = {p: 0.0 for p in periods}
+        rd = csv.reader(open(f)); next(rd)
+        for row in rd:
+            per = next((int(v) for v in row if v.isdigit() and len(v) == 4), None)
+            if per in tot:
+                q = float(row[-1])
+                tot[per] += q
+                if any("LNG" in str(v) for v in row[:-1]):
+                    lng[per] += q
+        lngsh = {p: (lng[p] / tot[p] if tot[p] > 0 else 0.0) for p in periods}
+    TR = {"cons": {2027:800,2030:850,2035:890,2040:930,2045:965,2050:1000},
+          "accel": {2027:840,2030:1070,2035:1390,2040:1670,2045:1915,2050:2120}}[traj]
+    dist = {p: (0.24*674 + 0.76*TR[p]) * 0.1822 * 8.760 for p in periods}
+    return periods, [
+        ("Oil",  {p: fossil[p]*(1-lngsh[p]) for p in periods}, "#8c564b"),
+        ("LNG",  {p: fossil[p]*lngsh[p] for p in periods},     "#7f7f7f"),
+        ("Waste-to-energy", en(lambda r: r["gen_tech"] == "H-Power"), "#bcbd22"),
+        ("Geothermal (EGS)", en(lambda r: r["gen_tech"] == "EGS"),   "#d62728"),
+        ("Wind", en(lambda r: "Wind" in r["gen_tech"]), "#1f77b4"),
+        ("Utility solar", en(lambda r: r["gen_tech"].startswith("CentralTrackingPV")), "#ff7f0e"),
+        ("Distributed solar (netted)", dist, "#ffbb78")]
 
-    oil = energy(lambda r: r["gen_energy_source"] in ("LSFO", "Diesel", "multiple"))
-    lng = energy(lambda r: r["gen_energy_source"] == "LNG")
-    usol = energy(lambda r: r["gen_tech"].startswith("CentralTrackingPV"))
-    wind = energy(lambda r: "Wind" in r["gen_tech"])
-    msw = energy(lambda r: r["gen_tech"] in ("H-Power",))
-    egs = energy(lambda r: r["gen_tech"] == "EGS")
-    # grid-visible distributed energy: effective MW x DistPV CF x 8760
-    TRAJ = {2027: 800, 2030: 850, 2035: 890, 2040: 930, 2045: 965, 2050: 1000}
-    CF, WEDGE, EXIST = 0.1822, 0.24, 674.0
-    dist = {p: (WEDGE * EXIST + (1 - WEDGE) * TRAJ[p]) * CF * 8.760 for p in periods}
 
-    bands = [("Oil", oil, "#8c564b"), ("LNG", lng, "#7f7f7f"),
-             ("Waste-to-energy", msw, "#bcbd22"), ("Geothermal (EGS)", egs, "#d62728"),
-             ("Wind", wind, "#1f77b4"), ("Utility solar", usol, "#ff7f0e"),
-             ("Distributed solar (netted)", dist, "#ffbb78")]
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 4.4),
-                                   gridspec_kw={"width_ratios": [3, 2]})
-    ys = np.zeros(len(periods))
-    for lab, ser, col in bands:
-        vals = np.array([ser[p] for p in periods])
-        ax1.fill_between(periods, ys, ys + vals, label=lab, color=col, alpha=0.9)
-        ys = ys + vals
-    ax1.set_ylabel("GWh per year")
-    ax1.set_title("Generation mix, least-cost path, no new fossil plant")
-    ax1.legend(loc="upper left", fontsize=7.5, frameon=False)
-    ax1.set_xticks(periods)
-
-    total = ys
-    fossil = np.array([oil[p] + lng[p] for p in periods])
-    rshare = 100 * (total - fossil) / total
-    ax2.plot(periods, rshare, "o-", color="#2ca02c", label="model renewable share")
-    for yr, tgt in [(2030, 40), (2040, 70), (2045, 100)]:
-        ax2.plot(yr, tgt, "s", color="k", ms=6)
-    ax2.plot([], [], "ks", label="RPS milestone")
-    ax2.set_ylabel("percent of generation")
-    ax2.set_ylim(0, 105)
-    ax2.set_title("Renewable share vs RPS")
-    ax2.legend(loc="lower right", fontsize=8, frameon=False)
-    ax2.set_xticks([2030, 2040, 2050])
+def fig_genmix():
+    """Figure 2.2: generation mix over time, four pathways (2x2)."""
+    import numpy as np
+    def refd(name):
+        for pre in ("R010_outputs_", "outputs_"):
+            d = REPO / (pre + name)
+            if (d / "dispatch_annual_summary.csv").exists():
+                return d
+        raise FileNotFoundError(name)
+    panels = [
+        ("a. Least-cost, no new plant", refd("nlv2b_C4_NOTHERMAL_refbrent"), "cons"),
+        ("b. JERA LNG plant",           refd("nlv2b_C5_LNG375_refbrent"),    "cons"),
+        ("c. No new plant, EGS blocked", refd("nlv2b_egs_none_no_lng_refbrent"), "cons"),
+        ("d. No new plant, accelerated rooftop", refd("nlv2a_C4_NOTHERMAL_refbrent"), "accel"),
+    ]
+    fig, axes = plt.subplots(2, 2, figsize=(11, 7.6), sharey=True)
+    for ax, (title, d, traj) in zip(axes.flat, panels):
+        periods, bands = _mix(d, traj)
+        ys = np.zeros(len(periods))
+        for lab, ser, col in bands:
+            vals = np.array([ser[p] for p in periods])
+            ax.fill_between(periods, ys, ys + vals, label=lab, color=col, alpha=0.9)
+            ys = ys + vals
+        ax.set_title(title, fontsize=10, loc="left")
+        ax.set_xticks([2030, 2040, 2050])
+    axes[0, 0].set_ylabel("GWh per year"); axes[1, 0].set_ylabel("GWh per year")
+    axes[0, 0].legend(loc="upper left", fontsize=7, frameon=False)
     fig.tight_layout()
     fig.savefig(FIG / "fig_genmix.png", dpi=200)
     plt.close(fig)
-    print("fig_genmix.png written")
-
-
-if __name__ == "__main__":
-    for f in (fig_es1, fig_land, fig_emissions, fig_reliability,
-              fig_solar_sensitivity, fig_genmix):
-        try:
-            f()
-        except FileNotFoundError as e:
-            print(f"SKIPPED {f.__name__}: awaiting v2 solve ({e})")
+    print("fig_genmix.png (2x2 pathways) written")

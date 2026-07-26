@@ -25,9 +25,10 @@ and the full model, data, and code are public. The base case reflects current
 federal law, including the storage and geothermal tax credits (48E) that
 survive under the 2025 budget reconciliation act; a no-credit sensitivity is
 reported alongside for the case those credits are denied or repealed.
-Three findings are robust across everything tested; a fourth — the cost
-comparison at the center of the LNG debate — is small in magnitude but now
-points consistently one way, and we report it that way.
+Five findings organize everything tested, and they share one scale: each is
+a claim about how many dollars a choice moves, so the reader can rank them.
+The two largest levers are about how Hawaiʻi deploys solar — on utility land
+and on rooftops. The choices that dominate public debate rank below them.
 
 **Finding 1. Cheaper solar and battery deployment is the largest economic lever
 Hawaiʻi has.** Delivered solar costs in Hawaiʻi carry a large premium over
@@ -36,7 +37,7 @@ mainland benchmarks, and the evidence points mainly to soft costs
 acquisition) more than to hardware, labor, or land, though the size of the gap
 is difficult to measure precisely. Holding solar and
 battery costs 50 percent above our baseline for the whole horizon raises total
-system cost by about $2.2 billion, and at 70 percent above by about $2.9 billion.
+system cost by about $2.1 billion, and at 70 percent above by about $2.8 billion.
 The baseline already carries a 20 percent Hawaiʻi premium, so these
 correspond to roughly 1.8× and 2.0× the mainland benchmark — near the level
 recent procurement awards imply; Section 2.3. This lever is large in part because a 
@@ -47,51 +48,80 @@ that get built regardless. Reforms that close even part of the soft-cost gap are
 worth more than any fuel decision in this report, and they are within the State's own
 control (Section 2).
 
-**Finding 2. Building the JERA LNG bundle costs modestly more than building no
-new fuel plant, and the considerations outside the cost model also point away
-from it.** Solved at the midpoint of JERA's own cost range — their bare-EPC
-estimate and their +20 percent sensitivity, which restores the customs,
-insurance, design-allowance, and contingency items the estimate excludes — the
-JERA bundle comes in $0.75 billion above building no new fuel plant at
-reference oil, with the range spanning $0.54 to $0.96 billion above (Table
-ES.1). The gap is smaller at low oil ($0.67 billion) and larger at high oil
-($0.85 billion), and positive in every case. Differences of this size amount
-to roughly half a cent per kilowatt-hour (Appendix A.1) — under two
-percent of a typical bill, so other considerations might tilt the balance. Considerations 
-the cost model does not capture push the same way, however: a twenty-year 
-single-supplier contract whose price formula should be read as a floor rather 
-than a ceiling; a decade of delayed clean-energy deployment; debatable upstream 
-methane emissions; utility rate-base and refinery exposure; and the option value 
-each path preserves (Sections 4 and 8). Two further results sharpen the picture. 
-Whatever LNG advantage exists comes from the fuel, not the plant: the same modern 
-plant burning today's fuel oil raises system cost further, while LNG burned in 
-existing plants lowers it — converting the existing independent Kalaeloa plant 
-alone saves more than building JERA's proposed plant, and converting Hawaiian 
-Electric's Kahe 5 and 6 and their CIP turbine as well saves several times as much, 
-with no new construction. These conversion savings survive realistic conversion 
-costs: HECO's own 2016 program priced its entire multi-island conversion 
-package at $341 million ($450 million in 2024$), and charging that full amount 
-against the converted units still leaves a net saving of about $0.61 billion, 
-or at least $0.35 billion if the entire 2016 onshore-pipeline package is added 
-on top (Sections 4.3, 4.6a). The cheapest use of LNG is Oʻahu's existing 
-plants, not a new one. 
-The case for LNG, but not necessarily a new power plant, is stronger if solar 
-deployment costs stay near today's procurement reality, or if existing storage tax 
-credits are denied — while the clean-energy mandate itself is inexpensive to keep 
-(about $0.26 billion, or about 0.2 cents per kilowatt-hour; Section 4.6b) if the Hawaii
-solar premium is limited to 20% above national midline projections.
+**Finding 2. Rooftop solar and storage is the second-largest lever, and most
+of its value is available with today's technology and behavior.** Oʻahu's
+roofs carry about 793 MW of solar today, installed at about 42 MW per year
+over 2020–2024 — a pace that reached, in 2024, the level Hawaiian Electric's
+2016 plan projected for 2034 (Appendix A.13). We estimate what this fleet
+does to demand directly from the metered record: each installed megawatt
+removes about 0.61 MW of midday grid load, and batteries move about 0.45 MWh
+per installed MWh into the evening each day (Appendix A.11). Rooftop growth
+displaces utility-scale build nearly one-for-one in land terms: continuing
+the recent installation rate holds 2050 utility solar near 4,100 MW on about
+20,400 acres, while unleashing the resource — unlimited sellback at avoided
+cost, with new systems pairing two megawatt-hours of storage per megawatt,
+the configuration federal tax law now favors for third-party owners —
+reaches about 2,100 MW of rooftop capacity and cuts utility land toward
+15,000 acres (Section 2.7). Two properties make this lever cheap to pull.
+Today's clock-driven battery behavior is already worth nearly as much to the
+grid as perfect price-responsive dispatch, within about two-tenths of a cent
+per kilowatt-hour even at accelerated scale; and distributed curtailment
+stays below one percent because the batteries absorb the midday surplus. The
+tariff reform that accelerates adoption is the same one that coordinates it.
 
-**Finding 3. Under current law, Enhanced Geothermal is in the least-cost
+**Finding 3. No new fuel plant pays for itself, and if LNG comes to Oʻahu its
+value is in the plants the island already has.** Solved at the midpoint of
+JERA's own cost range — their bare-EPC estimate and their +20 percent
+sensitivity, which restores the customs, insurance, design-allowance, and
+contingency items the estimate excludes — the JERA bundle comes in $0.75
+billion above building no new fuel plant at reference oil, with the range
+spanning $0.54 to $0.96 billion (Table ES.1), positive in every oil-price
+case, and roughly half a cent per kilowatt-hour (Appendix A.1). The
+comparison the debate should center on is different: whatever LNG advantage
+exists comes from the fuel, not the plant. The same modern plant burning
+today's fuel oil raises system cost further, while LNG burned in existing
+plants lowers it — converting the independent Kalaeloa plant alone saves
+more than JERA's new plant would, and converting Hawaiian Electric's Kahe 5
+and 6 and CIP turbine as well saves several times as much, with no new
+construction. Those savings survive conservative accounting: charging HECO's
+entire 2016 multi-island conversion program ($450 million in 2024$) against
+the three Oʻahu units still nets about $0.61 billion, and at least $0.35
+billion if the 2016 onshore-pipeline package is added on top (Sections 4.3,
+4.6a). Growing rooftop solar widens this gap — less energy for a new plant
+to serve — and the considerations outside the cost model push the same way:
+a twenty-year single-supplier contract whose price formula should be read as
+a floor, a decade of delayed clean-energy deployment, upstream methane, and
+rate-base exposure (Sections 4 and 8).
+
+**Finding 4. Under current law, Enhanced Geothermal is in the least-cost
 build.** With the federal geothermal tax credit in force, the model builds the
 full ~100 MW of identified Oʻahu resource in the base case at reference cost,
-lowering system cost by about $0.56 billion; at the optimistic cost projection
+lowering system cost by about $0.53 billion; at the optimistic cost projection
 the saving grows to roughly $1.0 billion; at the pessimistic projection the
 model builds nothing and loses nothing. Enhanced Geothermal is therefore part
 of the cheapest way to run the island, provided a first-of-a-kind demonstration
 proves the resource (Section 3) and it is pursued in partnership with Native
 Hawaiian communities (Section 3.5).
 
-**Two decisive results.** The Waiau Repower raises system cost by
+**Finding 5. The constraints people worry about mostly do not bind.** Land:
+every mandate-compliant pathway, including JERA's, builds nearly the same
+solar on nearly the same 20,400 acres, differing mainly in timing; the
+eligible inventory exceeds the build, flatter reserves (Class B/C cropland,
+military categories, durable non-agricultural sites, the built environment)
+stand behind it, and Hawaiian Electric's and the State Energy Office's own
+studies show the same LNG-changes-little pattern within their scenarios
+(Sections 2.5, 2.5a). Reliability: every scenario meets load and operating
+reserves at every modeled timepoint across the 2007–2008 weather record
+including its single hardest day, because firm resources need to cover the
+highest daily-average net load, not the momentary peak — batteries move
+energy within the day (Section 5). The mandate: priced directly, keeping the
+2045 requirement costs about $0.26 billion — roughly two-tenths of a cent
+per kilowatt-hour — because the least-cost path runs ahead of the RPS
+through 2040 and builds 95 percent of the solar even with the requirement
+removed; abandoning it saves at most $0.41 billion, and only by building a
+gas plant and import terminal (Section 4.6b).
+
+**Also decisive.** The Waiau Repower raises system cost by
 $1.35–1.40 billion under every oil price tested, and every bundle containing
 it inherits that penalty (Section 6). And a new 500 MW plant is larger than
 the system wants if one were built: a 375 MW version does modestly better in 
@@ -123,32 +153,6 @@ a deliberately extreme charge (Section 4.6a).
 | Waiau Repower only | 26.87 (+1.38) | 27.25 (+1.39) | 27.76 (+1.44) |
 | Waiau + LSFO plant | 27.34 (+1.85) | 27.74 (+1.88) | 28.28 (+1.96) |
 | Waiau + JERA LNG — midpoint | — | 28.71 (+2.01) | — |
-
-**Reliability.** Every scenario considered meets load and operating reserves at
-every modeled timepoint, on thirteen sample days spanning the 2007–2008 weather
-record and including its single most difficult day — a low-sun, low-wind
-November day with an evening peak (Section 5). The constructed systems can run 
-an indefinite number of even this most-difficult day.
-
-**Land.** Under the 2045 mandate, an LNG plant changes little about the solar
-buildout: in our optimal solutions the LNG and clean paths both use about
-20,400 acres of utility solar by 2050, a difference under one percent, with
-the LNG path building about a decade later and gas-fired generation filling
-the interim. These figures credit rooftop solar and storage with continuing
-on a conservative growth trajectory (Section 2.7); without that growth the
-2050 build would be roughly a quarter larger. 
-Hawaiian Electric's and the State Energy Office's own studies build less 
-grid-scale solar overall but show the same pattern within their scenarios: 
-adding LNG leaves solar nearly unchanged (93–100 percent year by year). 
-Where official plans project less utility-scale solar than ours, they substitute
-offshore wind and imported renewable fuels, options our model prices and does
-not select at current costs (Section 2.5a). The land screen finds physical 
-acreage sufficient (Section 2.5), though with real uncertainty. If utility-scale 
-land ever binds, the practical reserve is the built environment: rooftop and 
-other distributed solar, canopies over parking, and smaller installations on 
-marginal parcels, held back today by tariff terms rather than by physical 
-scarcity. That reserve is a more realistic escape valve than offshore wind 
-or large volumes of biodiesel or hydrogen.
 
 **Limits of inference.** These findings are conditional on the cost
 trajectories, fuel-price regressions, sample-day reliability design, and
@@ -534,16 +538,24 @@ generation supplying the difference until the mandate closes the gap by
 
 ![Figure 2.1 — cumulative utility solar, both pathways](figures/fig_2_1_land_timing.png)
 
-The generation mix behind those builds is shown in Figure 2.2 for the
-no-new-plant least-cost path: oil declines through the 2030s and is largely
-gone by 2045, utility-scale solar becomes the dominant source, and rooftop
-solar (netted from demand in the model, shown here as its own band) grows on
-the conservative trajectory. The right panel compares the path's renewable
-share with the statutory milestones: the least-cost path runs ahead of the
-RPS through 2040, a point Section 2.7 returns to in pricing the mandate
-itself.
+Figure 2.2 shows the generation mix over time for four pathways. On the
+least-cost path (panel a), oil declines through the 2030s and is largely
+gone by 2045, with utility-scale solar the dominant source; the path's
+renewable share runs ahead of the RPS milestones through 2040, a point
+Section 2.7 returns to in pricing the mandate. The JERA path (panel b) shows
+what the plant actually does: LNG displaces most oil from 2030 to 2044, and
+it also displaces solar — utility-scale capacity grows visibly later than in
+panel a, converging only as the mandate closes. Blocking Enhanced Geothermal
+(panel c) removes the geothermal band and backfills with oil and solar.
+Accelerated rooftop growth (panel d) roughly doubles the distributed band by
+2050 and shrinks the utility-scale build. One timing caveat: the model
+builds its 100 MW of EGS in the first period and runs it at 0.93 capacity
+factor from 2027, because nothing in the model constrains geothermal
+development time; a realistic demonstration-and-permitting timeline shifts
+that band's start into the 2030s without changing the 2050 mix (Appendix
+A.7).
 
-![Figure 2.2 — generation mix over time, no-new-plant least-cost path, and renewable share against RPS milestones](figures/fig_genmix.png)
+![Figure 2.2 — generation mix over time: least-cost, JERA LNG, no-EGS, and accelerated-rooftop pathways](figures/fig_genmix.png)
 
 **The State's own study shows the same pattern within its scenarios.** In
 HSEO's generation tables, adding LNG changes its solar hardly at all — the
