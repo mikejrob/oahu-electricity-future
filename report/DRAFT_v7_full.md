@@ -137,8 +137,10 @@ and wind averaged over a day, which is far below the momentary peak
 requirement costs about $0.26 billion, roughly two-tenths of a cent per
 kilowatt-hour, because the cheapest path runs ahead of the requirement
 through 2040 anyway and builds 95 percent of the solar even if the
-requirement is removed. Abandoning it saves at most $0.41 billion, and
-capturing even that requires building a gas plant and an import terminal
+requirement is removed. Abandoning it saves about $0.41 billion if the replacement is a new
+gas plant and import terminal, and more if existing plants are converted to
+LNG instead, the cheaper route Finding 3 identifies. Either way, capturing
+the saving requires committing the island to imported gas through 2050
 (Section 4.6b).
 
 **Also decisive.** The Waiau Repower, Hawaiian Electric's proposal to
@@ -1488,9 +1490,14 @@ The more striking number is how little is at stake. With no gas option on
 the menu, dropping the rule saves just $0.26 billion (25.86 against 25.60)
 — about 0.19 cents per kilowatt-hour; the larger figure arises only because
 abandonment also unlocks unrestricted gas: **abandoning the
-mandate saves at most $0.41 billion over twenty-four years — about three
-tenths of a cent per kilowatt-hour — and even that requires a 500 MW gas
-plant, an import terminal, and running LNG through 2050.** Rooftop growth is
+mandate saves about $0.41 billion over twenty-four years — roughly three
+tenths of a cent per kilowatt-hour — when the replacement is a 500 MW gas
+plant with an import terminal.** The configurations in this table exclude
+the conversion of existing plants, which Section 4.6a shows is the cheaper
+use of LNG; allowing conversions in the no-mandate case raises the saving
+above $0.41 billion, and by symmetry also lowers the with-mandate cost the
+saving is measured against. [Conversion-menu no-mandate solves in
+progress; exact figures to follow.] Rooftop growth is
 part of why the stake shrank: distributed solar and storage reduce the
 energy any new plant would serve, and the no-mandate gas build is half what
 it was on a gross-load basis. For
