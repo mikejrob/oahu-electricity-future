@@ -12,17 +12,30 @@ decades of investment.
 
 ## What the analysis finds
 
+## Versions
+
+- **v1** — the original copper-plate (single-node) model as first circulated.
+  Its distributed-solar treatment let existing rooftop PV retire by 2050 with
+  no replacement.
+- **v1.1 (current)** — corrected distributed solar and storage: rooftop
+  netted from load on empirically estimated charge/discharge patterns
+  (Appendix A.11–A.13), three growth trajectories, all scenarios re-solved.
+  Minor revisions in response to comments will increment as v1.11, v1.12, …;
+  larger additions as v1.2.
+- **v2 (planned)** — the regional (zonal) grid model described in `V2.md`.
+
 1. **Cheaper solar-and-storage deployment is the biggest lever on Hawaiʻi's
    electricity costs** — worth several times any fuel decision studied here.
    The Hawaiʻi cost premium sits in procurement, permitting, and
    interconnection — processes policy can fix; hardware, labor, and land
    price near mainland benchmarks.
 2. **Building the JERA LNG bundle costs modestly more than building no new
-   fuel plant** — about $0.54 billion at reference oil (roughly a third of
-   a cent per kilowatt-hour, Appendix A.1), and more in every oil-price case. The cheapest
+   fuel plant** — about $0.75 billion at reference oil at the capital
+   midpoint (roughly half a cent per kilowatt-hour, Appendix A.1), and more
+   in every oil-price case. The cheapest
    use of the same LNG is converting existing plants with no new construction:
    charged with the entire 2016 conversion-program estimate ($450M in 2024$),
-   conversions still save about $0.70 billion (report §4.6a). The gap is
+   conversions still save about $0.61 billion (report §4.6a). The gap is
    small, so contract structure, timing of the clean transition, upstream
    emissions, and risk carry the decision — and they point the same way as
    the cost.

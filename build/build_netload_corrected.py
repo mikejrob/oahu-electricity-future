@@ -2,8 +2,8 @@
 """build_netload_corrected.py -- net-load from distributed PV+storage, SYNCHRONIZED
 to site capacity factors and the firmed empirical estimates.
 
-NAMING: this is the CORRECTED v1 distributed-solar treatment (v1 initially let
-rooftop PV retire to zero). It is NOT the "v2" model -- v2 is reserved for the
+NAMING: this is model v1.1 -- the corrected distributed-solar treatment (v1
+as first circulated let rooftop PV retire to zero). It is NOT "v2"; v2 is the
 regional/nodal grid model (see V2.md). Internal artifact prefixes "nlv2*" in
 inputs_/outputs_/scenarios/ mean "net-load, revision 2 of the v1 distributed
 treatment" and predate this note; they are frozen because solve fleets

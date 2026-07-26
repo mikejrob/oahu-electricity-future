@@ -41,8 +41,8 @@ arrays drain. Final results use the 0.1% value wherever it exists.
 
 Scenario lists `netload_v2b.txt`/`netload_v2s.txt` and directory prefixes
 `inputs_nlv2*`, `outputs_nlv2*` (with `dgb/dgs/dga` for the dispatched-generator
-variants and `R010_`/`R0015_` for gap refinements) belong to the CORRECTED v1
-distributed-solar treatment: v1 as first released let rooftop PV retire to zero
-by 2050, and these runs fix that. "v2" proper is reserved for the regional
-(nodal) grid model described in `V2.md`. The prefixes are frozen because solve
+variants and `R010_`/`R0015_` for gap refinements) belong to **v1.1**, the corrected
+distributed-solar treatment (v1 as first circulated let rooftop PV retire to
+zero by 2050; v1.1 fixes that). "v2" is reserved for the regional (nodal)
+grid model described in `V2.md`. The prefixes are frozen because solve
 fleets and refinement machinery reference them.

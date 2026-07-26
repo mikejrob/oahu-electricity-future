@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """gen_refinements.py -- staged gap refinement for the corrected-distributed fleets.
-(Dir prefixes nlv2*/dg* are internal labels for the corrected v1 distributed
-treatment; "v2" proper is the nodal grid model, see V2.md.)
+(Dir prefixes nlv2*/dg* are internal labels for model v1.1, the corrected
+distributed treatment; "v2" proper is the nodal grid model, see V2.md.)
 
 Scans completed 0.25% solves in outputs_{nlv2b,nlv2s,nlv2a,dgb,dgs,dga}_* and
 emits refinement scenario lines, warmstarted from the scenario's OWN 0.25%

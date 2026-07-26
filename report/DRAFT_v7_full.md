@@ -2148,6 +2148,13 @@ Every entry is verified against the source before release.]
 
 ## Appendix C — data and reproducibility
 
+This report is produced with model version v1.1: the single-node
+(copper-plate) model with the corrected distributed-solar treatment of
+Appendices A.11–A.12. v1 designates the model as first circulated, whose
+rooftop fleet retired by 2050; minor revisions will increment as v1.11,
+v1.12, and larger ones as v1.2. v2 designates the planned regional (zonal)
+grid model (V2.md).
+
 The model is Switch 2.0.9 with CPLEX, solved on the University of Hawaiʻi's
 Koa cluster. The public repository contains the complete inputs, the build
 scripts that regenerate them from vendored primary sources, the scenario
