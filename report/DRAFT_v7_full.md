@@ -797,14 +797,17 @@ the optimizer dispatches against price — bear on the policy case. First, at
 today's trajectories the two representations agree closely (within about 50
 MW of 2050 utility solar on the conservative path, about 90 on the
 realistic): predictable evening-shifted battery behavior is close enough to
-optimal that the grid can plan around it. Second, at accelerated scale the
-value of coordination grows. With two gigawatts of distributed PV backed by
-storage, the optimizer treats the rooftop battery fleet as a system asset,
-absorbing midday output and firming evenings, and distributed curtailment
-stays below one percent even at 2.1 GW. Real-time pricing, or any tariff
-that approximates it, is what turns today's clock-driven battery behavior
-into that coordinated resource; the same policy that accelerates adoption
-also raises the value of each installed system.
+optimal that the grid can plan around it. Second, even at accelerated
+scale, coordination changes what gets built more than what it costs. At
+2.1 GW the optimizer treats the rooftop battery fleet as a system asset —
+absorbing midday output, firming evenings, substituting for utility-scale
+batteries, and supporting about 200 MW more utility solar — yet total
+system cost matches the fixed-behavior case within about $0.25 billion (at
+most two tenths of a cent per kilowatt-hour), and distributed curtailment
+stays below one percent. Predictable evening-shifted behavior is nearly as
+valuable to the grid as perfect dispatch; what real-time pricing mainly buys
+is the adoption itself, and a grid that can substitute rooftop batteries for
+utility ones.
 
 **The cost of the mandate, priced directly.** Removing the 100 percent RPS
 constraint and letting the model choose freely, the no-new-plant least-cost
