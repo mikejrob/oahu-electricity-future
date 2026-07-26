@@ -1318,15 +1318,15 @@ combustion turbine.
 
 At the vendor's cost quote, the conversion configurations beat building the
 new plant. Kalaeloa alone saves more than JERA's plant does: the model
-routes about 210 million MMBtu of LNG through Kalaeloa's existing units —
-running them at 80–90 percent capacity factor through 2044 — with no new
-construction at all. Extending conversion to Kahe 5 and 6 and the CIP
+routes about 200 million MMBtu of LNG through Kalaeloa's existing units —
+running them at 80–90 percent capacity factor into the early 2030s and 60–80
+percent through 2044 — with no new construction at all. Extending conversion to Kahe 5 and 6 and the CIP
 turbine makes the no-new-plant configuration the cheapest LNG arrangement
 tested; on the credited basis the bare-EPC plant does not save at all
 (+0.54). And the terminal needs no mandate to be used this way: in a variant
 where LNG import is offered as an option rather than forced, the model
-activates the terminal and the Kalaeloa conversion on its own, reaching the
-same −0.40 as the forced-Kalaeloa case. At the quoted fuel price, the terminal
+activates the terminal and the Kalaeloa conversion on its own, reaching
+essentially the same saving (−0.38 against −0.40 forced). At the quoted fuel price, the terminal
 pays for itself through conversions alone.
 
 Because conversion capital is set to zero, each saving doubles as a
