@@ -14,3 +14,4 @@ scenarios/scenarios_p001_batch2.txt
 solve/solve_p001_batch2.slurm
 solve_env/
 noitc_archive/
+*.queued
