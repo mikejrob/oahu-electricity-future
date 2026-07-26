@@ -137,11 +137,14 @@ and wind averaged over a day, which is far below the momentary peak
 requirement costs about $0.26 billion, roughly two-tenths of a cent per
 kilowatt-hour, because the cheapest path runs ahead of the requirement
 through 2040 anyway and builds 95 percent of the solar even if the
-requirement is removed. Abandoning it saves about $0.41 billion if the replacement is a new
-gas plant and import terminal, and more if existing plants are converted to
-LNG instead, the cheaper route Finding 3 identifies. Either way, capturing
-the saving requires committing the island to imported gas through 2050
-(Section 4.6b).
+requirement is removed. Abandoning it saves about $0.41 billion if the 
+replacement is a new gas plant and import terminal, and a bit more if existing 
+plants are converted to LNG instead, the cheaper route Finding 3 identifies. 
+Either way, capturing this modest savings requires abandoning the clean 
+energy mandate while committing to a long-term contract and hoping the 
+contract price holds, which looks dubious as today's spot price (July 
+25, 2026) hovers around $22/MMBtu, nearly double the contract price we 
+assume (Section 4.6b).  
 
 **Also decisive.** The Waiau Repower, Hawaiian Electric's proposal to
 rebuild its old Waiau oil units, raises system cost by $1.35 to $1.40
