@@ -32,123 +32,124 @@ land and on rooftops. The choices that dominate public debate matter less.
 
 **Finding 1. The largest lever is the price Hawaiʻi pays to build solar and
 batteries.** Delivered solar costs here carry a large premium over mainland
-benchmarks. The evidence points mainly to soft costs: long procurement
-cycles, permitting, interconnection queues, and customer acquisition. It
-does not point to hardware, labor, or land, though the size of the gap is
-hard to measure precisely. If solar and battery costs stay 50 percent above
-our baseline for the whole period, total system cost rises by about $2.1
-billion. At 70 percent above, it rises by about $2.8 billion. Our baseline
-already includes a 20 percent Hawaiʻi premium, so these cases correspond to
-roughly 1.8 and 2.0 times the mainland benchmark. Recent procurement awards
-imply prices near that level (Section 2.3). This lever is large because a
-big solar buildout happens on every pathway, with or without new fuel
-plants, and to a considerable degree even without the clean-energy mandate.
-The price paid per installed watt therefore multiplies across gigawatts that
-get built regardless. Reforms that close even part of the gap are worth more
-than any fuel decision in this report, and they are within the State's own
-control (Section 2).
+benchmarks, and the evidence points mainly to soft costs — long procurement
+cycles, permitting, interconnection queues, customer acquisition — rather
+than to hardware, labor, or land, though the size of the gap is hard to
+measure precisely. If solar and battery costs stay 50 percent above our
+baseline for the whole period, total system cost rises by about $2.1
+billion; at 70 percent above, by about $2.8 billion. Because our baseline
+already includes a 20 percent Hawaiʻi premium, these cases correspond to
+roughly 1.8 and 2.0 times the mainland benchmark, near the level recent
+procurement awards imply (Section 2.3). The lever is large because a big
+solar buildout happens on every pathway — with or without new fuel plants,
+and to a considerable degree even without the clean-energy mandate — so the
+price paid per installed watt multiplies across gigawatts that get built
+regardless. Reforms that close even part of the gap are worth more than any
+fuel decision in this report, and they are within the State's own control
+(Section 2).
 
 **Finding 2. The second-largest lever is rooftop solar and storage, and most
 of its value is available with today's technology and behavior.** Oʻahu's
-roofs carry about 793 MW of solar today. Owners added about 42 MW per year
-from 2020 through 2024. That pace reached, in 2024, the level Hawaiian
+rooftops carry about 793 MW of solar today, added at about 42 MW per year
+over 2020–2024 — a pace that reached, in 2024, the level Hawaiian
 Electric's 2016 plan projected for 2034 (Appendix A.13). We measure what
-this fleet does using utility demand records. Each installed megawatt of
-rooftop solar removes about 0.61 MW of midday demand on the grid. Home
-batteries then move about 45 percent of their storage capacity into the
-evening hours each day (Appendix A.11). Rooftop growth substitutes almost
-directly for utility-scale solar and the land under it. If installations
-continue at the recent rate, the 2050 utility-scale build is about 4,100 MW
-on about 20,400 acres. If the resource is unleashed, rooftop capacity
-reaches about 2,100 MW and the utility-scale land requirement falls toward
-15,000 acres (Section 2.7). Unleashing means two things. Households and
-businesses get paid the full value of the power they export, instead of
-today's reduced credits. And new systems pair larger batteries, about two
-megawatt-hours per megawatt of panels, which is one Tesla Powerwall on a
-typical home system and the configuration federal tax credits now favor when
-a company owns the equipment and leases it to the customer. This lever is
-also cheap to pull. Batteries that follow today's simple pattern, charge at
-midday and discharge in the evening, deliver nearly all the value that
-perfectly coordinated batteries would. The difference is at most about
-two-tenths of a cent per kilowatt-hour even at large scale. Very little
-rooftop power goes to waste, because the batteries soak up the midday
-surplus.
+this fleet does to the grid directly from utility demand records: each
+installed megawatt removes about 0.61 MW of midday grid demand, and home
+batteries shift about 45 percent of their storage capacity into the evening
+hours each day (Appendix A.11). Because rooftop supply substitutes almost
+one-for-one for utility-scale solar, its growth determines how much open
+land the transition needs. Continuing the recent installation rate leads to
+about 4,100 MW of utility-scale solar on about 20,400 acres by 2050.
+Unleashing the resource — paying households and businesses the full value
+of the power they export, rather than today's reduced credits — could grow
+rooftop capacity to about 2,100 MW and cut the utility-scale land
+requirement toward 15,000 acres (Section 2.7). New systems would pair
+larger batteries, about two megawatt-hours per megawatt of panels (one
+Tesla Powerwall on a typical home system), which is the configuration
+federal tax credits now favor when a company owns the equipment and leases
+it to the customer. The grid does not need sophisticated coordination to
+capture this value. Batteries following today's simple pattern, charging at
+midday and discharging in the evening, deliver nearly all of what perfectly
+price-responsive batteries would — the difference is at most two-tenths of
+a cent per kilowatt-hour — and little rooftop power goes to waste, because
+the batteries absorb the midday surplus.
 
 **Finding 3. No new fuel plant pays for itself. If LNG comes to Oʻahu, its
 value is in the power plants the island already has.** JERA proposes a new
 500 MW plant fed by imported liquefied natural gas. We solve the proposal at
-the midpoint of JERA's own cost range. The low end is their construction
-estimate, which excludes items like insurance, customs, design allowance,
-and contingency. The high end is their own +20 percent sensitivity, which
-restores those items. At that midpoint, the JERA bundle costs $0.75 billion
-more than building no new fuel plant at reference oil prices. The range runs
-from $0.54 to $0.96 billion, and the gap is positive at every oil price
-tested (Table ES.1). This equals roughly half a cent per kilowatt-hour
-(Appendix A.1). The more useful comparison is different. Whatever advantage
-LNG offers comes from the fuel, not the plant. The same modern plant burning
-today's fuel oil costs even more. LNG burned in existing plants saves money.
+the midpoint of JERA's own cost range, between their construction estimate,
+which excludes items such as insurance, customs, design allowance, and
+contingency, and their own +20 percent sensitivity that restores them. At
+that midpoint the bundle costs $0.75 billion more than building no new fuel
+plant at reference oil prices, within a range of $0.54 to $0.96 billion,
+and the gap is positive at every oil price tested (Table ES.1) — roughly
+half a cent per kilowatt-hour (Appendix A.1). The more useful comparison is
+between the plant and the fuel: whatever advantage LNG offers comes from
+the fuel, not the plant. The same modern plant burning today's fuel oil
+costs even more, while LNG burned in existing plants saves money.
 Converting the independent Kalaeloa plant alone saves more than JERA's new
-plant would. Converting Hawaiian Electric's Kahe 5 and 6 and their CIP
-turbine as well saves several times as much, with no new construction.
-These savings hold up under conservative accounting. Hawaiian Electric
-priced its entire 2016 multi-island conversion program at $450 million in
-today's dollars. Charging that full amount against just the three Oʻahu
-units still leaves a saving of about $0.61 billion, and at least $0.35
-billion if a further $260 million of 2016 pipeline plans is added on top
-(Sections 4.3, 4.6a). Rooftop growth widens the gap against new plants,
-because a growing rooftop fleet leaves less demand for a new plant to
-serve. Considerations outside the cost model point the same way. A
-twenty-year contract with a single supplier will be written to protect the
-supplier, so its quoted price is best read as a floor. The plant delays
-clean-energy deployment for about a decade. Natural gas is mostly methane,
-a potent greenhouse gas, and some of it leaks from wells and pipelines
-before the fuel ever reaches a ship. And a utility that earns a regulated
-return on what it builds has reasons to favor building, whether or not
-building is cheapest for customers (Sections 4 and 8).
+plant would, and converting Hawaiian Electric's Kahe 5 and 6 and CIP
+turbine as well saves several times as much, with no new construction. The
+savings hold up under conservative accounting: charging Hawaiian Electric's
+entire 2016 multi-island conversion budget ($450 million in today's
+dollars) against just the three Oʻahu units still leaves about $0.61
+billion, and at least $0.35 billion if a further $260 million of 2016
+pipeline plans is added on top (Sections 4.3, 4.6a). Rooftop growth widens
+the gap against new plants, because growing rooftop supply leaves less
+demand for a new plant to serve. Considerations outside the cost model
+point the same way. These considerations include: a twenty-year contract
+with a take-or-pay commitment to buy from a single supplier, likely written
+to protect the supplier, so its quoted price is best read as a floor; the
+plant delays clean-energy deployment for about a decade; a likely increase
+in greenhouse gas emissions; and stranding of Hawaiian Electric's
+generation assets, which would compromise its already fragile financial
+position if capital recovery were disallowed, or otherwise burden their
+customers with higher rates to pay for obsolete capital (Sections 4 and 8).
 
 **Finding 4. Under current law, Enhanced Geothermal is in the least-cost
-build.** Enhanced Geothermal is a newer form of geothermal power that
-creates its own underground reservoir instead of relying on natural steam.
-With the federal geothermal tax credit in force, the model builds the full
-~100 MW of identified Oʻahu resource in the base case, lowering system cost
-by about $0.53 billion. At the optimistic cost projection the saving roughly
-doubles. At the pessimistic projection the model builds nothing and loses
-nothing, so the downside is bounded. Enhanced Geothermal is therefore part
-of the cheapest way to run the island, provided a first demonstration
-project proves the resource works here (Section 3) and it is pursued in
-partnership with Native Hawaiian communities (Section 3.5).
+build.** Enhanced Geothermal, a newer form of geothermal power that creates
+its own underground reservoir rather than relying on natural steam, enters
+the cheapest build under the federal geothermal tax credit: the model
+develops the full ~100 MW of identified Oʻahu resource in the base case,
+lowering system cost by about $0.53 billion. At the optimistic cost
+projection the saving roughly doubles; at the pessimistic projection the
+model builds nothing and loses nothing, so the downside is bounded.
+Enhanced Geothermal is therefore part of the cheapest way to run the
+island, provided a first demonstration project proves the resource works
+here (Section 3) and it is pursued in partnership with Native Hawaiian
+communities (Section 3.5).
 
-**Finding 5. The constraints people worry about mostly do not bind.**
-Start with land. Every pathway that meets the 2045 mandate, including
-JERA's, builds nearly the same solar on nearly the same 20,400 acres. The
-paths differ mainly in timing. The eligible inventory exceeds what gets
-built, and flatter reserves stand behind it: prime cropland that current law
-holds back, military parcels, closed golf courses and quarries, and the
-built environment itself (Section 2.5). Hawaiian Electric's and the State
-Energy Office's own studies show the same pattern, with LNG changing the
-solar buildout very little within their scenarios (Section 2.5a). Next,
-reliability. Every scenario keeps the lights on at every modeled hour,
-across weather drawn from the 2007–2008 record, including its single
-hardest day: low sun, weak winds, and an evening peak. The reason is that
-batteries move energy within the day, so firm resources only need to cover
-demand net of solar and wind averaged over a day, which is far below the
-momentary peak (Section 5). Last, the mandate itself. Keeping the 2045
-clean-energy requirement costs about $0.26 billion, roughly two-tenths of a
-cent per kilowatt-hour. The cheapest path runs ahead of the requirement
-through 2040 anyway, and builds 95 percent of the solar even if the
+**Finding 5. The constraints people worry about mostly do not bind.** Start
+with land. Every pathway that meets the 2045 mandate, including JERA's,
+builds nearly the same solar on nearly the same 20,400 acres, differing
+mainly in timing. The eligible inventory exceeds what gets built, flatter
+reserves stand behind it — prime cropland that current law holds back,
+military parcels, closed golf courses and quarries, and the built
+environment itself — and Hawaiian Electric's and the State Energy Office's
+own studies show the same pattern, with LNG changing the solar buildout
+very little within their scenarios (Sections 2.5, 2.5a). Next, reliability.
+Every scenario keeps the lights on at every modeled hour, across weather
+drawn from the 2007–2008 record including its single hardest day of low
+sun, weak winds, and an evening peak. The reason is that batteries move
+energy within the day, so firm resources need to cover demand net of solar
+and wind averaged over a day, which is far below the momentary peak
+(Section 5). Last, the mandate itself. Keeping the 2045 clean-energy
+requirement costs about $0.26 billion, roughly two-tenths of a cent per
+kilowatt-hour, because the cheapest path runs ahead of the requirement
+through 2040 anyway and builds 95 percent of the solar even if the
 requirement is removed. Abandoning it saves at most $0.41 billion, and
 capturing even that requires building a gas plant and an import terminal
 (Section 4.6b).
 
 **Also decisive.** The Waiau Repower, Hawaiian Electric's proposal to
 rebuild its old Waiau oil units, raises system cost by $1.35 to $1.40
-billion at every oil price tested. Every bundle that contains it inherits
-that penalty (Section 6). And if a new plant were built at all, 500 MW is
-larger than the system wants. A 375 MW version does modestly better in
+billion at every oil price tested, and every bundle that contains it
+inherits that penalty (Section 6). If a new plant were built at all, 500 MW
+is larger than the system wants: a 375 MW version does modestly better in
 every configuration tested, and converting existing units beats both at
-JERA's quoted costs (Sections 4.1, 4.3, 4.6a). One caution: JERA attributes
-its attractive quote partly to scale, so a smaller plant might not get the
-same price per megawatt.
+JERA's quoted costs (Sections 4.1, 4.3, 4.6a). One caution applies — JERA
+attributes its attractive quote partly to scale, so a smaller plant might
+not get the same price per megawatt.
 
 **Table ES.1 — Total 2027–2050 system cost by trajectory and oil price
 (present value, billions of 2024$; difference vs. no new fuel plant in
