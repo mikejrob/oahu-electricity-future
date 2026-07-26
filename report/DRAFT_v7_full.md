@@ -271,8 +271,8 @@ Two clarifications set the limits of this claim. First, the mainland benchmark
 is not hardware alone. NREL's utility-scale PV cost model, which underlies the
 ATB figures used here, builds capital cost from the ground up and already
 includes soft costs, among them permitting, inspection and interconnection,
-customer acquisition, developer overhead, and profit [verify: NREL PV System
-Cost Benchmark, Ramasamy et al., Q1 2023, CAPEX component table]. Bringing
+customer acquisition, developer overhead, and profit (NREL PV System Cost
+Benchmark, Ramasamy et al., Q1 2023, NREL/TP-87303, CAPEX component table). Bringing
 Oʻahu near mainland cost therefore means narrowing Hawaiʻi's excess soft cost,
 not removing a category every market carries. Second, the size of that excess
 is difficult to measure directly, because Hawaiʻi procurement records do not
@@ -426,8 +426,10 @@ Texas is the clearest illustration of how far this can go. Generators there
 interconnect under connect-and-manage at a fraction of the cost and time of the
 invest-and-connect regions, without the network-upgrade charges that dominate
 elsewhere, which places its interconnection soft costs at or below the mainland
-average rather than above it [verify: Utility Dive, ERCOT connect-and-manage
-coverage, 2024–25]. Texas also carries a very large interconnection queue, but
+average rather than above it (Utility Dive, "Can ERCOT show the way to faster and cheaper grid
+interconnection?", 2023; ERCOT led all U.S. operators in interconnection
+volume in 2024, with Berkeley Lab attributing the lead in part to
+connect-and-manage). Texas also carries a very large interconnection queue, but
 for reasons unrelated to the cost of the process itself: a surge of speculative
 generation and large-load data-center requests, much of which has not submitted
 enough information to be studied. A long queue under cheap, open access is a
@@ -565,9 +567,7 @@ that toward offshore wind, rooftop solar, and firm renewables (IGP
 Supplemental Response, Docket 2018-0088, Nov 14 2023 — quote p. 10; plan
 composition pp. 13, 21, 62; public filing). Two facts bear on those substitutions: 
 offshore wind does not appear as a near-term resource in HSEO's current
-planning materials [verify: HSEO Ocean Energy Fact Sheet, Oct 2025,
-energy.hawaii.gov/wp-content/uploads/2025/10/HSEO-Ocean-Energy-Fact-Sheet.pdf
-— document confirmed to exist; read to confirm the near-term characterization], and our model — which prices offshore wind throughout — never
+planning materials (HSEO Ocean Energy Fact Sheet, Oct 2025, energy.hawaii.gov/wp-content/uploads/2025/10/HSEO-Ocean-Energy-Fact-Sheet.pdf), and our model — which prices offshore wind throughout — never
 selects it, in any scenario, at any oil price, including the land-constrained
 cases. A plan that avoids solar land by leaning on offshore wind leans on the
 option every current cost estimate rejects. If land contraints bind on utility
@@ -605,8 +605,9 @@ about 65 percent of Class C acreage exceeds a 5 percent grade against about 40
 percent for Classes A and B. However, standard single-axis trackers tolerate 
 slopes to roughly 15 percent (the documented upper end for current hardware; 
 companion study slope-cost review), with only modest cost increases, so much 
-of the sloped B/C acreage remains buildable [verify: compute the share of B 
-and C acreage at or below 15 percent grade from the companion GIS data]. Of 
+of the sloped B/C acreage remains buildable (about 92 percent of the mapped
+B/C envelope — 25,503 of 27,828 acres — lies at or below 15 percent grade;
+companion inventory, Figure 2.3). Of 
 eight special use permit applications that have come before the Land Use 
 Commission on Oʻahu, seven have been approved unanimously without 
 intervenors, and one is currently under review [verify: assemble the LUC 
@@ -722,8 +723,8 @@ directly on the solar-cost lever.
    against actual grid conditions, rather than waiting years for the full
    network-upgrade studies that dominate interconnection cost and time in most
    U.S. markets. ERCOT operates this way and has brought capacity online faster
-   and at lower interconnection cost than the invest-and-connect regions [verify:
-   Utility Dive, ERCOT connect-and-manage]. Making it work in a single-utility
+   and at lower interconnection cost than the invest-and-connect regions (Utility Dive, "Can ERCOT show
+   the way to faster and cheaper grid interconnection?", 2023). Making it work in a single-utility
    setting like Oʻahu, where no market arbitrates curtailment, requires dispatch
    rules that are clear, fair, and independently audited, so that a project
    accepting managed curtailment knows in advance how and when it will be
