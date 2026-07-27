@@ -436,11 +436,11 @@ reference), and displaced energy avoids more than fuel alone.
 These are not lofty projections. Other countries with more 
 streamlined interconnection policies and similar labor costs have seen even lower
 prices for solar, especially when IRA subsidies are taken into account. These 
-squandered savings present a warning and incentive for reform (Section 2.6). There is 
-also a remote chance of reviving recently canceled solar projects in time to take 
-advantage of the IRA subsidies. Under the 2025 federal tax law, a revived
-project qualifies if it was under construction before July 2026 or reaches
-service by the end of 2027 — a tight but not impossible window that a
+squandered savings present an incentive for reform, and warning if reform fails 
+(Section 2.6). There is also a remote chance of reviving recently canceled solar 
+projects in time to take advantage of the IRA subsidies. Under the 2025 federal 
+tax law, a revived project qualifies if it was under construction before July 
+2026 or reaches service by the end of 2027 — a tight but not impossible window that a
 "connect and manage" interconnection rule, described below, is the kind of
 reform that could open.
 
@@ -874,7 +874,7 @@ valuable to the grid as perfect dispatch; what real-time pricing mainly buys
 is the adoption itself, and a grid that can substitute rooftop batteries for
 utility ones.
 
-**The cost of the mandate, priced directly.** Removing the 100 percent RPS
+**The cost of the mandate.** Removing the 100 percent RPS
 constraint and letting the model choose freely, the no-new-plant least-cost
 path still reaches about 3,860 MW of utility solar by 2050 — 95 percent of
 the mandated build — and oil's share of generation falls to about 4 percent
@@ -1754,16 +1754,23 @@ midpoint of JERA's own cost range — their bare-EPC estimate and their +20%
 sensitivity, which restores the customs, insurance, design-allowance and
 contingency items the estimate itself says it excludes — the JERA bundle is
 about $0.75 billion more expensive over twenty-four years, and more expensive
-in every oil-price case tested. Per kilowatt-hour delivered, the difference is
-about half a cent — small against a bill of thirty-plus cents, so the
-cost gap alone does not decide the question, but it no longer favors LNG in any
-case, and every consideration outside the cost model points the same way. The
-findings that are larger: the Waiau Repower is uneconomic under every oil price
-tested (+$1.4 billion); if any new plant is built it should be smaller than
-JERA's 500 MW; solar-and-storage procurement reform is worth several times any
-fuel decision; and, under current law, Enhanced Geothermal is in the least-cost
-build with meaningful value at no
-meaningful cost.
+in every oil-price case tested. In other words, it earns back approximately 
+one half its up front capital expense in fuel savings. In an open, competitive
+market (which regulated electricity is not), no firm would make such an 
+investment. Per kilowatt-hour delivered, the difference is about half a cent —
+small against a bill of thirty-plus cents, so if there were compensating benefits
+in terms of reduced emissions, energy security, local economic spillovers, 
+such an investment might be justified. But on these measures, a new combined-cycle
+plant, even at JERA's competive price, make the investment look worse, not better. 
+There might be a case for LNG paired with retrofits of existing plants. There we 
+see real savings, but they would be unnoticable on most customers' bills, maybe
+a half-cent per kWh less, and the off-model implications are as likely to reduce
+the benefits as increase them. Clearer findings from the analysis are that the Waiau 
+Repower is uneconomic under every oil price tested (+$1.4 billion); if any new plant 
+is built it should be smaller than JERA's 500 MW; solar-and-storage procurement reform 
+is worth several times any fuel decision; and, under current law, Enhanced Geothermal 
+is in the least-cost build with meaningful value at no meaningful downside if the 
+new technology is accepted by the community.
 
 **When the cost gap is small, the decision rests on structure — and the structures are
 not symmetric.** The no-new-thermal path is an option-rich position: it commits
@@ -1774,19 +1781,18 @@ two-decade commitment to a single supplier, under a confidential contract, tied
 to infrastructure with one use. Its advertised price should be read as a
 **floor**: whatever formula the contract carries — indexed to
 world oil or to mainland gas — it will be written, as such contracts are, to
-insure the supplier's return. The bare-EPC cost quote
-in JERA's proposal carries the same asymmetry: it explicitly excludes
-contingency, insurance, customs, and design allowance, categories that
-history says run over (three of four electricity projects exceed
-their estimates; Sovacool, Gilbert & Nugent 2014). And the supplier itself has recently demonstrated the asymmetry
-in practice: JERA exited its own 20-year Commonwealth LNG contract when market
-conditions turned — an exit Hawaiʻi, having built the terminal and unwound its
-oil logistics, could not mirror. None of this is priced in the model. All of it
-weighs on one side.
+insure the supplier's return. The bare-EPC cost quote in JERA's proposal carries the 
+same asymmetry: it explicitly excludes contingency, insurance, customs, and 
+design allowance, categories that history says run over (three of four electricity 
+projects exceed their estimates; Sovacool, Gilbert & Nugent 2014). And the supplier 
+itself has recently demonstrated the asymmetry in practice: JERA exited its own 20-year 
+Commonwealth LNG contract when market conditions turned — an exit Hawaiʻi, having 
+built the terminal and unwound its oil logistics, could not mirror. None of this is 
+priced in the model. All of it weighs on one side.
 
 **On emissions, the combustion accounting is neutral — and the tie does
 not survive the gas field.** Counting only what is burned on Oʻahu, the LNG
-path and the clean-energy path produce nearly the same cumulative CO₂
+path and the clean-energy path produce similear cumulative CO₂
 through 2050: LNG's efficiency and lower carbon intensity displace oil early
 (roughly −0.8 Mt/yr around 2030), but the plant also displaces solar and
 storage that would otherwise have been built, leaving the island's power about
@@ -1795,22 +1801,22 @@ decade of deferred clean energy, with the ledger closing only because the RPS
 forces both paths to 100 percent by 2045. Combustion, though, is only part
 of the ledger. Natural gas is mostly methane, a far
 more potent greenhouse gas over the decision-relevant decades, and some of it
-leaks — from wells, gathering lines, processing, liquefaction, and shipping.
+leaks — from wells, gathering lines, processing, liquefaction, and shipping. 
 How much depends on where the gas comes from, and here the debate splits on a
-question of incidence. If one counts only the **literal source** — the specific
+question of incidence. If one counts only the *literal source* — the specific
 cargoes Hawaiʻi would buy, plausibly from relatively low-leakage suppliers —
 the upstream penalty may be modest. But the economically meaningful question is
-the **marginal source**: when global LNG demand rises by one buyer, which
+the *marginal source*: when global LNG demand rises by one buyer, which
 production expands to meet it? U.S. exports are the growing margin of
 world LNG supply, drawn from the Haynesville and from Permian associated gas
 (EIA 2026), and measured U.S. leakage rates are far above the tie-breaking
 thresholds — 0.75 to 9.6 percent by basin, 2.95 percent production-weighted
-(Sherwin et al. 2024, *Nature*, ~1M aerial site measurements). On that incidence, the upstream
-penalty ranges from material to severe. We do not put a single number on it;
-the range is wide and reasonable people will weigh the incidence question
-differently. The direction, though, is clear: **any nonzero leakage breaks
+(Sherwin et al. 2024, *Nature*, ~1M aerial site measurements). On that incidence, 
+the upstream penalty ranges from material to severe. We do not put a single 
+number on it; the range is wide and reasonable people will weigh the incidence 
+question differently. The direction, though, is clear: any nonzero leakage breaks
 the combustion tie against LNG, and the marginal-source reading breaks it
-badly.**
+badly.
 
 **The costs the model does not price fall disproportionately on one side.**
 Three sit outside the capacity-expansion frame and deserve weight in the
@@ -1849,11 +1855,11 @@ recovery destroys no resources: the plants are built, the money spent;
 disallowance changes only who bears a sunk cost. From the standpoint
 of Hawaiʻi residents specifically, the distinction matters more: Hawaiian
 Electric's shareholders are predominantly institutional and largely
-out-of-state (~73 percent institutional per 2025 13F aggregations), so a write-down of legacy rate base would
-function, in substantial part, as a transfer from external investors to local
-ratepayers — one large enough, on some readings, to offset much of the new
-capital the transition requires. We do not advocate that outcome, and two
-considerations weigh against welcoming it: a utility whose investors absorb an
+out-of-state (~73 percent institutional per 2025 13F aggregations), so a write-down 
+of legacy rate base would function, in substantial part, as a transfer from external 
+investors to local ratepayers — one large enough, on some readings, to offset 
+much of the new capital the transition requires. We do not advocate that outcome, 
+and two considerations weigh against welcoming it: a utility whose investors absorb an
 unplanned stranding pays more for capital on everything it builds afterward, a
 premium that returns to ratepayers through the wires and grid investment every
 pathway needs; and cost recovery on prudently incurred investment is the
@@ -1955,43 +1961,41 @@ permitting, land policy — that are within Hawaiʻi's own power to fix. With th
 reform delivered, the no-new-thermal path is plausibly
 the least-cost path outright, and it comes with insulation from fuel-price
 shocks in a world that keeps supplying them. Hawaiʻi imports every barrel and
-would import every shipload; sun and storage are the only energy inputs the
+would import every shipload on LNG; sun and storage are the only energy inputs the
 State will ever own. The weather-driven variability of a renewables-dominant
 grid, which the model meets hour-by-hour on the hardest day in the historical
 record, is by comparison a solved engineering problem. With the right political
 will, Hawaiʻi can decarbonize faster and more cheaply than any other state.
 Within the error of our tools, the analysis suggests that the cheapest version
-of Hawaiʻi's future and the cleanest one are the same.
+of Hawaiʻi's future and the cleanest one are virtually the same.
 
 **What we recommend.** (1) Treat solar-and-storage procurement reform (Act 266
 implementation, interconnection throughput, land policy) as the most consequential
 energy decision before the Commission and the Legislature. It dominates
-everything else in this report. (2) Do not commit to the JERA bundle on cost
-grounds: the cost case is a tie at best, bought with a floor-priced contract
-and an optimistic capital quote, and the contract, delivery, and emissions
-risks all point one way.
-Any LNG case should be required to clear a no-new-thermal counterfactual, at a
-delivered (not bare-EPC) capital cost, with the contract's floor/ceiling
-asymmetry priced. Any LNG proceeding should resolve *up front* how the
-Commission will treat capital recovery on the Hawaiian Electric generation the
-plant would idle, so that neither customers nor shareholders discover the
-stranding bill after the contract is signed. (3) Revisit the Waiau Repower scope to whatever extent
-Docket 2025-0211 allows; it is the clearest negative-value item in the
-analysis. (4) Fund the Enhanced Geothermal demonstration pathway; the option is
-cheap and the payoff asymmetric. (5) If firm thermal capacity is nonetheless
-procured, size it to the system's need (roughly 250–375 MW, not 500) and
-preserve fuel flexibility rather than locking to a single imported fuel.
+everything else in this report; get the pricing mechanism right and it could be 
+transformative. (2) It probably doesn't make sense to build a new power plant of
+any kind beyond the anticipated 99 MW plant at Pu‘uloa, but LNG might be entertained
+further in conjunction with conversion of existing plants. The stakes here are 
+smaller than some believe, and some of the tradeoffs are subtle. There would be
+little downside to collecting competitive bids for leased facilities and the best
+possible contract terms, and then making a decision.
+(3) Revisit the Waiau Repower scope to whatever extent Docket 2025-0211 allows; it 
+is the clearest negative-value item in the analysis. (4) Fund the Enhanced Geothermal 
+demonstration pathway; the option is cheap and the payoff asymmetric.
 
 **What would change our minds.** We state these so readers can hold us to
-them: sustained delivered-LNG prices well below the contract floor we
-model; a JERA capital commitment at its bare-EPC figure with the exclusions
-borne by the developer; procurement reform failing so durably that the
-effective Hawaiʻi premium stays at multiples of the mainland benchmark — in
-which case the thermal case strengthens on our own numbers; or upstream
-leakage evidence that resolves toward the low end under a verifiable
-supply-chain commitment. The model, inputs, and every number in this report are
-public; we invite anyone — including those who disagree — to change our minds
-with better evidence, and we commit to publishing whatever the numbers say.
+them: (1) sustained delivered-LNG prices well below the contract floor we
+model with clear terms that would ensure delivery of contracted fuel 
+even under major disruptions to world fuel markets (like today); (2) solar procurement reform 
+failing, so that even with simplified PPA terms, streamlined inteconnection, and 
+universal purchase at real-time avoided cost of any clean energy 
+provided to the grid by any customer or third party seller, solar cannot be procured 
+in the necessary quantities for prices less than double those typical in other states; 
+(3) detailed clarification of which lands are available for solar and which lands
+are not, and that . 
+The model, inputs, and every number in this report are public; we invite anyone — 
+including those who disagree — to change our minds with better evidence, and we 
+commit to publishing whatever the numbers say.
 
 *[Section 8 above is the working conclusions text under author revision;
 the bracketed employment ranges and fleet-utilization figures will be
