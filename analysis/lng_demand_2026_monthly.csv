@@ -1,0 +1,36 @@
+region,period,metric,value,unit,yoy_change,source,note
+Global,Mar 2026,LNG production,,bcm,-8% (-4 bcm),IEA Gas Market Report Q2-2026 p.7,Qatar+UAE loadings -9.5 bcm y/y; partly offset by new North America/Africa projects
+Global,Mar 2026,LNG deliveries,,bcm,-2% (-1 bcm),IEA GMR Q2-2026 p.7,Deliveries lag loadings due to shipping time; pre-war-loaded cargoes still arriving
+Global,1-20 Apr 2026,LNG deliveries,,bcm,-10% (>-3 bcm),IEA GMR Q2-2026 p.7,Full volumetric effect of Hormuz closure arrives
+Global,Mar-Jun 2026,LNG production,,bcm,-4% (-8 bcm),IEA GMR Q3-2026 p.6,Qatar+UAE loadings -35 bcm y/y; non-Gulf production +18% (+27 bcm) offset ~3/4 of Gulf loss
+Middle East exports,Mar 2026,LNG deliveries from region,,bcm,-45% (-5.5 bcm),IEA GMR Q2-2026 p.20,
+Middle East exports,Apr 2026,LNG supply decline y/y,-9.6,bcm,peak monthly loss,IEA GMR Q3-2026 p.22,Monthly y/y loss softened to -8.7 bcm May and -8.0 bcm June
+Asia total,Mar 2026,LNG imports,,bcm,-6% (-2 bcm),IEA GMR Q2-2026 p.20,Despite China -30%; some markets secured alternative supply
+Asia total,Mar-May 2026,LNG imports,,bcm,"avg -7%/month (-2.2 bcm/month)",IEA GMR Q3-2026 p.22,Largest single balancing factor in the global market in these months
+Asia total,Jun 2026,LNG imports,21.83,Mt,+1.3% (vs 21.55 Mt Jun 2025),Kpler ship-tracking via Bloomberg/energyconnects 2026-06,Returned to y/y growth; highest in five months
+China,Feb 2026,LNG imports,3.86,Mt,-13.9%,China GACC customs via LNG Prime,Decline pre-dates war: weak industrial demand + high resale of term cargoes
+China,Mar 2026,LNG imports,3.95,Mt,-19.2%,China GACC customs via LNG Prime,IEA GMR Q2 reports Mar -30% y/y (-2 bcm) on delivered basis (Kpler-type data); Q1 total 14.42 Mt -6.4%
+China,Apr 2026,LNG imports,,Mt,-23%,China GACC customs via LNG Prime,Lowest monthly LNG arrivals in eight years (Bloomberg); all-gas imports 8.42 Mt -13% y/y
+China,May 2026,LNG imports,4.9,Mt,marginally above May 2025,GACC via Bloomberg 2026-06-02,Buyers restocking ahead of summer
+China,Jun 2026,LNG imports,5.68,Mt,+8.3%,GACC customs via Bloomberg 2026-07-20,Kpler delivered estimate was 5.29 Mt (~flat); customs vs ship-tracking discrepancy
+China,H1 2026,LNG imports,,,-5.6% (customs) / -5% -4 bcm (IEA),GACC via Bloomberg; IEA GMR Q3-2026 p.34,Most of downside Feb-Apr; Mar-Jun gas DEMAND -4% y/y; domestic output +3%
+India,Mar 2026,LNG imports,,,-16%,IEA GMR Q2-2026 p.20 / Q3-2026 p.35,Petronet declared force majeure 3 Mar; GAIL allocation cut to zero 4 Mar (press)
+India,Apr 2026,LNG imports,,,-7%,IEA GMR Q3-2026 p.35,
+India,May 2026,LNG imports,,,+7%,IEA GMR Q3-2026 p.35,Rebound on diversified supply: Africa ~3x; North America +70%; Middle East -40% (Jan-May-ish period)
+India,Jan-May/Jun 2026,LNG imports,11,bcm,+1%,IEA GMR Q3-2026 p.35,Imports UP despite crisis: falling domestic production (22 consecutive months of decline) forced spot buying
+Japan,H1 2026,LNG imports,,bcm,"-2% (-0.7 bcm)",IEA GMR Q3-2026 p.23,Kashiwazaki-Kariwa-6 restart + coal-cap relaxation (1 Apr) reduced gas burn; gas-fired generation -10% since March
+Japan,Jun 2026,LNG imports,5.33,Mt,above Jun 2025,Kpler via energyconnects/Bloomberg,Highest in three months (summer cooling)
+Korea,Jun 2026,LNG imports,3.26,Mt,,Kpler via energyconnects/Bloomberg,H1 gas demand +2% y/y (nuclear maintenance outages in April); FY26 projected -1%
+Pakistan,Mar 2026,LNG imports,,,-70%,IEA GMR Q2-2026 p.20,Relied almost exclusively on Qatar
+Pakistan,H1 2026,LNG imports,,bcm,"-47% (-2.4 bcm)",IEA GMR Q3-2026 p.23,
+Bangladesh,Mar 2026,LNG imports,,,-11%,IEA GMR Q2-2026 p.20,Fertilizer production curtailed
+Europe,Oct 2025-Mar 2026,LNG imports,,bcm,"+19% (+17 bcm)",IEA GMR Q2-2026 p.21,Storage-driven pull; Q1 2026 record imports from US and Russia (IEA GMR Q2)
+Europe,Mar-Jun 2026,LNG cargo arrivals,,bcm,"-10% (-5.5 bcm)",IEA GMR Q3-2026 p.23,Monthly deficit grew each month as Asian premium diverted flexible cargoes; H1 overall ~flat y/y
+Egypt,H1 2026,LNG imports,,bcm,"+165% (+5.5 bcm)",IEA GMR Q3-2026 p.23,Domestic production collapse; little Hormuz sensitivity
+EU,end-Mar 2026,Underground storage fill,28,% full,vs 34% end-winter 2024/25,IEA GMR Q2-2026 p.43 (GIE AGSI+ data),Lowest end-winter level since 2022; pre-winter fill was only 83%
+EU,end-Jun 2026,Underground storage,,bcm,"-17% (>-10 bcm) y/y; -23% vs 5-yr avg",IEA GMR Q3-2026 p.43,H1 gross injections -15% y/y; 90% fill target needs +66% injections Jul-Oct
+Japan,Q1 2026,Power-utility LNG stocks,,,above 5-yr average,IEA GMR Q3-2026 p.43 (METI data),Stocks ABOVE average through crisis: Japan's response was consumption/fuel-switching not stock drawdown
+Korea,end-Apr 2026,LNG inventories,,,~40% below 5-yr average,IEA GMR Q3-2026 p.43,Near bottom of 5-yr range since 2025; inventory drawdown part of Korea's crisis response
+Prices,Mar 2026,Platts JKM monthly avg,21,USD/MMBtu,+95% m/m,IEA GMR Q2-2026 p.7,Highest monthly avg since Jan 2023; TTF avg $18 (+55% m/m); JKM-TTF spread flipped to $2.8 Asian premium
+Prices,Q2 2026,Platts JKM quarterly avg,17.5,USD/MMBtu,+45% y/y,IEA GMR Q3-2026 p.7,TTF Q2 avg ~$16 (+32% y/y); both highest Q2 since 2022; fell 12%/6% after mid-June interim agreement
+Prices,20 Jul 2026,JKM spot,21.03,USD/MMBtu,+75.5% y/y,Trading Economics JKM series,+32.6% over prior month as hostilities resumed

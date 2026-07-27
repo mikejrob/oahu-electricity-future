@@ -63,7 +63,11 @@ about 4,100 MW of utility-scale solar on about 20,400 acres by 2050.
 Unleashing the resource — paying households and businesses the full value
 of the power they export, rather than today's reduced credits — could grow
 rooftop capacity to about 2,100 MW and cut the utility-scale land
-requirement toward 15,000 acres (Section 2.7). New systems would pair
+requirement toward 15,000 acres (Section 2.7). That trajectory is
+illustrative rather than predicted. No one knows how much capacity would
+follow a tariff no one has yet offered, and even it uses only about half
+of the mapped rooftop potential. Its purpose is to show the direction and
+the scale: rooftop growth substitutes for open land. New systems would pair
 larger batteries, about two megawatt-hours per megawatt of panels (one
 Tesla Powerwall on a typical home system), which is the configuration
 federal tax credits now favor when a company owns the equipment and leases
@@ -137,8 +141,8 @@ and wind averaged over a day, which is far below the momentary peak
 requirement costs about $0.26 billion, roughly two-tenths of a cent per
 kilowatt-hour, because the cheapest path runs ahead of the requirement
 through 2040 anyway and builds 95 percent of the solar even if the
-requirement is removed. Abandoning it saves about $0.41 billion ([X cents per 
-kWh]) if the 
+requirement is removed. Abandoning it saves about $0.41 billion (about 0.3 cents per
+kilowatt-hour) if the 
 replacement is a new gas plant and import terminal, and a bit more if existing 
 plants are converted to LNG instead, the cheaper route Finding 3 identifies
 [verify -- the new plant may make sense if pushing more fuel beyhon 2050;
@@ -524,27 +528,39 @@ runs toward these flatter categories rather than toward more total land: the
 question the map settles is availability, not siting certainty for any single
 parcel (Figure 2.3).
 
-![Figure 2.3 — plausibly available solar land, the modeled subset, and transmission](figures/fig_2_3_available_land_map.png) — 27,256 eligible acres across 653 sites, 91 percent of 
-it marginal or non-agricultural. Relaxed terrain rules raise the inventory 
-to 49,181 acres. The companion land study quantifies the statutory B/C cap
-directly at the parcel level (its `notes/cap-quantification.md`, run July
-2026): under current law, as-of-right B/C eligibility on Oʻahu is about
-3,600 acres, and the binding element is the hard 20-acre-per-parcel cap
-rather than the 10 percent. Raising the share to 20 percent while keeping
-the 20-acre cap adds only about 1,100 acres; dropping the hard cap at the
-existing 10 percent nearly triples eligibility (to about 9,400 acres); and
-20 percent without the hard cap yields about 15,700 acres, a 4.3× increase. 
-Class B/C lands can be used for solar under agrivolatic systems under special 
-use permits granted by the Land Use Commission, and these have generally received 
-unanimous approval without intervenors. While community groups have blocked solar 
-on Maui, and new rules Wind setbacks severely constrain on-shore wind potential 
-for O‘ahu, we have not found evidence of community blocking solar development on Oahu.
-[Revisit and verify note to figure. Clarify seemingly contrary fugures: there are 
-only 36,000 B/C agriculture land, so it's hard to understand how a 20% cap
-would yield 15,700 acres. Be sure to note that the selected class B/C parcels
-are not physical selections, but representative of the area that the model 
-is allowed to select.]
+![Figure 2.3 — plausibly available solar land, the modeled subset, and transmission](figures/fig_2_3_available_land_map.png)
 
+The map and the model describe the same inventory at two levels of detail.
+The map's modeled subset totals about 30,300 acres: roughly 26,500 acres of
+Class D/E agricultural land, which carries no statutory cap, plus a
+3,800-acre draw of Class B/C parcels. The screening and clustering that turn
+that footprint into model inputs yield 5,451 MW of buildable capacity —
+27,256 acres at five acres per megawatt — across 54 tranches (18 areas in
+three slope bands), 91 percent of it on marginal or non-agricultural soils.
+The selected B/C parcels are not physical site choices. They are a
+quasi-random draw representing the amount of area current law allows, and
+any similarly sized set of parcels would serve the analysis equally well.
+
+The companion land study quantifies the statutory B/C cap directly at the
+parcel level (its notes/cap-quantification.md, run July 2026). Under current
+law, as-of-right B/C eligibility on Oʻahu is about 3,600 acres, and the
+binding element is the hard 20-acre-per-parcel cap rather than the 10
+percent share. Raising the share to 20 percent while keeping the 20-acre cap
+adds only about 1,100 acres; dropping the hard cap at the existing 10
+percent nearly triples eligibility, to about 9,400 acres; and 20 percent
+with no hard cap yields about 15,700 acres, a 4.3 times increase. The
+15,700-acre figure can look surprising against the island's roughly 34,400
+acres of agricultural-district B/C soil, but the cap is a share of each
+parcel's total acreage, not of its B/C acreage, and B/C soil is concentrated
+in very large parcels — the largest tenth of parcels hold 91 percent of it —
+so a 20 percent parcel share reaches nearly half the B/C total. The same
+concentration means relaxing the cap mostly transfers development option
+value to large landowners, a point the companion study develops. Class B/C
+lands can also be used for solar under agrivoltaic systems through special
+use permits from the Land Use Commission, which have generally received
+unanimous approval without intervenors. Community groups have blocked solar
+on Maui, and setback rules severely constrain onshore wind on Oʻahu, but we
+have found no case of a blocked solar project on Oʻahu.
 
 Physical acreage is sufficient; the binding questions are pace, process, and
 terms. A companion study of Oʻahu land availability and the political economy
@@ -689,15 +705,19 @@ inventory where these categories are being mapped and characterized, and
 contributions — corrections, parcels, local knowledge — are welcome there.
 
 **If land still binds, the escape valve is the built environment — a
-reserve currently closed by policy.** [This needs careful revision given
-revised rooftop solar modeling and scenarios] The model carries 4,062 MW of
+reserve currently closed by policy.** The model carries 4,062 MW of
 rooftop potential (canopies over parking would add more; we do not yet count
-them here, but will in the next zonal grid model). Under current costs and 
-tariffs the least-cost solution builds at most about half of it under the 
-accelerated rooftop solar scenario. About 49 percent of Oʻahu single-family homes now carry 
-rooftop systems, and customer-sited capacity across Hawaiian Electric's territory 
-is approaching 1.2 GW (Hawaiian Electric, 2025–26 releases) — growth achieved under
-restrictive tariffs. The reason is largely policy-made: current tariffs let distributed 
+them here, but will in the next zonal grid model). Even our accelerated
+scenario, at about 2,100 MW by 2050, uses just over half of that potential —
+and the accelerated trajectory itself is speculative, not a forecast. We do
+not know how much capacity would be added if sellback rules were relaxed; it
+could be less than we have penciled in, or a great deal more. Its purpose is
+perspective: to show how far rooftop growth can substitute for open land,
+not to predict the response to a tariff no one has yet offered. What the
+record does show is momentum against resistance. About 49 percent of Oʻahu
+single-family homes now carry rooftop systems, and customer-sited capacity
+across Hawaiian Electric's territory is approaching 1.2 GW (Hawaiian
+Electric, 2025–26 releases), growth achieved under restrictive tariffs. The reason is largely policy-made: current tariffs let distributed 
 systems offset their own bills but compensate exports below avoided cost and prohibit
 surplus credits for providing energy to others, which suppresses the investment that 
 would fill these surfaces. Rooftop and canopy solar is also a partial escape from the 
@@ -724,9 +744,10 @@ when no gas option exists, and 2,185 MW (54 percent) even when LNG is freely
 available and the model expands gas to its economic limit--the one case where
 the JERA proposed plant pencils out. Sunshine on Oʻahu
 out-competes imported fuel for most of the load under any policy; the mandate
-determines the remainder and the pace. And the savings to customers of 
-abandoning the mandate and leaning more heavily on LNG is modest: $0.41 billion 
-dollars (verify) or X cents per kWh - a bill reduction of approximately X%.
+determines the remainder and the pace. And the savings to customers of
+abandoning the mandate and leaning more heavily on LNG is modest: about
+$0.41 billion, or roughly 0.3 cents per kilowatt-hour — a bill reduction of
+approximately one percent.
 
 ### 2.6 Implications for procurement reform
 
@@ -824,8 +845,10 @@ serves demand that never crosses the meter.
 We run three installed-capacity trajectories (A.12, A.13). The conservative
 one, about 1,000 MW by 2050, roughly continues the recent installation rate
 in gross terms; the realistic one reaches about 1,560 MW; the accelerated
-one, about 2,120 MW, is our projection of what unleashing the resource could
-look like — unlimited sellback at avoided cost, the recommendation this
+one, about 2,120 MW, is an illustrative projection of what unleashing the
+resource could look like — the actual response to reformed sellback rules
+could be smaller or much larger, and even this case uses only about half
+the mapped rooftop potential — unlimited sellback at avoided cost, the recommendation this
 report develops in Section 2.6, with new installs pairing two megawatt-hours
 of storage per megawatt (a 6.5 kW system with one 13.5 kWh battery, already
 a typical configuration). Each step of rooftop growth displaces
@@ -1874,7 +1897,25 @@ demand is down more than 2 percent — driven, the IEA notes, by renewable
 expansion as much as by price; and Asia-Pacific LNG demand is now in its
 second consecutive annual decline (278 → 268 → 257 million tonnes,
 2024–2026), a retreat Wood Mackenzie characterizes as "structural
-responses rather than purely tactical ones." Nor is the retreat austerity:
+responses rather than purely tactical ones." The oil market makes the same
+point more sharply. World oil demand is expected to fall by about a million
+barrels per day this year, the first decline since 2020 (IEA, July 2026).
+In sixty years of data, declines like this have come only in and around
+recessions: every prior year of falling world oil demand saw world growth
+at or below 2.6 percent, and the deepest declines came with growth near or
+below zero. The IMF expects 2026 growth near 3 percent (Figure 8.1).
+Rationing without substitutes would have caused a recession, so a decline
+this large in a growing economy suggests energy users are finding
+alternatives. Where inventory data are public, the LNG decline looks like
+reduced consumption rather than delayed purchases: Japan cut imports while
+holding stocks above their five-year average. Not all of it will stick.
+Europe's decline is mostly deferred buying, and Qatari volumes return when
+the Strait reopens. A supply glut within a year of a Hormuz settlement
+would not surprise us, though no one knows when that settlement will come.
+
+![Figure 8.1 — world oil demand changes and world GDP growth, 1966–2026: prior demand declines came with weak economies; 2026's is forecast near trend growth](figures/fig_8_1_decline_vs_gdp.png)
+
+Nor is the retreat austerity:
 a record 664 GW of solar was installed worldwide in 2025 as the global
 fleet passed three terawatts (SolarPower Europe), and the war has
 accelerated the substitution where it hurts most — in March 2026,
