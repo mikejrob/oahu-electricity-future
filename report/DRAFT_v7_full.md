@@ -137,12 +137,15 @@ and wind averaged over a day, which is far below the momentary peak
 requirement costs about $0.26 billion, roughly two-tenths of a cent per
 kilowatt-hour, because the cheapest path runs ahead of the requirement
 through 2040 anyway and builds 95 percent of the solar even if the
-requirement is removed. Abandoning it saves about $0.41 billion if the 
+requirement is removed. Abandoning it saves about $0.41 billion ([X cents per 
+kWh]) if the 
 replacement is a new gas plant and import terminal, and a bit more if existing 
-plants are converted to LNG instead, the cheaper route Finding 3 identifies. 
+plants are converted to LNG instead, the cheaper route Finding 3 identifies
+[verify -- the new plant may make sense if pushing more fuel beyhon 2050;
+we should quantify more clearly vs the conversion route]. 
 Either way, capturing this modest savings requires abandoning the clean 
 energy mandate while committing to a long-term contract and hoping the 
-contract price holds, which looks dubious as today's spot price (July 
+contract price holds throughout, which looks dubious as today's spot price (July 
 25, 2026) hovers around $22/MMBtu, nearly double the contract price we 
 assume (Section 4.6b).  
 
@@ -489,8 +492,7 @@ Berkeley National Laboratory, emp.lbl.gov/publications/land-requirements-utility
 Because that density keeps improving, we use five acres per megawatt
 throughout, a reasonable value for a 2030s-and-later buildout, which puts the
 2050 build at about 20,400 acres (about 18,000 on the realistic rooftop
-trajectory). The screen's rule is
-fully documented: it admits agricultural/country-zoned 
+trajectory). The screen's rule is fully documented: it admits agricultural/country-zoned 
 land only; subtracts Class A soils, golf courses, road buffers, and (via the
 zoning filter) military installations; and caps prime 
 Class B/C land at 10 percent per cluster while admitting all Class D/E and 
@@ -531,12 +533,18 @@ directly at the parcel level (its `notes/cap-quantification.md`, run July
 rather than the 10 percent. Raising the share to 20 percent while keeping
 the 20-acre cap adds only about 1,100 acres; dropping the hard cap at the
 existing 10 percent nearly triples eligibility (to about 9,400 acres); and
-20 percent without the hard cap yields about 15,700 acres, a 4.3× increase. Class B/C lands can be used for solar
-under agrivolatic systems under special use permits granted by the Land 
-Use Commission, and these have generally received unanimous approval without
-intervenors. While community groups have blocked solar on Maui, and new rules 
-Wind setbacks severely constrain on-shore wind potential for O‘ahu, we have
-not found evidence of community blocking solar development on Oahu.
+20 percent without the hard cap yields about 15,700 acres, a 4.3× increase. 
+Class B/C lands can be used for solar under agrivolatic systems under special 
+use permits granted by the Land Use Commission, and these have generally received 
+unanimous approval without intervenors. While community groups have blocked solar 
+on Maui, and new rules Wind setbacks severely constrain on-shore wind potential 
+for O‘ahu, we have not found evidence of community blocking solar development on Oahu.
+[Revisit and verify note to figure. Clarify seemingly contrary fugures: there are 
+only 36,000 B/C agriculture land, so it's hard to understand how a 20% cap
+would yield 15,700 acres. Be sure to note that the selected class B/C parcels
+are not physical selections, but representative of the area that the model 
+is allowed to select.]
+
 
 Physical acreage is sufficient; the binding questions are pace, process, and
 terms. A companion study of Oʻahu land availability and the political economy
@@ -548,8 +556,9 @@ this section and the next.
 ### 2.5a The land question under the 2045 mandate is about timing
 
 A common objection to the solar-heavy path is that Oʻahu simply does not have
-the land. The concern is genuine and deserves a direct answer — first from the
-pathways themselves, then from the land records.
+the land. We addressed this issue above. Here we show how fuel and generator 
+choices intersect with the land use questions, first from the modeled pathways 
+themselves, then from the land records.
 
 **Every mandate-compliant pathway builds nearly the same solar with and 
 without LNG.** In our solutions the no-new-fuel-plant path reaches about
@@ -657,7 +666,7 @@ companion study finds actually binding is transfer capacity: roughly 70 percent 
 the screened utility-solar resource sits north of 
 the island's transmission necks, and moving a multi-gigawatt northern build south 
 requires bounded corridor upgrades on the order of $10–200 million — small against 
-the plant decisions in view, unpriced in this single-zone model, and exactly what
+the plant decisions in view, unpriced in this single-zone model, and what
 a subsequent nodal model will quantify (V2.md).
 
 **The screen errs in both directions, and the errors partially offset.**
@@ -667,11 +676,8 @@ not yet built, projects communities decline to accept, and parcels that are not
 correctly or completely characterized by the available data. But the screen also
 excludes, by construction, land that is plausibly viable: Class B and C
 acreage beyond the as-of-right cap, which Act 55's agrivoltaic pathway can
-reach — about 30,800 acres on Oʻahu (34,371 total ag-district B/C less the
-roughly 3,600 as-of-right; companion study cap quantification); slopes
-between 10 and 15 percent, which add roughly 22,000 acres
-under the relaxed terrain rule; industrial, brownfield, and other disturbed
-lands inside the urban district, which the screen never examines; reservoir
+reach — about 30,800 additional acres on Oʻahu; industrial, brownfield, and other 
+disturbed lands inside the urban district, which the screen never examines; reservoir
 surfaces; and two categories the companion study is now investigating
 parcel by parcel — federal landholdings (where tenure, mission constraints,
 and the 2029 state-land lease questions require careful treatment) and
@@ -683,30 +689,25 @@ inventory where these categories are being mapped and characterized, and
 contributions — corrections, parcels, local knowledge — are welcome there.
 
 **If land still binds, the escape valve is the built environment — a
-reserve currently closed by policy.** The model carries 4,062 MW of
+reserve currently closed by policy.** [This needs careful revision given
+revised rooftop solar modeling and scenarios] The model carries 4,062 MW of
 rooftop potential (canopies over parking would add more; we do not yet count
-them here, but will the next zonal grid model). Under current costs and 
-tariffs the least-cost solution builds **none
-of it**: the 674 MW of distributed solar in the model is existing
-capacity through 2020 vintages (verified against the model's predetermined
-build file; much more has been installed since), 
-and no new distributed capacity enters any scenario. The real world is already 
-ahead of the model here: about 49 percent of Oʻahu single-family homes now carry 
+them here, but will in the next zonal grid model). Under current costs and 
+tariffs the least-cost solution builds at most about half of it under the 
+accelerated rooftop solar scenario. About 49 percent of Oʻahu single-family homes now carry 
 rooftop systems, and customer-sited capacity across Hawaiian Electric's territory 
-is approaching 1.2 GW (Hawaiian Electric, 2025–26 releases) — growth achieved *under* the
-restrictive tariffs, which understates the reserve argument. (Updating the 
-model's predetermined distributed stock to the current installed base is part
-of the planned next version; it affects all scenarios equally.) The reason is 
-largely policy-made: current tariffs let distributed systems offset their own 
-bills but compensate exports below avoided cost, which suppresses exactly the 
-investment that would fill these surfaces. Rooftop and canopy solar is also a 
-partial escape from the soft-cost problem itself: Honolulu rooftop pricing sits 
-at the lower edge of the national residential band (Section 2.3), and larger 
-commercial-scale installations would improve its economies further. Among the levers 
-in this report, liberalizing distributed-solar tariffs is arguably the easiest — 
-it requires building nothing, condemning nothing, and rezoning nothing. A reader 
-worried that Oʻahu's open land cannot host the buildout should be, by the same logic,
-the strongest advocate for unlocking the rooftops.
+is approaching 1.2 GW (Hawaiian Electric, 2025–26 releases) — growth achieved under
+restrictive tariffs. The reason is largely policy-made: current tariffs let distributed 
+systems offset their own bills but compensate exports below avoided cost and prohibit
+surplus credits for providing energy to others, which suppresses the investment that 
+would fill these surfaces. Rooftop and canopy solar is also a partial escape from the 
+soft-cost problem itself: Honolulu rooftop pricing is more in line with pricing 
+in other parts of the United States (Section 2.3), and larger commercial-scale installations 
+would improve its economies further. Among the levers in this report, liberalizing 
+distributed-solar tariffs is arguably the easiest — it requires building nothing, 
+condemning nothing, and rezoning nothing. A reader worried that Oʻahu's open land 
+cannot host the buildout should be, by the same logic, the strongest advocate for 
+unlocking the rooftops.
 
 One caveat points to future work. The present model represents Oʻahu as a
 single zone, so it credits distributed resources with none of their locational
@@ -720,9 +721,12 @@ development for the next edition is designed to assess exactly this tradeoff.
 clean-energy requirement entirely (Section 4.6b), the least-cost system still
 builds 3,860 MW of utility solar by 2050 — 95 percent of the mandated build —
 when no gas option exists, and 2,185 MW (54 percent) even when LNG is freely
-available and the model expands gas to its economic limit. Sunshine on Oʻahu
+available and the model expands gas to its economic limit--the one case where
+the JERA proposed plant pencils out. Sunshine on Oʻahu
 out-competes imported fuel for most of the load under any policy; the mandate
-determines the remainder and the pace.
+determines the remainder and the pace. And the savings to customers of 
+abandoning the mandate and leaning more heavily on LNG is modest: $0.41 billion 
+dollars (verify) or X cents per kWh - a bill reduction of approximately X%.
 
 ### 2.6 Implications for procurement reform
 
@@ -760,13 +764,14 @@ directly on the solar-cost lever.
    against actual grid conditions, rather than waiting years for the full
    network-upgrade studies that dominate interconnection cost and time in most
    U.S. markets. ERCOT operates this way and has brought capacity online faster
-   and at lower interconnection cost than the invest-and-connect regions (Utility Dive, "Can ERCOT show
-   the way to faster and cheaper grid interconnection?", 2023). Making it work in a single-utility
-   setting like Oʻahu, where no market arbitrates curtailment, requires dispatch
+   and at lower interconnection cost than the invest-and-connect regions (Utility
+   Dive, "Can ERCOT show the way to faster and cheaper grid interconnection?", 2023).
+   Making it work in a single-utility setting like Oʻahu, where no market arbitrates
+   curtailment, requires dispatch
    rules that are clear, fair, and independently audited, so that a project
    accepting managed curtailment knows in advance how and when it will be
    curtailed.
-4. **Land-use reform, built to complement agriculture.**
+5. **Land-use reform, built to complement agriculture.**
    One precedented, community-forward option: develop a **menu of
    pre-characterized agrivoltaic systems** for Class B and C land — specific,
    named configurations pairing solar with compatible crops, grazing, or
@@ -796,7 +801,7 @@ directly on the solar-cost lever.
    lost. Returning them to managed, productive use, including agrivoltaics with
    maintained groundcover and grazing, reduces fuel loads and the fragmentation
    of firebreaks while producing energy and food.
-5. **Distributed-solar tariff reform.** Allow unlimited sellback at real-time
+6. **Distributed-solar tariff reform.** Allow unlimited sellback at real-time
    avoided-cost pricing. Current tariffs permit own-bill offsets and
    below-avoided-cost export compensation, which idles the rooftop and canopy
    potential documented in Section 2.5a. It is the easiest reform on this list,
