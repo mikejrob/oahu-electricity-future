@@ -1,0 +1,37 @@
+# note: commented-out modules may be added via --include-modules ...
+# in the scenario definitions.
+
+switch_model
+switch_model.timescales
+switch_model.financials
+switch_model.balancing.load_zones
+switch_model.energy_sources.properties
+switch_model.generators.core.build
+switch_model.generators.core.dispatch
+switch_model.energy_sources.fuel_costs.markets
+switch_model.generators.core.gen_discrete_build
+switch_model.generators.core.commit.operate
+switch_model.generators.core.commit.fuel_use
+switch_model.generators.core.commit.discrete
+switch_model.generators.extensions.storage
+switch_model.balancing.operating_reserves.areas
+switch_model.balancing.operating_reserves.spinning_reserves_advanced
+switch_model.hawaii.fuel_markets_expansion
+switch_model.hawaii.switch_patch
+switch_model.hawaii.rps
+lng_conversion
+ev_patched
+# updated_modules.ev
+switch_model.hawaii.oahu_plants
+switch_model.hawaii.hydrogen  
+# switch_model.hawaii.demand_response_simple
+switch_model.hawaii.register_hi_storage_reserves
+# switch_model.hawaii.fed_subsidies
+switch_model.hawaii.smooth_dispatch
+switch_model.hawaii.save_results
+switch_model.reporting
+#summarize_results
+limit_new_onshore_wind_capacity
+
+#diagnose_infeasibility
+egs_geothermal

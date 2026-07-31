@@ -1,0 +1,12 @@
+# Market-based Brent 5th/95th percentile band, real 2024$/bbl.
+# Built 2026-07-27 from futures strip quoted 2026-07-27 (see sources/market/METHOD.md and raw/ for provenance).
+# sigma_long=0.3, OVX(2026-07-24)=0.68, calm 1m IV=0.312 (EIA, 2025-09-04), war-premium decay k=0.033/day.
+# Breakevens 2026-07-27: 5y=0.0218, 5y5y fwd=0.0224; CPI-U 2024avg=313.698, latest(2026-06)=332.568.
+# Periods 2035+ = flat-in-real extension of the fitted lines beyond the last listed contract (Jan 2035).
+period,brent_low_5th,brent_central_futures,brent_high_95th,eia_ref_brent,eia_low_brent,eia_high_brent,low_sigma0.25,high_sigma0.25,low_sigma0.35,high_sigma0.35,p5_poly3,p95_poly3
+2027-29,35.53,66.65,128.45,89.46,89.46,89.46,39.37,114.94,32.08,143.64,36.12,128.73
+2030-34,18.13,57.89,189.1,90.29,84.73,98.83,21.96,155.0,14.97,230.84,18.05,189.09
+2035-39,12.81,53.29,221.71,92.99,77.7,116.44,16.24,174.83,10.1,281.18,10.85,221.11
+2040-44,12.81,53.29,221.71,95.36,69.89,134.45,16.24,174.83,10.1,281.18,10.85,221.11
+2045-49,12.81,53.29,221.71,99.18,62.5,155.47,16.24,174.83,10.1,281.18,10.85,221.11
+2050-54,12.81,53.29,221.71,107.2,56.55,184.95,16.24,174.83,10.1,281.18,10.85,221.11

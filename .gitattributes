@@ -1,0 +1,5 @@
+# private/ is tracked in this (private) repository but excluded from the
+# public mirror: push_both.sh builds the mirror tree with `git archive`,
+# which honors export-ignore.
+private/ export-ignore
+private/** export-ignore

@@ -1,0 +1,31 @@
+# Default options for Switch-Hawaii EGS model
+# Inherited from Ethan Hartley's base-model run options (see base_model/README.md)
+
+# control logging and reporting
+--verbose
+--stream-solver
+--sorted-output
+
+--solver cplexamp
+--solver-options-string "mipgap=0.001 mipemphasis=1 mipbasis=1 nodefile=0 nodefiledir=./tmp memoryemphasis=0 display=1 mipdisplay=2 threads=4 parallelmode=-1 numericalemphasis=1 basis_cond=1 timing=4 mipalg=2 primalopt='' crash=1 time=216000 feasibility=1e-5 logfile=cplex_test"
+--suffixes iis
+
+# EV charging: half BAU, half optimal
+--ev-timing bau=0.5 optimal=0.5
+
+# RPS allocation method
+--rps-allocation relaxed_split_commit
+
+# Hawaii reserve rules
+--spinning-requirement-rule Hawaii
+--contingency-reserve-type contingency
+--regulating-reserve-type regulation
+--hawaii-storage-reserve-types regulation contingency
+--ev-reserve-types none
+--unit-contingency
+
+# Onshore wind limit
+--onshore-wind-limit 150
+
+# LNG infrastructure cannot be built before 2030 (FSRU lead time)
+--lng-earliest-period 2030

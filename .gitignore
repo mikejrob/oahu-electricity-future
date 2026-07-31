@@ -1,0 +1,17 @@
+# solve artifacts
+outputs_*/
+# results/RESULTS_SUMMARY.csv is tracked (pushed as scenarios complete)
+logs/
+tmp/
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+sq/
+.archive_prerelease/
+scenarios/scenarios_p001_ready.txt
+scenarios/scenarios_p001_batch2.txt
+solve/solve_p001_batch2.slurm
+solve_env/
+noitc_archive/
+*.queued

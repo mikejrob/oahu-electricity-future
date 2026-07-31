@@ -1,0 +1,23 @@
+# Brent futures strip + ATM implied vol, for the market-based low/high oil band
+# (report method: EIA reference; low/high = futures 5th/95th pctile: exp(-/+ 1.645*sigma*sqrt(T)),
+#  T from quote_date, through the last listed contract; flat REAL beyond).
+# FILLED 2026-07-27. settle = "last" for the December ICE Brent contract of each year,
+# oilprice.com pull 2026-07-27 16:07 (raw/oilprice_brent_futures_strip_pulled_2026-07-27.csv),
+# cross-checked to the cent for 2030-2034 vs TradingView/ICE (raw/tradingview_*_2026-07-27.md).
+# atm_iv = sigma used by build/market_band/build_market_percentiles.py:
+#   sigma(tau) = 0.30 + (0.680-0.312)*exp(-0.033*(tau_days-30));
+#   0.680 = OVX 2026-07-24 (FRED OVXCLS); 0.312 = calm 1m WTI IV (EIA STEO workbook,
+#   NYMEX 5 days ending 2025-09-04, which also shows 0.268 at the 10m tenor);
+#   0.30 long-tenor level is a DOCUMENTED ASSUMPTION (no public 12m+ quote
+#   obtainable July 2026) - see METHOD.md item 1 and sensitivities 0.25/0.35.
+# tau runs to option/contract expiry (end of Oct preceding delivery).
+quote_date,contract_dec_year,settle_usd_bbl,atm_iv
+2026-07-27,2026,81.70,0.342
+2026-07-27,2027,74.26,0.300
+2026-07-27,2028,72.08,0.300
+2026-07-27,2029,71.05,0.300
+2026-07-27,2030,70.72,0.300
+2026-07-27,2031,70.13,0.300
+2026-07-27,2032,69.57,0.300
+2026-07-27,2033,68.73,0.300
+2026-07-27,2034,68.02,0.300

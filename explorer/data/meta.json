@@ -1,0 +1,36 @@
+{
+ "generated_hst": "2026-07-31 01:16 HST",
+ "commit": "f9102a2",
+ "scenarios": 503,
+ "skipped_non_fleet": 196,
+ "refined_010": 197,
+ "refined_0015": 0,
+ "first_pass_0025": 306,
+ "hourly_scenarios": [
+  "nlv2a_C4_NOTHERMAL_refbrent",
+  "nlv2b_C1_LSFO250_refbrent",
+  "nlv2b_C4_NOTHERMAL_futbrent",
+  "nlv2b_C4_NOTHERMAL_highbrent",
+  "nlv2b_C4_NOTHERMAL_lowbrent",
+  "nlv2b_C4_NOTHERMAL_refbrent",
+  "nlv2b_C5_LNG375_refbrent",
+  "nlv2b_C6_STATUSQUO_refbrent",
+  "nlv2b_be_pv15_C4_NOTHERMAL_refbrent",
+  "nlv2b_be_pv17_C4_NOTHERMAL_refbrent",
+  "nlv2b_egs_none_no_lng_refbrent",
+  "nlv2b_lc_C4_NOTHERMAL_refbrent",
+  "nlv2b_lngconv_heco_refbrent",
+  "nlv2b_lngconv_opt_refbrent",
+  "nlv2b_norps_LNG500_refbrent",
+  "nlv2b_norps_NOTHERMAL_refbrent",
+  "nlv2b_wb_C6_LNG500_highbrent",
+  "nlv2b_wb_C6_LNG500_refbrent",
+  "nlv2b_wr_C4_NOTHERMAL_refbrent",
+  "nlv2s_C4_NOTHERMAL_refbrent"
+ ],
+ "sample_days": {
+  "2035-08-18": "Summer peak (easy)",
+  "2035-11-22": "Low sun and wind (hard)"
+ },
+ "version": "pre-v1.01"
+}

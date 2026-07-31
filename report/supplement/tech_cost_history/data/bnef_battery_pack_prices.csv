@@ -1,0 +1,7 @@
+year,pack_price_usd_per_kwh,dollar_basis,source_survey,verification,note
+2010,1100,real (base ~2020; also stated >1200 in 2021 survey rebasing),BNEF 2020 Battery Price Survey,fetch_primary,"headline framing 'above $1,100/kWh'; rebased upward in later surveys (>$1,200 in 2021 survey); use as decline anchor not a precise point"
+2020,137,real 2020$,BNEF 2020 Battery Price Survey (Dec 16 2020),fetch_primary,"89% real decline from 2010; some cells cited below $100/kWh"
+2021,132,real 2021$,BNEF 2021 Battery Price Survey (Nov 30 2021),fetch_primary,"6% drop from a rebased $140/kWh (2020)"
+2022,151,real 2022$,BNEF 2022 Battery Price Survey (Dec 6 2022),fetch_primary,"first-ever real increase (+7%); lithium/commodity spike"
+2023,139,real 2023$,BNEF 2023 Battery Price Survey (Nov 26 2023),fetch_primary,"record low; 14% nominal drop from 2022"
+2024,115,nominal (real-terms decline framing since 2010),BNEF 2024 Battery Price Survey (Dec 10 2024),fetch_primary,"record low; 20% drop from 2023; largest annual drop since 2017"
