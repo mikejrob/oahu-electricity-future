@@ -243,6 +243,15 @@ GEN_INFO_ADD = [
      "0.5", ".", ".", "."],
 ]
 GEN_PREDETERMINED_ADD = [["Oahu_Puuloa", "2027", "99.0", "."]]
+# JERA part-load curve: CEMS-derived (sources/epa_cems/, issue #2) — REPLACES
+# the inherited proportional rows (6.92 flat, 30 MW min); min load 62.5 MW
+# (50%), no-load fuel 86.9 MMBtu/h, incremental 6.225, full-load avg 6.92
+GEN_INC_HEAT_RATES_JERA = [
+    ["Oahu_JERA", "62.5", ".", ".", "476.0"],
+    ["Oahu_JERA", "62.5", "75.0", "6.225", "."],
+    ["Oahu_JERA", "75.0", "100.0", "6.225", "."],
+    ["Oahu_JERA", "100.0", "125.0", "6.225", "."],
+]
 GEN_INC_HEAT_RATES_ADD = [
     ["Oahu_Puuloa", "3.0", ".", ".", "27.0"], ["Oahu_Puuloa", "3.0", "5.0", "8.0", "."],
     ["Oahu_Puuloa", "5.0", "7.0", "8.2", "."], ["Oahu_Puuloa", "7.0", "9.0", "8.5", "."],
@@ -447,6 +456,9 @@ def add_generators(out_dir):
                        ("gen_multiple_fuels.csv", GEN_MULTIPLE_FUELS_ADD),
                        ("generation_projects_reserve_capability.csv", GEN_RESERVE_CAP_ADD)]:
         h, r = read_rows(out_dir / fname); r += [x[:] for x in add]
+        if fname == "gen_inc_heat_rates.csv":
+            r = [x for x in r if x[0] != "Oahu_JERA"] \
+                + [x[:] for x in GEN_INC_HEAT_RATES_JERA]
         write_rows(out_dir / fname, h, r)
     # LNG-conversion fuel menus: base menu + LNG rows for existing units
     # (whitelisted in model/lng_conversion.py; used by scenarios_lngconv*)

@@ -18,39 +18,54 @@ Switch 2.0.9 + CPLEX environment.
 
 ## What it takes to solve these models
 
-**Per-solve requirements are modest.** Each scenario solve uses **4 CPU
-cores** (CPLEX deterministic parallel, 4 threads) and peaks at about
-**5–6 GB of memory** (the SLURM scripts request 64 GB out of caution on a
-shared cluster; that headroom is not needed). Any reasonably current
-laptop or workstation can solve any single scenario in this repository.
+**Per-solve requirements are modest.** Each scenario solve uses **one CPU
+core** and peaks at about **5–6 GB of memory** (the SLURM scripts request
+more out of caution on a shared cluster; that headroom is not needed).
+Extra cores buy little: CPLEX's parallel speed-up on these models is small
+enough that a second core is usually wasted allocation. Any reasonably
+current laptop or workstation can solve any single scenario here — the
+constraint is time, not hardware.
 
-**Runtimes divide sharply by tolerance.** Measured across this
-repository's own runs (times are CPLEX+Switch wall-clock on 4 cores):
+**Runtimes are heavy-tailed in both passes.** Measured across this
+repository's own runs (single-core wall-clock, the 513-cell published
+fleet):
 
-| Pass | Typical (median) | Range observed |
-|---|---|---|
-| 0.25% MIP gap, cold start | ~0.5–0.8 hours | 0.2 – 2.3 hours |
-| 0.1% MIP gap, warm-started from the 0.25% solution | ~1.4 hours | 0.7 hours – **over 24 hours** |
+| Pass | Median | p90 | Longest | Over 6 h | Over 24 h |
+|---|---|---|---|---|---|
+| 0.25% MIP gap, cold start | 0.68 h | 1.5 h | 25.3 h | 10 | 8 |
+| 0.1% MIP gap, warm-started from the 0.25% solution | 1.7 h | 9.4 h | 27.1 h | 74 | 13 |
 
-The 0.25% first pass is fairly fast everywhere. Tightening to 0.1% is
-where the hard tail lives: most cells refine in an hour or two, but the
-distribution is heavy-tailed — of 143 refinements timed so far, 14 took
-more than 6 hours, 9 more than 12, and a few exceeded a full day. This is
-ordinary mixed-integer behavior: the last fraction of a percent of the
-optimality gap can cost more than everything before it. The warm start
-(each 0.1% run begins from its own 0.25% solution via a CPLEX MIP start)
-is what keeps the tail from being worse.
+Neither pass is uniformly quick. The 0.25% pass is fast for most cells and
+occasionally is not: eight cells exceeded a full day, clustered on the
+status-quo and frozen-build configurations at low oil prices, where the
+commitment problem is hardest. Tightening to 0.1% shifts the whole
+distribution right rather than adding a few stragglers — the p90 moves
+from 1.5 to 9.4 hours. Twenty solves stopped on the 24-hour limit with a
+gap slightly wider than the target rather than reaching it; those cells
+are reported at the tolerance they achieved. This is ordinary
+mixed-integer behaviour: the last fraction of a percent can cost more than
+everything before it. The warm start (each 0.1% run begins from its own
+0.25% solution via a CPLEX MIP start) is what keeps the tail from being
+worse.
 
-**Solving everything is a batch-computing job.** The full set is
-The fleet has grown to over 500 scenario cells × two passes — on the order
-of ~6,000–7,000 core-hours in
-total. On one machine solving one cell at a time that is about a month of
-continuous computing; with ~30 parallel 4-core workers on a cluster or
-cloud environment, each pass completes in about a day. The SLURM scripts
-here implement the parallel version (workers pull cells from a shared
-queue, so arrays finish regardless of per-cell runtime); on a single
-machine, `switch solve-scenarios --scenario-list <list>` runs the same
-cells sequentially without SLURM.
+The plan-pricing cells (Section 4.5) are a separate class. Constraining
+generation to a published plan's mix removes the slack the optimizer
+normally uses, and they run a median of 2.2 hours at 0.25% with several
+beyond 12. On a preemptible cluster partition, cells this long should run
+somewhere they cannot be killed: a preemption near the end of a
+15-hour branch-and-bound forfeits all of it, and this fleet lost two
+cells that way before moving them to a non-preemptible queue.
+
+**Solving everything is a batch-computing job.** The published fleet is
+~500 cells × two passes, about **2,600 core-hours**: roughly 620 for the
+0.25% pass and 1,970 for the 0.1% refinement. On one machine solving one
+cell at a time that is about four months of continuous computing. With 20
+parallel single-core workers the first pass completes in about 1.3 days
+and the refinement in about 4. The SLURM scripts here implement the
+parallel version (workers pull cells from a shared queue, so arrays finish
+regardless of per-cell runtime); on a single machine, `switch
+solve-scenarios --scenario-list <list>` runs the same cells sequentially
+without SLURM.
 
 **Software environment.** Every script unpacks a packaged environment
 (Switch 2.0.9 + CPLEX 22.1.1) from two tarballs —

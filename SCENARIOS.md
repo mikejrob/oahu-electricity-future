@@ -3,7 +3,7 @@
 Every scenario in this analysis, in plain language. The full menu solves
 under two rooftop-solar trajectories (conservative and realistic), with a
 core subset also solved under an accelerated trajectory and with rooftop
-resources dispatched by the optimizer — over 500 solved configurations in all
+resources dispatched by the optimizer — 513 solved configurations in all
 (see the scenario map in the README). Each row is one solved optimization
 (at 0.25% tolerance, refined to 0.1%); machine-readable
 definitions are one line per scenario in `scenarios/*.txt`, and results are

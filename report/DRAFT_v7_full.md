@@ -3,8 +3,8 @@ title: "Hawaiʻi's Electricity Future: Solar Reform, Enhanced Geothermal, and th
 author:
  - "Ethan Hartley, *University of Hawaiʻi Department of Economics*"
  - "Michael J. Roberts, *University of Hawaiʻi Department of Economics, Sea Grant, and UHERO*"
-date: "pre-v1.01 DRAFT — July 2026 · open for comment"
-note: "This is a preliminary release, pre-v1.01, open for public comment; we ask that comments and suggestions arrive by September 1, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; corrections and extensions relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
+date: "pre-v1.02 DRAFT — August 2026 · open for comment"
+note: "This is a preliminary release, pre-v1.02, open for public comment; we ask that comments and suggestions arrive by September 1, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; corrections and extensions relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
   results are at 0.1% optimization tolerance, with a handful of degenerate
   cells at 0.15% pending tighter re-solves (docs/HARD_CELLS.md) and the EGS
   cost sensitivity carried as a documented capital reprice
@@ -74,12 +74,12 @@ sophisticated coordination to capture this value at today's scale. We tested
 this directly, solving the same system twice — once with rooftop batteries
 following today's simple pattern, charging at midday and discharging in the
 evening, and once with the identical batteries dispatched optimally. At the
-base adoption path the difference is $0.06 billion over 2027–2050, four
-hundredths of a cent per kilowatt-hour: predictable behavior is nearly as
+base adoption path the difference is $0.03 billion over 2027–2050, about a
+hundredth of a cent per kilowatt-hour: predictable behavior is nearly as
 good as perfect coordination. But the value of coordination grows steeply
 with adoption. With 2.1 GW of distributed solar (the accelerated trajectory
 the sellback reform of Section 2.8 is designed to unlock), optimal dispatch
-of the rooftop batteries is worth about $0.26 billion (0.19 cents per
+of the rooftop batteries is worth about $0.23 billion (0.10 cents per
 kilowatt-hour) — a reason to build real-time price exposure into that
 reform from the start rather than bolt it on later.
 
@@ -188,7 +188,7 @@ spot price (JKM, July 2026) hovers around $21–22/MMBtu, nearly double the
 reference contract price that we assume (Section 4.8). 
 
 **Also decisive.** The Waiau Repower, Hawaiian Electric's proposal to
-rebuild its old Waiau oil units, raises system cost by $1.35 to $1.40
+rebuild its old Waiau oil units, raises system cost by $1.38 to $1.49
 billion at every oil price tested, and every bundle that contains it
 inherits that penalty (Section 6). (This exceeds the literal cost of the plant 
 because the cost of capital is higher than our discount rate.) If a new plant 
@@ -230,14 +230,14 @@ above zero cost more than building no new plant.
 
 | Trajectory | Market 10th pct | Brent futures | EIA reference | Market 90th pct |
 |---|---:|---:|---:|---:|
-| No new fuel plant | 21.19 | 24.33 | 25.83 | 27.34 |
+| No new fuel plant | 21.16 | 24.30 | 25.83 | 27.32 |
 | LNG conversions, no new plant — net of conversion capital | — | — | 25.24 (−0.60) *[−0.34]* | — |
-| Modern LSFO plant (250 MW) | 21.84 (+0.65) | 24.81 (+0.47) | 26.27 (+0.43) | 27.96 (+0.62) |
-| JERA LNG 500 MW — midpoint | 22.81 (+1.62) | 24.97 (+0.64) | 26.58 (+0.75) | 28.53 (+1.19) |
-| *…JERA band [bare-EPC, +20%]* | *[+1.40, +1.83]* | *[+0.43, +0.85]* | *[+0.53, +0.96]* | *[+0.97, +1.41]* |
-| Waiau Repower only | 22.55 (+1.36) | 25.69 (+1.36) | 27.23 (+1.40) | 28.84 (+1.50) |
-| Waiau + LSFO plant | 23.29 (+2.10) | 26.25 (+1.92) | 27.71 (+1.88) | 29.45 (+2.11) |
-| Waiau + JERA LNG — midpoint | 24.29 (+3.10) | 26.43 (+2.10) | 28.06 (+2.22) | 30.03 (+2.69) |
+| Modern LSFO plant (250 MW) | 21.81 (+0.65) | 24.77 (+0.47) | 26.27 (+0.43) | 27.93 (+0.60) |
+| JERA LNG 500 MW — midpoint | 22.79 (+1.63) | 24.95 (+0.65) | 26.58 (+0.75) | 28.53 (+1.21) |
+| *…JERA band [bare-EPC, +20%]* | *[+1.42, +1.84]* | *[+0.44, +0.87]* | *[+0.54, +0.96]* | *[+1.00, +1.42]* |
+| Waiau Repower only | 22.54 (+1.38) | 25.69 (+1.39) | 27.23 (+1.40) | 28.81 (+1.49) |
+| Waiau + LSFO plant | 23.27 (+2.12) | 26.23 (+1.93) | 27.71 (+1.88) | 29.41 (+2.09) |
+| Waiau + JERA LNG — midpoint | 24.28 (+3.12) | 26.43 (+2.13) | 28.06 (+2.23) | 30.02 (+2.69) |
 
 **Limits of inference.** These findings are conditional on the cost
 trajectories, fuel-price regressions, sample-day reliability design, and
@@ -424,7 +424,7 @@ Solar, a new selection under review. Mainland prices also rose substantially
 over this period, roughly doubling from their 2019/20 lows:
 matched-configuration medians moved from about $31 to $65 per MWh (LBNL
 *Utility-Scale Solar*, 2025 data file; levelized PPA prices in constant 2024
-dollars).¹ On the same levelized 2024-dollar basis, Hawaiʻi's
+dollars; Box 2.1). On the same levelized 2024-dollar basis, Hawaiʻi's
 matched-configuration executions of 2018–2020 carried a median near $77 per
 MWh, and the amended Mahi contract is roughly $195. Because modules,
 batteries, and capital are priced in global markets, the common shock added
@@ -481,30 +481,58 @@ solar. The procurement and interconnection costs that raised prices across
 the United States are larger in Hawaiʻi, and that is the reason its prices
 are highest.
 
-¹ *Footnote: two adjustments keep the mainland–Hawaiʻi comparison
-apples-to-apples. (i) Subsidies. PPA prices are bid net of federal tax
-credits, which differ by market and vintage. Recent mainland utility-scale
-solar commonly elects the production tax credit, worth 2.75 cents per
-kilowatt-hour in 2024 and 3.0 cents in 2025 for wage-qualified projects
-(§45Y inflation adjustment, Federal Register 2025-16249), with the
-battery taking the 30 percent investment tax credit; the 2019/20-vintage
-projects had the 30 percent ITC alone. Election shares between the PTC and
-ITC are not published at the project level, so the add-back is an
-approximation; adding the credits back to both ends of the mainland series,
-the increase in gross (pre-subsidy) cost is less than double. The battery
-share of a hybrid takes the investment credit in either case (storage has no
-production-credit option under Section 48E), and the production credit favors
-low-cost, high-output projects — the opposite of Hawaiʻi's high-cost,
-battery-heavy configurations — so Hawaiʻi hybrids plausibly claim the 30
-percent ITC on both components. Because Hawaiʻi's contract prices are much
-higher, federal support covers a smaller share of the price there. (ii)
-Battery size. Hawaiʻi hybrids pair four-to-five-hour batteries sized near
-100 percent of PV capacity, far larger than the typical mainland hybrid,
-and unadjusted mainland medians are lower partly for that reason. The
-mainland figures above are configuration-matched (battery at least 90
-percent of PV capacity, four hours or longer) to remove that difference;
-raw mainland–Hawaiʻi comparisons that skip this step overstate the gap
-attributable to process.*
+> **Box 2.1 — How large is Hawaiʻi's utility-solar premium today?** Careful
+> measurements give answers from about 1.8 to 2.2 times mainland cost, and
+> the spread comes mostly from how the comparison is set up, not from
+> disagreement about Hawaiʻi. Three choices drive it.
+>
+> *What is compared.* The model needs the unsubsidized cost of installed
+> capital, benchmarked to NREL's ATB — that basis is what our multipliers
+> mean. Most public discussion instead compares contract (PPA) prices,
+> which fold in financing, configuration, and, most importantly, federal
+> subsidies.
+>
+> *How subsidies enter.* PPA prices are bid net of federal tax credits, and
+> the credits differ across the two markets in a way that inflates the
+> apparent gap. Recent mainland utility solar typically elects the
+> production tax credit — a flat 2.75 to 3 cents per kilowatt-hour (§45Y),
+> which covers a large share of a cheap mainland contract. Hawaiʻi's
+> battery-heavy hybrids plausibly claim the 30 percent investment credit on
+> both components instead (storage has no production-credit option, and the
+> production credit favors low-cost, high-output projects — the opposite of
+> Hawaiʻi's configurations), and because Hawaiʻi's prices are much higher,
+> federal support covers a far smaller share of them. Comparing subsidized
+> prices therefore overstates the underlying premium; adding the credits
+> back to both sides shrinks the gap materially. Configuration compounds
+> this: Hawaiʻi hybrids pair four-to-five-hour batteries sized near 100
+> percent of PV capacity, far larger than the typical mainland hybrid, so
+> comparisons that skip battery matching overstate the gap again. The
+> mainland figures in this section are configuration-matched (battery at
+> least 90 percent of PV capacity, four hours or longer) for that reason.
+>
+> *When.* The premium roughly doubled after 2020 (the table above), so any
+> estimate mixing contract vintages picks its own answer.
+>
+> On a consistent basis — unsubsidized, configuration-matched, recent
+> vintage — the procurement record implies roughly 1.8 to 2.2 times
+> mainland cost. Our 1.5× sensitivity (about 1.8× mainland) sits at the
+> bottom of that range; the State Energy Office's 2.154 multiplier sits
+> near the top; the difference between them is within the measurement noise
+> of a handful of contracts. No conclusion in this report depends on the
+> point estimate: results are solved at 1.2, 1.8, and 2.04 times the 2024
+> ATB baseline for unsubsidized solar and batteries, and stated across that
+> span. One asymmetry deserves note: we apply no Hawaiʻi premium to any
+> other resource — including offshore wind — which appears consistent with
+> the assumptions of HSEO and Hawaiian Electric. The assumption is untested
+> in both directions: there is no local procurement record to estimate an
+> offshore premium from, and none of the process factors behind the solar
+> premium — procurement cycles, permitting, interconnection — is specific
+> to solar. If those factors persist, a resource with no construction
+> record here and floating-platform engineering would be at least as
+> exposed to them (Section 4.5). Where a single number is needed, Hawaiʻi
+> currently pays roughly double the mainland price to deploy utility-scale
+> solar — and the evidence of Section 2 is that this figure reflects
+> process rather than geography.
 
 **Land and ground rent.** Recent University of Hawaiʻi solar RFPs and
 contemporary utility-scale leases price ground rent at a few dollars per
@@ -530,7 +558,7 @@ what the State of Hawaiʻi has already lost by not streamlining
 interconnection of solar and batteries sooner. Even the most pessimistic
 land-availability estimates from the Hawaiʻi State Energy Office put
 grid-scale solar potential on Oʻahu at roughly 2 GW. At a 25 percent
-capacity factor, that capacity would deliver about 4.4 TWh per year.² That
+capacity factor, that capacity would deliver about 4.4 TWh per year.¹ That
 is roughly two-thirds of Hawaiian Electric's current sales, and more than
 all of its current oil-fired generation. More would still be needed over
 the long run, to displace the independent Kalaeloa plant and to meet demand
@@ -556,7 +584,7 @@ was under construction before July 2026 or in service by the end of 2027.
 The window is tight but not closed. A "connect and manage" interconnection
 rule, described below, is the kind of reform that could open it.
 
-² *Footnote: the 25 percent capacity factor is conservative for this
+¹ *Footnote: the 25 percent capacity factor is conservative for this
 counterfactual. Hourly profiles for the model's 54 land tranches come from
 Matthias Fripp's Switch-Hawaiʻi data pipeline, which runs NSRDB satellite
 irradiance through NREL's PVWatts single-axis-tracking model
@@ -608,81 +636,59 @@ Hawaiʻi adds is time, queues, and risk premia — all of which policy can reduc
 
 ### 2.5 Does Oʻahu have enough land?
 
-The model's least-cost build reaches about 4,100 MW of utility-scale solar by
-2050, with rooftop systems continuing on the conservative trajectory of
-Section 2.7 (about 1,000 MW installed by 2050); faster rooftop growth reduces
-the utility-scale build further, to about 3,600 MW on the realistic
-trajectory.
-How much land a solar farm needs per megawatt has fallen steadily as panels
+**How much land the build needs.** The model's least-cost build reaches
+about 4,100 MW of utility-scale solar by 2050, with rooftop systems on the
+conservative trajectory of Section 2.7 (about 1,000 MW by 2050); faster
+rooftop growth cuts the utility build to about 3,600 MW on the realistic
+trajectory. How much land a megawatt needs has fallen steadily as panels
 have grown more efficient. The conventional figure is about six acres per
-megawatt with tracking solar, which counts the full site — access roads,
-setbacks, and buffers, not just the arrays. Measured on direct array area
-alone, which includes row spacing but not the rest of the site, the 2019
-U.S. medians were 4.2 acres per MW-DC (5.6 per MW-AC) for tracking plants
-and 2.9 (3.6) for fixed-tilt, which packs about half again more capacity
-per acre (Bolinger and Bolinger, *Land Requirements for Utility-Scale
-PV*, Lawrence Berkeley National Laboratory, 2022; vendored in sources/).
-Those medians are themselves seven years old: the same study found
-tracking power density rising 43 percent over 2011–2019, driven mostly by
-module efficiency, so even at half that pace since 2019 today's tracking
-plants would sit near five acres per MW-AC of direct area — and the trend
-runs through the 2030s and 2040s, when most of the buildout modeled here
-occurs.
-We use five acres per megawatt of AC capacity throughout — the same basis
-as the model's capacity variables and capacity factors. The choice is a
-judgment, and worth stating as one: five acres is probably optimistic for a
-tracking project built in the next few years and may well be pessimistic
-for one built around 2045, and choosing a single number for a
-quarter-century of construction means splitting that difference. Note that the current model assumes
-tracking solar throughout, as that's what the optimization model tends to select.
-If land constraints actually bite, it will become important to characterize
-specific parcels, allow for both fixed-tilt and tracking options, as well as 
-a variety of agrivoltaic options that could use more land and might have different
-capacity factors (e.g., double-sided vertical panels that capture early and late
-sun). Such options open up a lot more land potential than we assume here but 
-will require updates to the model structure; we plan to add these features to the
-next version (v2; see the roadmap in "What we will do next"). Nor is the
-density assumption mere bookkeeping. The model selects parcels in merit
-order, and 41 of the 54 land tranches are built to their caps in the
-least-cost 2050 build, so a worse acreage requirement shrinks every
-tranche's megawatt cap and pushes the build outward into steeper, costlier
-bands and lower-capacity-factor areas — while five acres per megawatt
-limits how far out it must go.
+megawatt for tracking solar, counting the full site — roads, setbacks, and
+buffers. On direct array area alone (row spacing included, the rest of the
+site not), the 2019 U.S. medians were 4.2 acres per MW-DC (5.6 per MW-AC)
+for tracking plants and 2.9 (3.6) for fixed-tilt, which packs about half
+again more capacity per acre (Bolinger and Bolinger, *Land Requirements
+for Utility-Scale PV*, Lawrence Berkeley National Laboratory, 2022;
+vendored in sources/). Those medians are seven years old, and the same
+study measured tracking power density rising 43 percent over 2011–2019,
+mostly from module efficiency; even at half that pace, today's tracking
+plants sit near five acres per MW-AC — and the trend runs through the
+2030s and 2040s, when most of the buildout modeled here occurs. We use
+five acres per megawatt-AC throughout — the same basis as the model's
+capacity variables — and state the judgment plainly: probably optimistic
+for a project built in the next few years, plausibly pessimistic for one
+built around 2045; one number for a quarter-century of construction splits
+that difference. The density is not bookkeeping. The model selects parcels
+in merit order, and 41 of the 54 land tranches are built to their caps in
+the least-cost 2050 build, so a worse acreage requirement shrinks every
+tranche's cap and pushes construction outward into steeper, costlier,
+lower-capacity-factor land. At five acres per megawatt, the 2050 build
+needs about 20,400 acres (about 18,000 on the realistic rooftop
+trajectory). The model assumes tracking solar throughout, because that is
+what the optimization selects. If land constraints were ever to bite, the
+next step is parcel-level characterization and a wider technology menu —
+fixed-tilt and agrivoltaic configurations (for instance double-sided
+vertical panels that capture early and late sun) use land differently and
+would open more potential than assumed here; both require changes to model
+structure and are planned for v2 ("What we will do next").
 
-
-That density puts the
-2050 build at about 20,400 acres (about 18,000 on the realistic rooftop
-trajectory). The screen's rule is fully documented: it admits agricultural/country-zoned 
-land only; subtracts Class A soils, golf courses, road buffers, and (via the
-zoning filter) military installations; and caps prime 
-Class B/C land at 10 percent per cluster while admitting all Class D/E and 
-non-agricultural land. Terrain enters through a graduated screen rather than
-a single cutoff: land up to 15 percent slope builds at reference cost, 15–20
-percent at a 5 percent cost premium, 20–30 percent at a 10 percent premium,
-and slopes above 30 percent are excluded. The premiums matter in practice:
-about a third of the least-cost build lands on slopes above 15 percent, so a
-flat-land-only reading of the inventory would misstate both the acreage and
-where it sits.
-
-Building at scale on 15–30 percent slopes is less settled practice than the
-cost premiums alone suggest. Tracker foundations, grading, and stormwater
-management on those grades carry engineering and permitting questions that a
-capacity-expansion model does not resolve, and some of that terrain may prove
-harder to develop than a 5–10 percent cost adder implies. Two observations
-bound the concern. First, the model is not short of flatter land it has been
-told not to use: the companion land inventory maps about 25,500 acres of
-Class B/C cropland under 15 percent slope that current law admits only
-through special use permits (the modeled screen draws just 3,500 of those
-acres), roughly 30,000 acres of military-controlled land in categories that
-range from plausible (explosive-safety buffers compatible with unoccupied
-solar, following the Kupono precedent) to discretionary, about 5,900 acres of
-durable non-agricultural sites — closed golf courses, quarries, landfills,
-brownfields — and reservoir surfaces suited to floating solar. Each category
-carries its own institutional path and none is assumed in the base
-inventory. Second, if steep-slope construction disappoints, the substitution
-runs toward these flatter categories rather than toward more total land: the
-question the map settles is physical availability, not siting certainty for 
-any particular parcel (Figure 2.3).
+**What the screen admits.** The screen's rule is fully documented. It
+admits agricultural- and country-zoned land only; subtracts Class A soils,
+golf courses, road buffers, and (via the zoning filter) military
+installations; caps prime Class B/C land at 10 percent per cluster — the
+as-of-right limit quantified below — and admits all Class D/E and
+non-agricultural land. Terrain enters through a graduated screen rather
+than a single cutoff: land to 15 percent slope builds at reference cost,
+15–20 percent at a 5 percent premium, 20–30 percent at a 10 percent
+premium, and slopes above 30 percent are excluded. Screening and
+clustering yield 5,451 MW of buildable capacity — 27,256 acres at five
+acres per megawatt — across 54 tranches (18 areas in three slope bands),
+91 percent of it on marginal or non-agricultural soils. The selected B/C
+parcels are not physical site choices; they are a quasi-random draw
+representing the acreage current law allows, and any similarly sized set
+would serve the analysis equally well. The slope premiums matter in
+practice: about a third of the least-cost build lands above 15 percent
+slope, so a flat-land-only reading of the inventory would misstate both
+the acreage and where it sits.
 
 ![Figure 2.3 — plausibly available solar land, the modeled subset, and transmission](figures/fig_2_3_available_land_map.png)
 
@@ -699,108 +705,120 @@ lines are the existing 138 kV and mapped 46 kV-plus network; dashed lines
 are modeled expansion paths. The inset table gives acreage by category and
 slope band; the modeled subset totals about 30,300 acres.
 
-The map and the model describe the same inventory at two levels of detail.
-The map's modeled subset totals about 30,300 acres: roughly 26,500 acres of
-Class D/E agricultural land, which carries no statutory cap, plus a
-3,800-acre draw of Class B/C parcels. The screening and clustering that turn
-that footprint into model inputs yield 5,451 MW of buildable capacity —
-27,256 acres at five acres per megawatt — across 54 tranches (18 areas in
-three slope bands), 91 percent of it on marginal or non-agricultural soils.
-The selected B/C parcels are not physical site choices. They are a
-quasi-random draw representing the amount of area current law allows, and
-any similarly sized set of parcels would serve the analysis equally well.
+**The inventory beyond the screen.** The map and the model describe the
+same inventory at two levels of detail. The map's modeled subset totals
+about 30,300 acres — roughly 26,500 acres of Class D/E agricultural land,
+which carries no statutory cap, plus a 3,800-acre draw of Class B/C
+parcels. Around it, the map documents what the screen excludes by
+construction, each category with its own institutional path and none
+assumed in the base inventory: about 25,500 acres of Class B/C cropland
+under 15 percent slope that current law admits only through special use
+permits (the modeled draw takes just 3,500 of those acres); roughly 30,000
+acres of military-controlled land, in categories from plausible
+(explosive-safety buffers compatible with unoccupied solar, following the
+Kupono precedent) to discretionary; about 5,900 acres of durable
+non-agricultural sites — closed golf courses, quarries, landfills,
+brownfields; and reservoir surfaces suited to floating solar. Beyond the
+mapped categories sit industrial, brownfield, and other disturbed lands
+inside the urban district, which the screen never examines, and two
+categories under parcel-by-parcel investigation: federal landholdings
+(tenure, mission constraints, and the 2029 state-land lease questions
+require careful treatment) and closed golf acreage (which the screen
+subtracts regardless of operating status).
 
-The companion land study quantifies the statutory B/C cap — as-of-right
-development limited to the lesser of 10 percent of a parcel or 20 acres
-(2014 Act 55) — directly at the
-parcel level (its notes/cap-quantification.md, run July 2026). Under current
-law, as-of-right B/C eligibility on Oʻahu is about 3,600 acres, and the
-binding element is the hard 20-acre-per-parcel cap rather than the 10
-percent share. Raising the share to 20 percent while keeping the 20-acre cap
-adds only about 1,100 acres; dropping the hard cap at the existing 10
-percent nearly triples eligibility, to about 9,400 acres; and 20 percent
-with no hard cap yields about 15,700 acres, a 4.3 times increase. The
-15,700-acre figure can look surprising against the island's roughly 34,400
-acres of agricultural-district B/C soil, but the cap is a share of each
-parcel's total acreage, not of its B/C acreage, and B/C soil is concentrated
-in very large parcels — the largest tenth of parcels hold 91 percent of it —
-so a 20 percent parcel share reaches nearly half the B/C total. The same
-concentration means relaxing the cap mostly transfers development option
-value to large landowners, a point the companion study develops. Class B/C
-lands can also be used for solar under agrivoltaic systems through special
-use permits from the Land Use Commission: of the eight applications to come
-before it, seven were approved unanimously without intervenors, and one, on
-Maui, is under review. Setback rules severely constrain onshore wind on
-Oʻahu, but we have found no case of a blocked solar project on the island.
+**Steep slopes.** Building at scale on 15–30 percent grades is less
+settled practice than the cost premiums alone suggest: tracker
+foundations, grading, and stormwater management on those grades carry
+engineering and permitting questions a capacity-expansion model does not
+resolve, and some of that terrain may prove harder to develop than a 5–10
+percent adder implies. Two observations bound the concern. First, the
+hardware tolerance is real but finite: standard single-axis trackers
+handle grades to roughly 15 percent with modest cost increases (companion
+study slope-cost review), and 92 percent of the mapped B/C envelope —
+25,503 of 27,828 acres — lies at or below that grade, though terrain binds
+unevenly (about 65 percent of Class C acreage exceeds a 5 percent grade,
+against about 40 percent for Classes A and B). Second, the model is not
+short of flatter land it has been told not to use — the categories above.
+If steep-slope construction disappoints, the substitution runs toward
+those flatter categories rather than toward more total land; the question
+the map settles is physical availability, not siting certainty for any
+particular parcel.
 
-**What the land records show.** The claim that suitable land is unavailable
-sits uneasily with the documented structure of the rules (companion study).
-Marginal (Class D/E) agricultural
-land is uncapped and abundant — 91 percent of the eligible inventory. Prime
-Class B/C land is capped as-of-right (the Act 55 cap quantified above), with
-*unlimited* B/C development available through
-a Special Use Permit — but only on the condition of an agricultural lease at
-50 percent or more below fair-market rent plus decommissioning security. For 
-much of this land, the solar value far exceeds the agricultural value, and 
-even a minimal second income stream would make these lands very attractive for
-solar. Moreover, such agrivoltaic systems could leverage solar to advance 
-state goals to make more productive use of agricultural lands and increase local
-food production. Some of the land, however, may have agricultural value that
-exceeds solar value, especially highly valuable seed crops. Seed crops, however, 
-require large buffers to limit cross-fertilization with other varieties, and 
-those buffers might be usefully and profitably deployed in solar production
-as well. 
+**What the land records show.** The claim that suitable land is
+unavailable sits uneasily with the documented structure of the rules. The
+companion land study quantifies the statutory cap on prime Class B/C
+soils — as-of-right development limited to the lesser of 10 percent of a
+parcel or 20 acres (2014 Act 55) — directly at the parcel level (its
+notes/cap-quantification.md, run July 2026). Under current law,
+as-of-right B/C eligibility on Oʻahu is about 3,600 acres, and the binding
+element is the hard 20-acre cap, not the 10 percent share. Raising the
+share to 20 percent while keeping the 20-acre cap adds only about 1,100
+acres; dropping the hard cap at the existing 10 percent nearly triples
+eligibility, to about 9,400 acres; both changes together yield about
+15,700 acres, a 4.3-times increase. That figure can look surprising
+against the island's roughly 34,400 acres of agricultural-district B/C
+soil, but the cap is a share of each parcel's *total* acreage, not of its
+B/C acreage, and B/C soil concentrates in very large parcels — the largest
+tenth hold 91 percent of it — so a 20 percent parcel share reaches nearly
+half the B/C total. The same concentration means relaxing the cap mostly
+transfers development option value to large landowners, a point the
+companion study develops.
 
-Thus, a realistic reading of our 10 percent baseline should note it may well be 
-conservative: in practice, much of the Class B/C deployment it represents would 
-likely proceed as agrivoltaic projects under the special-use permit pathway. 
-The record to date shows the route is workable when the economics support it — 
-and some larger parcels could economically develop to the as-of-right cap without 
-any permit at all. Ownership of the *eligible* land is unconcentrated (HHI ≈ 560, 
-44 percent government-held, no pivotal private owner), so land market power does 
-not rescue the scarcity argument either.  Slope data show terrain binds unevenly — 
-about 65 percent of Class C acreage exceeds a 5 percent grade against about 40 
-percent for Classes A and B. However, standard single-axis trackers tolerate 
-slopes to roughly 15 percent (the documented upper end for current hardware; 
-companion study slope-cost review), with only modest cost increases, so much 
-of the sloped B/C acreage remains buildable (about 92 percent of the mapped
-B/C envelope — 25,503 of 27,828 acres — lies at or below 15 percent grade;
-companion inventory, Figure 2.3).
+Above the cap, B/C development is *unlimited* through a Special Use
+Permit, conditional on an agricultural lease at 50 percent or more below
+fair-market rent plus decommissioning security. The record shows the route
+workable when the economics support it: of the eight applications to come
+before the Land Use Commission, seven were approved unanimously without
+intervenors; the eighth, on Maui, is under review. And the economics
+generally do support it: for much of this land the solar value far exceeds
+the agricultural value, so even a minimal second income stream makes dual
+use attractive — while advancing the state's goals of keeping agricultural
+land productive and growing local food supply. The exception is land whose
+agricultural value exceeds its solar value, notably high-value seed crops;
+but seed crops require large buffers against cross-fertilization, and
+those buffers might themselves be profitably planted in panels. A
+realistic reading of our 10 percent baseline is therefore that it is
+likely conservative: much of the B/C deployment it represents would
+proceed as agrivoltaic projects under the special-use pathway, and some
+large parcels could build to the as-of-right cap with no permit at all —
+though at five acres per megawatt a 20-acre site is about 4 MW, below the
+5 MW minimum today's PPA terms require, a procurement conflict Section 2.8
+(reform 2) addresses. Setback rules severely constrain onshore wind on
+Oʻahu; we have found no case of a blocked solar project on the island.
 
-An agrivoltaic standard giving solar the same as-of-right dual-use pathway that wind 
-enjoys under HRS §205-4.5 would streamline the interconnection process while keeping 
-and possibly growing the land in farming (Section 2.8, reform 5). And the constraint the 
-companion study finds actually binding is transfer capacity: roughly 70 percent of 
-the screened utility-solar resource sits north of 
-the island's transmission necks, and moving a multi-gigawatt northern build south 
-requires bounded corridor upgrades on the order of $10–200 million — small against 
-the plant decisions in view, unpriced in this single-zone model, and what
-a subsequent nodal model will quantify (V2.md).
+**Ownership, terrain, and the grid.** Ownership of the eligible land is
+unconcentrated — HHI ≈ 560, 44 percent government-held, no pivotal private
+owner — so land market power does not rescue the scarcity argument either.
+An agrivoltaic standard giving solar the same as-of-right dual-use pathway
+wind enjoys under HRS §205-4.5 would streamline the process while keeping,
+and possibly growing, the land in farming (Section 2.8, reform 4). The
+constraint the companion study finds actually binding is not acreage but
+transfer capacity: roughly 70 percent of the screened utility-solar
+resource sits north of the island's transmission necks, and moving a
+multi-gigawatt northern build south requires bounded corridor upgrades on
+the order of $10–200 million — small against the plant decisions in view,
+unpriced in this single-zone model, and what the nodal model of v2 will
+quantify.
 
 **The screen errs in both directions, and the errors partially offset.**
 Some acreage inside the screen will prove undeliverable in practice —
-parcels whose owners decline to lease, sites behind transmission corridors
-not yet built, projects communities decline to accept, and parcels that are not 
-correctly or completely characterized by the available data. But the screen also
-excludes, by construction, land that is plausibly viable: the reserves
-enumerated above — the agrivoltaic B/C envelope beyond the as-of-right cap
-(about 30,800 additional acres), the military categories, the durable
-non-agricultural sites, and reservoir surfaces — plus industrial,
-brownfield, and other disturbed lands inside the urban district, which the
-screen never examines, and two categories now under parcel-by-parcel
-investigation: federal landholdings (where tenure, mission constraints,
-and the 2029 state-land lease questions require careful treatment) and
-closed golf acreage (which the screen subtracts regardless of operating
-status). None of these is counted in the 27,256 eligible acres, which itself
-exceeds the roughly 20,400 acres the least-cost build actually uses.
+owners who decline to lease, sites behind transmission corridors not yet
+built, projects communities decline to accept, and parcels the available
+data mischaracterize. But the screen also excludes the plausibly viable
+reserves cataloged above — the roughly 30,800 acres of
+agricultural-district B/C soil beyond the as-of-right cap, the military
+categories, the durable non-agricultural sites, the reservoir surfaces,
+and the urban-district lands it never examines. None of these is counted
+in the 27,256 eligible acres, which itself exceeds the roughly 20,400
+acres the least-cost build actually uses.
 
-Physical acreage is sufficient; the binding questions are pace, process, and
-terms. The companion study of Oʻahu land availability and the political economy
-of the land-use rules — the legislative record of HRS §205-2/§205-4.5, cap
-counterfactuals, ownership, terrain, and grid proximity — is public at
-github.com/mikejrob/solar-wind-landuse and carries the full detail behind
-this section and the next. It is a living inventory: corrections, parcels,
-and local knowledge are welcome there.
+Physical acreage is sufficient; the binding questions are pace, process,
+and terms. The companion study of Oʻahu land availability and the
+political economy of the land-use rules — the legislative record of HRS
+§205-2/§205-4.5, cap counterfactuals, ownership, terrain, and grid
+proximity — is public at github.com/mikejrob/solar-wind-landuse and
+carries the full detail behind this section and the next. It is a living
+inventory: corrections, parcels, and local knowledge are welcome there.
 
 ### 2.6 What the fuel choices change about land, and when
 
@@ -904,11 +922,12 @@ turbines burning imported hydrogen. Our own model pivots similarly to offshore
 wind when solar costs more than twice the ATB baseline while offshore wind
 carries no Hawaiʻi premium (Section 4.5 examines the HSEO study's methodology
 directly).
-Hawaiian Electric's Integrated Grid Plan similarly presents a Base Plan 
-"integrating nearly 3,000 MW of solar and storage by 2050" and a Land-Constrained 
-Preferred Plan that shifts part of that toward offshore wind, rooftop solar, 
-and firm renewables (IGP Supplemental Response, Docket 2018-0088, Nov 14 2023 — quote p. 10; plan
-composition pp. 13, 21, 62; public filing). 
+Hawaiian Electric's Integrated Grid Plan similarly presents a base scenario
+"integrating nearly 3,000 MW of solar and storage by 2050" and a
+land-constrained scenario that shifts part of that toward offshore wind,
+rooftop solar, and firm renewables. The land-constrained scenario is the
+utility's plan of record (IGP Supplemental Response, Docket 2018-0088,
+Nov 14 2023 — quote p. 10; plan composition pp. 13, 21, 62; public filing). 
 
 Two facts bear on those substitutions: offshore wind does not appear as a 
 near-term resource in HSEO's current planning materials (HSEO Ocean Energy Fact Sheet, Oct 2025, 
@@ -947,8 +966,9 @@ utility-scale build: 2050 utility solar falls from about 4,100 MW
 about 20,400 acres of land to roughly 15,000.
 
 **The built environment is a reserve currently closed by policy.** If
-utility-scale land binds, this is where much of the substitution could go (off-shore
-wind is another possibility). The model carries 4,062 MW of rooftop potential 
+utility-scale land binds, this is where much of the substitution could go,
+alongside the flatter-land reserves of Section 2.5 (offshore wind is
+another possibility). The model carries 4,062 MW of rooftop potential 
 (canopies over parking would add more; we do not yet count them here, but will in the 
 next zonal grid model). Even our accelerated scenario, at about 2,100 MW by 2050, 
 uses just over half of that potential — and the accelerated trajectory itself is 
@@ -958,7 +978,7 @@ deal more. Its purpose is perspective: to show how far rooftop growth can substi
 for open land, not to predict the response to a tariff no one has yet offered. Presently, 
 about 49 percent of Oʻahu single-family homes now carry rooftop systems, 
 and customer-sited capacity across Hawaiian Electric's territory is 
-approaching 1.2 GW (Hawaiian Electric, 2025–26 releases),⁴ growth achieved 
+approaching 1.2 GW (Hawaiian Electric, 2025–26 releases),³ growth achieved 
 under restrictive tariffs. Current tariffs let distributed systems offset their own 
 bills but compensate exports below avoided cost and prohibit
 surplus credits for providing energy to others, which suppresses the investment that 
@@ -972,7 +992,7 @@ condemning nothing, and rezoning nothing. A reader worried that Oʻahu's open la
 cannot host the buildout should be, by the same logic, the strongest advocate for 
 unlocking the rooftops.
 
-⁴ *Footnote: distributed-capacity totals differ across sources in ways
+³ *Footnote: distributed-capacity totals differ across sources in ways
 consistent with rating conventions. Hawaiian Electric's quarterly data
 (June 30, 2026) reports 79,347 Oʻahu PV systems without stating a rating
 basis; EIA's monthly utility data (May 2026), which is AC, shows about
@@ -1005,10 +1025,12 @@ dispatched by the optimizer alongside the rest of the system. The cost
 difference is therefore the value of coordination itself, free of the
 accounting choices that otherwise separate the demand-side and supply-side
 representations of rooftop solar. On the conservative path the difference
-is $0.06 billion over 2027–2050 (about 0.04 cents per kilowatt-hour); on
-the trend path $0.04 billion; on the accelerated path — 2.1 GW of
+is $0.03 billion over 2027–2050 (about 0.01 cents per kilowatt-hour); on
+the trend path $0.01 billion; on the accelerated path — 2.1 GW of
 distributed solar with roughly 2,800 MWh of customer batteries by 2050 —
-$0.26 billion, or 0.19 cents per kilowatt-hour. The investment plan is similarly robust: solved
+$0.23 billion, or 0.10 cents per kilowatt-hour. All six cells are solved at
+the 0.1 percent tolerance, so the paired differences are not tolerance
+artifacts. The investment plan is similarly robust: solved
 either way, 2050 utility solar moves by 25 to 200 MW across the three
 trajectories.
 
@@ -1017,15 +1039,15 @@ behavior is nearly as good as perfect dispatch; the grid can plan around
 it, and nothing in the near-term case for rooftop solar depends on smarter
 coordination. But the value of coordination rises steeply with adoption:
 with 2.1 GW of distributed solar — the scale the Section 2.8 tariff reform
-could create — it is worth about as much as the entire cost of the 2045
-mandate (below). One caveat bounds these figures: they price battery
+could create — it is worth roughly eight times its value at today's
+adoption, and approaches the entire cost of the 2045 mandate (below). One caveat bounds these figures: they price battery
 scheduling only. Letting household consumption itself respond to prices —
 demand response proper — is not modeled anywhere in this report, and prior
 work finds such response is worth several times more on a grid like this
 one, so the full value of real-time pricing likely exceeds the battery
-figure.⁵
+figure.⁴
 
-⁵ *Footnote: responding to prices costs households effort, and that cost
+⁴ *Footnote: responding to prices costs households effort, and that cost
 does not appear in our present-value accounting. But the effort is not new.
 Rooftop customers already manage their demand to get the most from their
 panels and batteries under today's tariffs: buying from the grid costs much
@@ -1076,11 +1098,15 @@ directly on the solar-cost lever.
    to a realistic allowance of 0.3-0.5 percent per year. Where feasible, a simplified
    take-or-pay for capacity would lower financing cost. And a streamlined track
    for small installations of 5 MW or less would open Class B and C agricultural
-   land that current terms foreclose: the as-of-right cap on that land, the
-   lesser of 10 percent of a parcel or 20 acres (Section 2.5), is a de-facto
-   prohibition when PPAs require projects above 5 MW to qualify. Small
-   installations could be offered avoided-cost pricing with one-to-two-hour
-   storage rather than the usual four-hour standard.
+   land that current terms foreclose: at the five-acre-per-megawatt density of
+   Section 2.5, the as-of-right cap on that land — the lesser of 10 percent of
+   a parcel or 20 acres — tops out near 4 MW, so PPA terms requiring more than
+   5 MW are a de-facto prohibition on exactly the projects the cap permits.
+   Denser fixed-tilt layouts or continued panel-efficiency gains could lift a
+   20-acre site past the threshold; a lower minimum would help, but a
+   streamlined, fast-connect exception for small installations removes the
+   conflict directly. Small installations could be offered avoided-cost pricing
+   with one-to-two-hour storage rather than the usual four-hour standard.
 3. **Interconnection reform.** Queue reform, ideally built around
    connect-and-manage (Section 2.4): a project interconnects on a preliminary
    feasibility determination and is dispatched against actual grid conditions,
@@ -1132,7 +1158,7 @@ directly on the solar-cost lever.
    and rezoning nothing — and it would unambiguously reduce system costs and
    pollution. The gains compound with scale: at today's adoption, battery
    timing is worth little, but with 2.1 GW of distributed solar — the
-   trajectory this tariff could put Oʻahu on — it is worth about $0.26
+   trajectory this tariff could put Oʻahu on — it is worth about $0.23
    billion (Section 2.7), and the demand-response benefit, which our
    modeling does not count, comes on top.
 
@@ -1142,7 +1168,7 @@ directly on the solar-cost lever.
 
 Enhanced geothermal (EGS) cost cases are 6.2 / 10 / 14.7 $M/MW at 2030, before the 
 federal credit. These assumptions represent the optimistic DOE GeoVision trajectory, 
-a compromise reference, and the ATB 2024 Conservative profile.³ Under current law, the 
+a compromise reference, and the ATB 2024 Conservative profile.² Under current law, the 
 geothermal tax credit applies, lowering the effective cost of a 2027–2035 build by 30
 percent, and at that credited reference cost the model builds the full identified 
 resource in the base case.
@@ -1169,7 +1195,7 @@ about 2,000 acres at five acres per MW, along with 145 MW (1,250 MWh) of
 storage. And if the developable resource on Oʻahu proves larger than the
 roughly 100 MW modeled here, both cost and land requirements fall further.
 
-³ *Footnote: the reference case is a documented judgment call sitting
+² *Footnote: the reference case is a documented judgment call sitting
 between a DOE-referenced ~$9M/MW and ATB 2024 Moderate ~$12M/MW; sources and
 reasoning are in the repository conventions file. The cost-case labels
 (6.2/10/14.7 $M/MW) are gross of the federal tax credit; the model itself
@@ -1279,7 +1305,7 @@ plant at all.
 
 Table ES.1 carries the headline matrix. Three results:
 
-**The Waiau Repower is uneconomic in every case.** It adds +$1.35 to +$1.39
+**The Waiau Repower is uneconomic in every case.** It adds +$1.38 to +$1.49
 billion on its own, and every bundle containing it inherits the penalty. This
 result is robust to every sensitivity in the report.
 
@@ -1434,23 +1460,34 @@ risk or how fuel-price risk passes through. The fuel price we carry
 well below current Pacific spot and Qatar-linked term markets, and Section 4.6
 discusses why a contract floor at that level should not be read as a ceiling.
 
-One asymmetry in the fuel modeling favors the JERA plant and should be
-stated. Every existing unit on the system, and our own LSFO-plant
+An asymmetry in the fuel modeling used to favor the JERA plant, and has
+been corrected. Every existing unit on the system, and our own LSFO-plant
 comparator, carries a part-load fuel curve: average heat rates rise when a
 unit runs below full output (Kalaeloa averages about 9.5 MMBtu/MWh at its
 minimum load against a 5.7 incremental rate; the modeled LSFO plant about
-8.5 against 6.6). The JERA plant's fuel use is instead modeled as strictly
-proportional to output — 6.92 MMBtu/MWh at every load — so it pays no
-part-load penalty even though it runs between 19 and 81 percent capacity
-factor across the solved scenarios' operating periods, mostly near the
-lower half of that range after 2035. The bias is bounded, because the plant is
-modeled as four 125 MW units that the optimizer can shut down rather than
-part-load, but its direction is one-sided: correcting it would raise the
-JERA pathway's fuel use and cost. The JERA cost premia reported here are
-floors in this respect. We will apply a part-load curve to the JERA plant
-and re-solve the affected scenarios before the v1 lock; the item is
-tracked, with other pre-lock corrections, in the public repository's
-issue list.
+8.5 against 6.6). The JERA plant's fuel use was instead modeled as strictly
+proportional to output — 6.92 MMBtu/MWh at every load — so it paid no
+part-load penalty even though it runs well below full output for much of
+its life. The plant now carries a curve derived from the operating record
+of 408 comparable combined-cycle units on the mainland, and a minimum load
+raised from 30 to 62.5 MW per block (Appendix A.8; `sources/epa_cems/`).⁵
+
+⁵ *Footnote: this refinement was prompted by JERA, whose July 2026 memo
+on the withdrawn paper pressed the distinction between a plant's
+full-load heat rate and the average rate it achieves in operation. The point
+was well taken and applies to the modeling as well as the presentation,
+and we thank them for it. The corrected curve barely moves cost: the
+JERA premium over no-new-plant changes by less than $0.01 billion in
+every configuration tested (for example +$0.535 to +$0.538 billion at
+500 MW bare-EPC, +$0.958 to +$0.959 billion at the +20 percent capital
+case). What it moves is dispatch. Facing a real part-load penalty and a
+higher minimum load, the optimizer runs the plant less and buys the
+displaced energy from solar and storage instead, so LNG imports over the
+horizon fall about 16 percent (293 to 246 million MMBtu) and the plant's
+combustion-CO₂ advantage over the no-new-plant path widens from about
+0.5 to 1.3 Mt. Because the methane threshold scales with imports and
+with that advantage, the leak rate at which LNG's greenhouse edge
+disappears roughly triples (Appendix A.10).*
 
 ### 4.3 Plant or fuel? Where the LNG advantage comes from
 
@@ -1717,8 +1754,12 @@ forecasts differ.
 *Figure 4.4 — Generation mix at anchor years: this report's least-cost and
 no-mandate paths (labeled "Switch" after the model; base rooftop
 trajectory, reference oil) against Hawaiian
-Electric's Integrated Grid Plan (preferred and land-constrained scenarios,
-Figure 2-3 of the 2023 final report) and the HSEO study's oil and LNG cases
+Electric's Integrated Grid Plan (Figure 2-3 of the May 2023 final report).
+The IGP plans are named here by scenario — base and land-constrained —
+because the utility reversed which one it called "preferred": the May 2023
+report gave that label to the base scenario, and the November 2023
+Supplemental Response moved it to the land-constrained scenario, which is
+now the plan of record. The HSEO study's oil and LNG cases are
 (the study's results worksheets, vendored in `sources/plan_mix/`). Shares
 include customer-sited solar; the oil shares quoted in Section 2.7 are of
 grid supply alone and run a few points higher. In our solves, thermal
@@ -1726,8 +1767,10 @@ generation with zero dispatch emissions is counted as biodiesel.*
 
 Three contrasts carry most of the information. First, everyone agrees on
 the destination: every plan reaches essentially zero fossil generation by
-2045. The paths differ in pace. The IGP's preferred scenario de-fossilizes
-fastest early — 23 percent fossil by 2030 — while our least-cost path holds
+2045. The paths differ in pace. The IGP's base scenario — the one the
+utility did *not* adopt — de-fossilizes fastest early, 23 percent fossil by
+2030, against 45 percent in the land-constrained plan of record; our
+least-cost path holds
 about 40 percent in 2030 and then moves fast (14 percent by 2035), because
 the optimizer waits for the solar and storage it buys to get cheap and for
 the credit window rather than building early at higher cost; HSEO sits
@@ -1754,6 +1797,179 @@ without the mandate the model keeps about 9 percent fossil generation in
 on economics alone. That last step is what the mandate buys, and it costs
 about $0.25 billion in present value, roughly 0.2 cents per kilowatt-hour
 (Sections 2.7 and 4.8).
+
+**Pricing the plans.** The mixes in Figure 4.4 can be priced. For each
+published plan we solve a scenario whose generation is constrained to that
+plan's mix: the plan's shares of its own grid supply, rescaled to the grid
+demand our matching rooftop trajectory leaves the utility to serve, and
+imposed each planning period as a band on utility solar and on total wind,
+a band on fossil generation through 2040, and a floor under the plan's
+firm clean energy from 2045. Dispatch, storage, and everything the plan
+does not specify stay optimized. The difference between that cell's cost
+and the least-cost build on identical settings is the plan's price tag:
+what following the plan costs over building the cheapest system that meets
+the same requirements, with both sides priced by the same model, the same
+fuel forecasts, and the same capital costs. The comparison each plan
+should be read against is the least-cost column at the same solar premium,
+because a planner who believes Hawaiʻi utility solar carries a 104
+percent premium over mainland costs faces both columns at that price.
+
+Two features of the construction need stating. First, wind is pinned as a
+total, not by type: the plans carry 257–287 MW of onshore wind, but the
+county setback ordinance caps onshore at about 150 MW in our framework
+(Section 2.6), so offshore stands in for onshore the ordinance forbids, and
+only the plans' combined wind is reproduced. Second, from 2045 the plans
+lean on firm clean energy — a quarter to a third of grid supply for the
+HSEO cases — which HSEO's study carries as biodiesel in its oil case and
+as imported hydrogen in its LNG case. We hold each plan to its firm
+*quantity* and let the model choose the fuel, for a reason given below;
+the model chooses biodiesel every time. Appendix A.15 documents the
+quotas, the contract carve-outs (Kalaeloa's minimum-take PPA sits outside
+the fossil band), and the tolerance basis.
+
+| Plan (vs least cost, same settings) | 20% Hawaiʻi premium | 104% Hawaiʻi premium |
+|---|---|---|
+| IGP land-constrained (plan of record) | [PENDING] | [PENDING] |
+| IGP base | +$2.18B | +$2.29B |
+| HSEO oil | +$3.63B | +$2.54B |
+| HSEO LNG | +$2.90B | +$1.72B |
+
+*Table 4.1 — Plan price tags: NPV system cost above the least-cost build
+at the same utility-solar premium over mainland ATB costs (2024$,
+EIA-reference oil; the 20 percent premium is the study baseline,
+Section 2.6). The IGP land-constrained rows await two solves still
+running at press of this draft.*
+
+![Figure 4.5 — plan price tags versus cumulative emissions](figures/fig_4_5_plan_price_tags.png)
+
+The tags are large — two to nearly four billion dollars, on a least-cost
+base of about 25 to 29 — and they are not purchasing emissions cuts. At
+baseline solar costs the HSEO oil plan is the starkest case: it costs $3.6
+billion more than least cost and emits *more* — 31.6 against 30.1 Mt of
+cumulative combustion CO₂ through 2050 — because its early years keep more
+oil on the grid than the cheapest build would. Where a plan does cut
+cumulative emissions, the implied abatement price runs $170 to $690 per
+tonne of CO₂. The one comparison that narrows with expensive solar is
+HSEO-LNG against least cost: at the 104 percent premium its tag falls to
+$1.7 billion, because the plan's offshore wind and firm fuel look better
+when the alternative's solar is dear.
+
+The oil-versus-LNG pair is the comparison HSEO's study was built to make,
+and our framework agrees with its direction: the LNG case lands $0.7–0.8
+billion cheaper than the oil case at every solar premium, and 5.7 Mt
+lower. About $0.14 billion of that gap — a fifth — is a fuel-price
+assumption rather than a physical difference: our forecasts hold LSFO at
+roughly 1.4 times the delivered price of LNG across the horizon, while
+HSEO's tracks converge to 1.2 by 2050, so the same plans priced on
+HSEO's fuel assumptions would sit about $0.14 billion closer (our LNG
+price includes the import infrastructure charge; the fuel-track
+discussion above).
+
+**The firm-fuel choice, and why we take it away from the plans.** HSEO's
+post-2044 supply rests on a fuel its two cases do not share: biodiesel at
+$63.84 per MMBtu in the oil case, hydrogen at $40.66 in the LNG case,
+both externally supplied at assumed prices. Hydrogen at that price
+presupposes an import supply chain — liquefaction, shipping, storage —
+that does not exist at scale today, serving an island that would be among
+its first buyers; we regard that as somewhere between very uncertain and
+unlikely, and our framework does not assume it. Here hydrogen must be
+made: electrolyzers, tanks, and fuel cells are available to the model at
+reference costs, charged as capital, powered by whatever electricity the
+build can spare (Section 3's hydrogen scenarios build exactly this way,
+and remain feasible). Offered that choice, the plan cells never make
+hydrogen: with utility solar and wind pinned to the plans' own levels
+there is no surplus generation to electrolyze, and hydrogen made from
+biodiesel-fired electricity returns about a third of the fuel burned, so
+biodiesel burned directly is always cheaper. Both HSEO plans, priced
+here, therefore meet their post-2044 firm requirement with the same fuel
+— which has the useful side effect of making the oil and LNG cases
+directly comparable, freed of the hydrogen-price assumption that would
+otherwise do much of the work (the same asymmetry noted in this
+section's first bullet). Readers who expect cheap imported hydrogen to
+materialize should read both tags as upper bounds on that world.
+
+> **Box 4.2 — What the plans' own price tags say.** Hawaiian Electric's
+> IGP prices its plans directly (Table 9-1 of the May 2023 report): a
+> revenue requirement of $29.40 billion NPV for the base plan, $30.36
+> billion for the land-constrained plan of record (+3%), and $33.89
+> billion for the status quo (+15%). Those totals are not comparable to
+> ours — different demand, different discounting, different scope — but
+> their internal structure is instructive in three ways.
+>
+> First, the two plans are not directly comparable *with each other* in
+> the IGP's own accounting: the land-constrained plan's utility serves
+> about 26 percent less energy in 2045 (customer DER supplies 4,082 GWh
+> against the base plan's 1,878 on near-equal totals, Tables 2-3/2-4),
+> and the rooftop capital that substitution requires is customer-paid
+> and appears in no revenue requirement. A plan can look cheap by moving
+> spending off the utility's books. Our cross-family cells put both
+> plans on a common rooftop trajectory before comparing: [PENDING —
+> the head-to-head awaits the land-constrained solves].
+>
+> Second, the transmission line. The base plan carries $9.77 billion
+> (nominal) of transmission capital against the land-constrained plan's
+> $2.35 billion and the status quo's $0.82 billion — roughly $6.0
+> billion in 2024 dollars, most of it in 2045–2050. Set against each
+> plan's total capital program (Tables 9-2 through 9-4), transmission is
+> 63 percent of the base plan's capital, 29 percent of the
+> land-constrained plan's, and 12 percent of the status quo's. That last
+> figure is the ordinary one — transmission is the smallest component
+> of what U.S. electricity customers pay, about 13 percent of the
+> delivered price against 58 for generation and 28 for distribution
+> (EIA, AEO 2023 Table 8, 2022 values; those are shares of price, not
+> of capital, so the comparison is loose). The cleaner benchmark is
+> internal to the same tables: continuing as-is puts 12 percent of
+> capital into wires, the land-constrained plan 29 percent, and the
+> base plan 63 percent — five times the status quo's share. Even the
+> land-constrained plan, which builds the least of the three, roughly
+> doubles the wires share of a continue-as-is program. (The IGP labels
+> both Tables 9-2 and 9-4 a "Preferred Plan": the term designates the
+> chosen plan *within* each scenario, not a choice between scenarios,
+> and the utility's plan of record is now the land-constrained one.) The IGP's own text
+> prices renewable-zone enablement at $950–1,100 per kW; our solved
+> builds carry solar at $1,511 per kW *including* the generation. Its
+> own non-wires analysis identifies avoidable segments: the Archer cable
+> replacement avoidable with 37 MW of storage or demand response, Ewa
+> Nui reducible from 324 to 175 MW, Wahiawa by 220 MW, and a $3,980M
+> 2040–2045 network expansion whose stability contribution is listed as
+> "Not studied." For scale: Hawaiian Electric's entire Oʻahu net utility
+> plant — every wire, pole, and plant it operates today — stands at
+> $5.96 billion ($9.29 billion gross of depreciation, at historical
+> cost; HEI 2024 10-K, utility-only balance sheet). A regulated utility
+> earns its allowed return on the capital it deploys, so it profits more
+> from building infrastructure than from avoiding the need for it — the
+> incentive economists call the Averch–Johnson effect. A plan that
+> spends a new grid's worth of capital on transmission at least raises
+> the question, though performance-based regulation mutes the incentive,
+> and settling it requires modeling the alternatives — storage, demand
+> response, generation sited to need less wire — priced against the
+> line. At national scale that comparison has been made, in the same
+> model family used here: an optimal U.S. transmission buildout would
+> more than triple interregional capacity yet lowers the cost of a
+> zero-emissions system by only about 7 percent, because storage and
+> generation siting substitute closely for wires (Zheng, Schivley,
+> Fripp, and Roberts, *Applied Energy* 421(15), 2026). Oʻahu is one
+> small zone rather than a continent, so the number does not transfer —
+> but the mechanism is what v2 will test here.
+>
+> Third, the status quo. HECO prices continuing as-is at 15 percent
+> above its base plan. Our equivalent — solar and wind frozen at
+> contracted projects, conservative rooftop growth, no clean-energy
+> requirement — lands 19 percent above least cost with more than triple
+> the emissions (108 against 30 Mt), or 4 percent above when LNG is
+> allowed in. The direction agrees; the magnitude says the cost of
+> standing still is, if anything, larger in our framework than in the
+> utility's.
+>
+> A fourth comparison no accounting here captures: the rooftop capital
+> itself. The accelerated trajectory adds about 1,120 MW of customer
+> solar over the base one by 2050 — $2.1–2.4 billion of present-value
+> capital at Hawaiʻi residential prices (Section 2.3) that appears in
+> no plan's revenue requirement and no cell of Table 4.1. Version 2 of
+> this model is being built to close both gaps: transmission expansion
+> optimized jointly with storage, demand response, and generation
+> siting — rather than inherited from the plan being priced — and a
+> full both-sides-of-the-meter accounting of customer capital.
 
 ### 4.6 Considerations the analysis does not capture
 
@@ -1897,11 +2113,11 @@ combustion turbine.
 | Configuration (reference oil) | System cost ($B) | vs no-new-plant |
 |---|---:|---:|
 | No new fuel plant, no LNG | 25.83 | — |
-| FSRU + Kalaeloa conversion, no new plant | 25.44 | −0.39 |
-| FSRU + Kalaeloa, Kahe 5 & 6, CIP CT conversions, no new plant | 24.78 | **−1.05** |
-| *…same, net of the full 2016 conversion-program charge ($0.45B)* | *25.23* | ***−0.60*** |
-| *…same, also charging the entire 2016 onshore package ($0.26B)* | *25.49* | *−0.34* |
-| JERA 500 (bare-EPC), no conversions | 26.36 | +0.53 |
+| FSRU + Kalaeloa conversion, no new plant | 25.45 | −0.39 |
+| FSRU + Kalaeloa, Kahe 5 & 6, CIP CT conversions, no new plant | 24.79 | **−1.05** |
+| *…same, net of the full 2016 conversion-program charge ($0.45B)* | *25.24* | ***−0.60*** |
+| *…same, also charging the entire 2016 onshore package ($0.26B)* | *25.50* | *−0.34* |
+| JERA 500 (bare-EPC), no conversions | 26.37 | +0.54 |
 | JERA 500 (bare-EPC) + Kalaeloa conversion | 25.92 | +0.09 |
 
 At JERA's cost quote, the conversion configurations beat building the
@@ -2073,11 +2289,11 @@ and the decisions that dominate bills lie elsewhere.
 ### 4.9 Emissions and the pace of decarbonization
 
 Counting only combustion on Oʻahu — the accounting most favorable to LNG,
-with no upstream methane — the two paths run close: 30.8 Mt for JERA
-(bare-EPC), 30.6 for the +20% case, against 31.3 for no-new-plant over
-2027–2050, so the LNG path is about 0.5–0.6 Mt lower on combustion CO₂. LNG
-displaces oil early (about 0.9 Mt/yr cleaner around 2030) and displaces
-solar and geothermal in the middle years (about 0.55 Mt/yr dirtier around
+with no upstream methane — the two paths run close: 30.0 Mt for JERA
+(bare-EPC), 30.5 for the +20% case, against 31.3 for no-new-plant over
+2027–2050, so the LNG path is about 0.8–1.3 Mt lower on combustion CO₂. LNG
+displaces oil early (about 0.8 Mt/yr cleaner around 2030) and displaces
+solar and geothermal in the middle years (about 0.6 Mt/yr dirtier around
 2035), with the RPS forcing both paths to zero by 2045 (Figure 4.1). The
 credited base case pulls both totals well below the earlier no-credit
 figures, as cheaper storage and geothermal displace more oil.
@@ -2092,8 +2308,8 @@ only; upstream methane is treated in the text. Both paths reach zero by 2045
 under the clean-energy mandate.
 
 The clearer difference is the pace of the transition. In 2035 the
-no-new-plant path generates 85 percent of Oʻahu's electricity from
-renewables; the JERA path, 63 percent — a 22-point gap (by the model's own
+no-new-plant path generates 82 percent of Oʻahu's electricity from
+renewables; the JERA path, 54 percent — a 28-point gap (by the model's own
 renewable-share metric) that narrows through the 2040s. The LNG path defers
 roughly a decade of clean-energy deployment, and its cumulative-CO₂ parity
 depends on the mandate forcing the same endpoint.
@@ -2102,14 +2318,15 @@ Upstream methane overcomes LNG's combustion edge, by an amount that depends on a
 debatable question of incidence. Natural gas is mostly methane, and
 some share leaks from wells, gathering, processing, liquefaction, and
 shipping. Appendix A.10 carries the calculation: the JERA path imports about
-293 million MMBtu of LNG over the horizon, roughly 5.6 million tonnes of
+246 million MMBtu of LNG over the horizon, roughly 4.7 million tonnes of
 methane throughput. Each percentage point of supply-chain leakage adds about
-1.7 Mt CO₂-equivalent at a 100-year warming potential, or about 4.7 Mt at the
-20-year potential — against a combustion gap of 0.5–0.6 Mt in LNG's favor. LNG's
-greenhouse advantage therefore reverses at leakage above roughly one-third
-of one percent (100-year basis) or one-tenth of one percent (20-year basis) —
-thresholds below every published measurement of U.S. supply chains (Sherwin et al. 2024: 
-every measured U.S. basin exceeds both thresholds).
+1.4 Mt CO₂-equivalent at a 100-year warming potential, or about 3.9 Mt at the
+20-year potential — against a combustion gap of 0.8–1.3 Mt in LNG's favor. LNG's
+greenhouse advantage therefore reverses at leakage above roughly nine-tenths
+of one percent (100-year basis) or one-third of one percent (20-year basis) —
+thresholds at or below every published measurement of U.S. supply chains
+(Sherwin et al. 2024: the lowest basin measured, Appalachia, sits at 0.75
+percent and the production-weighted average at 2.95 percent).
 
 How far above depends on whose gas is counted. Counting only the literal
 cargoes Hawaiʻi would buy — plausibly sourced from lower-leakage suppliers —
@@ -2251,7 +2468,7 @@ comparable firm capacity at roughly $2,900/kW on this report's basis
 (Section 4.3) — about a third below the repower's $4,545/kW — with a heat
 rate near 6,900 BTU/kWh against the repower's simple-cycle ≈9,500. The
 system-cost gap tells the same story: no-new-plant beats the repower by
-$1.38 billion, and no bundle rescues it — every Waiau-containing
+$1.40 billion, and no bundle rescues it — every Waiau-containing
 configuration inherits the penalty (Table ES.1).
 
 ### 6.3 For the proceeding
@@ -2750,6 +2967,25 @@ tier's fixed charge, verified equivalent to amortizing the infrastructure at
 6 percent over the tier life. HECO's 2016 planning figure ($4,050/kW nominal,
 152 MW unit) is treated as corroborating context for small-unit costs only.
 
+**Part-load fuel curve.** The plant burns fuel at 6.92 MMBtu/MWh at full
+output, an assumption the fleet record confirms; below full output its
+average rate rises. The curve is derived from EPA continuous-emissions
+monitoring records for 408 mainland combined-cycle combustion turbines in
+the F-class capacity band (140–260 MW nameplate, in service 2002 or later),
+selected through the EPA–EIA crosswalk and fitted on steady operating hours
+over 2022–2024. The fleet's realized full-load heat rate is 6.895
+MMBtu/MWh, within 0.4 percent of the figure the model already carried; its
+median no-load fuel share is 10 percent and its median minimum stable load
+52 percent of maximum. Applied to the model's 125 MW blocks, that gives a
+no-load draw of 86.9 MMBtu/h, an incremental rate of 6.225 MMBtu/MWh, and
+average rates of 7.62 at minimum load, 7.15 at three-quarters, and 6.92 at
+full. Minimum load is set at 50 percent (62.5 MW per block), just below the
+fleet median and inside its interquartile range; JERA's proposal states no
+block-level turndown figure, and its flexibility claims rest on the
+simple-cycle portion of the hybrid, which the four-block commitment
+structure already represents. Selection criteria, per-unit fits, and
+provenance are in `sources/epa_cems/`.
+
 ### A.9 Local-employment coefficients
 
 Construction and O&M job-year ranges per MW by technology, from Wei, Patadia
@@ -2764,21 +3000,58 @@ Coffman et al. 2022).
 
 ### A.10 Upstream methane calculation
 
-The JERA path imports ≈293 million MMBtu of LNG over 2027–2050 (model
-dispatch). At ≈19.3 kg CH₄ per MMBtu, that is ≈5.64 Mt of methane throughput.
+The JERA path imports ≈246 million MMBtu of LNG over 2027–2050 (model
+dispatch). At ≈19.3 kg CH₄ per MMBtu, that is ≈4.74 Mt of methane throughput.
 CO₂-equivalent added by supply-chain leakage = throughput × leak rate × GWP:
 
 | Leak rate | GWP₁₀₀ = 30 | GWP₂₀ = 82.5 |
 |---|---:|---:|
-| 1% | 1.7 Mt | 4.7 Mt |
-| 3% | 5.1 Mt | 14.0 Mt |
-| 6% | 10.2 Mt | 27.9 Mt |
+| 1% | 1.4 Mt | 3.9 Mt |
+| 3% | 4.3 Mt | 11.7 Mt |
+| 6% | 8.5 Mt | 23.5 Mt |
 
-On the current-law base case the combustion ledger gives LNG a ≈0.5 Mt edge
-(30.8 Mt JERA bare-EPC versus 31.3 no-new-plant), implying break-even
-leakage of ≈0.3 percent (100-year basis) or ≈0.1 percent (20-year basis) —
-below every measured U.S. basin, so on the marginal-source reading the LNG
-path is behind on total greenhouse effect. Leak-rate measurements: 
+On the current-law base case the combustion ledger gives LNG a ≈1.3 Mt edge
+(30.0 Mt JERA bare-EPC versus 31.3 no-new-plant), implying break-even
+leakage of ≈0.9 percent (100-year basis) or ≈0.3 percent (20-year basis) —
+at or below every measured U.S. basin, so on the marginal-source reading the
+LNG path is behind on total greenhouse effect.
+
+**Break-even leakage depends on the comparator.** A cleaner alternative
+leaves LNG a smaller combustion edge to defend, so the threshold falls. Each
+row prices the LNG configuration against the no-new-thermal least-cost path
+carrying the same Waiau decision, at reference oil on the base rooftop
+trajectory (`analysis/assemble_methane_breakeven.py`).
+
+| pathway | imports (M MMBtu) | CH₄ (Mt) | edge (Mt) | 100-yr | 20-yr |
+|---|---:|---:|---:|---:|---:|
+| JERA 500 MW, bare-EPC | 246 | 4.7 | 1.3 | 0.88% | 0.32% |
+| JERA 500 MW, +20% capital | 250 | 4.8 | 0.8 | 0.57% | 0.21% |
+| JERA 375 MW, bare-EPC | 213 | 4.1 | 1.1 | 0.88% | 0.32% |
+| JERA 375 MW, +20% capital | 214 | 4.1 | 0.9 | 0.75% | 0.27% |
+| Conversion, optimized | 195 | 3.8 | 2.3 | 2.06% | 0.75% |
+| Conversion, no new plant | 197 | 3.8 | 2.2 | 1.94% | 0.71% |
+| Conversion, HECO configuration | 356 | 6.9 | 1.9 | 0.93% | 0.34% |
+
+**The same calculation inside HSEO's own comparison.** HSEO sets its LNG
+case against its oil case rather than against a least-cost clean path, and
+that oil case burns oil at scale through 2044. LNG's combustion edge over
+that comparator is therefore much larger — about 5.7 Mt at every solar
+premium, since both plan cells hold their mixes fixed as solar costs move —
+and the break-even leak rate correspondingly higher: 3.3 percent on the
+100-year basis, essentially flat across the 20, 80, and 104 percent solar
+premiums (1.2 percent on the 20-year basis). Measured U.S. supply chains average
+2.95 percent, production weighted. So on the comparison most favorable to
+it, HSEO's LNG emissions advantage survives average U.S. gas — narrowly,
+and only on the century timescale. Against a least-cost clean path the
+break-even is 2.4 percent at the study's baseline solar premium — below
+the U.S. production-weighted average, so the edge does not survive
+average gas there — and clears it only if solar is very expensive (4.7
+to 5.8 percent at the 80 and 104 percent premiums). (Plan cells here are the
+Section 4.5 pricing cells: mixes pinned to each plan, firm energy
+delivered as biodiesel in both cases, so the comparison is free of the
+study's hydrogen-price asymmetry.)
+
+Leak-rate measurements: 
 Sherwin et al. 2024 (*Nature* 627, 328–334): basin loss rates 0.75% (Appalachia) 
 to 9.63% (New Mexico Permian), production-weighted 2.95% across six measured 
 regions. GWP values: IPCC AR6 WG1, Table 7.15 (fossil-origin CH₄: GWP₁₀₀ = 29.8, GWP₂₀ = 82.5); the table uses 30/82.5, and the thresholds are insensitive to the rounding.
@@ -2801,7 +3074,7 @@ carrying the installed stocks:
                       + f(T(h,d)) + ε(h,d)
 
 where L is metered system load (MW, clock-shift corrected), GHI is
-island-mean solar radiation (W/m²), PV(q) and Batt(q) are cumulative
+island-mean solar radiation (W/m¹), PV(q) and Batt(q) are cumulative
 installed rooftop capacity (MW) and battery energy (MWh), δ(h, season) are
 hour-by-season fixed effects, and f(T) is a quadratic in temperature. The
 PV response is read from b(h) at midday hours; the battery response from
@@ -2959,9 +3232,80 @@ inputs and results are archived (*_aeo.csv, aeo_archive/) for comparison.
 The AEO-cased fan opened too slowly to represent near-term oil-price risk,
 which is concentrated exactly where the LNG decisions live.
 
+### A.15 Plan pricing methodology
+
+The Section 4.5 price tags come from scenarios whose generation is
+constrained to each published plan's mix. This appendix documents the
+constraint set and its carve-outs.
+
+**Sources and rescaling.** IGP plan mixes come from the November 2023
+Supplemental Response Tables 2-3 (the land-constrained plan of record,
+which that document labels "preferred") and 2-4 (the base scenario, which
+it labels "alternate") — the utility's plan of record rather than its
+RESOLVE model output; HSEO mixes from the study's
+own results worksheets. Customer-sited solar rows are excluded and each
+plan's remaining categories are converted to shares of its grid supply,
+then multiplied by the served demand of the rooftop family whose
+customer-solar assumptions that plan tracks (land-constrained on
+accelerated, base on conservative, HSEO on trend). A plan is thereby held
+to its mix, not to its demand forecast.
+
+**The quota set, per planning period 2030–2050.** Utility solar: a
+two-sided band at 0.98–1.02 times the plan's level. Wind: the same band
+on combined onshore-plus-offshore, with a floor (no ceiling) under
+offshore alone — the plans carry 257–287 MW of onshore against the
+county-setback screen's 150 MW, so a ceiling on offshore specifically
+would forbid the only substitute for onshore the model may not build.
+Fossil: a 0.95–1.05 band in 2035 and 2040, a floor only in 2030 (see
+carve-outs), nothing from 2045, where the clean-energy requirement binds
+instead. Firm clean energy: from 2045, a floor at 0.98 times the plan's
+combined biofuel-plus-hydrogen level, counted as hydrogen fuel-cell
+output plus generation in the multi-fuel thermal fleet — which at the
+100 percent requirement is necessarily renewable fuel. There is no
+ceiling on firm energy; it is the one category left open, and cells that
+retire thermal capacity late can exceed the plan's level (the IGP cells
+run 600–900 GWh of biodiesel above their plans' own 2050 levels for this
+reason — the residual our grid cannot place elsewhere surfaces here).
+2050 quotas hold each plan's 2045 shares, rescaled to 2050 demand; the
+2027–2029 window is unpinned because the plans publish no anchor there.
+
+**Carve-outs.** Kalaeloa is exempt from the fossil quota
+(`--plan-quota-fossil-exempt`): the plans close it around 2033 while our
+model carries its power-purchase minimum-take as a floor dispatch cannot
+go below, so its plant is excluded from the constrained set and its
+generation stripped from the IGP fossil targets (KPLP rows). The
+refinery cogens are must-run baseload in this framework, identical in
+plan and reference cells, and sit outside the quota for the same reason.
+Biofuel *quantities* before 2045 are unconstrained.
+
+**What the tag means.** Because the firm floor holds each plan to the
+firm clean energy it says it needs, the tag prices the plan as published
+— not the cheaper build a model would choose if allowed to substitute
+solar for the plan's biofuel. Dispatch, storage sizing, and every
+unnamed category remain optimized, so the tag is still generous to the
+plan wherever the plan is silent. The design was validated two ways:
+an elastic variant of the quota module (slack on every row, minimizing
+total violation) proves each quota set feasible before any cell is
+solved, and a fidelity audit confirms solved cells reproduce their
+plans' pinned categories within the band. Cross-family cells (the Box
+4.2 head-to-head) apply one plan's shares to the other plan's rooftop
+trajectory, so the two IGP plans can be compared serving the same
+demand; a cell read against the wrong trajectory's reference mixes
+demands that differ by a quarter and is not a price tag.
+
+**Tolerance.** Plan cells solve to 0.25 percent MIP gap
+[PENDING: 0.1 percent refinement in progress] against least-cost
+references at 0.1 percent.
+
 ## Appendix B — references
 
-[Reference list to finalize. Oil-price method (A.14): Berck, P. and M.
+[Reference list to finalize. Transmission/storage substitution (Box 4.2):
+Zheng, R., G. Schivley, M. Fripp and M. J. Roberts (2026), "Optimal
+transmission expansion modestly reduces decarbonization costs of U.S.
+electricity," *Applied Energy* 421(15),
+https://www.sciencedirect.com/science/article/abs/pii/S030626192600797X;
+EIA price components (Box 4.2): AEO 2023 Table 8, vendored
+sources/eia_price_components/. Oil-price method (A.14): Berck, P. and M.
 Roberts (1996), "Natural Resource Prices: Will They Ever Turn Up?" *Journal
 of Environmental Economics and Management* 31(1): 65–78; Livernois, J.
 (2009), "On the Empirical Significance of the Hotelling Rule," *Review of
@@ -2975,7 +3319,7 @@ POWER, Star-Advertiser, and the JERA notice (public cost record); the HECO
 IGP Supplemental Response (Docket 2018-0088, Nov 2023); the cost-overrun
 literature and Utility Dive reporting used in Section 4.2; the methane
 measurement literature used in A.10; HEI ownership data; the wildfire/fallow-
-land literature for §2.6 (Trauernicht, Pickett, Giardina, Litton, Cordell,
+land literature for §2.8 (Trauernicht, Pickett, Giardina, Litton, Cordell,
 and Beavers, "The Contemporary Scale and Context of Wildfire in Hawaiʻi,"
 *Pacific Science* 69(4): 427–444, 2015; Bond-Smith, Bremer, Burnett,
 Trauernicht, and Wada, "Reducing fire risk and restoring value to fallow
@@ -3004,7 +3348,7 @@ Every entry is verified against the source before release.]
 
 ## Appendix C — data and reproducibility
 
-This report is release pre-v1.01: the single-node (copper-plate) model
+This report is release pre-v1.02: the single-node (copper-plate) model
 with the corrected distributed-solar treatment of Appendices A.11–A.12,
 issued as a preliminary version open for comment (requested by
 September 1, 2026, tentative). After the comment period, responses, and

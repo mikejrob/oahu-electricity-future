@@ -53,14 +53,75 @@ FAMILY = {
     "nlv2s": "Trend rooftop (sensitivity)",
     "nlv2a": "Accelerated rooftop",
 }
-# grid-visible distributed trajectory per family (build_netload_corrected.py):
-# effective MW = WEDGE*EXISTING + (1-WEDGE)*TRAJ; energy = MW * CF * 8760
+# Installed distributed capacity per family (build_netload_corrected.py TRAJ).
+# Shown as the capacity of the "Distributed solar (netted)" series.
 TRAJ = {
     "nlv2b": {2027: 800, 2030: 850, 2035: 890, 2040: 930, 2045: 965, 2050: 1000},
     "nlv2s": {2027: 820, 2030: 960, 2035: 1140, 2040: 1300, 2045: 1440, 2050: 1560},
     "nlv2a": {2027: 840, 2030: 1070, 2035: 1390, 2040: 1670, 2045: 1915, 2050: 2120},
 }
-EXISTING_MW, WEDGE, DIST_CF = 674.0, 0.24, 0.1822
+PERIOD_YEARS = {2027: 3, 2030: 5, 2035: 5, 2040: 5, 2045: 5, 2050: 5}
+NETTED_GWH = {}
+
+
+def _load_gwh_by_period(loads_csv, tp_weight):
+    """Annual GWh represented by a loads.csv, by period."""
+    tot = {}
+    for r in csv.DictReader(open(loads_csv)):
+        per, w = tp_weight[r["TIMEPOINT"]]
+        tot[per] = tot.get(per, 0.0) + float(r["zone_demand_mw"]) * w
+    return {p: v / PERIOD_YEARS[p] / 1e3 for p, v in tot.items()}
+
+
+def netted_distributed_gwh():
+    """Grid-visible distributed generation actually netted out of load, by
+    family and period, measured as gross load minus each family's net load.
+
+    Read from the inputs rather than reconstructed: an earlier version of this
+    extractor rebuilt the series from a flat annual capacity factor, which
+    understated it by 9-11% on the base trajectory and 25% on the accelerated
+    one by 2050, because the model nets per timepoint at site capacity factors
+    and the effective factor rises as the battery-paired share of the fleet
+    grows (pre-lock issue: explorer netted series)."""
+    ts = {r["TIMESERIES"]: r for r in csv.DictReader(open(REPO / "inputs/timeseries.csv"))}
+    tp_weight = {}
+    for r in csv.DictReader(open(REPO / "inputs/timepoints.csv")):
+        t = ts[r["timeseries"]]
+        tp_weight[r["timepoint_id"]] = (
+            int(r["timestamp"][:4]),
+            float(t["ts_scale_to_period"]) * float(t["ts_duration_of_tp"]))
+    gross = _load_gwh_by_period(REPO / "inputs/loads.csv", tp_weight)
+    out = {}
+    for fam in TRAJ:
+        net = _load_gwh_by_period(REPO / f"inputs_{fam}/loads.csv", tp_weight)
+        out[fam] = {p: gross[p] - net[p] for p in gross if p in net}
+    return out
+
+# Published-plan cells (Section 4.5). These are a different kind of object
+# from the configurations below: the generation mix is constrained to a plan
+# somebody else published, rescaled to our served demand, so the cost is what
+# it takes to run THEIR plan in this framework rather than a build this model
+# chose. Only the current quota design is exported.
+PLAN_DESIGN = "hybrid"
+PLAN_NAME = {
+    "igp_pref": "IGP land-constrained",
+    "igp_alt": "IGP base",
+    "hseo_oil": "HSEO oil",
+    "hseo_lng": "HSEO LNG",
+}
+PLAN_WHOSE = {
+    "igp_pref": "Hawaiian Electric's integrated grid plan (land-constrained "
+                "scenario, the plan of record)",
+    "igp_alt": "Hawaiian Electric's integrated grid plan (base scenario)",
+    "hseo_oil": "the Hawaiʻi State Energy Office's alternative-fuels study, "
+                "oil case",
+    "hseo_lng": "the Hawaiʻi State Energy Office's alternative-fuels study, "
+                "LNG case",
+}
+# each plan is paired with the rooftop trajectory its own customer-solar
+# assumptions track; a cell on any other trajectory is the rescaled variant
+PLAN_HOME = {"igp_pref": "nlv2a", "igp_alt": "nlv2b",
+             "hseo_oil": "nlv2s", "hseo_lng": "nlv2s"}
 
 CONFIG_LABEL = {
     "C4_NOTHERMAL": "No new fuel plant",
@@ -162,6 +223,22 @@ CONFIG_DESC = {
     "egs_high_lng_forced": "Enhanced geothermal at its high cost case; the "
                            "JERA LNG bundle is forced in",
 }
+
+# plan entries, generated so the matched and rescaled variants cannot drift
+for _pid, _nm in PLAN_NAME.items():
+    CONFIG_LABEL[f"plan_{_pid}"] = f"Published plan: {_nm}"
+    CONFIG_LABEL[f"plan_{_pid}_xf"] = f"Published plan: {_nm} (rescaled to this trajectory)"
+    _base = (f"Generation is constrained to the mix published in {PLAN_WHOSE[_pid]}, "
+             f"rescaled to the grid demand this rooftop trajectory leaves to serve. "
+             f"The cost is what running that mix costs in this framework, not a "
+             f"build the model chose")
+    CONFIG_DESC[f"plan_{_pid}"] = _base
+    CONFIG_DESC[f"plan_{_pid}_xf"] = (
+        _base + ". This is the rescaled variant: the same published plan applied "
+        "to a rooftop trajectory other than the one its own customer-solar "
+        "assumptions track, so the two plans can be compared on common ground. "
+        "Its cost is not comparable with the same plan on its home trajectory, "
+        "which serves a different amount of grid demand")
 
 OIL_DESC = {
     "lowbrent": "the market's 10th-percentile (low) path from Brent options",
@@ -267,6 +344,38 @@ def parse_name(name):
     if oil is None:
         return None                     # legacy AEO path or malformed
     mult = 1.0
+    if rest.startswith("plan_"):
+        # plan_<id>[_pv15|_pv17][_xf]_<design>; the solar tag sits inside the
+        # name rather than carrying the be_pv prefix the matrix cells use
+        body = rest[len("plan_"):]
+        head, _, design = body.rpartition("_")
+        if design != PLAN_DESIGN:
+            return None                 # superseded quota design, not exported
+        xf = head.endswith("_xf")
+        if xf:
+            head = head[: -len("_xf")]
+        for tag, m_ in (("_pv15", 1.5), ("_pv17", 1.7)):
+            if head.endswith(tag):
+                mult = m_
+                head = head[: -len(tag)]
+                break
+        if head not in PLAN_NAME:
+            return None
+        cfg = f"plan_{head}" + ("_xf" if xf else "")
+        return {
+            "family": family,
+            "trajectory": FAMILY[family],
+            "config": cfg,
+            "config_label": CONFIG_LABEL[cfg],
+            "oil": oil,
+            "oil_label": OIL_TOKENS[oil],
+            "solar_mult": mult,
+            "land_screen": "Reference",
+            "jera_capital": "bare-EPC",
+            "solar_basis": "ATB Moderate",
+            "kind": "plan",
+            "rescaled": int(xf or family != PLAN_HOME[head]),
+        }
     for tag, m_ in (("be_pv15_", 1.5), ("be_pv17_", 1.7)):
         if rest.startswith(tag):
             mult = m_
@@ -287,6 +396,8 @@ def parse_name(name):
         "land_screen": screen,
         "jera_capital": "+20%" if flags["j120"] else "bare-EPC",
         "solar_basis": "ATB Advanced" if flags["adv"] else "ATB Moderate",
+        "kind": "model",
+        "rescaled": 0,
     }
 
 
@@ -331,6 +442,8 @@ def lng_shares(d, periods):
 
 
 def main():
+    global NETTED_GWH
+    NETTED_GWH = netted_distributed_gwh()
     names = sorted({
         re.sub(r"^(R010_|R0015_)?outputs_", "", p.name)
         for p in REPO.iterdir()
@@ -386,14 +499,17 @@ def main():
                                  "energy_gwh": round(e, 2),
                                  "capacity_mw": round(c, 1),
                                  "emissions_tco2": round(em, 0)})
-        # synthetic netted distributed series for display
+        # netted distributed series, measured from the family's net-load inputs
         fam = axes["family"]
         for p in sorted(periods):
-            mw = WEDGE * EXISTING_MW + (1 - WEDGE) * TRAJ[fam].get(p, TRAJ[fam][2050])
+            gwh = NETTED_GWH.get(fam, {}).get(p)
+            if gwh is None:
+                continue
             gen_rows.append({"scenario": name, "period": p,
                              "tech": "Distributed solar (netted)",
-                             "energy_gwh": round(mw * DIST_CF * 8.760, 2),
-                             "capacity_mw": round(mw, 1), "emissions_tco2": 0})
+                             "energy_gwh": round(gwh, 2),
+                             "capacity_mw": round(TRAJ[fam].get(p, TRAJ[fam][2050]), 1),
+                             "emissions_tco2": 0})
         ec = d / "electricity_cost.csv"
         if ec.exists():
             for r in csv.DictReader(open(ec)):
@@ -523,17 +639,24 @@ def main():
     meta = {
         "generated_hst": datetime.now(hst).strftime("%Y-%m-%d %H:%M HST"),
         "commit": commit,
+        # two populations, counted separately because they answer different
+        # questions: the scenario matrix is what this model chose, the plan
+        # cells are what somebody else's plan costs. Summing them into one
+        # headline invites the "how many scenarios?" confusion.
         "scenarios": len(scen_rows),
+        "matrix_cells": sum(1 for r in scen_rows if r["kind"] == "model"),
+        "plan_cells": sum(1 for r in scen_rows if r["kind"] == "plan"),
         "skipped_non_fleet": skipped,
         "refined_010": sum(1 for r in scen_rows if r["mip_gap"] == 0.001),
         "refined_0015": sum(1 for r in scen_rows if r["mip_gap"] == 0.0015),
         "first_pass_0025": sum(1 for r in scen_rows if r["mip_gap"] == 0.0025),
         "hourly_scenarios": sorted({r["scenario"] for r in hr_rows}),
         "sample_days": SAMPLE_DAYS,
-        "version": "pre-v1.01",
+        "version": "pre-v1.02",
     }
     (OUT / "meta.json").write_text(json.dumps(meta, indent=1))
-    print(f"  meta.json: {meta['scenarios']} scenarios "
+    print(f"  meta.json: {meta['scenarios']} scenarios = "
+          f"{meta['matrix_cells']} matrix + {meta['plan_cells']} published-plan "
           f"({meta['refined_010']} at 0.1%), {skipped} names outside the fleet")
 
 

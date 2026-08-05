@@ -1,0 +1,6 @@
+period,category,bound,gwh
+2035,fossil,min,507.3
+2035,fossil,max,560.8
+2035,usolar,min,3672.0
+2035,offshore,min,1995.4
+2035,wind,min,2192.4

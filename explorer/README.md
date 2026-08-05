@@ -36,7 +36,16 @@ The site rebuilds automatically a few minutes after the push.
 The extracts cover the report-basis fleet only: the corrected
 distributed-solar families (`nlv2b`/`nlv2s`/`nlv2a`) on the four market oil
 paths plus the EIA reference. Legacy gross-load families and archived AEO
-oil paths are excluded so no chart mixes netting conventions. Approximations
+oil paths are excluded so no chart mixes netting conventions.
+
+Two populations are carried, counted separately in `meta.json`
+(`matrix_cells`, `plan_cells`) and in the app header. The **scenario
+matrix** is what the model chooses given costs and constraints — 513 cells,
+the same set as `results/RESULTS_SUMMARY.csv`. The **published-plan cells**
+hold generation to a plan somebody else published (Section 4.5); they are
+labelled `Published plan: …` and are not part of the 513. Only the current
+quota design is exported — `PLAN_DESIGN` in the extractor gates it, so
+superseded designs cannot leak into the site. Approximations
 (thermal oil/LNG split, reconstructed netted-distributed series, the
 optional conversion-capital charge) are documented in the app's About tab
 and in the extractor's docstring.

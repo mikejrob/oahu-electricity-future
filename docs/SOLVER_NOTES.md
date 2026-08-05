@@ -152,6 +152,36 @@ cost it builds (26.72, 100 MW, $0.58 saving); at low cost it builds
 from the pathological full-MIP cells. `sanity_check_results.py` treats the EGS
 sensitivity as derived.
 
+## "infeasible" in a worker log is usually not a failed cell
+
+Most `infeasible` lines in the refinement logs are benign, and reading them as
+failures wastes a session. `switch_model.hawaii.smooth_dispatch` runs a *second*
+solve after the main one to smooth dispatch among equal-cost options. When that
+pass fails, Switch prints
+
+    WARNING: model became infeasible when smoothing; reverting to original solution.
+
+and writes the original solution out normally. Cost, capacity and emissions all
+come from the main solve and are unaffected; only the dispatch is unsmoothed.
+Round 2 of the refinements (job 14311261) hit this 12 times across 10 workers —
+e.g. `nlv2b_C3_LSFO500_lowbrent_adv`, which nonetheless refined 21.5408B ->
+21.5186B, a clean 0.1% improvement.
+
+Two things make this easy to misread. A worker log holds many scenarios, so the
+`--scenario-name` at the top of the file is not the cell that printed the
+message; and `--suffixes iis` makes CPLEX attempt an IIS on any infeasible
+solve, which on the full model returns empty after a long grind. To separate
+real failures from smoothing reverts, attribute each node-zero infeasibility to
+the scenario it occurred under and check whether a revert followed:
+
+    awk '/^running scenario /{ if(cur && bad && !rev) print "FATAL " cur; cur=$3; bad=0; rev=0; next }
+         /^ *0 *0 *infeasible/{ bad=1 }
+         /reverting to original solution/{ rev=1 }
+         END{ if(cur && bad && !rev) print "FATAL " cur }' logs/<log>.out
+
+A cell is genuinely dead only when no solution is written — confirm against
+output freshness, never against the job's exit code.
+
 ## The specific hard cells
 
 The scenarios that stall near 0.1% on the ITC basis are listed in

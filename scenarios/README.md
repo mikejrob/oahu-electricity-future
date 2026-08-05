@@ -60,6 +60,6 @@ Scenario lists `netload_v2b.txt`/`netload_v2s.txt` and directory prefixes
 `inputs_nlv2*`, `outputs_nlv2*` (with `dgb/dgs/dga` for the dispatched-generator
 variants and `R010_`/`R0015_` for gap refinements) belong to the corrected
 distributed-solar treatment (v1 as first circulated let rooftop PV retire to
-zero by 2050; this release, pre-v1.01, fixes that). "v2" is reserved for the regional (nodal)
+zero by 2050; fixed since pre-v1.01). "v2" is reserved for the regional (nodal)
 grid model described in `V2.md`. The prefixes are frozen because solve
 fleets and refinement machinery reference them.

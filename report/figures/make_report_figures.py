@@ -577,7 +577,7 @@ def fig_oil_solar_matrix(family="nlv2s", fname="fig_4_3_oil_solar_matrix.png"):
 
 def fig_plan_comparison(fname="fig_4_4_plan_comparison.png"):
     """Generation-mix shares at anchor years: this report's least-cost and
-    no-mandate paths against HECO's IGP (preferred, land-constrained) and the
+    no-mandate paths against HECO's IGP (base, land-constrained) and the
     HSEO Alternative Fuels Study (oil, LNG). All mixes include customer-sited
     (distributed) solar; each bar is normalized to that plan's own annual
     generation. Data: sources/plan_mix/ (provenance in its README)."""
@@ -682,7 +682,11 @@ def fig_plan_comparison(fname="fig_4_4_plan_comparison.png"):
     PLANS = [
         ("Switch\nleast\ncost", ours("C4_NOTHERMAL_refbrent")),
         ("Switch\nno\nmandate", ours("norps_NOTHERMAL_refbrent")),
-        ("IGP\npre-\nferred", igp("preferred")),
+        # The igp_fig23_shares key "preferred" is the BASE scenario (the May-2023
+# Figure 2-3 name). Hawaiian Electric later reversed which plan it called
+# preferred, so we label by scenario -- base / land-constrained -- which
+# has never changed meaning. Land-constrained is the plan of record.
+        ("IGP\nbase", igp("preferred")),
         ("IGP\nland-\nconstr.", igp("land_constrained")),
         ("HSEO\noil\ncase", hseo("oil")),
         ("HSEO\nLNG\ncase", hseo("lng")),
@@ -714,3 +718,38 @@ def fig_plan_comparison(fname="fig_4_4_plan_comparison.png"):
     fig.savefig(FIG / fname, dpi=200)
     plt.close(fig)
     print(f"{fname} written")
+
+
+ALL_FIGURES = [
+    fig_es1, fig_land, fig_emissions, fig_reliability, fig_solar_sensitivity,
+    fig_genmix, fig_scenario_map, fig_high_solar_cost, fig_oil_solar_matrix,
+    fig_plan_comparison,
+]
+
+
+def main():
+    """Regenerate report figures.
+
+    Without this entry point the module ran as a script did nothing and
+    exited zero, which is easy to mistake for success.
+
+      python3 report/figures/make_report_figures.py            # all
+      python3 report/figures/make_report_figures.py fig_emissions ...
+    """
+    import sys
+    wanted = sys.argv[1:]
+    todo = ALL_FIGURES
+    if wanted:
+        by_name = {f.__name__: f for f in ALL_FIGURES}
+        missing = [w for w in wanted if w not in by_name]
+        if missing:
+            sys.exit(f"unknown figure(s): {', '.join(missing)}\n"
+                     f"available: {', '.join(by_name)}")
+        todo = [by_name[w] for w in wanted]
+    for f in todo:
+        print(f"-- {f.__name__}")
+        f()
+
+
+if __name__ == "__main__":
+    main()

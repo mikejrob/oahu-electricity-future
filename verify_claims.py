@@ -79,6 +79,16 @@ j = cost(GBC, "Oahu_JERA", "2030", 2)
 jtgt = 3_020_000 * (1.027 ** -2)
 ok("JERA 2030 = $3,020k x1.027^-2 (2024$)", abs(j - jtgt) < 1, f"{j:,.0f} vs {jtgt:,.0f}")
 
+print("\n== JERA part-load curve (CEMS-derived; sources/epa_cems/) ==")
+jrows = [l.strip().split(",") for l in open(REPO / "inputs" / "gen_inc_heat_rates.csv")
+         if l.startswith("Oahu_JERA")]
+ok("JERA min load 62.5 MW, 476.0 MMBtu/h",
+   jrows and jrows[0][1] == "62.5" and jrows[0][4] == "476.0")
+ok("JERA incremental 6.225 through 125 MW",
+   len(jrows) == 4 and all(r[3] == "6.225" for r in jrows[1:]) and jrows[-1][2] == "125.0")
+ok("JERA full-load average = 6.92",
+   abs((476.0 + 6.225 * 62.5) / 125 - 6.92) < 0.005)
+
 print("\n== Waiau: HECO's STATED construction cost (system-cost basis, not recoverable) ==")
 w = cost(GBC, "Oahu_Waiau_Repower", "2030", 2)
 wtgt = 4_545_000.0                       # $1.155B / 253 MW; original report input

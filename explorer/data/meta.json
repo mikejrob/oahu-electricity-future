@@ -1,11 +1,13 @@
 {
- "generated_hst": "2026-07-31 01:16 HST",
- "commit": "f9102a2",
- "scenarios": 503,
- "skipped_non_fleet": 196,
- "refined_010": 197,
+ "generated_hst": "2026-08-04 14:31 HST",
+ "commit": "05e2707",
+ "scenarios": 523,
+ "matrix_cells": 513,
+ "plan_cells": 10,
+ "skipped_non_fleet": 254,
+ "refined_010": 512,
  "refined_0015": 0,
- "first_pass_0025": 306,
+ "first_pass_0025": 11,
  "hourly_scenarios": [
   "nlv2a_C4_NOTHERMAL_refbrent",
   "nlv2b_C1_LSFO250_refbrent",
@@ -32,5 +34,5 @@
   "2035-08-18": "Summer peak (easy)",
   "2035-11-22": "Low sun and wind (hard)"
  },
- "version": "pre-v1.01"
+ "version": "pre-v1.02"
 }

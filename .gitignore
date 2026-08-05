@@ -1,5 +1,10 @@
-# solve artifacts
+# solve artifacts (refinement passes carry a tolerance prefix;
+# STALE_ marks quarantined superseded solves)
 outputs_*/
+R010_outputs_*/
+R0015_outputs_*/
+STALE_*/
+sqc/
 # results/RESULTS_SUMMARY.csv is tracked (pushed as scenarios complete)
 logs/
 tmp/

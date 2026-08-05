@@ -94,10 +94,26 @@ judge which way a fix would move the results.
   the trees (only an open-item note in the v2 docs). The optimal build uses
   ~1/3 of the ceiling, so results are not sensitive to modest revisions, but
   the derivation should be documented or reconstructed for v2.
-- **Predetermined distributed-solar stock is dated (through 2020 vintages,
-  674 MW).** Actual customer-sited capacity is far higher (~49% of Oʻahu
-  single-family homes; HECO 2025–26 releases). Affects all scenarios equally,
-  so differences are insensitive; refresh for v2.
+- **The rooftop fleet's rating basis is not documented by any source, and
+  the in-model predetermined stock is dated (through 2020 vintages,
+  674 MW).** Three public series count Oʻahu's rooftop capacity — permit
+  records (793 MW mid-2025), the utility's quarterly data, and EIA's
+  monthly utility data (about 645 MW, AC) — and none states whether it is
+  DC nameplate or AC. System counts agree to within half a percent and the
+  capacity gaps match a typical inverter loading ratio, so the likely
+  reading is that permit and utility series are DC and EIA is AC, but no
+  source says so (Appendix A.11). The report's projections are internally
+  consistent regardless, because every coefficient is estimated per
+  *reported* megawatt on the same series used to project net load; the
+  exposure is to comparisons with outside figures, and to the netting chain
+  if the trajectory megawatts and the model's distributed capacity factors
+  were to sit on different bases (roughly a 10 percent effect on
+  distributed energy in every scenario). Settling this needs an independent
+  measurement of the installed fleet rather than a code review; v2 will
+  measure panel area from imagery and re-anchor all three trajectories to
+  it (see [`V2.md`](V2.md)). Direction of effect: more rooftop lowers
+  system cost in every scenario, while differences between scenarios move
+  little.
 - **EGS 100 MW resource is not vendored.** The NREL reV screen (GDR 1702, 2.5 km
   depth) that yields ~100 MW across ~a dozen sites needs to be attached, and
   site-specific characterisation is a follow-on activity.

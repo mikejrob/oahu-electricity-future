@@ -14,6 +14,16 @@ same policy as report/figures/make_report_figures.py and the explorer
 extractor — mixing netting conventions or oil vintages in one table
 silently corrupts comparisons. total_cost_npv in $; solved_at in HST from
 the total_cost.txt mtime of the winning pass.
+
+Plan price-tag cells (*_plan_*) are excluded too. They are constrained-mix
+runs, not members of the scenario matrix, and the ones sitting in the tree
+are the discarded floors-only design — folding them in would both inflate
+the "more than 500 scenarios" count in docs/CORRECTIONS.md with cells the
+author threw out and make them targets for --report-basis refinement.
+Note the open end: this file is also the register the unverifiable-cell
+rule consults, so once the pinned-mix cells are final they need a record of
+their own (a sibling PLAN_CELLS.csv, or a family column here) or a later
+session will read Table 4.1 as unsupported and re-solve it.
 """
 import csv
 import datetime
@@ -31,6 +41,7 @@ for p in REPO.iterdir():
     if m and (p / "total_cost.txt").exists():
         names.add(m.group(2))
 names = {n for n in names if any(f"_{o}" in n for o in OIL)}
+names = {n for n in names if "_plan_" not in n}
 
 rows = []
 for name in sorted(names):

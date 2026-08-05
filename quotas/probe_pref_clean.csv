@@ -1,0 +1,15 @@
+period,category,bound,gwh
+2030,usolar,min,2056.0
+2030,wind,min,256.5
+2035,usolar,min,1820.7
+2035,offshore,min,1886.1
+2035,wind,min,2176.9
+2040,usolar,min,1628.8
+2040,offshore,min,1690.8
+2040,wind,min,2129.3
+2045,usolar,min,1803.6
+2045,offshore,min,1886.3
+2045,wind,min,2380.4
+2050,usolar,min,1762.5
+2050,offshore,min,1843.3
+2050,wind,min,2326.2

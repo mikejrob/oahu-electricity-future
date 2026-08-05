@@ -105,9 +105,10 @@ The withdrawn working paper's claimed set was **64 unique scenarios** (its
 spec files listed 66 lines; `wb_C6_LNG500` low/high were duplicated):
 46 reference-land + 18 land-constrained, all on one oil path family and one
 solar-cost level. The corrected analysis first re-solved that set on the
-corrected inputs, then grew well beyond it. The current report-basis fleet is
-**more than 500 solved scenario cells** (503 in the public explorer as of the
-last data build, plus experiment cells since), spanning:
+corrected inputs, then grew well beyond it. Two populations of cells are
+reported, and they are counted separately throughout because they answer
+different questions. The **scenario matrix** — what this model chooses when
+given costs and constraints — is **513 solved cells**, spanning:
 
 - four market-derived Brent paths plus the EIA reference (Appendix A.14),
   replacing the archived AEO cases;
@@ -121,11 +122,16 @@ last data build, plus experiment cells since), spanning:
   counterfactuals (Section 4.8), and the EGS cost menu (Section 3);
 - paired-experiment cells isolating the value of rooftop-battery scheduling
   (Section 2.7), solved on the gross-load representation with the battery
-  schedule pinned to observed behavior;
-- cells pricing the published plans — Hawaiian Electric's IGP Preferred and
-  Alternate portfolios and the HSEO study's oil and LNG cases — under this
-  report's framework (results section forthcoming; the vendored plan data
-  are in `sources/plan_mix/`).
+  schedule pinned to observed behavior.
+
+The **published-plan cells** are the second population: **14 cells** pricing
+Hawaiian Electric's IGP base and land-constrained portfolios (the latter its
+plan of record) and the HSEO study's oil and LNG cases, each constrained to
+that plan's own generation mix rather than optimized (Section 4.5, Appendix
+A.15; vendored plan data in `sources/plan_mix/`). They are excluded from the
+513 because they are not scenarios this model chose, and because including
+them would make them targets of the refinement machinery that maintains the
+matrix. The results explorer carries both and labels the plan cells as such.
 
 Solve discipline is unchanged: a 0.25% first pass (cold), then 0.1%
 warm-started refinements superseding it cell by cell
@@ -137,8 +143,8 @@ warm-started refinements superseding it cell by cell
 
 The original intent was a minimal correction of the working paper's 64
 scenarios. The public questions the work provoked justified more, and the
-analysis has grown to more than 500 solved scenario cells (see the scenario
-set above). The extensions and their reasons:
+analysis has grown to 513 scenario-matrix cells plus 14 published-plan
+cells (see the scenario set above). The extensions and their reasons:
 
 - **JERA's full capital range** (bare-EPC and their own +20% case, reported
   as a midpoint with a band; report Section 4.2, Figure ES.1) — because the

@@ -8,6 +8,16 @@ Reads --plan-quota-file, a CSV with columns period, category, bound
   wind      DispatchGen of Onshore + Offshore wind combined
   fossil    DispatchGen of LSFO / Diesel / LNG / multiple-fuel projects
   hydrogen  DispatchFuelCellMW (the hawaii.hydrogen module)
+  firm      hydrogen + the fossil set: the plan's firm clean energy, however
+            it is carried. Valid only from 2045, where the RPS is 100% and
+            hawaii/rps.py forbids non-renewable fuel, so every MWh in the
+            fossil set is biodiesel. HSEO assigns firm clean to biofuel in
+            its oil case and to hydrogen in its LNG case -- a labelling
+            choice, not a physical difference, and its hydrogen is bought in
+            at an assumed price while ours is made from otherwise-curtailed
+            solar with the capital charged. Pinning the combination lets the
+            model deliver the plan's firm requirement by whichever carrier
+            our framework finds cheaper, instead of importing HSEO's split.
 
 Floors (min) make the model build and run at least the plan's clean mix;
 the fossil band pins its thermal reliance. Dispatch, storage, and all other
@@ -27,6 +37,13 @@ def define_arguments(argparser):
     argparser.add_argument("--plan-quota-file", default=None,
                            help="CSV of generation quotas (period, category, "
                                 "bound, gwh); omit to disable")
+    argparser.add_argument("--plan-quota-fossil-exempt", default="",
+                           help="comma-separated name substrings of projects "
+                                "excluded from the fossil quota (contract-"
+                                "bound plants whose floors the plan's "
+                                "trajectory contradicts, e.g. Kalaeloa_CC); "
+                                "exclude the same plant from the plan's "
+                                "fossil target when using this")
 
 
 def define_components(m):
@@ -47,14 +64,29 @@ def define_components(m):
             return [g for g in m.GENERATION_PROJECTS
                     if m.gen_tech[g] in ("OffshoreWind", "OnshoreWind")]
         if cat == "fossil":
+            # baseload-flagged units (the refinery cogens) are must-run in
+            # this model and identical in plan and reference cells; they
+            # cannot respond to the quota and would make low plan ceilings
+            # infeasible, so they sit outside the constrained set — as do
+            # any explicitly exempted contract-bound plants
+            exempt = [s for s in
+                      getattr(m.options, "plan_quota_fossil_exempt", "").split(",")
+                      if s]
             return [g for g in m.GENERATION_PROJECTS
-                    if m.gen_energy_source[g] in CAT_SOURCES]
+                    if m.gen_energy_source[g] in CAT_SOURCES
+                    and not m.gen_is_baseload[g]
+                    and not any(s in g for s in exempt)]
         raise ValueError(cat)
+
+    def fuel_cell_mwh(m, p):
+        return sum(m.DispatchFuelCellMW[z, t] * m.tp_weight_in_year[t]
+                   for z in m.LOAD_ZONES for t in m.TPS_IN_PERIOD[p])
 
     def annual_mwh(m, p, cat):
         if cat == "hydrogen":
-            return sum(m.DispatchFuelCellMW[z, t] * m.tp_weight_in_year[t]
-                       for z in m.LOAD_ZONES for t in m.TPS_IN_PERIOD[p])
+            return fuel_cell_mwh(m, p)
+        if cat == "firm":
+            return fuel_cell_mwh(m, p) + annual_mwh(m, p, "fossil")
         return sum(m.DispatchGen[g, t] * m.tp_weight_in_year[t]
                    for g in gens(m, cat) for t in m.TPS_IN_PERIOD[p]
                    if (g, t) in m.GEN_TPS)
@@ -66,6 +98,16 @@ def define_components(m):
         p, cat, bound, gwh = quotas[i]
         if p not in m.PERIODS:
             return Constraint.Skip
+        if cat == "firm":
+            # before the 100% RPS the fossil set may burn fossil, so a firm
+            # quota would silently count that as clean
+            tgt = getattr(m, "rps_target_for_period", None)
+            if tgt is None or tgt[p] != 1.0:
+                raise ValueError(
+                    f"firm quota at {p} with RPS target "
+                    f"{'none' if tgt is None else tgt[p]}, not 1.0; the "
+                    f"category only means 'clean' once hawaii/rps.py forbids "
+                    f"non-renewable fuel")
         expr = annual_mwh(m, p, cat)
         if bound == "min":
             return expr >= gwh * 1000.0

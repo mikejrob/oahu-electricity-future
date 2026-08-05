@@ -1,0 +1,6 @@
+period,category,bound,gwh
+2030,fossil,min,1790.8
+2035,fossil,min,507.3
+2035,fossil,max,560.8
+2040,fossil,min,195.8
+2040,fossil,max,216.4
