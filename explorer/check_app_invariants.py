@@ -41,6 +41,11 @@ if not re.search(r"cost_plot\s*<-\s*renderPlot\(\s*height\s*=\s*function\(\)", s
 if not re.search(r"BAR_PX\s*<-\s*\d+", src):
     fail.append("app.R: BAR_PX constant missing — minimum per-bar thickness "
                 "is no longer defined in one place.")
+if not re.search(r"overflow-y:\s*auto.{0,120}?checkboxGroupInput\(\s*\"e_configs\"", src, re.S):
+    fail.append("app.R: the Emissions configuration picker lost its scroll "
+                "box — 30+ checkboxes at natural height stretch the whole "
+                "panel past the viewport (layout_sidebar matches the card "
+                "to the sidebar).")
 
 # --- 2. deploy environment must stay pinned ---------------------------------
 wf = HERE.parent / ".github" / "workflows" / "deploy-explorer.yml"

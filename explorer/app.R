@@ -392,11 +392,16 @@ server <- function(input, output, session) {
   })
 
   # ---- Emissions ----
+  # The configuration list can run to 30+ entries; it scrolls inside a fixed
+  # box so the sidebar — and with it the whole panel, which layout_sidebar
+  # stretches to match — stays within the viewport (guardrail: the emissions
+  # page must not scroll to see the chart).
   output$e_configs_ui <- renderUI({
     opts <- filter_axes(scen, input, "e") |> pull(config_label) |> unique()
-    checkboxGroupInput("e_configs", "Configurations", opts,
-                       selected = intersect(c("No new fuel plant",
-                                              "JERA LNG plant, 500 MW"), opts))
+    div(style = "max-height: 45vh; overflow-y: auto;",
+        checkboxGroupInput("e_configs", "Configurations", opts,
+                           selected = intersect(c("No new fuel plant",
+                                                  "JERA LNG plant, 500 MW"), opts)))
   })
 
   output$em_note <- renderUI({
