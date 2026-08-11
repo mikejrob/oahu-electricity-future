@@ -24,6 +24,13 @@ MSG="${1:-Sync results and report from working repository}"
 MIRROR_URL="git@github.com:mikejrob/oahu-electricity-future.git"
 cd "$SRC"
 
+# Hard gate: no push while a solved result violates a must-hold relation.
+# Runs on the published basis (best refinement per cell), the same numbers
+# the report and explorer read. The Aug 2026 fuel-alias bug was visible to
+# this check for four days pre-push while it was only run by hand.
+python3 sanity_check_results.py || {
+  echo "ABORT: sanity_check_results.py found violations - fix before pushing"; exit 1; }
+
 git push origin main || { echo "origin push failed"; exit 1; }
 
 git remote get-url mirror >/dev/null 2>&1 || git remote add mirror "$MIRROR_URL"

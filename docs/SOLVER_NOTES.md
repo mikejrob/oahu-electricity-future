@@ -186,3 +186,20 @@ output freshness, never against the job's exit code.
 
 The scenarios that stall near 0.1% on the ITC basis are listed in
 [`HARD_CELLS.md`](HARD_CELLS.md), with the looser-gap / retry workflow.
+
+## The fuel-alias bug (August 2026): six cells solved on the wrong fuel curve
+
+The `be_pv15`/`be_pv17` `wb_C6_LNG500` `*_j120` cells on the market
+low/futures/high oil paths pointed at the reference-oil jera120 fuel curve —
+a copied `--input-alias` in four scenario lists — which made a +20%-capital
+cell cheaper than its bare-capital twin, an impossibility. The dominance
+sweep in `sanity_check_results.py` (rule: bare ≤ +20%) caught it. The six
+cells were quarantined as `STALE_MISFUEL_*` and re-solved on the per-path
+curves (`inputs/fuel_supply_curves_<path>_jera120.csv`; 24 corrected lines
+across the four lists). Verified after the re-solve: every `_j120` cell sits
+above its bare twin on all four oil paths. No report figure used the
+affected cells; they appeared only in the explorer's Costs-tab band at
+those solar tiers and in six RESULTS_SUMMARY rows, both rebuilt on the
+corrected fleet. Disclosed as public issue #8 while in progress; this note
+is the record of the fix. It is why the dominance sweep is a hard gate in
+`push_both.sh`.

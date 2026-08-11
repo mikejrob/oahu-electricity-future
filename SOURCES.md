@@ -13,6 +13,17 @@ number used; nothing here is cited from memory.
 | JERA LNG proposal to the State of Hawaiʻi, 17 Mar 2026 | `JERA_Proposal_State_of_Hawaii_March_17_2026.pdf` `e8ebd12c7e5e2d2a…` | JERA plant-only cost, import-infra split | **verified** — p.30 cost breakdown, p.35 cost-of-service read firsthand |
 | Ethan Hartley base model (Switch 2.0.9) | vendored in `base_model/` | grid topology, loads, existing fleet, base costs | **carried** — byte-identical regeneration of the corrected inputs verified |
 | Fuel-curve coefficients: LSFO = 0.7388·Brent + 37.30; LNG = 0.118·Brent + 0.60 | — | fuel supply curves | **carried** — from the report's `build_brent_fuel_curves_v2.py`, which cites the brief; brief not re-derived here |
+| HECO Integrated Grid Plan, May 2023 | `IGP_Report_May-2023.pdf` `c523e6a034223dc6…` | Box 4.2 revenue requirements (Table 9-1) and capex (9-2/3/4) | **carried** — Ch.9 tables read for Box 4.2 |
+| HECO IGP Supplemental Response, Nov 2023 (Docket 2018-0088) | `IGP_SupplementalResponse_Nov-14-2023.pdf` `d26129b0e505a682…` | §4.5 plan mixes (Tables 2-3/2-4) | **carried** — parsed by `build/build_igp_plan_tables.py` |
+| HSEO Alternative Fuels Study, revised May 2026 | `HSEO_Alternative_Fuels_Study_Revised_May2026_w_Appendices.pdf` `44d549c4943d2d7e…` | §4.5 HSEO oil/LNG mixes; §4.5 methodological comparison | **carried** — results worksheets and Alt-1A/2A headline read firsthand |
+| HSEO PLEXOS cost workbook, Oct 2024 | `PLEXOS_24-10-29_cost_calculations_MF/` `be8e9f900d926010…` (cost terms sheet) | §4.5 oil/LNG fuel-price attribution | **carried** — HSEO's own OIL/GAS/HYDROGEN/BIODIESEL price rows |
+| HEI 2024 Annual Report (Form 10-K) | `heco_financial/HEI_Annual_Report_2024.pdf` `7d7477ae2e1d2520…` | Box 4.2 utility-only net/gross plant (p.98) | **carried** — balance sheet read firsthand |
+| EIA Annual Energy Outlook 2023, Table 8 | `eia_price_components/aeotab_8_AEO2023.xlsx` `f28d5dfbac7a0a14…` | Box 4.2 transmission-share benchmark | **carried** — price-by-service-category rows, 2022 |
+| FERC Form 714 HECO planning-area load (via PUDL) | `ferc714/heco_oahu_annual_load_2006_2024.csv` `a1a8b864e7f2d616…` | A.11 demand record (annual anchors; hourly series pulled per ferc714/README) | **carried** — pulled 2026-07-24 from the PUDL nightly build, provenance in `ferc714/README.md` |
+| EPA CEMS combined-cycle unit-hours (via PUDL) | `epa_cems/` (extract + unit fits) | §4.2 JERA part-load heat-rate curve | **carried** — derived by `build/derive_jera_partload_from_cems.py`, method in A.8 |
+| HECO Stage 2 Oʻahu RFP, Aug 2019 | `heco_rfp/Stage2_Oahu_RFP_2019-08-22.pdf` `097160a0142d8254…` | §2.7 PPA price terms (escalation prohibited, §3.9.2) | **carried** — §3.9.2 read firsthand |
+| HECO Stage 3 Hawaiʻi RFP, Nov 2022 | `heco_rfp/Stage3_Hawaii_RFP_2022-11-07.pdf` `48c2cf3b7ef6bc48…` | §2.7 PPA price terms (10%-capped one-time inflation adjustment introduced) | **carried** — BAFO adjustment clause read firsthand |
+| HECO IGP RFP Model RDG PPA (Appendix J) | `heco_rfp/IGP_RFP_AppxJ_Model_RDG_PPA.pdf` `b454d368485e30fa…` | §2.7 PPA price terms (GDPIPD adjustment, 15% combined cap) | **carried** — Attachment J §2(d)/(f) read firsthand |
 
 ### Note on the ATB slice
 The full NREL ATB 2024 v3.0.0 electricity workbook is ~94 MB (572,233 rows).

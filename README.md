@@ -96,11 +96,11 @@ Plus Enhanced Geothermal cost/availability variants, no-mandate (RPS
 removed) counterfactuals, and a core subset re-solved with rooftop resources
 dispatched by the optimizer instead of netted from demand. The full menu
 solves under both the conservative and trend rooftop trajectories at each oil
-path. Every cell is solved to 0.25 percent optimality and then refined to 0.1
-percent; 512 of the 513 currently sit at 0.1 percent, and a handful of the
-hardest cells stopped on a 24-hour limit at the tolerance they had reached
-(`solve/README.md` gives the distribution). The published-plan cells of
-Section 4.5 are reported at 0.25 percent.
+path. Every cell is solved to 0.25 percent optimality and then refined to
+0.1 percent — all 513 have completed the refinement pass, with a handful of
+the hardest cells stopping on a 24-hour limit at the tolerance they had
+reached (`solve/README.md` gives the distribution). The published-plan cells
+of Section 4.5 are refined to 0.1 percent as well.
 
 One figure summarizes the space — every comparable solve, by family and
 rooftop trajectory:

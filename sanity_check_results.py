@@ -7,24 +7,55 @@ A violation means a bad solve (non-converged / stuck MIP) or a missing cell,
 not a real result. Run after any re-solve; fix flagged cells before trusting
 the numbers. Exit 0 = clean, 1 = violations found.
 
-Usage:  python sanity_check_results.py [--p001]   (default: 0.25% outputs_)
+Usage:  python sanity_check_results.py [--p001|--first-pass]
+        default: the PUBLISHED basis — best available refinement per cell
+        (R010_ > R0015_ > outputs_), the same resolution the analysis
+        scripts use. --first-pass restricts to the 0.25% outputs_ dirs.
+        The fuel-curve alias bug of Aug 2026 sat visible to this check for
+        four days while it was only run by hand; push_both.sh now runs it
+        as a hard gate, on the published basis, so a dominance violation
+        cannot reach the public repository again.
 """
 import csv
 import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
+FIRST_PASS = "--first-pass" in sys.argv
 PFX = "outputs_p001_" if "--p001" in sys.argv else "outputs_"
 BR = ["lowbrent", "refbrent", "highbrent"]
 viol, missing = [], []
 
+# The EGS cost-sensitivity corners are DERIVED (a capital reprice off the
+# clean egs_none/egs_ref cells — docs/SOLVER_NOTES.md "EGS sensitivity is
+# analytical"), not required solves. If a legacy solved cell exists it is
+# still checked for monotonicity; if absent it is not a missing solve.
+OPTIONAL = {"egs_high_no_lng_refbrent", "egs_low_no_lng_refbrent"}
+
 
 def cost(name):
+    if name in OPTIONAL:
+        return cost_optional(name)
+    if not FIRST_PASS and PFX == "outputs_":
+        for pre in ("R010_outputs_", "R0015_outputs_", "outputs_"):
+            p = REPO / f"{pre}{name}" / "total_cost.txt"
+            if p.exists():
+                return float(p.read_text()) / 1e9
+        missing.append(name)
+        return None
     p = REPO / f"{PFX}{name}" / "total_cost.txt"
     if not p.exists():
         missing.append(name)
         return None
     return float(p.read_text()) / 1e9
+
+
+def cost_optional(name):
+    for pre in ("R010_outputs_", "R0015_outputs_", "outputs_"):
+        p = REPO / f"{pre}{name}" / "total_cost.txt"
+        if p.exists():
+            return float(p.read_text()) / 1e9
+    return None
 
 
 def egs_mw(name):
@@ -131,7 +162,7 @@ for _n in list(_all):
 
 print(f"  dominance sweep: {_dompairs} pairs checked across {len(_all)} solved cells")
 
-print(f"== sanity check ({PFX}) ==")
+print(f"== sanity check ({'first-pass ' + PFX if FIRST_PASS or PFX != 'outputs_' else 'published basis: R010>R0015>outputs'}) ==")
 if missing:
     print(f"MISSING ({len(missing)}): " + ", ".join(sorted(set(missing))[:25]))
 if viol:

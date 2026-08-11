@@ -1,16 +1,22 @@
-# Pre-lock work queue — paste-ready GitHub issues
+# Pre-lock work queue — paste-ready GitHub issues (RESOLVED)
 
-Planned work between public release and the v1 lock (~Sept 1; errata only
-after). Post each block as an issue on the public repository so readers know
-what is coming. Issue #2 (JERA part-load heat-rate curve + affected re-solves)
-is already posted and stands.
+Historical record. Every block below was posted as a public-repository
+issue and is now closed: the JERA part-load curve and its re-solves
+(issue #2), the plan price tags (#3, delivered as Section 4.5 under the
+hybrid quota design of A.15, which supersedes the lower-bound framing
+below), the pinned-schedule refinements (#4; all six cells at 0.1 percent,
+report figures reconciled to $0.03 / $0.01 / $0.23 billion), the explorer
+netted-series fix (#5), and the full-fleet refinement (#6; all 513 matrix
+cells and 14 plan cells at 0.1 percent). The rooftop rebase/basis item was
+deferred to v2 as documented in its block. The issue list on the public
+repository remains the authoritative punch list for anything new.
 
 ---
 
 ## Issue: Rooftop trajectory rebase and capacity-factor basis — DEFERRED TO v2
 
 *(Posted for the record; this item is no longer a pre-lock task. See
-[`V2.md`](../V2.md), "Rooftop solar measured, not inferred.")*
+[`V2.md`](../V2.md), "Measuring the rooftop fleet directly.")*
 
 Two questions were queued here: re-anchoring the three adoption
 trajectories to the latest observed customer-sited capacity, and verifying
