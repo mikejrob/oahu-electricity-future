@@ -143,6 +143,8 @@ CONFIG_LABEL = {
     "lngconv_wjera": "JERA plant + Kalaeloa conversion",
     "norps_NOTHERMAL": "No mandate: no new fuel plant",
     "norps_LNG500": "No mandate: JERA LNG 500",
+    "sq_nolng": "Status quo (frozen build), no LNG",
+    "sq_lngfree": "Status quo (frozen build), LNG allowed",
     "norps_LNGOPT": "No mandate: model-chosen LNG plant",
     "norps_lngconv_opt": "No mandate: conversions (Kalaeloa only)",
     "norps_lngconv_heco": "No mandate: conversions (HECO plant set)",
@@ -209,6 +211,12 @@ CONFIG_DESC = {
     "norps_lngconv_heco": "The mandate is removed; LNG imports with existing "
                           "plants converted (Kalaeloa, Kahe 5 and 6, CIP); "
                           "no new plant",
+    "sq_nolng": "Status quo: solar and wind are frozen at contracted "
+                "projects, rooftop follows the conservative trajectory, no "
+                "clean-energy requirement, and no LNG is available.",
+    "sq_lngfree": "Status quo: solar and wind frozen at contracted projects, "
+                  "conservative rooftop, no clean-energy requirement, with "
+                  "LNG imports available to the existing fleet.",
     "egs_none_no_lng": "Enhanced geothermal is unavailable and no LNG is "
                        "imported",
     "egs_low_no_lng": "Enhanced geothermal at its low cost case; no LNG",

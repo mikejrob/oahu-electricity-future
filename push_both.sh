@@ -30,6 +30,8 @@ cd "$SRC"
 # this check for four days pre-push while it was only run by hand.
 python3 sanity_check_results.py || {
   echo "ABORT: sanity_check_results.py found violations - fix before pushing"; exit 1; }
+python3 explorer/check_app_invariants.py || {
+  echo "ABORT: explorer invariant regressed - fix before pushing"; exit 1; }
 
 git push origin main || { echo "origin push failed"; exit 1; }
 

@@ -89,6 +89,20 @@ rescale_note <- function(ids) {
   tags$div(class = "small text-muted mt-2 border-top pt-2", HTML(RESCALE_NOTE))
 }
 
+# ---- GUARDRAIL: cost-bar readability ---------------------------------------
+# Every bar on the System-costs chart gets a fixed minimum thickness, and the
+# chart grows downward (the page scrolls) to fit however many configurations
+# the filters admit. This regressed once: bslib's fillable pages flex-squeezed
+# the tall container to viewport height as the bar count grew, crushing the
+# bars. The height is therefore enforced at BOTH levels -- the container
+# (plotOutput(height=)) AND the plot device (renderPlot(height=)), which no
+# layout negotiation can override -- and page_navbar(fillable = FALSE) keeps
+# pages scrolling instead of squeezing. explorer/check_app_invariants.py
+# asserts all three and gates push_both.sh; do not remove any of them.
+BAR_PX      <- 70    # minimum vertical pixels per cost bar
+COST_MIN_PX <- 480   # floor for short bar lists
+cost_px <- function(n) max(COST_MIN_PX, BAR_PX * n + 130)
+
 axis_selectors <- function(id, mult = TRUE) {
   tagList(
     selectInput(paste0(id, "_traj"), "Rooftop trajectory", TRAJS,
@@ -121,6 +135,7 @@ filter_axes <- function(df, input, id, mult = TRUE) {
 ui <- page_navbar(
   title = "Oʻahu Electricity Futures — results explorer",
   theme = bs_theme(bootswatch = "flatly"),
+  fillable = FALSE,   # pages scroll; never flex-squeeze tall charts (guardrail)
   header = tags$div(
     class = "alert alert-warning py-1 px-3 mb-0 small",
     sprintf(paste0("Pre-release (%s), open for comment — results may change. ",
@@ -243,11 +258,12 @@ server <- function(input, output, session) {
     rescale_note(filter_axes(scen, input, "c")$scenario))
 
   # size the bar chart to the number of configurations so nothing is cramped
+  # (container height; the device height below is the binding guarantee)
   output$cost_plot_ui <- renderUI({
-    plotOutput("cost_plot", height = max(480, 70 * nrow(cost_data()) + 130))
+    plotOutput("cost_plot", height = cost_px(nrow(cost_data())))
   })
 
-  output$cost_plot <- renderPlot({
+  output$cost_plot <- renderPlot(height = function() cost_px(nrow(cost_data())), {
     d <- cost_data()
     base <- d$mid[d$config_label == "No new fuel plant"]
     if (input$c_delta && length(base) == 1) {

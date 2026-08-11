@@ -50,6 +50,15 @@ superseded designs cannot leak into the site. Approximations
 optional conversion-capital charge) are documented in the app's About tab
 and in the extractor's docstring.
 
+## Invariants (guarded)
+
+`check_app_invariants.py` runs in `push_both.sh` and blocks a sync if a
+known regression reappears: the System-costs chart must keep a fixed
+minimum thickness per bar (`BAR_PX`) with the height enforced at both the
+container and the plot device, `page_navbar` must stay `fillable = FALSE`
+(bslib's fillable pages flex-squeeze tall charts to viewport height), and
+no raw config string may leak into `config_label` in the data extract.
+
 ## Local development
 
 ```r
