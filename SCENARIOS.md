@@ -1,7 +1,7 @@
 # The scenario menu
 
 Every scenario in this analysis, in plain language. The full menu solves
-under two rooftop-solar trajectories (conservative and realistic), with a
+under two rooftop-solar trajectories (conservative and trend), with a
 core subset also solved under an accelerated trajectory and with rooftop
 resources dispatched by the optimizer — 513 solved configurations in all
 (see the scenario map in the README). Each row is one solved optimization
@@ -82,7 +82,7 @@ documented compromise / ATB Conservative.
   plant** — tests whether the fuel benefit needs the plant. Conversion capex
   set to zero (upper bound; flagged).
 - `norps_*`: the 2045 clean-energy mandate **removed** — the no-mandate
-  baseline, the model's unconstrained choice (it builds 1,125 MW of gas), and
+  baseline, the model's unconstrained choice (it builds 500 MW of gas), and
   forced JERA-500 at both capital cases.
 
 ## 6. Solve passes

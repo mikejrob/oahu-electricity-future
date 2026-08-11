@@ -175,7 +175,7 @@ provenance only.
 - **LNG price note:** the contract-floor formula gives ~$11–12/MMBtu delivered
   at reference Brent, well below current JKM spot (~$16.5). This is the price
   the JERA proposal indexes to and is retained by decision; the contract-risk
-  section (report §4.5) explains that the floor is a floor,
+  section (report §4.6) explains that the floor is a floor,
   not a ceiling.
 
 ## Kept design choices (not errors)
@@ -183,7 +183,7 @@ provenance only.
 (a) EGS geothermal option; (b) solar+battery co-location discount; (c) the
 graduated-slope solar premium; Ethan's flexible-EV configuration; the
 predetermined 99 MW Puʻuloa plant. Base model = Ethan Hartley's
-`reference_wslope` / `constrained_c`, used byte-identical except the corrections
+`reference_wslope` / `constrained_c`, used byte-identical except the changes
 above.
 
 ---

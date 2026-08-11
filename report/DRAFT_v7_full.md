@@ -4,7 +4,7 @@ author:
  - "Ethan Hartley, *University of Hawaiʻi Department of Economics*"
  - "Michael J. Roberts, *University of Hawaiʻi Department of Economics, Sea Grant, and UHERO*"
 date: "pre-v1.02 DRAFT — August 2026 · open for comment"
-note: "This is a preliminary release, pre-v1.02, open for public comment; we ask that comments and suggestions arrive by September 1, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; corrections and extensions relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
+note: "This is a preliminary release, pre-v1.02, open for public comment; we ask that comments and suggestions arrive by September 1, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; the changes relative to it are documented in docs/CHANGES_FROM_WORKING_PAPER.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
   results are at 0.1% optimization tolerance, with a handful of degenerate
   cells at 0.15% pending tighter re-solves (docs/HARD_CELLS.md) and the EGS
   cost sensitivity carried as a documented capital reprice
@@ -3409,8 +3409,8 @@ revisions, the report will be locked as version 1 — the version of record
 — and subsequent changes will be limited to documented errata (v1.01,
 v1.02, …). Suggestions beyond errata will be directed to v2, the regional
 (zonal) grid model described in V2.md. An earlier working paper, since
-withdrawn, preceded this series; its corrections are documented in
-docs/CORRECTIONS.md.
+withdrawn, preceded this series; the changes relative to it are documented
+in docs/CHANGES_FROM_WORKING_PAPER.md.
 
 The model is Switch 2.0.9 with CPLEX, solved on the University of Hawaiʻi's
 Koa cluster. The public repository contains the complete inputs, the build

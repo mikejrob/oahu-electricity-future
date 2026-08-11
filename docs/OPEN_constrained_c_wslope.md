@@ -7,7 +7,7 @@ unaffected.**
 
 ## The problem
 
-The correction adopts Ethan's **graduated-slope** solar (`wSlope`: each solar
+The rebuilt inputs adopt Ethan's **graduated-slope** solar (`wSlope`: each solar
 site split into Flat/Moderate/Steep terrain classes with cost premiums ×1.00 /
 ×1.05 / ×1.10). Ethan built this split **only for the reference land case**
 (`reference_wslope`, 5,451 MW). There is no `constrained_c_wslope`.
@@ -31,7 +31,7 @@ parcels, and the Class-C parcels are not the reference parcels.
    reference terrain per site — documented as an approximation.
 3. **Run the 18 lc scenarios on the non-slope constrained_c (as the report
    actually did) and flag the inconsistency.** Matches the published behaviour
-   exactly but leaves the graduated-slope correction applied unevenly.
+   exactly but leaves the graduated-slope treatment applied unevenly.
 
 ## Recommendation
 
@@ -44,4 +44,4 @@ first solve pass.
 Direction of effect: the graduated-slope premium raises solar cost slightly on
 steeper land, so applying it to constrained_c would modestly raise the
 land-constrained solar cost vs the published non-slope treatment — i.e. the
-correction is mildly conservative for the land-constrained case.
+convention is mildly conservative for the land-constrained case.

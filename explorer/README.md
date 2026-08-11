@@ -33,7 +33,7 @@ The site rebuilds automatically a few minutes after the push.
 
 ## Coverage and conventions
 
-The extracts cover the report-basis fleet only: the corrected
+The extracts cover the report-basis fleet only: the report-basis
 distributed-solar families (`nlv2b`/`nlv2s`/`nlv2a`) on the four market oil
 paths plus the EIA reference. Legacy gross-load families and archived AEO
 oil paths are excluded so no chart mixes netting conventions.
