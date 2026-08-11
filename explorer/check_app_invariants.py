@@ -46,10 +46,25 @@ if not re.search(r"BAR_PX\s*<-\s*\d+", src):
 wf = HERE.parent / ".github" / "workflows" / "deploy-explorer.yml"
 if wf.exists():
     wtxt = wf.read_text()
-    if not re.search(r"packagemanager\.posit\.co/cran/20\d\d-\d\d-\d\d", wtxt):
+    m = re.search(r"packagemanager\.posit\.co/cran/(?:__linux__/\w+/)?"
+                  r"(20\d\d-\d\d-\d\d)", wtxt)
+    if not m:
         fail.append("deploy-explorer.yml: package installs are no longer "
                     "pinned to a dated CRAN snapshot — a CRAN release can "
                     "silently restyle the site on the next redeploy.")
+    else:
+        # the pin must point at a PUBLISHED snapshot, or the deploy fails
+        # (install.packages warns and continues; export then dies)
+        import urllib.request
+        url = (f"https://packagemanager.posit.co/cran/__linux__/noble/"
+               f"{m.group(1)}/src/contrib/PACKAGES")
+        try:
+            req = urllib.request.Request(url, method="HEAD")
+            urllib.request.urlopen(req, timeout=15)
+        except Exception:
+            fail.append(f"deploy-explorer.yml: pinned snapshot {m.group(1)} "
+                        f"is not published on packagemanager.posit.co — the "
+                        f"deploy will fail. Pin an existing (past) date.")
 
 # --- 3. no raw config labels in the extract ---------------------------------
 scen = HERE / "data" / "scenarios.csv"

@@ -38,10 +38,13 @@ jobs:
       # chart (see explorer/check_app_invariants.py). Latest-at-deploy-time
       # means any CRAN release can restyle the site silently. To upgrade:
       # bump the snapshot date deliberately, redeploy, and eyeball the cost
-      # chart before leaving it.
-      - name: Install packages (CRAN snapshot 2026-08-11)
+      # chart before leaving it. The date must be a PUBLISHED snapshot (the
+      # same-day date may not exist yet — probe
+      # https://packagemanager.posit.co/cran/__linux__/noble/<date>/src/contrib/PACKAGES
+      # for HTTP 200 before bumping).
+      - name: Install packages (CRAN snapshot 2026-08-10)
         run: |
-          Rscript -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/2026-08-11"));
+          Rscript -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/2026-08-10"));
             install.packages(c("shinylive", "shiny", "bslib",
               "dplyr", "tidyr", "ggplot2", "readr", "jsonlite", "scales",
               "plotly"));
