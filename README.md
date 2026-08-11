@@ -95,11 +95,10 @@ assumptions. They are counted separately from the 513.
 Plus Enhanced Geothermal cost/availability variants, no-mandate (RPS
 removed) counterfactuals, and a core subset re-solved with rooftop
 resources dispatched by the optimizer instead of netted from demand. Every
-cell is solved to 0.25 percent optimality and refined to 0.1 percent — all
-513 have completed the refinement, with a handful of the hardest cells
-stopping on a 24-hour limit at the tolerance they had reached
-(`solve/README.md` gives the distribution). The published-plan cells are at
-0.1 percent as well.
+cell — matrix and plan alike — is solved to 0.25 percent and refined to
+0.1 percent; a handful of the hardest cells stopped on a 24-hour limit at
+the tolerance they had reached (`solve/README.md` gives the
+distribution).
 
 One figure summarizes the space — every comparable solve, by family and
 rooftop trajectory:
@@ -140,13 +139,12 @@ the JERA plant-only capital, Waiau's stated cost, the EGS cost trio, the
 LSFO heat content, and the original 64-scenario set — plus SHA-256 hashes
 of the key source files. It needs nothing but a clone and Python.
 
-Its limits: it verifies **inputs, not results** — it does not re-run the
-optimization (`sanity_check_results.py` plays that role for solved outputs,
-testing monotonicity and dominance relations that must hold across cells).
-Author assumptions (the 1.20 premium) are checked against their
-documentation, since no source exists. And a hash match confirms a vendored
-file is the one we used — the point of vendoring is that you can open the
-same page and check the reading yourself.
+Its limits: it verifies **inputs, not results** — `sanity_check_results.py`
+plays that role for solved outputs, testing monotonicity and dominance
+relations that must hold across cells. Author assumptions (the 1.20
+premium) are checked against their documentation. A hash match confirms a
+vendored file is the one we used; the point of vendoring is that you can
+open the same page and check the reading yourself.
 
 - **15 minutes to half a day**: [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md)
   gives tiered paths to scrutinize every load-bearing choice.

@@ -43,11 +43,10 @@ says what we chose, where the evidence sits, and how to check it.
 3. **Recompute any table/figure** from the per-scenario outputs feeding
    `results/`.
 
-Scenarios will solve in minutes to a couple of hours at 0.25% tolerance, but 0.1% tolerances 
-can take over 24 hours for some scenarios. To solve all of the scenarios would take a
-considerable amount of time on a personal computer. On a larger server with many computing
-cores, all scenarios can be solved simultaneously with complete results in one-to-two 
-days.
+Most scenarios solve in minutes to a couple of hours at 0.25% tolerance;
+0.1% can take over 24 hours for some. Solving everything is a
+batch-computing job — one-to-two days on a many-core server
+(`solve/README.md`).
 
 ## Solve quality
 

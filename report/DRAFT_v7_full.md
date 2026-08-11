@@ -2891,14 +2891,12 @@ better evidence, and we commit to publishing whatever the numbers say.
   
 The model, inputs, code, and every number here are public. We invite
 specific, sourced challenges to any input or finding — from Hawaiian
-Electric, HSEO, JERA, and every other reader. It is relatively easy to 
-replicate these findings from the source code and input data provided. 
-It should not be difficult to adjust assumptions and run new scenarios.
-If you don't have the computing resources or solver to compute your 
-desired scenarios, make a request here. We will consider all requests,
-solve the scenario if reasonable and feasible, and publish what we find.
-To be reflected in version 1, comments and suggestions should arrive by
-September 1, 2026 (tentative); later suggestions will inform v2.
+Electric, HSEO, JERA, and every other reader. The findings can be
+replicated from the code and data provided, and assumptions adjusted to
+run new scenarios. If you lack the computing resources or solver, make a
+request here: we will solve any reasonable, feasible scenario and publish
+what we find. To be reflected in version 1, comments should arrive by
+September 1, 2026 (tentative); later suggestions inform v2.
 
 ---
 
@@ -2917,17 +2915,14 @@ conventions and every constant behind them are in the repository conventions
 file, and `verify_claims.py` re-derives each headline input from the vendored
 sources on a bare clone.
 
-**Cents per kilowatt-hour.** Per-kilowatt-hour figures in this report are a
-present-value ratio: the present value of the cost difference divided by the
-present value of delivered electricity, both discounted to 2027 at the same 3
-percent social rate. Discounting only the dollars while leaving energy
-undiscounted would overstate the denominator and understate the per-unit cost;
-we discount both. Delivered energy is the system's served load, about 6.8 TWh
-per year rising to about 7.4 TWh by 2050, whose present value over 2027–2050
-is 135.6 TWh (undiscounted, about 198 TWh). At this present-value
-denominator, a $1 billion difference in system cost equals about 0.74 cents
-per kilowatt-hour. Both numerator and denominator come from the same solved
-run, so the ratio is internally consistent with every dollar figure quoted.
+**Cents per kilowatt-hour.** Per-kilowatt-hour figures are a present-value
+ratio: the present value of the cost difference over the present value of
+delivered electricity, both discounted to 2027 at the same 3 percent rate
+(discounting only the dollars would understate the per-unit cost).
+Delivered energy — served load of about 6.8 TWh per year rising to 7.4 by
+2050 — has a present value of 135.6 TWh over 2027–2050 (about 198
+undiscounted), so a $1 billion cost difference equals about 0.74 cents per
+kilowatt-hour. Numerator and denominator come from the same solved run.
 
 ### A.2 Capacity-expansion modeling versus lifecycle cost analysis
 
@@ -2988,18 +2983,16 @@ from the post-2044 fuel assignment); all figures are HSEO's own.
 
 ### A.7 EGS demonstration arithmetic
 
-A 10 MW demonstration at the reference capital trajectory ($10M/MW gross)
-costs about $100M gross, $147M at the high trajectory. At a 50 percent
-federal cost share, Hawaiʻi's net exposure is about $50M / $74M. Energy
-value: at an 85 percent capacity factor the plant delivers 10 MW × 8,760 h ×
-0.85 ≈ 74.5 GWh per year; at a conservative $70/MWh that is $5.2M per year,
-whose 30-year present value is $102M at the 3 percent social discount rate
-($72M at the 6 percent regulated-utility rate, Appendix A.3). Against the
-$50M reference-trajectory exposure the energy value alone covers the State's
-share at either rate; against the $74M high-trajectory exposure it covers
-the full amount at 3 percent and most of it at 6 percent. The demonstration's
-downside is bounded near zero to modest tens of millions, against the
-$0.56–1.0 billion system saving if the resource proves out (Section 3).
+A 10 MW demonstration costs about $100M gross at the reference capital
+trajectory ($10M/MW), $147M at the high; at a 50 percent federal cost
+share, Hawaiʻi's net exposure is about $50M / $74M. At an 85 percent
+capacity factor the plant delivers ≈74.5 GWh per year — $5.2M per year at
+a conservative $70/MWh, a 30-year present value of $102M at the 3 percent
+social rate ($72M at 6 percent, Appendix A.3). That energy value covers
+the reference exposure at either rate, and the high exposure fully at 3
+percent and mostly at 6. The downside is bounded near zero to modest tens
+of millions, against the $0.56–1.0 billion system saving if the resource
+proves out (Section 3).
 
 ### A.8 JERA capital and infrastructure treatment
 
@@ -3103,9 +3096,9 @@ regions. GWP values: IPCC AR6 WG1, Table 7.15 (fossil-origin CH₄: GWP₁₀₀
 
 The distributed-resource assumptions in this report are estimated from three data sources: hourly system demand from FERC Form 714 (Hawaiian Electric planning area, 2006–2024, via the PUDL compilation), hourly solar radiation from the NREL NSRDB (GOES-aggregated v4, island mean over 264 Oʻahu grid cells), and cumulative installed distributed PV and battery capacity compiled from permit and interconnection records (793 MW of PV and roughly 250 MWh of storage at mid-2025; the storage total is a calibration and less certain than the PV total).
 
-A unit-basis caveat applies to every capacity figure in this appendix. The permit-record capacity series does not document its rating basis (DC nameplate versus AC), and neither do Hawaiian Electric's published PV totals; EIA's utility-level data, which is AC, runs about 12 percent below the matched residential figures, consistent with the reported series being DC nameplate at a typical inverter loading ratio. This ambiguity does not affect the report's projections, because every coefficient here is estimated per *reported* megawatt on the same series used to project net load — the basis cancels. It matters only when comparing our megawatts with outside sources, which should not be done without stating the basis on both sides. A pre-battery calibration pins the physical interpretation: restricting to 2013–2019, when net metering put essentially all rooftop generation on the meter and installed batteries were negligible, day-to-day radiation variation within four-hour blocks identifies a grid-load reduction of 0.79 MW per reported MW at reference irradiance (standard error 0.03; analysis/18_prebattery_effective_mw.py). That is the expected usable AC output of a DC-nameplate megawatt once tilt, aspect, soiling, and inverter conversion are included. It is not comparable to the 0.61 MW per MW estimated on the battery era, which additionally nets the behind-the-meter wedge and the post-net-metering tariff structures; the two bracket the tariff regimes rather than contradicting each other.
+A unit-basis caveat applies to every capacity figure here. Neither the permit-record series nor Hawaiian Electric's published totals states a rating basis (DC nameplate versus AC); EIA's utility-level data, which is AC, runs about 12 percent below the matched residential figures — consistent with the reported series being DC nameplate at a typical inverter loading ratio. The ambiguity does not affect the report's projections, because every coefficient is estimated per *reported* megawatt on the same series used to project net load — the basis cancels. It matters only when comparing our megawatts with outside sources, which needs the basis stated on both sides. A pre-battery calibration pins the physical interpretation: on 2013–2019 data, when net metering put essentially all rooftop generation on the meter and batteries were negligible, day-to-day radiation variation identifies a grid-load reduction of 0.79 MW per reported MW at reference irradiance (s.e. 0.03; analysis/18_prebattery_effective_mw.py) — the expected usable AC output of a DC-nameplate megawatt after tilt, aspect, soiling, and inverter conversion. The battery-era 0.61 additionally nets the behind-the-meter wedge and post-net-metering tariffs; the two bracket the tariff regimes.
 
-Two measurement problems had to be resolved first. The FERC 714 hourly series carries clock misalignments that coincide with its reporting-format changes: 2006–2012 reads one hour early and 2021–2024 one hour late relative to 2013–2020. We detect and correct these using hours that distributed technologies cannot affect. The pre-dawn morning ramp (roughly 5–7 am, sun down, batteries at their overnight reserve) shifts by +0.95 hours in a single step at the 2020–2021 format boundary and stays constant while installed battery capacity more than doubles, which identifies it as a reporting artifact rather than behavior. A uniform one-hour roll removes it. The correction was validated against astronomical solar noon in the radiation data: after the roll, the midday net-load trough aligns with solar noon within a few tenths of an hour. Detecting the shift from the evening peak instead would absorb the real battery reshaping into the correction; calibrating on battery-inert hours preserves it. Second, 4 am serves as the anchor hour throughout: regressed on installed PV and battery capacity, its load level carries essentially zero loading on either (+0.001 MW per MW and −0.05 MW per MWh), so subtracting each day's 4 am load removes underlying demand drift (efficiency, electric vehicles, the economy) without touching the distributed signal.
+Two measurement problems come first. The FERC 714 hourly series carries clock misalignments coinciding with its reporting-format changes: 2006–2012 reads one hour early and 2021–2024 one hour late relative to 2013–2020. We detect and correct these on hours distributed technologies cannot affect: the pre-dawn ramp (5–7 am, sun down, batteries at overnight reserve) shifts +0.95 hours in a single step at the 2020–2021 format boundary and stays constant while battery capacity more than doubles — a reporting artifact, removed by a uniform one-hour roll and validated against astronomical solar noon (the midday net-load trough aligns within a few tenths of an hour). Calibrating on battery-inert hours matters: detecting the shift from the evening peak would absorb the real battery reshaping into the correction. Second, 4 am anchors every day: its load carries essentially zero loading on installed PV or batteries (+0.001 MW per MW; −0.05 MW per MWh), so subtracting it removes demand drift (efficiency, EVs, the economy) without touching the distributed signal.
 
 Rooftop PV and battery effects are then identified from weather variation rather than from installation trends, because installed PV, installed storage, and EV adoption all grew together after 2020 and cannot be separated on trend alone. Day-to-day radiation is exogenous and orthogonal to those trends. Contemporaneous radiation interacted with installed PV identifies the PV response: a reduction in grid load of 0.61 MW per MW installed at midday, consistent across two independent estimators. Same-day midday radiation interacted with installed battery capacity, predicting load after sunset (when PV output is zero), identifies the battery: a sunnier midday charges batteries fuller and lowers that evening's grid load (t = −4.9). The estimate implies 0.45 MWh delivered to the evening per installed MWh per day, distributed 19:00–22:00 with peak weight at 20:00. That figure passes the physical bound of 0.62 MWh (round-trip efficiency of 0.86, a 20 percent outage reserve, 90 percent usable capacity), a check the trend-based estimator fails by a factor of five, which is what motivated the weather-based design.
 
@@ -3120,13 +3113,10 @@ where L is metered system load (MW, clock-shift corrected), GHI is
 island-mean solar radiation (W/m²), PV(q) and Batt(q) are cumulative
 installed rooftop capacity (MW) and battery energy (MWh), δ(h, season) are
 hour-by-season fixed effects, and f(T) is a quadratic in temperature. The
-PV response is read from b(h) at midday hours; the battery response from
-c(h) at evening hours (19:00–22:00), where PV output is zero and the only
-channel from midday sunshine to evening load is storage. Anchoring on the
-4 a.m. load removes underlying demand drift, and identification comes from
-day-to-day weather variation rather than installation trends (the full
-derivation, code, and diagnostics are in the repository's analysis/
-directory).
+PV response is read from b(h) at midday; the battery response from c(h) at
+19:00–22:00, where PV output is zero and the only channel from midday
+sunshine to evening load is storage. Full derivation, code, and
+diagnostics: the repository's analysis/ directory.
 
 The gap between what rooftop systems physically generate (about 4.4 MWh per day per MW) and the grid-load reduction they produce (about 3.4) is 24 percent of generation, stable across 2018–2024. This wedge is demand that exists only behind the meter, consumption induced by the solar itself plus storage losses, and it never crosses the meter in either direction. Island-wide it grew from roughly 180 to 290 GWh per year over 2018–2024. Net-load projections in this report net out only the grid-visible fraction.
 
@@ -3134,13 +3124,13 @@ One further pattern matters for reliability. On very low-radiation days, grid lo
 
 ### A.12 Net-load construction from distributed projections
 
-Projected net load is built from gross load in three steps. First, distributed PV is netted per timepoint using the model's own site-level DistPV capacity factors, so that distributed output, utility-scale solar output, and demand move with the same weather realization in every hour the optimizer sees. This matters for curtailment and firm-capacity sizing: a cloudy timepoint has low rooftop and low utility solar together. A check of whether installs' actual locations change this (weighting the 264 radiation cells by installed MW in each zone) moves the effective capacity factor by under one percent, so the model's island-level profile is used unchanged. Second, the full trajectory is netted at those capacity factors: the pre-2020 stock keeps the PV-only midday shape, and capacity added since carries the battery-reshaped profile. Third, that reshaped profile moves 40 percent of midday output into the evening hours, energy-conserving, a shift calibrated to the reshaping observed in the metered record (A.11's battery estimates identify the same behavior; the 24 percent wedge of A.11 describes where the meter sits relative to generation, and enters the trajectory calibration rather than the netting itself). In the alternative representation used for comparison, distributed PV and batteries are instead carried as generation and storage resources dispatched by the optimizer against gross load, with the fleet's capital charged to the system. Because the two representations differ in capital accounting as well as behavior, their raw cost difference does not measure the value of scheduling; the paired experiment of Section 2.7, which pins the battery schedule inside a single representation, does.
+Projected net load is built from gross load in three steps. First, distributed PV is netted per timepoint using the model's own site-level DistPV capacity factors, so that distributed output, utility-scale solar output, and demand move with the same weather realization in every hour the optimizer sees. This matters for curtailment and firm-capacity sizing: a cloudy timepoint has low rooftop and low utility solar together. A check of whether installs' actual locations change this (weighting the 264 radiation cells by installed MW in each zone) moves the effective capacity factor by under one percent, so the model's island-level profile is used unchanged. Second, the full trajectory is netted at those capacity factors: the pre-2020 stock keeps the PV-only midday shape, and capacity added since carries the battery-reshaped profile. Third, that reshaped profile moves 40 percent of midday output into the evening hours, energy-conserving, a shift calibrated to the reshaping observed in the metered record (A.11's battery estimates identify the same behavior; the 24 percent wedge of A.11 describes where the meter sits relative to generation, and enters the trajectory calibration rather than the netting itself). In the alternative representation used for comparison, distributed PV and batteries are dispatched by the optimizer against gross load, with the fleet's capital charged to the system. The two representations differ in capital accounting as well as behavior, so their raw cost difference does not measure the value of scheduling; the paired experiment of Section 2.7, pinned inside a single representation, does.
 
 Three installed-capacity trajectories are run. The conservative trajectory grows from 800 MW (2027) to 1,000 MW (2050); in gross-build terms this approximately continues the realized 2020–2024 installation rate, because the 2012–2016 build wave retires within the horizon. The trend trajectory reaches 1,560 MW, about 1.5 times the recent realized build rate; we regard it as the most realistic projection absent a policy change to rooftop-solar pricing (Section 2.7). The accelerated trajectory, constructed as twice the trend increment (2,120 MW by 2050), represents the response to unlimited sellback at avoided cost as discussed in the body; its new installs pair 2 MWh of storage per MW of PV, the configuration of a typical 6.5 kW residential system with one 13.5 kWh battery. Federal tax treatment supports the storage-heavy, third-party-owned character of that growth: residential-owned credits ended after 2025 and third-party solar loses eligibility for systems placed in service after 2027, while third-party-owned batteries retain the Section 48E credit through 2033 (Arnold & Porter 2025; RSM 2025).
 
 ### A.13 Rooftop adoption versus Hawaiian Electric's forecasts
 
-The trajectories above can be placed against the utility's own forecast record. Hawaiian Electric's 2016 Power Supply Improvement Plan projected Oʻahu distributed PV reaching 770 MW in 2034. The installed base reached 765 MW at the end of 2024, a decade ahead of the projection within eight years of its publication. Over the forecast's own first eight years, projected additions were 27 MW per year against 41 realized; in the forecast's steady phase (2021–2045), the projected 11 MW per year compares with 42 realized over 2020–2024, with no deceleration visible in the record. The digitized PSIP series anchors to the realized 2016 installed base within 0.7 percent. The utility's current Integrated Grid Planning forecast is closer to the record (a forward rate near 29 MW per year), though still below the realized rate; its published series bundles territories and storage in a way that prevents a clean Oʻahu-only comparison, and it is shown separately in the supporting analysis. Against this record, the conservative trajectory's net growth rate (8.7 MW per year) sits below even the PSIP steady-phase rate that realized adoption exceeded several times over, and the accelerated trajectory assumes a gross build rate twice the recent realized rate. Full series, provenance notes, and the comparison figure are in the repository (`analysis/appendix_forecast_vs_actual.csv`, `analysis/APPENDIX_forecast_evidence.md`).
+The trajectories can be placed against the utility's own forecast record. Hawaiian Electric's 2016 Power Supply Improvement Plan projected Oʻahu distributed PV reaching 770 MW in 2034; the installed base reached 765 MW at the end of 2024 — a decade ahead, within eight years of publication. Projected additions over the forecast's first eight years were 27 MW per year against 41 realized; its steady phase (2021–2045) projected 11 MW per year against 42 realized over 2020–2024, with no deceleration in the record. (The digitized PSIP series anchors to the realized 2016 base within 0.7 percent.) The utility's current IGP forecast is closer — a forward rate near 29 MW per year — though still below the realized rate; its published series bundles territories and storage, preventing a clean Oʻahu-only comparison. Against this record, the conservative trajectory's net growth (8.7 MW per year) sits below even the PSIP steady-phase rate that adoption exceeded several times over, and the accelerated trajectory assumes a gross rate twice the recent realized one. Full series and provenance: `analysis/appendix_forecast_vs_actual.csv`, `analysis/APPENDIX_forecast_evidence.md`.
 
 ### A.14 Oil-price cases from futures and options
 

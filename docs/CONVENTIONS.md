@@ -1,21 +1,25 @@
 # Cost and financial conventions
 
-Every cost input in this repository is real **2024 US dollars**, with net
-present values computed **as of 2027**. The **base case reflects current federal law**: the 48E clean-electricity tax credit (30% of capital for construction beginning through 2033, phasing to zero after 2035) applies to utility-scale storage and to Enhanced Geothermal, modeled as a capital discount on 2027–2035 build vintages; wind and solar credits are terminated for 2027+ builds under the 2025 act, so utility solar carries none. A no-credit sensitivity (`gen_build_costs_noitc.csv`, `results/RESULTS_SUMMARY_noitc.csv`) is reported for the case the credits are denied (foreign-entity rules) or repealed, and every figure traces to a named
-primary source or an explicitly-labelled author assumption. This file is the
-single authoritative description of those conventions; `build/
-build_corrected_inputs.py` implements them and `verify_claims.py` re-derives
-each headline figure from source and asserts the match.
+Every cost input is real **2024 US dollars**, with net present values
+computed **as of 2027**. The **base case reflects current federal law**:
+the 48E credit (30% of capital for construction beginning through 2033,
+zero after 2035) applies to utility-scale storage and Enhanced Geothermal
+as a capital discount on 2027–2035 vintages; solar and wind credits are
+terminated for 2027+ builds, so utility solar carries none. A no-credit
+sensitivity (`gen_build_costs_noitc.csv`,
+`results/RESULTS_SUMMARY_noitc.csv`) covers the case the credits are
+denied or repealed. Every figure traces to a named primary source or a
+labelled author assumption. This file is the authoritative description;
+`build/build_corrected_inputs.py` implements it and `verify_claims.py`
+re-derives each headline figure from source.
 
 ## Dollar unit and valuation date
 
-The **dollar unit is real 2024 US$**; the **NPV valuation date is 2027**. These
-are two separate things, and keeping them separate is what lets the report quote
-everything in 2024$ (an already-happened price level) without any awkward
-2027$→2024$ scaling step. Every cost is rebased to 2024$ from its own source
-year (below); the model then discounts each period's real-2024$ cost to a 2027
-present value at 3% real. Reported NPVs are therefore "real 2024$, present value
-as of 2027" — the convention the report's Appendix A.1 describes.
+The **dollar unit is real 2024 US$**; the **NPV valuation date is 2027**.
+Keeping the two separate lets the report quote everything in 2024$ with no
+scaling step: every cost is rebased to 2024$ from its own source year
+(below), then discounted to a 2027 present value at 3% real. Reported NPVs
+are "real 2024$, present value as of 2027" (report Appendix A.1).
 
 ## Financial parameters (`inputs/financials.csv`)
 
@@ -95,13 +99,12 @@ the mistake, the reference is set as a documented compromise.
 | **reference** | **compromise** between DOE ~$9M and ATB Moderate ~$12M | **$10.0M/MW** |
 | **high** | ATB 2024 NF-EGS Binary Conservative profile, anchored to $14.7M@2030 | **$14.7M/MW** |
 
-The **$10M reference** sits near the centre of the low–high range (~$10.35M) and
-**below ATB Moderate**. That below-ATB placement is deliberate and justified:
-**ATB 2024 is dated and EGS costs have fallen fast** (Fervo Cape Station and
-related learning), so ATB skews high for a 2030+ build; the GeoVision/DOE
-optimistic sources are more recent for the low trajectory. The reference is
-placed on the ATB Moderate decline profile; the high case takes the ATB
-Conservative decline profile, anchored so its 2030 vintage is $14.7M. FOM = ATB NF-EGS Binary Moderate FOM × 1.05473 (≈ $187/kW-yr), all
+The **$10M reference** sits near the centre of the low–high range
+(~$10.35M) and **below ATB Moderate** — deliberately: ATB 2024 is dated
+and EGS costs have fallen fast (Fervo Cape Station and related learning),
+so ATB skews high for a 2030+ build. The reference rides the ATB Moderate
+decline profile; the high case rides ATB Conservative, anchored to $14.7M
+at 2030. FOM = ATB NF-EGS Binary Moderate × 1.05473 (≈$187/kW-yr), all
 cases. No Hawaiʻi premium on EGS capital.
 
 - **The low case sets the upside.** Under current-law credits the reference
