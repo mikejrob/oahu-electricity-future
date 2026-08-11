@@ -26,7 +26,7 @@ quoted Hawaiʻi thermal cost.
 
 **Change from the withdrawn edition, and what it moves.** The prior edition
 priced this comparator near **$1,950/kW** (≈$487M/250 MW). The increase to
-$2,900 (+~50%), alongside the JERA correction in the other direction
+$2,900 (+~50%), alongside the JERA capital change in the other direction
 (bundle $4,229/kW → plant-only $2,863), is what turned the sister-plant
 capital comparison into a wash. The *outcome* of the sister comparison
 does not hinge on it: repricing the 500 MW LSFO CC at the old $1,950

@@ -824,7 +824,7 @@ political economy of the land-use rules — the legislative record of HRS
 §205-2/§205-4.5, cap counterfactuals, ownership, terrain, and grid
 proximity — is public at github.com/mikejrob/solar-wind-landuse and
 carries the full detail behind this section and the next. It is a living
-inventory: corrections, parcels, and local knowledge are welcome there.
+inventory: fixes, parcels, and local knowledge are welcome there.
 
 ### 2.6 What the fuel choices change about land, and when
 
@@ -1493,7 +1493,7 @@ well below current Pacific spot and Qatar-linked term markets, and Section 4.6
 discusses why a contract floor at that level should not be read as a ceiling.
 
 An asymmetry in the fuel modeling formerly favored the JERA plant, and
-has been corrected. Every existing unit on the system, and our own LSFO-plant
+has been removed. Every existing unit on the system, and our own LSFO-plant
 comparator, carries a part-load fuel curve: average heat rates rise when a
 unit runs below full output (Kalaeloa averages about 9.5 MMBtu/MWh at its
 minimum load against a 5.7 incremental rate; the modeled LSFO plant about
@@ -1508,7 +1508,7 @@ raised from 30 to 62.5 MW per block (Appendix A.8; `sources/epa_cems/`).⁵
 on the withdrawn paper pressed the distinction between a plant's
 full-load heat rate and the average rate it achieves in operation. The point
 was well taken and applies to the modeling as well as the presentation,
-and we thank them for it. The corrected curve barely moves cost: the
+and we thank them for it. The revised curve barely moves cost: the
 JERA premium over no-new-plant changes by less than $0.01 billion in
 every configuration tested (for example +$0.535 to +$0.538 billion at
 500 MW bare-EPC, +$0.958 to +$0.959 billion at the +20 percent capital
@@ -3402,7 +3402,7 @@ seismicity protocol, §3).
 ## Appendix C — data and reproducibility
 
 This report is release pre-v1.02: the single-node (copper-plate) model
-with the corrected distributed-solar treatment of Appendices A.11–A.12,
+with the rebuilt distributed-solar treatment of Appendices A.11–A.12,
 issued as a preliminary version open for comment (requested by
 September 1, 2026, tentative). After the comment period, responses, and
 revisions, the report will be locked as version 1 — the version of record

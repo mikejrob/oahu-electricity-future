@@ -134,7 +134,7 @@ battery signal). Roll: **+1h 2006-2012, 0 2013-2020, -1h 2021-2024.** Radiation 
     was 13h, +1h late). The -1h roll fixes it; residual trough drift with installed MWh is the
     PRESERVED battery signal.
 - NOTE: the earlier "4am clean anchor" was the SHIFTED 3am reference-block anchor in 2021-24 data.
-- Also corrects an earlier caveat: the hourshift note documents respondent 178 as HECO Oahu-only
+- Also supersedes an earlier caveat: the hourshift note documents respondent 178 as HECO Oahu-only
   (not consolidated). Cross-island placebo still BLOCKED (no Maui/Hawaii-Island respondents in 714).
 
 ### Estimator 2 FIRMED [09_estimator2_firmed.py, estimator2_*_firmed.csv, estimator2_battery_shape.csv]

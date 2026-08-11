@@ -27,7 +27,7 @@ general. And the risk-premium caveat is weaker than it first looks: estimates
 disagree on sign as well as magnitude, no significant average premium is detectable,
 and adjusting for one makes real-time forecasts worse.
 
-On the option-implied band, one substantive correction to A.14: the claim that
+On the option-implied band, one substantive revision for A.14: the claim that
 risk-neutrality makes the band conservatively wide does not hold for oil in the tail
 that matters. The best oil-specific density evaluation finds low-price outcomes
 materialised **more** often than WTI options priced them, at every horizon out to a
@@ -820,7 +820,7 @@ and unaffected.
   forecasts from the EIA, 42 (93%) have under-predicted the price of oil."
   **[UNVERIFIED — title, magazine and month only. Do not cite the statistic.]**
 
-### Corrections to the research brief, and gaps
+### Errata for the published research brief, and gaps
 
 - The brief's lead "Winebrake & Sakva, 'Understanding errors in EIA projections of
   energy demand' (Resource and Energy Economics 2006)" conflates two real papers:
@@ -850,5 +850,5 @@ and unaffected.
   left-tail question and neither was read.
 - NBER w22991 is titled "Commodity Price Forecasts, Futures Prices and Pricing
   Models," not "... and Prediction Markets," and it does not study prediction
-  markets. Corrected citation under Cortazar et al. (2019) above.
+  markets. The right citation appears under Cortazar et al. (2019) above.
 - No git commit was made; this note is untracked working material.

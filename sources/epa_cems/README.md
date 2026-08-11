@@ -58,4 +58,4 @@ Oahu_JERA,100.0,125.0,6.225,.
 
 Average heat rates: 7.62 at minimum, 7.15 at 75%, 6.92 at full load.
 Direction of effect: raises JERA-pathway fuel use and cost; the bias it
-corrects was one-sided (report Section 4.2).
+removes was one-sided (report Section 4.2).

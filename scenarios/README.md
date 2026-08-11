@@ -16,7 +16,7 @@ percentile; report Appendix A.14). The lists:
 |---|---|
 | `market_lh_b.txt` / `market_lh_s.txt` | The core matrix re-solved at the market 10th/90th paths (base and trend rooftop) |
 | `market_fut_b.txt` / `market_fut_s.txt` | The Brent-futures central path |
-| `netload_v2b.txt` / `netload_v2s.txt` | The corrected distributed-solar families (all four paths) |
+| `netload_v2b.txt` / `netload_v2s.txt` | The report-basis distributed-solar families (all four paths) |
 | `j120fix_b.txt` / `j120fix_s.txt` | JERA +20% capital at the market paths |
 | `solarmult_oil.txt` | Solar-premium cases (1.5x/1.7x) crossed with oil paths and conversions |
 | `matrix_nlv2s.txt` | The trend-rooftop oil x solar matrix behind report Figure 4.3 |
@@ -58,8 +58,8 @@ arrays drain. Final results use the 0.1% value wherever it exists.
 
 Scenario lists `netload_v2b.txt`/`netload_v2s.txt` and directory prefixes
 `inputs_nlv2*`, `outputs_nlv2*` (with `dgb/dgs/dga` for the dispatched-generator
-variants and `R010_`/`R0015_` for gap refinements) belong to the corrected
-distributed-solar treatment (v1 as first circulated let rooftop PV retire to
+variants and `R010_`/`R0015_` for gap refinements) belong to the current
+distributed-solar treatment (an earlier build let rooftop PV retire to
 zero by 2050; fixed since pre-v1.01). "v2" is reserved for the regional (nodal)
 grid model described in `V2.md`. The prefixes are frozen because solve
 fleets and refinement machinery reference them.

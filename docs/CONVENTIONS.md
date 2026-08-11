@@ -77,7 +77,7 @@ hybrid** (100 MW PV + 50 MW / 4-hr battery, DC-coupled).
   saved, 6.9%, + NREL's joint-install saving, 1.9%), varying 0.91–0.93 by year.
   The old 12% figure traced to the **2-hour** battery's GCC share (10.6%) and
   overstated the 4-hour discount — batteries are ~3.7% dearer under the
-  corrected basis (a refinement that raises battery cost, i.e. runs against the solar case).
+  ATB-derived basis (a refinement that raises battery cost, i.e. runs against the solar case).
 - Cross-check: Ethan Hartley's convention (ATB OCC basis, interconnection
   excluded, no joint-install saving) differs from this by <2% at matched
   premium — the two conventions effectively agree.

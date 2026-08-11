@@ -62,7 +62,7 @@ Relative to the prior Switch-Hawaiʻi conventions, the deliberate deviations
 are: (a) the dollar-unit/NPV-anchor split in row 1 (prior practice treated
 `base_financial_year` as the dollar-year); (b) `ev_patched` = `hawaii.ev`
 plus the one missing `Param` declaration; (c) `lng_conversion`'s
-converted-plants list corrected to the actual generator names (the PSIP-era
+converted-plants list updated to the actual generator names (the PSIP-era
 entries had drifted and were inert); (d) battery cost from the ATB hybrid
 rather than a flat co-location factor. Everything else follows the base
 model's conventions, and the base model itself is vendored in `base_model/`

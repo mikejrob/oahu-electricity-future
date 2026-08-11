@@ -97,7 +97,7 @@ downloaded (hosted only on data.nrel.gov, which does not resolve from this node 
   years, unlike some other industry observers."
 - **Dollar-year (verified in-session, p. 38):** LBNL states "We deflate the nominal dollar price
   series to 2023 dollars." Both the $1.56 (2022) and $1.43 (2023) figures are therefore in **real
-  2023$** — this corrects the earlier draft, which inconsistently treated the 2022 point as native
+  2023$** — this fixes the earlier draft, which inconsistently treated the 2022 point as native
   2022$. Both points are rebased **2023$ → 2024$** (× 313.698/304.703) in Figure 1, giving
   **$1.61/W_AC (2022)** and **$1.47/W_AC (2023)**.
 

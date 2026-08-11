@@ -11,7 +11,7 @@ number used; nothing here is cited from memory.
 | NREL ATB 2024 v3.0.0 (electricity) | `ATBe_2024_v3.0.0_slice.csv` `11983d011a0e7263…` (slice of full file `beb07e64aa4d43a9…`) | solar, battery, EGS cost targets | **verified** — read + used programmatically by `build/build_corrected_inputs.py` |
 | EIA Annual Energy Outlook 2025 (narrative) | `EIA_AEO2025_narrative.pdf` `2d23f8fc34b59903…` | real-Brent low/high case spread | **verified** — 2050 anchors read firsthand: Reference $91/bbl, Low $48/bbl, High $157/bbl (real 2024$) |
 | JERA LNG proposal to the State of Hawaiʻi, 17 Mar 2026 | `JERA_Proposal_State_of_Hawaii_March_17_2026.pdf` `e8ebd12c7e5e2d2a…` | JERA plant-only cost, import-infra split | **verified** — p.30 cost breakdown, p.35 cost-of-service read firsthand |
-| Ethan Hartley base model (Switch 2.0.9) | vendored in `base_model/` | grid topology, loads, existing fleet, base costs | **carried** — byte-identical regeneration of the corrected inputs verified |
+| Ethan Hartley base model (Switch 2.0.9) | vendored in `base_model/` | grid topology, loads, existing fleet, base costs | **carried** — byte-identical regeneration of the model inputs verified |
 | Fuel-curve coefficients: LSFO = 0.7388·Brent + 37.30; LNG = 0.118·Brent + 0.60 | — | fuel supply curves | **carried** — from the report's `build_brent_fuel_curves_v2.py`, which cites the brief; brief not re-derived here |
 | HECO Integrated Grid Plan, May 2023 | `IGP_Report_May-2023.pdf` `c523e6a034223dc6…` | Box 4.2 revenue requirements (Table 9-1) and capex (9-2/3/4) | **carried** — Ch.9 tables read for Box 4.2 |
 | HECO IGP Supplemental Response, Nov 2023 (Docket 2018-0088) | `IGP_SupplementalResponse_Nov-14-2023.pdf` `d26129b0e505a682…` | §4.5 plan mixes (Tables 2-3/2-4) | **carried** — parsed by `build/build_igp_plan_tables.py` |
@@ -47,14 +47,14 @@ csv.writer(open("ATBe_2024_v3.0.0_slice.csv", "w", newline=""), lineterminator="
 ## Detailed verifications
 
 ### Solar — ATB 2024 Moderate UtilityPV Class5
-Corrected solar capital and FOM = ATB CAPEX/FOM × 1.20 (Hawaiʻi premium floor),
+Solar capital and FOM here = ATB CAPEX/FOM × 1.20 (Hawaiʻi premium floor),
 preserving Ethan's graduated-slope steps (Flat ×1.00 / Moderate ×1.05 / Steep
 ×1.10). Verified in-build: every Flat row lands on ATB × 1.20 to <0.1%, and the
-Moderate/Steep steps hold to ±0.02. The published run's fabricated "ATB 2025 ×
+Moderate/Steep steps hold to ±0.02. The withdrawn paper's fabricated "ATB 2025 ×
 0.75" is removed entirely.
 
 ### Battery — ATB 2024 Moderate 4Hr Battery Storage
-Corrected to ATB 4h-system CAPEX × 1.20 × the co-location factor **derived
+Now ATB 4h-system CAPEX × 1.20 × the co-location factor **derived
 from ATB's own PV-Plus-Battery hybrid**: battery-share cost =
 (PVB − PV)/0.5, giving ~0.91–0.93 by year (interconnection fully saved plus
 NREL's joint-install delta). The earlier flat 0.88 — traced to the 2-hour
@@ -63,7 +63,7 @@ docs/CORRECTIONS.md). Verified per-year by `verify_claims.py`.
 
 ### JERA — plant-only from the proposal
 Proposal p.30: plant $1,510 M + subsea/mooring/ORF $250 M + onshore pipe $200 M
-+ FSRU $10 M. Corrected model carries the **plant only**, $1.51 B / 500 MW =
++ FSRU $10 M. This model carries the **plant only**, $1.51 B / 500 MW =
 $3,020/kW → $3,101,540/MW rebased, flat across build years; the ~$460 M import
 infrastructure remains in the LNG supply-tier `fixed_cost`, so it is charged
 once, not twice.
