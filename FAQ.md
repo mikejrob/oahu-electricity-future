@@ -27,7 +27,7 @@ documents on any clone, and the full model and scenario definitions are
 public. The changes moved results in both directions — the biggest single
 change made LNG look *better*, though the current-law base case still puts
 LNG modestly behind on cost. What changed and why:
-[`docs/CHANGES_FROM_WORKING_PAPER.md`](docs/CHANGES_FROM_WORKING_PAPER.md).
+[`docs/CORRECTIONS.md`](docs/CORRECTIONS.md).
 (`REVIEWER_GUIDE.md` shows the 15-minute check.)
 
 **Would LNG cut electricity bills by 20 percent?**

@@ -59,7 +59,7 @@ from ATB's own PV-Plus-Battery hybrid**: battery-share cost =
 (PVB − PV)/0.5, giving ~0.91–0.93 by year (interconnection fully saved plus
 NREL's joint-install delta). The earlier flat 0.88 — traced to the 2-hour
 battery's grid-connection share — is superseded (docs/CONVENTIONS.md;
-docs/CHANGES_FROM_WORKING_PAPER.md). Verified per-year by `verify_claims.py`.
+docs/CORRECTIONS.md). Verified per-year by `verify_claims.py`.
 
 ### JERA — plant-only from the proposal
 Proposal p.30: plant $1,510 M + subsea/mooring/ORF $250 M + onshore pipe $200 M

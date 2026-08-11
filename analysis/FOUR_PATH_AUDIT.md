@@ -208,7 +208,7 @@ adds 22 more in-flight cells (be_pv15/pv17 × low/fut/high).
    scripts find nothing. Mark as legacy in their docstrings.
 3. `docs/SOURCES.md` — no entries for the oil-price sources at all (neither
    `EIA_AEO2025_narrative.pdf` nor the `sources/market/raw/` pulls). Add both.
-4. `docs/CHANGES_FROM_WORKING_PAPER.md` (fuel-price row) — AEO mention is historical; fine. `docs/SOLVER_NOTES.md`
+4. `docs/CORRECTIONS.md` (fuel-price row) — AEO mention is historical; fine. `docs/SOLVER_NOTES.md`
    — no oil-path content; fine.
 5. `solve/gen_refinements.py:25–26` — correctly scans only the six current
    prefixes at top level (cannot reach `aeo_archive/`); its only exposure is the

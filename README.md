@@ -69,8 +69,7 @@ The full case, with sensitivities and limits: the
 - **v2 (planned)** — the regional (zonal) grid model described in
   [`V2.md`](V2.md).
 - An earlier working paper, since withdrawn, preceded this series; what
-  changed is documented in
-  [`docs/CHANGES_FROM_WORKING_PAPER.md`](docs/CHANGES_FROM_WORKING_PAPER.md).
+  changed is documented in [`docs/CORRECTIONS.md`](docs/CORRECTIONS.md).
 
 ## The scenario set
 
@@ -182,7 +181,7 @@ docs/            conventions, solver notes, analyses
 
 This analysis supersedes a 2026 working paper by the same authors — a
 withdrawn report we regret having released too early.
-[`docs/CHANGES_FROM_WORKING_PAPER.md`](docs/CHANGES_FROM_WORKING_PAPER.md)
+[`docs/CORRECTIONS.md`](docs/CORRECTIONS.md)
 documents what changed and how the analysis was extended, item by item,
 with direction of effect. The base grid model was developed by Ethan
 Hartley on Matthias Fripp's open-source Switch platform and

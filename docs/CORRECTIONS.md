@@ -1,18 +1,18 @@
-# Relationship to the withdrawn 2026 working paper
+# Relationship to the withdrawn 2026 working paper: corrections and extensions
 
 This analysis supersedes an earlier working paper by the same authors,
 withdrawn after we found errors introduced during its preparation. This page
-records what changed and why, in one place: the input changes, the two
-largest errors and how they happened, and how the analysis grew beyond the
-original scope.
+records the corrections and why, in one place: the input corrections, the
+two largest errors and how they happened, and how the analysis grew beyond
+the original scope.
 
-## What changed
+## Corrections
 
 Every input now traces to a named public source or a labelled author
 assumption, and `verify_claims.py` re-derives the headline set from vendored
-documents on any clone. The changes cut in both directions:
+documents on any clone. The corrections cut in both directions:
 
-| item | withdrawn paper | this analysis | direction |
+| item | withdrawn paper | corrected | direction |
 |---|---|---|---|
 | **Solar / battery vintage** | "ATB 2025 × 0.75" — a requested low-cost sensitivity that leaked into the baseline | ATB 2024 Moderate, real | raises solar cost |
 | **Price level** | costs left in ATB 2022$ (rebase omitted) | **rebased to real 2024$** (ATB ×1.05473; fuel deflated from 2027$; NPV valued 2027) — one dollar unit, no scaling step | raises solar cost ~5% |
@@ -48,7 +48,7 @@ documents on any clone. The changes cut in both directions:
 
 ## Direction (important)
 
-The changes do **not** all point one way. Removing the leaked cheap solar
+The corrections do **not** all point one way. Removing the leaked cheap solar
 and adding the 2024$ rebase made the all-renewable baseline dearer, which
 helped LNG at reference oil; anchoring Waiau to its stated cost cut the
 other way. On the no-credit basis the reference-oil comparison is a near

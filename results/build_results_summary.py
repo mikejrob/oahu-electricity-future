@@ -18,7 +18,7 @@ the total_cost.txt mtime of the winning pass.
 Plan price-tag cells (*_plan_*) are excluded too. They are constrained-mix
 runs, not members of the scenario matrix, and the ones sitting in the tree
 are the discarded floors-only design — folding them in would both inflate
-the "more than 500 scenarios" count in docs/CHANGES_FROM_WORKING_PAPER.md with cells the
+the "more than 500 scenarios" count in docs/CORRECTIONS.md with cells the
 author threw out and make them targets for --report-basis refinement.
 Note the open end: this file is also the register the unverifiable-cell
 rule consults, so once the pinned-mix cells are final they need a record of
