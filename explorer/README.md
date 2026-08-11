@@ -57,7 +57,12 @@ known regression reappears: the System-costs chart must keep a fixed
 minimum thickness per bar (`BAR_PX`) with the height enforced at both the
 container and the plot device, `page_navbar` must stay `fillable = FALSE`
 (bslib's fillable pages flex-squeeze tall charts to viewport height), and
-no raw config string may leak into `config_label` in the data extract.
+no raw config string may leak into `config_label` in the data extract, and
+the deploy workflow must install from a dated CRAN snapshot — the chart
+regressed once with no repository change when a redeploy picked up a newer
+bslib whose fillable layout squeezed it. To upgrade packages, bump the
+snapshot date in `.github/workflows/deploy-explorer.yml` deliberately and
+check the cost chart after the deploy.
 
 ## Local development
 
