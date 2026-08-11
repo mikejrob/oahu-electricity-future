@@ -238,26 +238,34 @@ def fig_reliability():
              ("Rooftop solar", "DIST", "#f7e08a"),
              ("Battery discharge (net)", "Battery", "#2ca02c"),
              ("Curtailed solar & wind", "Curtailed", "#d9d9d9")]
+    # Rendering matches the explorer's hourly tab: stacked BARS per two-hour
+    # model timepoint plus a step demand line. Continuous areas (stackplot)
+    # interpolate between sample points, which smears a charge block into an
+    # adjacent discharge block and reads as simultaneous charge/discharge.
     fig, axes = plt.subplots(1, 2, figsize=(11.2, 4.8), sharey=True)
     for ax, day, title in [(axes[0], EASY, "Easy day: summer peak demand (Aug 18)"),
                            (axes[1], HARD, "Hard day: low sun, low wind (Nov 22)")]:
         ts = sorted(t for t in dem if t.startswith(day))
-        x = [int(t[11:13]) for t in ts]
-        stacks, labels, colors = [], [], []
+        x = [int(t[11:13]) + 1 for t in ts]          # centers of 2-h blocks
+        bottom = [0.0] * len(ts)
         for label, es, c in bands:
             y = ([max(dist[t], 0.0) for t in ts] if es == "DIST"
                  else [max(cen[t].get(es, 0.0), 0.0) for t in ts])
             if sum(y) > 1:
-                stacks.append(y); labels.append(label); colors.append(c)
-        ax.stackplot(x, *stacks, labels=labels, colors=colors, alpha=0.9)
-        ax.plot(x, [dem[t] for t in ts], color="black", lw=2.2, label="Demand")
-        ax.fill_between(x, [-max(charge[t], 0.0) for t in ts], 0,
-                        color="#2ca02c", alpha=0.35, hatch="//", lw=0,
-                        label="Battery charging (net)")
+                ax.bar(x, y, width=2.0, bottom=bottom, color=c, alpha=0.9,
+                       linewidth=0, label=label)
+                bottom = [b + v for b, v in zip(bottom, y)]
+        ax.bar(x, [-max(charge[t], 0.0) for t in ts], width=2.0,
+               color="#2ca02c", alpha=0.35, hatch="//", linewidth=0,
+               label="Battery charging (net)")
+        edges = [int(t[11:13]) for t in ts] + [24]
+        dvals = [dem[t] for t in ts] + [dem[ts[-1]]]
+        ax.step(edges, dvals, where="post", color="black", lw=2.2,
+                label="Demand")
         ax.axhline(0, color="black", lw=0.6)
         ax.set_title(title, fontsize=11)
         ax.set_xlabel("Hour of day")
-        ax.set_xticks(range(0, 24, 4)); ax.set_xlim(0, 22)
+        ax.set_xticks(range(0, 25, 4)); ax.set_xlim(0, 24)
     axes[0].set_ylabel("MW")
     h0, l0 = axes[0].get_legend_handles_labels()
     h1, l1 = axes[1].get_legend_handles_labels()

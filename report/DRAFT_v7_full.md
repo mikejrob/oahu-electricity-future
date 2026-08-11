@@ -2431,10 +2431,11 @@ case.
 ![Figure 5.1 — hourly dispatch on the easy and hard sample days, 2035](figures/fig_5_1_reliability_days.png)
 
 *Figure 5.1 — Hourly dispatch on the two 2035 sample days, no-new-plant base
-case.* Stacked hourly generation (MW) on the summer peak-demand day
-(August 18) and the low-sun, low-wind day (November 22). The black line is
-demand; the hatched area below zero is net battery charging; the gray band
-is curtailed solar and wind, potential output above what was dispatched.
+case.* Stacked generation (MW) by two-hour model timepoint on the summer
+peak-demand day (August 18) and the low-sun, low-wind day (November 22),
+rendered as in the results explorer. The black step line is demand; the
+hatched bars below zero are net battery charging; the gray band is
+curtailed solar and wind, potential output above what was dispatched.
 Battery flows are shown net: in surplus hours the optimizer may charge and
 discharge simultaneously, a costless way to shed surplus, which the net
 view removes; the round-trip losses of that disposal are counted as
