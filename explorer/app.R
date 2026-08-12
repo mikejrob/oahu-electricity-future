@@ -99,7 +99,7 @@ rescale_note <- function(ids) {
 # layout negotiation can override -- and page_navbar(fillable = FALSE) keeps
 # pages scrolling instead of squeezing. explorer/check_app_invariants.py
 # asserts all three and gates push_both.sh; do not remove any of them.
-BAR_PX      <- 70    # minimum vertical pixels per cost bar
+BAR_PX      <- 45    # minimum vertical pixels per cost bar
 COST_MIN_PX <- 480   # floor for short bar lists
 cost_px <- function(n) max(COST_MIN_PX, BAR_PX * n + 130)
 
