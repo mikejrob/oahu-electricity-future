@@ -4,7 +4,7 @@ author:
  - "Ethan Hartley, *University of Hawaiʻi Department of Economics*"
  - "Michael J. Roberts, *University of Hawaiʻi Department of Economics, Sea Grant, and UHERO*"
 date: "pre-v1.02 DRAFT — August 2026 · open for comment"
-note: "This is a preliminary release, pre-v1.02, open for public comment; we ask that comments and suggestions arrive by September 1, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; the changes relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
+note: "This is a preliminary release, pre-v1.02, open for public comment; we ask that comments and suggestions arrive by September 15, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; the changes relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
   results are at 0.1% optimization tolerance, with a handful of degenerate
   cells at 0.15% pending tighter re-solves (docs/HARD_CELLS.md) and the EGS
   cost sensitivity carried as a documented capital reprice
@@ -2897,7 +2897,7 @@ replicated from the code and data provided, and assumptions adjusted to
 run new scenarios. If you lack the computing resources or solver, make a
 request here: we will solve any reasonable, feasible scenario and publish
 what we find. To be reflected in version 1, comments should arrive by
-September 1, 2026 (tentative); later suggestions inform v2.
+September 15, 2026 (tentative); later suggestions inform v2.
 
 ---
 
@@ -3395,7 +3395,7 @@ seismicity protocol, §3).
 This report is release pre-v1.02: the single-node (copper-plate) model
 with the rebuilt distributed-solar treatment of Appendices A.11–A.12,
 issued as a preliminary version open for comment (requested by
-September 1, 2026, tentative). After the comment period, responses, and
+September 15, 2026, tentative). After the comment period, responses, and
 revisions, the report will be locked as version 1 — the version of record
 — and subsequent changes will be limited to documented errata (v1.01,
 v1.02, …). Suggestions beyond errata will be directed to v2, the regional

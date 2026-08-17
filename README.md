@@ -60,7 +60,7 @@ The full case, with sensitivities and limits: the
 - **pre-v1.01** — the first pre-release: the single-node model with the
   rebuilt distributed solar and storage treatment (report Appendices
   A.11–A.13), three rooftop trajectories, four oil-price paths. **Open for
-  comment: we ask that comments and suggestions arrive by September 1,
+  comment: we ask that comments and suggestions arrive by September 15,
   2026** (tentative; this line is the authoritative date). Pre-release
   updates increment as pre-v1.03, …
 - **v1 (planned)** — the locked version of record, after the comment
