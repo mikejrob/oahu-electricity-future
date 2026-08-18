@@ -40,7 +40,10 @@ decades of investment.
    makes them cleaner as well.
 
 The full case, with sensitivities and limits: the
-[Executive Summary](report/DRAFT_v7_full.md).
+[Executive Summary](report/DRAFT_v7_full.md). A typeset
+[PDF of the full report](report/DRAFT_v7_full.pdf) is built from the same
+source (`build/make_report_pdf.sh`) and is the easier read on paper or
+tablet; the markdown remains the version of record.
 
 ## Versions
 

@@ -1,0 +1,7 @@
+% Extras for the PDF build (build/make_report_pdf.sh).
+% Tables in the source are sized for the web; longtable at \small keeps the
+% wide ones inside the text block. emergencystretch avoids overfull lines
+% from long URLs and file paths in the references and appendices.
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small}
+\setlength{\emergencystretch}{3em}

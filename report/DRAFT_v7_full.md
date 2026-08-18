@@ -3357,9 +3357,9 @@ journal articles are cited with DOI only and are not redistributed.
 *Additional peer-reviewed citations whose exact locators the authors confirm at
 release:* Bernard, Kaack, and Ryan & Lidderdale (oil-price forecast accuracy,
 detailed in `analysis/EIA_FORECAST_ACCURACY.md`); Coffman et al. (2022, §A.10);
-Fripp (2020) and the Switch-Hawaiʻi design; Grue et al. (2020, HECO distributed-
-solar characteristics, archived in this repository); Majer et al. (2012, induced-
-seismicity protocol, §3).
+Fripp (2020) and the Switch-Hawaiʻi design; Grue et al. (2020, HECO
+distributed-solar characteristics, archived in this repository); Majer et
+al. (2012, induced-seismicity protocol, §3).
 
 **Government, agency, and institutional reports**
 
