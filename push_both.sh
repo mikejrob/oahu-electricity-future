@@ -52,11 +52,20 @@ if git rev-parse -q --verify refs/mirror-synced >/dev/null; then
   fi
 fi
 
+# Paths stripped from the public mirror. private/ never syncs. The
+# holdback list below is TEMPORARY — delete a line to publish that path
+# on the next push.
+STRIP_PATHS=(private)
+# HOLDBACK (2026-08-20, per author): talk decks stay off the mirror until
+# the wheeling proposal is public. make_slides.sh goes with them so the
+# mirror carries no build script for files it does not have.
+STRIP_PATHS+=(slides build/make_slides.sh)
+
 SRC_HEAD=$(git rev-parse HEAD)
 TMPIDX=$(mktemp)
 trap 'rm -f "$TMPIDX"' EXIT
 STRIPPED=$(GIT_INDEX_FILE="$TMPIDX" git read-tree "$SRC_HEAD" \
-  && GIT_INDEX_FILE="$TMPIDX" git rm -rf --cached -q --ignore-unmatch private \
+  && GIT_INDEX_FILE="$TMPIDX" git rm -rf --cached -q --ignore-unmatch "${STRIP_PATHS[@]}" \
   && GIT_INDEX_FILE="$TMPIDX" git write-tree)
 
 PARENT=$(git rev-parse refs/remotes/mirror/main)

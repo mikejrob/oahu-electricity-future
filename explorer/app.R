@@ -102,6 +102,14 @@ rescale_note <- function(ids) {
 BAR_PX      <- 45    # minimum vertical pixels per cost bar
 COST_MIN_PX <- 480   # floor for short bar lists
 cost_px <- function(n) max(COST_MIN_PX, BAR_PX * n + 130)
+# All-solves ladder: every config is always on the y axis, so the height is
+# static. 26 px per row keeps the jittered points and tick labels apart;
+# ALLSOLVES_LEGEND_PX reserves room under the x axis for the wrapped
+# horizontal legend (up to 12 oil x trajectory entries) so it never climbs
+# into the plot or the card header.
+ALLSOLVES_ROW_PX    <- 26
+ALLSOLVES_LEGEND_PX <- 120
+allsolves_px <- function(n) ALLSOLVES_ROW_PX * n + 140 + ALLSOLVES_LEGEND_PX
 
 axis_selectors <- function(id, mult = TRUE) {
   tagList(
@@ -233,7 +241,8 @@ ui <- page_navbar(
       ),
       card(card_header(sprintf(
         "Every solved scenario (%s) — hover for details", meta$scenarios)),
-        plotlyOutput("all_plot", height = 560))
+        plotlyOutput("all_plot",
+                     height = allsolves_px(length(CONFIG_ORDER))))
     )
   ),
 
@@ -488,14 +497,21 @@ server <- function(input, output, session) {
              tip = paste0(short_label, "<br>$",
                           sprintf("%.2f", total_cost_bn), "B<br>",
                           scenario))
+    ht <- allsolves_px(length(CONFIG_ORDER))
     plot_ly(d, x = ~total_cost_bn, y = ~yn, color = ~oil_label,
             symbol = ~trajectory, text = ~tip, hoverinfo = "text",
             type = "scatter", mode = "markers",
             marker = list(size = 8, opacity = 0.75)) |>
-      layout(yaxis = list(tickvals = seq_along(CONFIG_ORDER),
+      layout(height = ht,
+             yaxis = list(tickvals = seq_along(CONFIG_ORDER),
                           ticktext = CONFIG_ORDER, title = ""),
              xaxis = list(title = "Total system cost (billion 2024$, PV 2027)"),
-             legend = list(orientation = "h"))
+             # bottom margin holds the x-axis title plus up to three wrapped
+             # legend rows; the legend is anchored below the axis so it can
+             # never ride up over the plot or the card header
+             margin = list(b = ALLSOLVES_LEGEND_PX + 50),
+             legend = list(orientation = "h", x = 0, xanchor = "left",
+                           y = -0.06, yanchor = "top"))
   })
 
   # ---- About ----

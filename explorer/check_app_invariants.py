@@ -46,6 +46,15 @@ if not re.search(r"overflow-y:\s*auto.{0,120}?checkboxGroupInput\(\s*\"e_configs
                 "box — 30+ checkboxes at natural height stretch the whole "
                 "panel past the viewport (layout_sidebar matches the card "
                 "to the sidebar).")
+if not re.search(r'plotlyOutput\(\s*"all_plot"\s*,\s*height\s*=\s*allsolves_px\(', src):
+    fail.append("app.R: the All-solves ladder no longer sizes with "
+                "allsolves_px(length(CONFIG_ORDER)) — at a fixed height the "
+                "38-row config ladder squeezes to ~15 px per row and the "
+                "tick labels overlap.")
+if not re.search(r'legend\s*=\s*list\(\s*orientation\s*=\s*"h"\s*,.{0,120}?yanchor\s*=\s*"top"', src, re.S):
+    fail.append("app.R: the All-solves legend lost its explicit below-axis "
+                "anchor — an unpositioned horizontal plotly legend wraps up "
+                "over the plot and the card header.")
 
 # --- 2. deploy environment must stay pinned ---------------------------------
 wf = HERE.parent / ".github" / "workflows" / "deploy-explorer.yml"
