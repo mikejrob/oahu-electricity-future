@@ -33,6 +33,17 @@ python3 sanity_check_results.py || {
 python3 explorer/check_app_invariants.py || {
   echo "ABORT: explorer invariant regressed - fix before pushing"; exit 1; }
 
+# Windows-portable paths: a tracked name with < > : " | ? * \ (or a
+# component starting/ending with a space or ending with a dot) makes the
+# public repo UNCLONABLE on Windows - checkout fails in GitHub Desktop.
+# A stakeholder hit exactly this in Aug 2026 ('PLEXOS results >-...').
+BADPATHS=$(git ls-files | LC_ALL=C grep -E '[<>:"|?*\\]|(^|/) |[ .]/|[ .]$' ; true)
+if [ -n "$BADPATHS" ]; then
+  echo "ABORT: Windows-invalid tracked path(s) - rename before pushing:"
+  echo "$BADPATHS" | sed 's/^/  /'
+  exit 1
+fi
+
 git push origin main || { echo "origin push failed"; exit 1; }
 
 git remote get-url mirror >/dev/null 2>&1 || git remote add mirror "$MIRROR_URL"
