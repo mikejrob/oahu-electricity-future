@@ -56,6 +56,24 @@ pricing — both make the renewable-heavy paths look *worse* than they would
 perform. Multi-day events beyond the historical record are flagged as
 future work, for every pathway. (Section 5.)
 
+**Why only two years of weather data (2007–2008)? Are those years cherry-picked?**
+No. The constraint is data quality, not selection. The model needs wind,
+solar, and demand that move together hour by hour, and the highest-quality
+synchronized record for Oʻahu comes from high-resolution meteorological
+modeling of 2007 and 2008, developed for Oʻahu grid studies and carried in
+the Switch-Hawaiʻi data pipeline. Nothing about those years was chosen for
+favorable weather, and the sampling is anchored on the record's hardest day
+— November 22, 2008, low sun, weak trades, evening peak — which every
+scenario must survive at full weight. Longer public records exist only at
+coarser quality: NREL's NOW-23 meteorological dataset covers two decades
+but is a mesoscale simulation, unvalidated against Oʻahu's operating wind
+farms. For v2 we are building a longer synchronized series by linking the
+high-resolution 2007–2008 data to NOW-23, so reliability can be tested
+against many more years, including rare multi-day wind droughts — a
+NOW-23-based study counts an average of 93 low-wind days a year on Oʻahu
+and a worst run of 16 straight (Covelli et al. 2024, Applied Energy).
+(Section 5, Appendix A.5, V2.md.)
+
 **Why a 20 percent Hawaiʻi premium on solar costs? Isn't the real premium
 higher?**
 Recent Oʻahu procurement implies a much higher effective premium — which is
