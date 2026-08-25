@@ -3,8 +3,8 @@ title: "Hawaiʻi's Electricity Future: Solar Reform, Enhanced Geothermal, and th
 author:
  - "Ethan Hartley, *University of Hawaiʻi Department of Economics*"
  - "Michael J. Roberts, *University of Hawaiʻi Department of Economics, Sea Grant, and UHERO*"
-date: "pre-v1.02 DRAFT — August 2026 · open for comment"
-note: "This is a preliminary release, pre-v1.02, open for public comment; we ask that comments and suggestions arrive by September 15, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; the changes relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
+date: "pre-v1.03 DRAFT — August 2026 · open for comment"
+note: "This is a preliminary release, pre-v1.03, open for public comment; we ask that comments and suggestions arrive by September 15, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; the changes relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
   results are at 0.1% optimization tolerance, with a handful of degenerate
   cells at 0.15% pending tighter re-solves (docs/HARD_CELLS.md) and the EGS
   cost sensitivity carried as a documented capital reprice
@@ -2664,9 +2664,23 @@ The modeled-derate column also states our own treatment plainly, and it is
 inconsistent in a way v2 will correct: existing utility units are never
 derated, the candidate plants carry 2 to 3.5 percent forced-outage derates,
 and the JERA plant carries a 5 percent scheduled derate but no
-forced-outage derate. None of these matches the filings. Zero derating
-flatters the existing fleet, and the missing forced-outage derate flatters
-the JERA plant relative to its own LSFO comparator.
+forced-outage derate. None of these matches the filings. Zero derating flatters the existing fleet, and the missing forced-outage
+derate flatters the JERA plant relative to its own LSFO comparator.
+
+A pilot re-solve prices the missing derates. We applied the filed rates of
+Table 6.1 to every unit — the utility's forward rates for its own plants,
+the IGP planning rates for the independents, and 3.5 percent to the JERA
+plant — and re-solved nine headline cells at the 0.1 percent tolerance
+(inputs, scenario lists, and results are in the repository:
+gen_info_efor.csv, results/EFOR_PILOT.csv). No total cost moved by more
+than $12 million on systems of $24 to $28 billion. Every headline
+comparison reproduced: at reference oil the JERA band is +$0.53 to +$0.96
+billion derated against +$0.54 to +$0.96 billion published, the Waiau
+penalty $1.39 billion against $1.40, and the conversion saving $1.04
+billion against $1.05. The result matches the mechanics: a derate prices
+average energy availability, the fleet carries slack in energy and capacity
+alike, and the questions that matter for resiliency are the coincidence and
+correlation questions taken up below.
 
 Some of the recent stress is scheduling as much as hardware. The 2021
 filing attributes rising rates partly to units "operated in ways for which
@@ -3683,7 +3697,7 @@ al. (2012, induced-seismicity protocol, §3).
 
 ## Appendix C — data and reproducibility
 
-This report is release pre-v1.02: the single-node (copper-plate) model
+This report is release pre-v1.03: the single-node (copper-plate) model
 with the rebuilt distributed-solar treatment of Appendices A.11–A.12,
 issued as a preliminary version open for comment (requested by
 September 15, 2026, tentative). After the comment period, responses, and

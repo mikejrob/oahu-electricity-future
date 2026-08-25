@@ -56,7 +56,14 @@ tablet; the markdown remains the version of record.
 > `sources/market/`, report Appendix A.14). The former EIA AEO case spread
 > is archived (`*_aeo.csv`, `aeo_archive/`).
 
-- **pre-v1.02 (current)** — adds the published-plan pricing of Section 4.5
+- **pre-v1.03 (current)** — the resource-adequacy and resiliency update:
+  the firm-fleet table with the utility's filed outage rates and a
+  forced-outage sensitivity pilot that moves no headline comparison
+  (Section 6.3, `results/EFOR_PILOT.csv`), the reserve-cushion figure
+  and the odds-versus-standards arithmetic, the Waiau small-units
+  discussion opened for comment, and an external land-use benchmark
+  (Covelli et al. 2024).
+- **pre-v1.02** — adds the published-plan pricing of Section 4.5
   (Hawaiian Electric's IGP portfolios and HSEO's oil and LNG cases, priced
   against least cost on identical assumptions) and refines the full
   scenario matrix to 0.1 percent tolerance.
@@ -65,7 +72,7 @@ tablet; the markdown remains the version of record.
   A.11–A.13), three rooftop trajectories, four oil-price paths. **Open for
   comment: we ask that comments and suggestions arrive by September 15,
   2026** (tentative; this line is the authoritative date). Pre-release
-  updates increment as pre-v1.03, …
+  updates increment as pre-v1.04, …
 - **v1 (planned)** — the locked version of record, after the comment
   period, our responses, and revisions. Post-lock changes will be limited
   to documented errata; new suggestions will be directed to v2.
