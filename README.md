@@ -56,7 +56,14 @@ tablet; the markdown remains the version of record.
 > `sources/market/`, report Appendix A.14). The former EIA AEO case spread
 > is archived (`*_aeo.csv`, `aeo_archive/`).
 
-- **pre-v1.03 (current)** — the resource-adequacy and resiliency update:
+- **pre-v1.031 (current)** — a midweek correction to the reliability
+  comparison in Sections 5.3 and 6.3. The earlier text compared this
+  system's outage odds against a European hours-per-year standard and a
+  North American days-per-year standard without converting between them,
+  and claimed a margin of one to two orders of magnitude. Put in common
+  units, conventional standards run about 2 to 8 unserved hours a year, and
+  the system's own arithmetic lands in the same range.
+- **pre-v1.03** — the resource-adequacy and resiliency update:
   the firm-fleet table with the utility's filed outage rates and a
   forced-outage sensitivity pilot that moves no headline comparison
   (Section 6.3, `results/EFOR_PILOT.csv`), the reserve-cushion figure

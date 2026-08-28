@@ -660,7 +660,12 @@ def main():
         "first_pass_0025": sum(1 for r in scen_rows if r["mip_gap"] == 0.0025),
         "hourly_scenarios": sorted({r["scenario"] for r in hr_rows}),
         "sample_days": SAMPLE_DAYS,
-        "version": "pre-v1.02",
+        # Bump on every release. This literal is the explorer's only version
+        # source: the app prints meta$version, so a missed bump publishes the
+        # wrong release number on the live site. It sat at pre-v1.02 through
+        # the whole pre-v1.03 release because that release touched no file
+        # under explorer/.
+        "version": "pre-v1.031",
     }
     (OUT / "meta.json").write_text(json.dumps(meta, indent=1))
     print(f"  meta.json: {meta['scenarios']} scenarios = "
