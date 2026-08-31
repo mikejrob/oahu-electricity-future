@@ -108,6 +108,27 @@ case is mildly optimistic relative to ATB Moderate.
 
 - `Lazard_LCOEplus_June2025.pdf` — Lazard LCOE+ (June 2025); sha256 63a3376a…; CCGT capital-cost context (pp. 4, 8).
 
+- `heco_aos/Adequacy-of-Supply-HECO-2021.pdf` — Hawaiian Electric AOS filing
+  (2021-01-29); sha256 cd3f84dc…; Table 3 forward EFORd (p. 10), four-year
+  actuals and adjustments (Appendix 4, pp. 23–24), the cycling sentence
+  (p. 9). Feeds report Table 6.1 and §6.3; see `heco_aos/README.md`.
+- `heco_aos/Adequacy-of-Supply-HECO-2022.pdf` — Hawaiian Electric AOS filing
+  (2022-01-31); sha256 4830f6b7…; Table 3 forward EFORd (p. 9), four-year
+  actuals (Appendix 2, pp. 16–17), the cycling sentence (p. 8). Feeds report
+  Table 6.1 and §6.3; see `heco_aos/README.md`.
+
+- `tesla/tesla_learn_solar-panel-cost-breakdown_wayback_20260614.html` —
+  Tesla, "Solar Panel Cost Breakdown" (tesla.com/learn/...), Wayback
+  capture 2026-06-14, retrieved 2026-08-31; sha256 1148054d…; the
+  state-by-state $/W table (8 kW+ systems, "Tesla Energy's internal
+  data"): AZ 2.54, FL 2.56, TX 2.67, CA 2.83, HI 2.90, NY 2.98, CT 3.01,
+  MA 3.45. Transcribed in `tesla/tesla_state_price_table.csv` (sha256
+  25f5190b…). Verifies §2.3's Tesla ranking sentence; the earlier
+  "$2.27–2.82 nationally" range does NOT trace to this page (table runs
+  2.54–3.45) and needs correction. See `tesla/README.md` for caveats
+  (page undated, 2024–25 authorship indicated, certified-installer
+  transition).
+
 - **Companion land study**: github.com/mikejrob/solar-wind-landuse —
   land-availability GIS (cap scenarios, slope, grid proximity), ownership,
   and the legislative/documentary record of HRS §205-2/§205-4.5; cited in

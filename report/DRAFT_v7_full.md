@@ -2530,12 +2530,13 @@ reserve, so no build here depends on energy banked from a better day, and
 every build could repeat its worst day indefinitely.
 
 The failure that matters is several thermal units forced out at once
-during one of the few hours when reserves are thin. At a 10 percent
-failure rate, two units failing together in a thin hour comes to a little
-over 6 hours a year (Section 6.3). Conventional standards run 2 to 8
+during one of the few hours when reserves are thin. At the 10 percent
+forward rate Hawaiian Electric files for its largest units, two units
+failing together in a thin hour comes to a little over 6 hours a year
+(Section 6.3). Conventional standards run 2 to 8
 hours a year. Whether such a coincidence actually loses load depends on
 the layers behind the spinning reserve, the fast-starting units and the
-charge held in batteries.
+charge held in batteries, so the count overstates hours of lost load.
 
 Forecasting adds a further layer. Tight hours are visible days ahead,
 batteries can be filled before them, and once a unit is down the system
@@ -2621,8 +2622,8 @@ The model leaves failure itself unpriced: no unit in v1 ever suffers a
 forced outage (Section 5.3). The omission is large. Hawaiian
 Electric's 2021 and 2022 Adequacy of Supply filings carry forward-looking
 equivalent forced-outage rates (EFORd, the probability a unit is
-unavailable when called on) of 2 to 25 percent across its fleet, with
-four-year actuals reaching 39 percent; Table 6.1 gives the unit detail.
+unavailable when called on) of 2 to 25 percent across its fleet; Table 6.1
+gives the unit detail.
 Correlated failures compound the per-unit rates: the January 2024 rolling
 outages came from losses across a single weather system, and the August
 2024 Kalaeloa pipe rupture removed the island's largest independent plant,
@@ -2677,8 +2678,8 @@ in 2027, against a peak the model puts near 1,270 MW in 2035 and a binding
 daily-average net load of about 610 MW (Section 5.2). Age and outage risk
 concentrate together, and the retirement schedule sheds the worst first:
 the units with the worst filed rates — Waiau 3 and 4, at 25 percent forward
-in the 2022 filing with actuals to 39 percent — were deactivated in 2024
-and are not in the model; Waiau 7 and 8 (10 percent forward) retire in
+in the 2022 filing, with Waiau 3's four-year actual at 39 percent in the
+2021 filing — were deactivated in 2024 and are not in the model; Waiau 7 and 8 (10 percent forward) retire in
 2029, Kahe 1 and 2 in 2033, Kahe 3 and 4 in 2037. The fleet the
 high-renewable future inherits is the younger, lower-rate tail: Kalaeloa,
 the CIP turbine, Schofield, Puʻuloa, and the newest Kahe units.
@@ -2704,13 +2705,9 @@ billion against $1.05. The result matches the mechanics. The fleet carries
 slack in energy and capacity alike, and the questions that matter for
 resiliency are the coincidence and correlation questions taken up below.
 
-Some of the recent stress is scheduling as much as hardware. The 2021
-filing attributes rising rates partly to units "operated in ways for which
-they were not designed" as cycling duty grows, and its actuals adjustment
-cites maintenance disrupted through the pandemic. The hour that matters has
-also moved. Section 5.2 shows the binding net-load peak sits in the
-evening, away from the gross peak that maintenance calendars were built
-around.
+The hour that matters has also moved. Section 5.2 shows the binding
+net-load peak sits in the evening, away from the gross peak that
+maintenance calendars were built around.
 
 Timing separates the near-term options. Solar and storage construct in
 about a year (Section 4.6); a new thermal unit waits in a multi-year
@@ -2769,29 +2766,42 @@ amounts to a little over 6 hours per year. To the extent that failures are
 forecastable, ample battery storage would help — batteries could be
 charged ahead of risky events.
 
-The reserve requirement absorbs the first large unit by construction. A
-second unit's loss in a thin hour falls on the layers behind it: a cushion
-under 50 MW, about 370 MW of fast-starting units if they start in time,
-and whatever charge and headroom the batteries hold at that moment. The
-solved schedules say what each layer holds on the modeled days. They do
-not simulate the failure itself, so we do not state a megawatt threshold
-for lost load in v1.
+The 10 percent is the forward rate Hawaiian Electric filed for its largest
+units, Kahe 1–4 and Waiau 7–8, in the 2021 and 2022 Adequacy of Supply
+filings (Table 6.1). The filings put the group's four-year actual near 14
+percent and explain the gap: the actuals fold in one-time events and
+pandemic-disrupted maintenance, and the units are "operated in ways for
+which they were not designed" as cycling duty grows. In a high-renewable
+system the batteries do most of the ramping and the thermal units that run
+stay close to flat, so the filed rate may be the better guide to future
+duty. HSEO's modeling workbook instead steps the rate to 13 percent from
+2027; at 13 percent the same arithmetic gives about 10 hours a year.
 
-Two biases run in opposite directions, and both are large. Independence
-understates correlated failure — the January 2024 event was multiple units
-and dimmed solar in one weather system, and the August 2024 Kalaeloa outage removed the plant's full 208 MW of
-contracted capacity with a single pipe. Counting every broken unit overstates harm, because in a high-renewable
-system most of the fleet is idle most of the time, and a unit that fails
-while idle costs nothing. Anticipation overstates it further. Forced
-outages persist for days and are known to the operator, and tight evening
-hours are forecastable well ahead. The solved schedule already positions
-batteries within each day, and once a unit is down, the system re-commits
-and re-charges around it, so a second failure usually meets a grid already
-braced for the first.
+The 6 hours per year counts hours with two units out at once. Lost load
+requires more. The reserve requirement covers the first unit by
+construction. About 370 MW of fast-starting units can start as soon as one
+plant fails, and the batteries add whatever charge they hold at that
+moment. The count also includes failures of idle units. In a
+high-renewable system many units sit idle in most hours, and a failed idle
+unit costs nothing. The solved schedules do not simulate failures, so we
+put no number on how often these layers fall short. In most of the counted
+hours they would cover the second unit. The 6 hours is conservative.
 
-Oʻahu has had too few multi-unit events to say how often they land on thin
-hours or how long they last. On this arithmetic the system likely meets the
-standard.
+Two caveats pull in opposite directions. Correlated events could raise the
+odds of two simultaneous outages. The January 2024 rolling outages came
+from one weather system, and the August 2024 Kalaeloa pipe rupture removed
+all 208 MW of the plant's contracted capacity at once. But correlated
+outages follow weather that is forecast days ahead, so batteries can be
+charged and extra reserves committed in preparation. Forced outages
+persist for days and are known to the operator. Once a unit is down, the
+system re-commits and re-charges around it, and a second failure usually
+meets a grid already braced for the first.
+
+Oʻahu's record holds too few multi-unit events to estimate these
+offsetting effects, and a perfect-foresight model cannot estimate them,
+because it never draws a failure. We can approximate them in simulations,
+and v2 will (below). On the arithmetic in hand, these systems likely meet
+the standard.
 
 Two questions remain, and v1 cannot answer them. Would an outage-aware
 security criterion return any of the repower's $1.40 billion? And if
@@ -2808,10 +2818,7 @@ outage histories at random against years of synchronized weather and
 demand, counts the hours load is actually lost, and lets maintenance move
 to the hours that can most afford it.
 
-The duty would also change. The higher rates in Table 6.1 belong to the
-older plants, and the 2021 filing ties them partly to cycling (above). With
-batteries doing most of the ramping, those plants would run differently
-than they do today. We will explore these issues more carefully in v2,
+We will explore these issues more carefully in v2,
 under a range of multi-day events, with unit-level outage draws in a
 chronological simulation, maintenance timing chosen inside the model, a
 loss-of-load screen on every solved build, and a stress day with the
@@ -3730,6 +3737,7 @@ al. (2012, induced-seismicity protocol, §3).
 - NREL (2024). Annual Technology Baseline 2024, electricity. *(vendored: `sources/ATBe_2024_v3.0.0_slice.csv`)*
 - Ong, S., C. Campbell, P. Denholm, R. Margolis, and G. Heath (2013). *Land-Use Requirements for Solar Power Plants in the United States*. NREL/TP-6A20-56290.
 - SolarPower Europe (2025). *Global Market Outlook for Solar Power 2025–2029*.
+- Hawaiian Electric (2021, 2022). *Adequacy of Supply*, annual filings to the Hawaiʻi Public Utilities Commission, January 29, 2021 and January 31, 2022. Forward-looking EFORd by unit (Table 3) with four-year actuals and adjustments (2021 Appendix 4; 2022 Appendix 2). *(vendored: `sources/heco_aos/`)*
 - UK Government. *GB Electricity Market Implementation Plan* (the Great Britain reliability standard of 3 hours LOLE per year).
 - U.S. Energy Information Administration. *Annual Energy Outlook 2023*, Table 8 *(vendored: `sources/eia_price_components/`)*; *Annual Energy Outlook 2025* *(vendored)*; *Annual Energy Outlook Retrospective Review* (2022); *Today in Energy*,
 February 2025 and April 16, 2026.
