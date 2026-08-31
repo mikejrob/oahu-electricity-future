@@ -3052,16 +3052,22 @@ return when the Strait reopens. A supply glut within a year of a Hormuz
 settlement would not surprise us, though no one knows when that settlement
 will come.
 
-![Figure 8.1 — world oil demand changes vs world GDP growth, 1966–2026](figures/fig_8_1_decline_vs_gdp.png)
+![Figure 8.1 — world oil demand changes vs world GDP growth, 1966–2026](figures/fig_8_1_decline_vs_gdp_usrec.png)
 
 *Figure 8.1 — World oil-demand changes and world GDP growth, 1966–2026.*
 Each point is one year: the percent change in world oil demand (vertical)
 against world real GDP growth (horizontal). Red points mark the years demand
-fell; the star is 2026, combining the IEA's July 2026 demand forecast
-(−1.0 mb/d) with the IMF's July 2026 growth projection (about 3 percent).
-Demand history is the EI Statistical Review (consumption basis); GDP is
-World Bank data. Prior declines cluster at weak or negative growth; 2026's
-sits near trend.
+fell, filled where the year is a United States recession year and hollow
+where it is not. World recessions have no dating comparable to the NBER's,
+so United States dating stands in. Eight of the ten declines are United
+States recession years. The two exceptions are 1983, when real oil still
+stood about 1.5 times its long-run median in the aftermath of 1979–81, and
+1993, the collapse of the former Soviet Union. The star is 2026, combining
+the IEA's July 2026 demand forecast (−1.0 mb/d) with the IMF's July 2026
+growth projection (about 3 percent). Demand history is the EI Statistical
+Review (consumption basis); GDP is World Bank data; recession years are
+NBER dating via FRED. Prior declines came with recession or with expensive
+oil; 2026's comes with neither.
 
 Nor is the retreat austerity:
 a record 664 GW of solar was installed worldwide in 2025 as the global
