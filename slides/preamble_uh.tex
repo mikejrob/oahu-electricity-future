@@ -1,0 +1,76 @@
+% Shared beamer preamble — UH Mānoa / UHERO styling for the report talks.
+% Loaded after \documentclass[...]{beamer} by talk_50min.tex / talk_20min.tex.
+% Build: build/make_slides.sh (lualatex; DejaVu Sans is the per-glyph
+% fallback so the ʻokina renders — same mechanism as the report PDF).
+
+\usepackage{fontspec}
+\directlua{luaotfload.add_fallback("slidefb",{"DejaVu Sans:mode=node;"})}
+\setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,
+  BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic,
+  RawFeature={fallback=slidefb}]
+\usepackage{booktabs}
+\usepackage{graphicx}
+\graphicspath{{../report/figures/}}
+
+% ---- palette --------------------------------------------------------------
+% uhgreen is UH Mānoa's green (from the author's teaching deck). The slate
+% and brick echo the report figures' dominant colors so deck chrome and
+% chart ink read as one family. Adjust hex here if matching a brand guide.
+\definecolor{uhgreen}{RGB}{2,71,49}
+\definecolor{uhslate}{HTML}{31708C}
+\definecolor{uhbrick}{HTML}{843C39}
+\definecolor{uhgray}{RGB}{200,200,200}
+\definecolor{silver}{RGB}{200,200,200}
+
+% ---- chrome ---------------------------------------------------------------
+\setbeamercolor{frametitle}{fg=uhgreen}
+\setbeamercolor{title}{fg=uhgreen}
+\setbeamercolor{structure}{fg=uhgreen}
+\setbeamercolor{local structure}{fg=uhgreen}
+\setbeamercolor{section in toc}{fg=uhgreen}
+\setbeamercolor{subsection in toc}{fg=uhslate}
+\setbeamercolor{button}{bg=white,fg=uhslate}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}{--}
+\setbeamercolor{itemize item}{fg=uhgreen}
+\setbeamercolor{itemize subitem}{fg=uhslate}
+\setbeamercolor{enumerate item}{fg=uhgreen}
+\setbeamersize{text margin left=1.4em,text margin right=1.4em}
+\setbeamertemplate{title page}[default][left]
+
+% two-tone footline (green over gray) with the frame count at right
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox to \paperwidth{\hfil\scriptsize
+    \color{uhgreen}\insertframenumber/\inserttotalframenumber\hspace*{2mm}}%
+  \vskip2pt%
+  \color{uhgreen}\rule{\paperwidth}{0.35mm}\par
+  \color{uhgray}\rule{\paperwidth}{0.35mm}%
+}
+
+% transition slides: silver canvas, section title only
+\newenvironment{transitionframe}{%
+  \setbeamercolor{background canvas}{bg=silver}%
+  \begin{frame}}{%
+  \end{frame}}
+
+% roomier itemize for content slides
+\newenvironment{wideitemize}
+  {\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
+
+% backup slides: keep the two-tone rules, drop the frame count
+% (the count restarts after \appendix and would render as n/0)
+\usepackage{appendixnumberbeamer}
+\newcommand{\beginbackup}{%
+  \setbeamertemplate{footline}{%
+    \leavevmode\vskip8pt%
+    \color{uhgreen}\rule{\paperwidth}{0.35mm}\par
+    \color{uhgray}\rule{\paperwidth}{0.35mm}}}
+\newcommand{\backupend}{}
+
+% one figure, as big as the frame allows
+\newcommand{\bigfig}[1]{%
+  \begin{center}
+    \includegraphics[width=\linewidth,height=0.82\textheight,
+      keepaspectratio]{#1}
+  \end{center}}

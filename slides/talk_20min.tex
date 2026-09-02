@@ -1,0 +1,144 @@
+% 20-minute talk (+10–15 Q&A) — Hawaiʻi's Electricity Future.
+% ~13 content frames. Build: build/make_slides.sh
+\documentclass[11pt,aspectratio=169]{beamer}
+\input{preamble_uh.tex}
+
+\title{\textcolor{uhgreen}{Hawaiʻi's Electricity Future:\\
+  Solar Reform, Enhanced Geothermal, and the JERA LNG Proposal}}
+\author{Ethan Hartley \and Michael J. Roberts}
+\institute{University of Hawaiʻi at Mānoa — Economics, Sea Grant, UHERO}
+\date{pre-v1.031 draft · open for comment to September 15, 2026}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\vfill
+\footnotesize All code, data, and results:
+\texttt{github.com/mikejrob/oahu-electricity-future}
+\end{frame}
+
+\begin{frame}{Three decisions are on the table now}
+\begin{wideitemize}
+  \item \textbf{Waiau Repower} — six oil-fired turbines, approved March 2026
+  \item \textbf{JERA proposal} — \$2B, 500 MW plant + LNG import terminal
+  \item \textbf{Utility-scale solar} — procurement stalled; land rules bind
+\end{wideitemize}
+\vspace{0.3cm}
+Open model, 2027--2050, 500+ solved scenarios. Everything public.
+\end{frame}
+
+\begin{frame}{The land is there}
+\bigfig{fig_2_3_available_land_map.png}
+\end{frame}
+
+\begin{frame}{No proposed plant beats building no plant}
+\bigfig{fig_ES1_jera_bracket.png}
+\end{frame}
+
+\begin{frame}{What the system builds instead}
+\bigfig{fig_genmix.png}
+\end{frame}
+
+\begin{frame}{The verdict survives every oil and solar price}
+\bigfig{fig_4_3_oil_solar_matrix.png}
+\end{frame}
+
+\begin{frame}{If LNG comes, existing plants beat new ones}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lr}
+\toprule
+LNG configuration (vs.\ no new plant) & $\Delta$ cost \\
+\midrule
+New JERA plant (midpoint)            & \textcolor{uhbrick}{$+\$0.7$--$1.6$B} \\
+Convert Kalaeloa alone               & \textcolor{uhgreen}{$-\$0.4$B} \\
+\ \ + Kahe 5\,\&\,6, CIP turbine     & \textcolor{uhgreen}{$-\$1.1$B} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.3cm}
+And LNG's greenhouse advantage disappears above $\sim$0.9\% methane
+leakage --- measured U.S. rates sit well above.
+\end{frame}
+
+\begin{frame}{Every plan on file, priced on one ruler}
+\bigfig{fig_4_5_plan_price_tags.png}
+\end{frame}
+
+\begin{frame}{Reliability: the hard day is not the peak day}
+\bigfig{fig_5_1_reliability_days.png}
+\end{frame}
+
+\begin{frame}{Resource adequacy: covered with room to spare}
+\bigfig{fig_reserve_cushion.png}
+\end{frame}
+
+\begin{frame}{Four levers, no new technology required}
+\begin{wideitemize}
+  \item \textbf{Land}: siting rules exclude most flat, cleared,
+        transmission-adjacent land
+  \item \textbf{Procurement}: independent bid evaluation, standard
+        contracts, published queues
+  \item \textbf{Rooftops}: pay fair value for exported power
+  \item \textbf{Wheeling}: settle at real marginal prices ---
+        Schedule RWS proposal in preparation
+\end{wideitemize}
+\end{frame}
+
+\begin{frame}{Takeaways}
+\begin{wideitemize}
+  \item \textbf{No proposed fuel plant pays for itself} --- under any
+        oil or solar price we can defend
+  \item \textbf{Solar + storage + existing plants} is the robust
+        least-cost core; geothermal sweetens it
+  \item \textbf{The binding constraints are rules, not resources}
+\end{wideitemize}
+\vspace{0.3cm}
+\centering
+\texttt{github.com/mikejrob/oahu-electricity-future} · comments to
+Sept.\ 15
+\end{frame}
+
+% ---------------------------------------------------------------- backup
+\appendix
+\beginbackup
+\begin{transitionframe}
+  \begin{center}{\Huge \textcolor{black}{Backup}}\end{center}
+\end{transitionframe}
+
+\begin{frame}{System cost by trajectory and oil price (Table ES.1)}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{lcccc}
+\toprule
+ & Market 10th & Brent futures & EIA ref. & Market 90th \\
+\midrule
+No new fuel plant       & 21.2 & 24.3 & 25.8 & 27.3 \\
+Modern LSFO plant       & +0.7 & +0.5 & +0.4 & +0.6 \\
+JERA LNG (midpoint)     & +1.6 & +0.7 & +0.8 & +1.2 \\
+Waiau Repower           & +1.4 & +1.4 & +1.4 & +1.5 \\
+Waiau + JERA            & +3.1 & +2.1 & +2.2 & +2.7 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+Billions of 2024\$, present value 2027--2050, 3\% real.
+\end{center}
+\end{frame}
+
+\begin{frame}{Our least-cost paths vs.\ HECO's IGP and HSEO's study}
+\bigfig{fig_4_4_plan_comparison.png}
+\end{frame}
+
+\begin{frame}{Solar-cost sensitivity}
+\bigfig{fig_4_2_solar_sensitivity.png}
+\end{frame}
+
+\begin{frame}{Four oil futures, priced from markets}
+\bigfig{fig_A14_oil_cases.png}
+\end{frame}
+
+\backupend
+\end{document}

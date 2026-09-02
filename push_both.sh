@@ -67,10 +67,8 @@ fi
 # holdback list below is TEMPORARY — delete a line to publish that path
 # on the next push.
 STRIP_PATHS=(private)
-# HOLDBACK (2026-08-20, per author): talk decks stay off the mirror until
-# the wheeling proposal is public. make_slides.sh goes with them so the
-# mirror carries no build script for files it does not have.
-STRIP_PATHS+=(slides build/make_slides.sh)
+# Slides holdback lifted 2026-09-02, per author, after the 8/31 WEER talk
+# made the decks public: slides/ and build/make_slides.sh now sync.
 
 SRC_HEAD=$(git rev-parse HEAD)
 TMPIDX=$(mktemp)
