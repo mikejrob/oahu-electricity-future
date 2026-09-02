@@ -348,8 +348,9 @@ facts temper the omission. Every scenario keeps a substantial synchronous
 fleet well into the 2040s, so these services are a cost shared across
 pathways rather than a differentiator between them. Grid-forming
 capability is largely an inverter specification, not a separate build —
-and most of the roughly 250 MWh of distributed batteries already on
-Oʻahu roofs (Appendix A.11) likely carry grid-forming-capable hardware.
+and most of the roughly 250 MWh of distributed batteries already
+connected to Oʻahu rooftop solar systems (Appendix A.11) likely carry
+grid-forming-capable hardware.
 And the grid-side complement — substation protection upgraded with
 microprocessor-based equipment designed for two-way flow — costs on the
 order of millions to tens of millions of dollars, a small fraction of
