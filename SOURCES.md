@@ -173,3 +173,21 @@ case is mildly optimistic relative to ATB Moderate.
   t/yr × 20 years from Tilbury, start 2021) and Maui Now (withdrawal after
   merger termination; LNG contract conditional on the NextEra merger). Both
   read 2026-07-18; report §4.4.
+- **Ulupono Phase 2 Reply Statement of Position, PBR Docket 2018-0088
+  (filed Aug 20, 2020)** —
+  `Ulupono_Phase2_RSOP_PBR_2018-0088_Aug2020.pdf` (PUC DMS document
+  0001385F); sha256 1c2567ea…; vendored 2026-09-04. Carries M. Fripp's
+  Exhibit D-5 (pp. 242–266): the Switch-Oʻahu Scenario 2.1 comparison
+  against the utility's then-current long-term plan. Documents, from the
+  utility's own statements, that the plan's renewable portfolio came from
+  2016 RESOLVE optimization while retirements and thermal additions were
+  "determined outside of the model and manually input" — 604 MW of
+  combined-cycle capacity added that the optimizer did not choose (D-5
+  itemizes 151+151+302 MW in 2026–2032; one passage says 602), all wind
+  after 2022 removed, and a distributed-PV forecast held 112 MW below
+  already-installed levels. "By definition, no manual change to an
+  optimized plan will lower costs" (D-5 §1); "no reason to trust it to be
+  cost-effective now" (D-5 p. 2). Precursor to this report's §2.1, §4.5,
+  and §6 findings; the no-new-wind sensitivity there (+1.1 percent) is
+  the 2020 estimate of the world the 2023 county setback ordinance later
+  created.
