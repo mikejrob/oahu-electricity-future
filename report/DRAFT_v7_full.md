@@ -29,19 +29,22 @@ how Hawaiʻi builds solar — on open land and on rooftops. The choices that
 dominate public debate matter less.
 
 **Finding 1. The largest lever is the price Hawaiʻi pays to build solar and
-batteries.** Solar delivered here costs far more than on the mainland. The
+batteries.** Solar delivered here costs far more than other states. The
 evidence points mainly to soft costs: long procurement cycles, permitting,
-interconnection queues, and customer acquisition. The size of the gap is
+interconnection queues, and customer acquisition. Note that soft costs 
+are already high in the United States as compared to other countries, owing 
+mainly to a very large interconnection queue, but Hawai‘i's costs considerably
+higher, even though the size of its queue is paltry. The size of the cost gap is
 hard to measure precisely. If solar and battery costs stay 50 percent above
 our baseline for the whole period, total system cost rises by about $2.1
 billion; at 70 percent above, by about $2.8 billion. Our baseline already
 includes a 20 percent Hawaiʻi premium, so these cases correspond to roughly
-1.8 and 2.0 times the mainland benchmark, near what recent procurement
+1.8 and 2.0 times the national benchmark, near what recent procurement
 awards imply (Section 2.3). The lever is large because a big solar buildout
 happens on every pathway, with or without new fuel plants and largely even
-without the clean-energy mandate, so the price per installed watt
-multiplies across every gigawatt built. Reforms that close even part of the
-gap are worth more than any fuel decision in this report, and they are
+without the clean-energy mandate, because even at twice the national average 
+cost, solar will be the cheapest energy source. Reforms that close even part 
+of the gap are worth more than any fuel decision in this report, and they are
 within the State's own control (Section 2).
 
 **Finding 2. The second-largest lever is rooftop solar and storage, and most
@@ -49,26 +52,24 @@ of its value is available with today's technology and behavior.** Oʻahu's
 rooftops carry about 793 MW of solar today, added at about 42 MW per year
 over 2020–2024. In 2024 the installed base reached the level Hawaiian
 Electric's 2016 plan projected for 2034 (Appendix A.13). We measure what
-this fleet does to
-the grid directly from utility demand records: each installed megawatt
-removes about 0.61 MW of midday grid demand, and home batteries shift about
-45 percent of their storage capacity into the evening hours each day
-(Appendix A.11). Because rooftop supply substitutes almost one-for-one for
-utility-scale solar, its growth determines how much open land is needed for
-grid-scale solar. Limited further growth of rooftop solar leads to about
-4,100 MW of utility-scale solar on about 20,400 acres by 2050; continuing
+these distributed resources do to the grid directly from utility demand records: 
+each installed megawatt removes about 0.61 MW of midday grid demand, and home 
+batteries shift about 45 percent of their storage capacity into the evening 
+hours each day (Appendix A.11). Because rooftop supply substitutes almost 
+one-for-one for utility-scale solar, its growth determines how much open land 
+is needed for grid-scale solar. Limited further growth of rooftop solar leads to 
+about 4,100 MW of utility-scale solar on about 20,400 acres by 2050; continuing
 the current trend requires only about 3,600 MW on about 18,000 acres.
-Removing the sellback limits could grow rooftop capacity much faster: pay
+Removing sellback limits could grow rooftop capacity much faster: pay
 households and businesses the full value of all the power they export, even
 when it exceeds the value of what they draw from the grid, instead of
 today's limited credits. If this doubled the installation pace, rooftop
-capacity
-would reach about 2,100 MW by 2050 and cut the utility-scale land
+capacity would reach about 2,100 MW by 2050 and cut the utility-scale land
 requirement toward 15,000 acres (Section 2.7). That trajectory is an
 illustration. No one knows how much capacity would follow a tariff no one
 has yet offered, and even this path uses only about half of the mapped
-rooftop potential. It shows the direction and the scale: rooftop growth
-substitutes for open land.
+rooftop potential and ignores all parking lot and walkway canopy potential.
+It shows the direction and the scale that rooftop growth substitutes for open land.
 
 The grid does not need sophisticated coordination to capture this value at
 today's scale. We tested this directly: we solved the same system twice —
@@ -76,11 +77,11 @@ once with rooftop batteries following today's simple pattern, charging at
 midday and discharging in the evening, and once with the identical
 batteries dispatched optimally. At the base adoption path the difference is
 $0.03 billion over 2027–2050, about two-hundredths of a cent per kilowatt-hour.
-Predictable behavior is nearly as good as perfect
-coordination. But the value of coordination grows steeply with adoption.
-With 2.1 GW of distributed solar (the accelerated trajectory the sellback
-reform of Section 2.8 is designed to unlock), optimal dispatch of the
-rooftop batteries is worth about $0.23 billion (0.17 cents per kilowatt-hour) — a reason to build real-time price exposure into that
+Predictable behavior is nearly as good as perfect coordination. But the value 
+of coordination grows with adoption. With 2.1 GW of distributed solar 
+(the accelerated trajectory the sellback reform of Section 2.8 is designed to 
+unlock), optimal dispatch of the rooftop batteries is worth about $0.23 billion 
+(0.17 cents per kilowatt-hour) — a reason to build real-time price exposure into that
 reform from the start.
 
 **Finding 3. No new fuel plant pays for itself. If LNG comes to Oʻahu, its
@@ -89,55 +90,55 @@ value is in the power plants the island already has.** JERA proposes a new
 at both ends of JERA's own cost range and focus mainly on the middle. The
 low end is their construction estimate, which excludes items such as
 insurance, customs, design allowance, and contingency; the high end is
-their own +20 percent sensitivity, which restores them. At that midpoint
-the bundle costs $0.75 billion more than building no new fuel plant at
-reference oil prices, roughly half a cent per kilowatt-hour (Appendix A.1),
-within a range of $0.54 to $0.96 billion at that oil price. The gap is
-positive at every oil price tested: it widens to $1.63 billion on the
-market's low oil path and $1.21 billion on its high path (Table ES.1). The
-more useful comparison is between the plant and the fuel: whatever
-advantage LNG offers comes from the fuel, not the plant. The same modern
-plant burning today's fuel oil costs even more, while LNG burned in
-existing plants saves money. JERA's new plant, even in its best case — its
-lowest capital estimate, with solar at twice mainland cost — roughly breaks
-even. Converting the independent Kalaeloa plant alone saves $0.39 billion,
-and converting Hawaiian Electric's Kahe 5 and 6 and its Campbell Industrial
-Park (CIP) combustion turbine as well saves nearly three times as much,
-with no new construction. The savings hold up under conservative
+their own +20 percent sensitivity. At that midpoint the bundle costs $0.75 
+billion more than building no new fuel plant at reference oil prices, 
+roughly half a cent per kilowatt-hour (Appendix A.1), within a range of $0.54 
+to $0.96 billion at that oil price. The gap is positive at every oil price 
+tested: it widens to $1.63 billion on the market's low oil path and $1.21 
+billion on its high path (Table ES.1). The more useful comparison is between 
+the plant and the fuel: whatever advantage LNG offers comes from the fuel, 
+not the plant. The same modern plant burning today's fuel oil costs even more, 
+while LNG burned in existing plants saves money. JERA's new plant, even in 
+its best case — its lowest capital estimate, with solar at twice mainland 
+cost — roughly breaks even. Converting the independent Kalaeloa plant alone 
+saves $0.39 billion, and converting Hawaiian Electric's Kahe 5 and 6 and 
+its Campbell Industrial Park (CIP) combustion turbine as well saves nearly 
+three times as much, with no new construction. The savings hold up under conservative
 accounting: charging Hawaiian Electric's entire 2016 multi-island
 conversion budget ($450 million in today's dollars) against just the three
 Oʻahu units still leaves about $0.60 billion; adding a further $260 million
 of 2016 pipeline plans on top still leaves at least $0.34 billion (Sections
-4.3, 4.7). Rooftop growth widens the gap against new plants: more rooftop
-supply leaves less demand for a new plant to serve.
+4.3, 4.7). Faster rooftop solar growth widens the gap against new plants because
+it leaves less demand for a new plant to serve.
 
 The two LNG questions turn out to depend on oil prices in opposite ways,
-and separating them clarifies the choice. Converting existing plants is a
+and separating them clarifies the tradeoffs. Converting existing plants is a
 fuel-switching decision: its value is the price gap between fuel oil and
 gas, multiplied by the volume burned. Because the proposed LNG contract is
 indexed to oil at a rate that nearly matches how fuel oil itself tracks
 crude, that gap stays near $6.60 per million Btu whether oil is cheap or expensive
-($5.30 after the regasification charge; Table 1.1). What varies across oil worlds is how much fuel is left to switch
-and how much clean investment cheap gas defers, so conversion savings peak
-on the central oil paths and fade at both extremes (Section 4.1) — but they
-never depend on the per-unit gap being right. Building a new plant is an
-efficiency decision: its value is the fuel saved by a more efficient
-machine, which is worth more when fuel costs more. That value falls short
-at both ends of the range. When oil is cheap the plant runs hard but saves
-little, because the fuel it displaces is cheap. When oil is expensive solar
-and storage are a better option, and the plant runs at just 19 percent of
-capacity in 2035. So the LNG case, to the extent there is one, rests on
-switching fuel in plants Oʻahu already owns, and that case does not need an
+($5.30 after the regasification charge; Table 1.1). What varies across oil 
+worlds is how much fuel is left to switch and how much clean investment 
+cheap gas defers, so conversion savings peak on the central oil paths and 
+fade at both extremes (Section 4.1) — but they never depend on the per-unit 
+gap being right. Building a new plant is an efficiency decision: its value 
+is the fuel saved by a more efficient machine, which is worth more when 
+fuel costs more. That value falls short at both ends of the range. When 
+oil is cheap the plant runs hard but saves little, because the fuel 
+it displaces is cheap. When oil is expensive, solar and storage are 
+a better option sooner, and the plant runs at just 19 percent of capacity in 
+2035. So the LNG case, to the extent there is one, rests on switching 
+fuel in plants Oʻahu already owns, and that case does not need an
 oil-price forecast to be right. Considerations outside the cost model point
 the same way. The proposal commits Oʻahu to a single supplier for two
 decades: twenty years of operation for the floating import terminal (FSRU),
-under supply-contract terms not
-yet public that are likely written to protect the supplier, so the quoted
-price is best read as a floor. It defers roughly a decade of clean-energy
-deployment and likely increases greenhouse gas emissions. And it strands
-Hawaiian Electric's generation assets, a loss that falls on the utility's
-already fragile finances if capital recovery is disallowed, or on its
-customers if it is allowed (Sections 4 and 8).
+under supply-contract terms not yet public that are likely written to 
+protect the supplier, so the quoted price is best read as a floor. It 
+defers roughly a decade of clean-energy deployment and likely increases 
+greenhouse gas emissions. And it strands Hawaiian Electric's generation 
+assets, a loss that falls on the utility's already fragile finances if 
+capital recovery is disallowed, or on its customers if it is allowed 
+(Sections 4 and 8).
 
 **Finding 4. Under current law, Enhanced Geothermal is in the least-cost
 build.** Enhanced Geothermal, a newer form of geothermal power that creates
@@ -149,57 +150,51 @@ projection the saving roughly doubles; at the pessimistic projection the
 model builds nothing and loses nothing, so the downside is bounded.
 Enhanced Geothermal is therefore part of the cheapest way to run the
 island, provided a first demonstration project proves the resource works
-here (Section 3) and development proceeds in partnership with Native Hawaiian communities
-(Section 3.1).
+here (Section 3) and development proceeds in partnership with Native Hawaiian 
+communities (Section 3.1).
 
 **Finding 5. The constraints many people worry about mostly do not bind.**
 Start with land. Every pathway that meets the 2045 mandate, including
 JERA's, builds nearly the same solar on nearly the same 20,400 acres,
-differing mainly in timing. The assumed eligible inventory exceeds what
-gets built, and flat-land reserves stand behind it — cropland that current
-law allows under a special use permit, military parcels, closed golf
-courses and quarries, and the built environment itself. The LNG question is
-largely separate from the land-use question: Hawaiian Electric's and the State Energy Office's (HSEO's) own studies,
-like ours, find that LNG does little or
-nothing to change the ultimate solar buildout (Sections 2.5 and 2.6). Next,
-reliability. Every scenario keeps the lights on at every modeled hour,
-across weather drawn from the 2007–2008 record, including its single
-hardest day of low sun, weak winds, and an evening peak, plus a required
-reserve margin. Oʻahu does not need new thermal generation for reliability:
-the existing fleet, plus the planned 99 MW Puʻuloa engine plant, suffices. Some
-claim a high-renewable grid still needs enough firm capacity to meet peak
-demand. It does not, because storage moves energy within the day: firm
-resources need to cover only demand net of solar and wind averaged over the
-day, far below the momentary peak. It also helps that demand is generally
-lower on low-sun days (Section 5). Last, the mandate itself. Keeping the
-2045 clean-energy requirement costs about $0.25 billion, roughly two-tenths
-of a cent per kilowatt-hour, because the cheapest path runs ahead of the
-requirement through 2040 anyway and builds 91 percent of the solar even if the requirement is removed. Abandoning it saves about $0.40 billion (about 0.3 cents per kilowatt-hour) if the replacement is a new gas plant and
-import terminal, and up to about $0.7 billion if existing plants are
-converted to LNG instead, the cheaper route Finding 3 identifies. We tested
-whether a new, more efficient plant earns its keep in that no-mandate world
-when the model may choose freely: it declines the 2030 plant entirely and
-adds at most about 250 MW around 2045, as the converted units age out, for
-a saving within the solve tolerance (Section 4.8). Either way, capturing
-this modest saving requires abandoning the clean-energy mandate, committing
-to a long-term contract, hoping (awkwardly) that rooftop and grid-scale
-solar don't overperform, and hoping the contract price, or better, holds
-throughout. That last hope looks dubious: today's spot price (JKM, the
-Asian spot-LNG marker, July 2026) hovers around $21–22/MMBtu, nearly double
-the reference contract price we assume (Section 4.8).
+differing mainly in timing. Markedly less is used if rooftop, canopy, or other
+kinds of distributed solar expand meaningfully from its footprint today. The 
+assumed eligible inventory exceeds what gets built, and this inventory is deliberately conservative both in quantity and quality, because most of 
+the best-suited agricultural lands require a special permit, belong to the 
+military, or may otherwise be challenging to develop. We built the inventory using land screens that match what Hawaiian Electric and the Hawaii State Energy Office used in developing their plans, and in a sensitivity check remove the remaining
+better agricultural lands. We interpret this assumed inventory as a working
+assumption, recognizing that while some of it may be unworkable in practice,
+many parcels outside of it are likely viable, too.
+
+Ultimately, the LNG question is largely separate from the land-use question: Hawaiian Electric's and the State Energy Office's (HSEO's) own studies, like ours, find that LNG does little to change the ultimate solar buildout (Sections 2.5 and 2.6) because it's the least expensive way to meet the State's RPS goal.
+
+Next, reliability. Every scenario keeps the lights on at every modeled hour, 
+across weather drawn from the 2007–2008 record (where we have the best-quality data), including its single hardest day of low sun, weak winds, and an evening peak, plus a reserve margin that can survive the largest plant falling offline. Oʻahu does not need additional thermal generation for reliability: the existing fleet, 
+plus the planned 99 MW Puʻuloa thermal plant, suffices. Some claim a high-renewable 
+grid still needs enough firm capacity to meet peak demand. It does not. What it
+needs is approximately enough firm resources to cover the highest daily average demand net of solar and wind. Ample battery storage moves energy within the day 
+and gross demand is generally lower on low-sun, low-wind days, and even the worst 
+days produce some solar energy (Section 5). 
+
+Last, the mandate itself. Keeping the 2045 clean-energy requirement costs about $0.25 billion, roughly two-tenths of a cent per kilowatt-hour, because the cheapest path runs ahead of the requirement through 2040 anyway and builds 91 percent of the solar even if the requirement is removed. Abandoning it saves about $0.40 billion (about 0.3 cents per kilowatt-hour) if the replacement is a new gas plant and
+import terminal, and up to about $0.7 billion if existing plants are converted 
+to LNG instead, the cheaper route Finding 3 identifies. We tested whether a new, 
+more efficient plant can pay for itself in a no-mandate world when the model may choose freely: it declines the 2030 plant entirely and adds at most about 250 MW around 2045, as the converted units age out, for a savings that lies within the solve tolerance (Section 4.8). Either way, capturing this modest saving requires abandoning the clean-energy mandate, committing to a long-term contract, hoping (awkwardly) that geothermal and solar don't overperform, and hoping the contract price, or better, holds throughout. That last hope looks dubious: today's spot price (JKM, the Asian spot-LNG marker, July 2026) hovers around $21–22/MMBtu, nearly double the reference contract price we assume (Section 4.8).
 
 **Also decisive.** The Waiau Repower, Hawaiian Electric's proposal to
-rebuild its old Waiau oil units, raises system cost by $1.38 to $1.49 billion at every oil price tested, and
-every bundle that contains it inherits that penalty (Section 6). (This
-exceeds the literal cost of the plant because the cost of capital is higher
-than our discount rate.) The repower's six small units carry a resiliency argument the model leaves
-unpriced: no unit in v1 ever suffers a forced outage. Section 6.3 sizes
-that argument and invites comment on it. Pricing outages would cut hardest against large units and against plants
-whose units share one site and one fuel supply. If a new plant
-is built at all, 500 MW is larger than the system wants: a 375 MW version
-does modestly better in every configuration tested, and converting existing
-units beats both at JERA's quoted costs (Sections 4.1, 4.3, 4.7). One
-caution: JERA attributes its attractive quote partly to scale,
+rebuild its old Waiau oil units, raises system cost by $1.38 to $1.49 
+billion at every oil price tested, and every bundle that contains it 
+inherits that penalty (Section 6). (This exceeds the literal cost of 
+the plant because the cost of capital is higher than our discount rate.) 
+The repower's six small units carry a resiliency argument the model does not
+formally test: no unit in v1 ever suffers a forced outage, but all hours carry 
+reserves large enough to survive a forced outage of the largest plant. Section 6.3
+provides some approximate and likely conservative reliability measures. Systems 
+without the repower appear to be very resilient to a wide range of extreme 
+events, but we have not tested this formally with simulation exercises. Pricing 
+outages would cut hardest against large units and against plants whose units share 
+one site and one fuel supply. If a new plant is built at all, 500 MW is larger 
+than the system wants: a 375 MW version does modestly better in every configuration 
+tested, and converting existing units beats both at JERA's quoted costs (Sections 4.1, 4.3, 4.7). One caution: JERA attributes its attractive quote partly to scale,
 so a smaller plant might not get the same price per megawatt.
 
 **Table ES.1 — Total 2027–2050 system cost by trajectory and oil price
@@ -208,23 +203,19 @@ parentheses; current-law base case, 0.1% solve tolerance).** JERA rows show
 the midpoint of the bare construction estimate (bare-EPC: engineering,
 procurement, and construction, excluding contingency and similar items) and
 the +20% capital case; the band spans the two (Figure ES.1). The conversion
-row is shown at reference oil, the only oil
-path solved on this base-rooftop trajectory; Figure 4.3 solves the
-conversions across all four oil paths and three solar-cost levels on the
-trend-rooftop trajectory, where the saving peaks on the central paths and
-fades at both extremes (Section 4.1). The conversion row nets out the full 2016
-conversion-program estimate ($450M in 2024$) as conversion capital; its
-bracketed value also adds the entire 2016 onshore-pipeline package ($260M),
+row is shown at reference oil, the only oil path solved on this base-rooftop trajectory; Figure 4.3 solves the conversions across all four oil paths and three solar-cost levels on the trend-rooftop trajectory, where the saving peaks on the central paths and fades at both extremes (Section 4.1). The conversion row nets out the full 2016conversion-program estimate ($450M in 2024$) as conversion capital; 
+its bracketed value also adds the entire 2016 onshore-pipeline package ($260M),
 an extreme charge by construction (Section 4.7).
 
 ![Figure ES.1 — system cost of each investment vs building no new fuel plant](figures/fig_ES1_jera_bracket.png)
 
-*Figure ES.1 — Total 2027–2050 system cost of each proposed investment,
+*Figure ES.1 —
+ Total 2027–2050 system cost of each proposed investment,
 measured against building no new fuel plant.* Each bar is the present value
 of total system cost (billion 2024$, discounted to 2027) for a pathway
 including the named investment, minus the no-new-plant path solved under the
 same oil-price case. Oil cases: the market's 10th percentile, the Brent
-futures strip, the EIA-anchored reference, and the market's 90th percentile
+futures path, the EIA-anchored reference, and the market's 90th percentile
 (Appendix A.14). Whiskers on the JERA bars span the
 plant's bare-EPC capital to +20 percent; the bar sits at the midpoint. The
 conversions bar (shown at reference oil; Figure 4.3 spans all four oil
@@ -300,14 +291,15 @@ report.
 Roughly half of a residential bill pays for generation. The other half pays for
 wires, meters, and programs that cost the same under any fuel. In the near term
 the 2026 conflict in Iran and the Persian Gulf has raised oil prices, so fuel can
-temporarily run above half of generation cost. Over the planning horizon, fuel is about two-fifths of total system cost in the early years at
+temporarily run above half of generation cost. Over the planning horizon, fuel is 
+about two-fifths of total system cost in the early years at
 reference oil prices, declining to about 5 percent by 2045 as renewables
 displace combustion (Appendix A.4). Even if every dollar of fuel spending captured
 LNG's actual price advantage over low-sulfur fuel oil (LSFO) — roughly $5
-per million Btu, on a base of about $17 at reference oil prices (Table 1.1) — the realistic ceiling is a few
-percent of the bill, declining toward one percent. The 20 percent figure is
-unreachable under any reading of the same data. Section 4 tests the more
-generous "bundled" interpretation directly, with the same conclusion.
+per million Btu, on a base of about $17 at reference oil prices (Table 1.1) — the 
+realistic ceiling is a few percent of the bill, declining toward one percent. The 
+20 percent figure is unreachable under any reading of the same data. Section 4 tests 
+the more generous "bundled" interpretation directly, with the same conclusion.
 
 *Table 1.1 — LSFO and LNG delivered cost at three paths of Brent, the
 benchmark world oil price, 2030 (2024$).*
@@ -423,17 +415,18 @@ Houston in absolute dollars.
 **Utility-scale procurement.** Hawaiian Electric's Stage 1 awards (approved
 2018–19) delivered four-hour solar-plus-storage on Oʻahu at 8–12 cents per
 kilowatt-hour (nominal award prices; ≈10–14 cents in 2024$): Hoʻohana, Mililani
-I, Waiawa Phase 1, AES West Oʻahu. The contracts approved since 2024 price the same service at 21–23 cents in
-nominal contract dollars: Mahi, a 2020-vintage project whose amended contract
-(Docket 2025-0414) roughly tripled its originally executed price, and Puʻuloa Solar, a new selection under review (a solar-plus-storage
-project, distinct from the 99 MW Puʻuloa engine plant of Section 4.6). Mainland prices also rose substantially
-over this period, roughly doubling from their 2019/20 lows:
-matched-configuration medians moved from about 3.1 to 6.5 cents per
-kilowatt-hour (LBNL
-*Utility-Scale Solar*, 2025 data file; levelized PPA prices in constant 2024
-dollars; Box 2.1). On the same levelized 2024-dollar basis, Hawaiʻi's
-matched-configuration executions of 2018–2020 carried a median near 7.7 cents per kilowatt-hour, and the amended Mahi
-contract is roughly 19.5 cents. Because modules,
+I, Waiawa Phase 1, AES West Oʻahu. The contracts approved since 2024 price the 
+same service at 21–23 cents in nominal contract dollars: Mahi, a 2020-vintage 
+project whose amended contract
+(Docket 2025-0414) roughly tripled its originally executed price, and Puʻuloa 
+Solar, a new selection under review (a solar-plus-storage
+project, distinct from the 99 MW Puʻuloa engine plant of Section 4.6). Mainland 
+prices also rose substantially over this period, roughly doubling from their 
+2019/20 lows: matched-configuration medians moved from about 3.1 to 6.5 cents per
+kilowatt-hour (LBNL *Utility-Scale Solar*, 2025 data file; levelized PPA prices 
+in constant 2024 dollars; Box 2.1). On the same levelized 2024-dollar basis, Hawaiʻi's
+matched-configuration executions of 2018–2020 carried a median near 7.7 cents 
+per kilowatt-hour, and the amended Mahi contract is roughly 19.5 cents. Because modules,
 batteries, and capital are priced in global markets, the common shock added
 roughly the same number of cents everywhere: about 2.5 to 3.5 cents per
 kilowatt-hour on the mainland at matched configuration, against roughly 12
@@ -453,7 +446,8 @@ and Barbers Point were cancelled, and Mahi survived by repricing.
 
 The technology itself continued to get cheaper. IRENA's Renewable Cost
 Database records a 90 percent decline in the global weighted-average
-levelized cost of utility-scale solar between 2010 and 2024, to about 4.4 cents per kilowatt-hour, and a 93 percent decline in battery storage costs
+levelized cost of utility-scale solar between 2010 and 2024, to about 4.4 
+cents per kilowatt-hour, and a 93 percent decline in battery storage costs
 over the same period. Its 2026 study of firm renewable power finds that
 solar sized with storage to deliver continuous supply fell about 30 percent
 in cost between 2020 and 2025 at high-quality sites, in real 2025 dollars,
@@ -474,18 +468,15 @@ broader system." The interconnection backlog on the mainland reached about
 2.6 terawatts at the end of 2023, 95 percent of it solar, wind, and
 storage, and the typical project now takes about five years to connect,
 against under two a decade earlier (LBNL, *Queued Up*, 2024). Rising real
-interest rates added to all of it, and they raise the cost of solar and
+interest rates were a clear fundamental driver: they raise the cost of solar and
 storage by more than they raise the cost of a fuel-burning plant: a plant
-with no fuel recovers almost all of its cost as capital, and capital cost
-rises with the interest rate.
+with no fuel recovers almost all of its cost as capital. Real interest rates
+were negative for
 
-Hawaiʻi has the highest utility-scale solar prices in the country. Its grid
-is small, and it does not have a large interconnection backlog. Its
-interconnection and procurement process is slow and costly, and it applies
-to a system that already carries an unusually large amount of distributed
-solar. The procurement and interconnection costs that raised prices across
-the United States are larger in Hawaiʻi, and that is the reason its prices
-are highest.
+Hawaiʻi has, by far, the highest utility-scale solar prices in the country. 
+Its grid is small, and it does not have a large interconnection backlog. Its
+interconnection and procurement process is especially slow and it is difficult
+to find other factors that could explain its significantly higher costs.
 
 > **Box 2.1 — How large is Hawaiʻi's utility-solar premium today?** Careful
 > measurements give answers from about 1.8 to 2.2 times mainland cost, and
@@ -517,7 +508,7 @@ are highest.
 > least 90 percent of PV capacity, four hours or longer) for that reason.
 >
 > *When.* The nominal premium roughly doubled after 2020 (the table
-> above), so any estimate mixing contract vintages picks its own answer.
+> above), so any estimate mixing contract vintages can mislead.
 >
 > On a consistent basis — unsubsidized, configuration-matched, and
 > vintage-matched — the procurement record implies roughly 1.4 to more
@@ -529,8 +520,8 @@ are highest.
 > results are solved at 1.2, 1.8, and 2.04 times the 2024 ATB baseline for
 > unsubsidized solar and batteries, and stated across that span. Since
 > 2024, battery costs — a disproportionately large share of a Hawaiʻi
-> installation's cost — have fallen about 30 percent, making these
-> multiples somewhat conservative.
+> installation's cost — have fallen 30-45 percent, making these
+> multiples somewhat conservative (IRENA, Bloomberg).
 >
 > One asymmetry deserves note: we apply no Hawaiʻi premium to any
 > other resource — including offshore wind — which appears consistent with
@@ -539,11 +530,12 @@ are highest.
 > offshore premium from, and none of the process factors behind the solar
 > premium — procurement cycles, permitting, interconnection — is specific
 > to solar. If those factors persist, a resource with no construction
-> record here and floating-platform engineering would be at least as
-> exposed to them (Section 4.5). Where a single number is needed, Hawaiʻi
+> record here, floating-platform engineering, plus long interconnection lines
+> owing to the deep seafloor would likely be exposed to them (Section 4.5). 
+> Where a single number is needed, Hawaiʻi
 > currently pays roughly double the mainland price to deploy utility-scale
-> solar — and the evidence of Section 2 is that this figure reflects
-> process rather than geography.
+> solar — and the evidence of Section 2 is that this figure mainly reflects
+> processes that could be reformed.
 
 **Land and ground rent.** Recent University of Hawaiʻi solar RFPs and
 contemporary utility-scale leases price ground rent at a few tenths of a cent per kilowatt-hour delivered — a
