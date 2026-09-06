@@ -219,24 +219,30 @@ to roughly twice the mainland benchmark, so a reader who believes those
 costs are stuck can see exactly what changes. What the model does not do
 is treat today's process as fixed: the 2024 IGP filing reports average
 study times of 24–30 months while actual interconnection has taken four to
-seven years, and Section 2.4 argues that gap is process, not physics.
+seven years, and Section 2.4 argues that gap is mainly process or "soft 
+costs" that are high throughout the United States but especially high in 
+Hawai‘i.
 
 **Do the wind projections account for climate change — fewer trade-wind
 days?**
-No climate adjustment is applied to the 2007–2008 weather basis. Three
-things bound the exposure. Onshore wind is capped at 150 MW in the
-framework — roughly the existing plants — so every solved build is
-overwhelmingly solar plus storage, and a decline in trade-wind days moves
-little of the supply. The binding reliability day already has very little
-wind — on November 22 the fleet delivers about a third of its good-day
-output — and because every sample day starts from the batteries'
-overnight reserve, each build can run an indefinite string of those days
-back to back. And the multi-decade weather series under construction for v2
-(linking the 2007–2008 record to NREL's NOW-23 dataset) is designed to
-test many more years, including long weak-wind runs. If climate trends
-took wind further down, the build would shift toward more solar and
-storage — the direction every build already leans. (Sections 5.3, "What
-we will do next.")
+No climate adjustment is applied to the 2007–2008 weather basis. Note 
+that high-quality wind data for the islands is the most challenging data 
+element and has been the main obstacle to using more or different
+years of data; an account of climate change would be a significant 
+undertaking. Three things bound the magnitude of this concern. Onshore 
+wind is capped at 150 MW in the framework — roughly the existing plants 
+— so every solved build is overwhelmingly solar plus storage, and a decline in trade-wind days moves little of the supply. This capacity is much less than 
+earlier  modeling efforts due to new, substantial setback requirements, 
+and we have yet to model precisely what is allowed with the new setbacks. 
+The binding reliability day already has very little wind — on November 22 
+the fleet delivers about a third of its good-day output — and because 
+every sample day starts from the batteries' overnight reserve, each build 
+can run an indefinite string of those days back to back. And the multi-decade 
+weather series under construction for v2 (linking the 2007–2008 record 
+to NREL's NOW-23 dataset) is designed to test many more years, including 
+long weak-wind runs. If climate trends took wind further down, the build 
+might shift toward more solar and storage — the direction every build 
+already leans. (Sections 5.3, "What we will do next.")
 
 **For the new geothermal technology, did you use NREL's most recent reV
 model?**
@@ -248,31 +254,32 @@ spread at 2030 — 6.2, 10, and 14.7 $M per MW before the federal geothermal
 credit — anchored to the DOE GeoVision optimistic trajectory, a compromise
 reference, and the ATB 2024 Conservative profile. The conditional
 structure in Section 3.2 shows which conclusions survive at which cost;
-the finding is an option argument, not a bet on the optimistic case. If a
-newer resource assessment or ATB revision moves these inputs, send the
-pointer — that is exactly the kind of comment we are asking for.
+the finding is an option argument: the worst cost case is roughly 
+breakeven, while anything more affordable saves. If a newer resource 
+assessment or ATB revision moves these inputs, we would be interested in 
+learning about it.
 (Section 3.)
 
 **The PUC's Waiau order mandates renewable fuel. Why does the model let
 the repower burn oil, and what emissions rate do you give biofuels?**
-Three separate points. What the model does: the repower can burn LSFO,
-diesel, or biodiesel, and the optimizer picks the cheapest, so through
-2044 it burns oil; from 2045 the mandate leaves only renewable fuel and
-its dispatch falls below 1 percent. Modeled biodiesel costs about $33 per
-MMBtu — roughly double delivered LSFO at reference oil — so letting the
-plant burn oil is the most favorable fuel treatment the repower could ask
-for. Pricing the PUC's actual order (51 percent renewable fuel at
-commissioning, 100 percent by 2045) would push the repower's cost above
-the $1.4 billion penalty reported; that scenario is easy to define and we
-are open to running it on request. Emissions: the model counts biodiesel
-at zero combustion CO₂, the standard RPS accounting. Lifecycle emissions
-of biofuels are contested and feedstock-dependent, and this report takes
+We do allow the repower to burn LSFO, diesel, or biodiesel, and the 
+optimizer picks the cheapest, so through s2044 it burns oil; from 2045 
+the mandate leaves only renewable fuel and its dispatch falls below 1 percent. Modeled biodiesel costs about $33 per MMBtu — roughly double delivered LSFO at reference oil — so letting the plant burn oil is the most favorable fuel treatment the repower could ask for. Pricing the PUC's actual order (51 percent 
+renewable fuel at commissioning, 100 percent by 2045) would push the repower's 
+cost above the $1.4 billion penalty reported; that scenario is easy to define 
+and we are open to running it on request. The outcome is fairly predictable: 
+the model will use other plants instead of Waiau to avoid using expensive 
+biodiesel before 2045, greatly reducing its capacity factor and probably 
+increasing costs modestly, because other plants are nearly as efficient at 
+burning oil. Emissions: the model counts biodiesel at zero combustion CO₂, 
+the standard RPS accounting. Lifecycle emissions of biofuels are contested 
+and feedstock-dependent, and this report takes
 no position — the assumption is immaterial here because dispatched
 biofuel volumes are small in every scenario. Policy: the model says only
 that biofuels do not enter on cost; whether a mandate serves other goals —
 the refinery's Hawaiʻi Renewables venture is one of the few in-state
 pathways for the biofuel volumes every 2045 scenario needs (Section 4.6)
-— is a judgment the report leaves to the proceeding. (Sections 6.1, 4.6.)
+— is a judgment beyond the scope of this report. (Sections 6.1, 4.6.)
 
 **Did you look at replacing all oil generation with LNG?**
 Yes — it is the cheapest LNG configuration tested. Section 4.7's
@@ -283,7 +290,7 @@ Hawaiian Electric's LSFO demand nearly completely and saves $1.05 billion
 gross, $0.60 billion net of the full 2016 conversion-program charge. What
 stays on oil is the diesel peaking fleet, a small share of energy. Every
 LNG arrangement with the new plant does worse than the same arrangement
-without it. (Section 4.7.)
+without it (Section 4.7).
 
 **What is assumed about Kahe's retirement? Do the fuel-switch cases
 include added maintenance costs for old plants on new fuel?**
@@ -317,11 +324,13 @@ U.S. supply-chain rates sit well above the break-even thresholds.
 cleaner fossil fuel, cheaper than oil, that pairs well with renewables.
 What changed?**
 The 2014 piece (Wee and Roberts, UHERO, May 21, 2014) was conditional,
-and its conditions decide the current question. Its stated "real
-question" was "whether gas-linked
-pricing from the US West Coast or US Gulf Coast can be secured over
-oil-linked pricing": Henry-Hub-indexed delivery at 13–19 $2012/MMBtu
-against oil-linked at 19–24. The JERA proposal is oil-indexed — at 11.8
+and its conditions decide the current question. It stated "real
+question" was "whether gas-linked pricing from the US West Coast or 
+US Gulf Coast can be secured over oil-linked pricing": Henry-Hub-indexed 
+delivery at 13–19 $2012/MMBtu against oil-linked at 19–24. That was a long
+time ago in a very different environment, and even the most optimistic
+would have been unlikely to predict how cheap solar panels and batteries
+are today. Much else has changed. The JERA proposal is oil-indexed — at 11.8
 percent of Brent, a better slope than 2014-era contracts, which this
 report credits fully (Section 4.4) — but the gas-linked structure the
 piece asked for is not what is on offer. Its renewables claim rested on
@@ -336,7 +345,7 @@ the mandate leaves no role for the fuel. The 100 percent mandate itself
 postdates the piece (Act 97, 2015). What survives from 2014 is the
 fuel-cost logic, and Section 4.7 finds where it now leads: if LNG comes,
 its value is fuel through existing plants, not a new plant. Conclusions
-here follow the inputs; when the inputs moved, so did they.
+here follow the inputs.
 
 **Does the model include black start, grid-forming inverters, fault
 current, voltage support, inertia, or fast frequency response?**
@@ -350,15 +359,15 @@ pathways rather than a differentiator between them. Grid-forming
 capability is largely an inverter specification, not a separate build —
 and most of the roughly 250 MWh of distributed batteries already
 connected to Oʻahu rooftop solar systems (Appendix A.11) likely carry
-grid-forming-capable hardware.
+grid-forming-capable hardware. All new batteries surely would as well.
 And the grid-side complement — substation protection upgraded with
 microprocessor-based equipment designed for two-way flow — costs on the
 order of millions to tens of millions of dollars, a small fraction of
 the $1–2 billion plant proposals before the State; its supply chains are
 tight, but no tighter than those for new thermal plants. Prioritizing
 those upgrades on the most congested circuits would directly expand the
-room for rooftop solar. Stability constraints get explicit treatment in
-the zonal grid model under development for v2.
+room for rooftop and canopy solar. Stability constraints get explicit 
+treatment in the zonal grid model under development for v2.
 
 **Has the portfolio been tested against Kona lows, storms, wildfire,
 fuel-supply disruption, simultaneous failures — or several bad days in a
@@ -367,12 +376,10 @@ Back-to-back bad days, yes, by construction: each sample day starts from
 the batteries' overnight reserve, no build depends on energy banked from a
 better day, and every build could repeat its worst day indefinitely
 (Section 5.2). The rest is outside v1: no unit is ever forced out, so a
-storm that breaks several at
-once — as in January 2024 — sits outside the test; the two-year record
-contains no multi-week wind drought, though a longer meteorological record
-for Oʻahu shows a sixteen-day run of low wind; and the oil- and
-biofuel-burning plants that remain depend on fuel deliveries, so
-fuel-supply disruption cuts against every pathway that keeps them.
+storm that breaks several at once — as in January 2024 — sits outside the 
+test; the two-year record contains no multi-week wind drought, though a longer meteorological record for Oʻahu shows a sixteen-day run of low wind; 
+and the oil- and biofuel-burning plants that remain depend on fuel deliveries, 
+so fuel-supply disruption cuts against every pathway that keeps them.
 Section 5.3 lists these omissions with their directions and notes they
 bear most heavily on the builds with the least thermal capacity; Section
 6.3 sizes the exposure and finds several layers between a bad event and
@@ -393,19 +400,20 @@ a loss-of-load expectation for every solved build.
 
 **What maintenance and outage risks are assumed for the existing diesel
 and LSFO-fired units?**
-Table 6.1 lists them unit by unit: the filed forward EFORd rates from the
-utility's 2021 and 2022 Adequacy of Supply filings (10 percent for the
-Kahe and Waiau steam units, 7 percent for Kahe 5–6, 4.2 percent for the
-CIP turbine), with four-year actuals in parentheses — the steam group's
-actuals run 12.3–14.4 percent. One caution on reading the actuals
+Table 6.1 lists all of the units: the filed forward forced outage rates 
+from the utility's 2021 and 2022 Adequacy of Supply filings (10 percent 
+for the Kahe and Waiau steam units, 7 percent for Kahe 5–6, 4.2 percent f
+or the CIP turbine), with four-year actuals in parentheses — the steam 
+group's actuals run 12.3–14.4 percent. One caution on reading the actuals
 forward: the filings attribute part of the gap to units "operated in ways
 for which they were not designed" as cycling duty grows. In a
 high-renewable system with large storage the batteries do most of the
 ramping and the thermal units that run stay close to flat, so realized
 rates under future duty could differ from the historical record — the
 filed forward rate may be the better guide (Section 6.3). v1's dispatch
-does not derate the existing
-units, so a pilot re-solve
+does not derate the existing units (this is less indicative in an island
+system with relatively few generators). We did test whether a lack of 
+derating matters  pilot re-solve
 applied the filed rates to every unit across nine headline cells: no
 total moved more than $12 million on systems of $24–28 billion
 (`results/EFOR_PILOT.csv`). Maintenance timing is not chosen inside the

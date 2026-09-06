@@ -10,9 +10,12 @@ input, a direction of effect, and a source are the fastest to act on.
 ## Cost inputs
 
 - **The Hawaiʻi premium (1.20×) is an author assumption**, not a sourced
-  point estimate. A Hawaiʻi-specific installed-cost study would replace it;
-  sensitivities at 1.5× and 1.7× bracket it. Direction: a higher premium
-  raises solar and battery cost, weakening the solar case.
+  point estimate. We regard this multiple as a reasonable, attainable goal
+  for if solar-plus-battery were procured competitively in a more streamlined
+  manner. Sensitivities consider 1.5× and 1.7× the baseline multiple. 
+  Direction: a higher premium raises solar and battery cost, weakening 
+  the solar case, but solar dominates expansion even at the highest 
+  mulitple. 
 - **The Lazard CCGT reference is partially vendored**
   ([`sources/LSFO_COST_REVIEW.md`](sources/LSFO_COST_REVIEW.md)). The
   $2,900/kW figure sits above mainland market quotes and below realized
