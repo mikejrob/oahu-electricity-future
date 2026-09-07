@@ -319,13 +319,26 @@ SAMPLE_DAYS = {"2035-08-18": "Summer peak (easy)", "2035-11-22": "Low sun and wi
 
 
 def best_dir(name):
-    """Best solved dir for scenario `name`, with its mip gap."""
+    """Best solved dir for scenario `name`, with its REQUESTED mip gap.
+    The gap is the refinement tier's target, not solver evidence — achieved
+    gaps live in results/SOLVE_MANIFEST.csv (audit finding 5)."""
     for pre, gap in (("R010_outputs_", 0.001), ("R0015_outputs_", 0.0015),
                      ("outputs_", 0.0025)):
         d = REPO / (pre + name)
         if (d / "total_cost.txt").exists():
             return d, gap
     return None, None
+
+
+def _load_manifest():
+    p = REPO / "results" / "SOLVE_MANIFEST.csv"
+    if not p.exists():
+        return {}
+    import csv as _csv
+    return {r["outputs_dir"]: r for r in _csv.DictReader(open(p))}
+
+
+MANIFEST = _load_manifest()
 
 
 def parse_name(name):
@@ -456,6 +469,10 @@ def main():
         re.sub(r"^(R010_|R0015_)?outputs_", "", p.name)
         for p in REPO.iterdir()
         if re.match(r"^(R010_|R0015_)?outputs_nlv2[bsa]_", p.name)
+        # EFOR-pilot cells have their own register (results/EFOR_PILOT.csv);
+        # battfix dirs are local correction-test artifacts — same exclusions
+        # as results/build_results_summary.py
+        and "_efor_" not in p.name and "battfix" not in p.name
     })
     scen_rows, gen_rows, cost_rows = [], [], []
     skipped = 0
@@ -480,7 +497,10 @@ def main():
             "short_label": short, "description": desc,
             "total_cost_bn": round(total / 1e9, 4),
             "conv_capital_bn": conv_capital,
-            "mip_gap": gap, "source_dir": d.name,
+            "mip_gap_requested": gap,
+            "mip_gap_achieved": MANIFEST.get(d.name, {}).get(
+                "relmipgap_achieved", ""),
+            "source_dir": d.name,
         })
         # generation / capacity / emissions by tech group and period
         agg = defaultdict(lambda: [0.0, 0.0, 0.0])   # (period, group) -> e, c, em
@@ -496,12 +516,24 @@ def main():
         sh = lng_shares(d, sorted(periods))
         for (p, g), (e, c, em) in sorted(agg.items()):
             if g == "Thermal":
+                # ENERGY and EMISSIONS split by annual fuel share (the
+                # disclosed approximation); installed CAPACITY is not
+                # fuel-attributable — the same units burn either fuel — so
+                # it is reported once under "Thermal (oil/LNG)" instead of
+                # all-on-Oil with LNG hard-coded to 0 MW (audit finding 10;
+                # the old row also vanished entirely when the oil share hit
+                # zero, dropping the capacity from the chart)
                 for part, w in (("Oil", 1 - sh[p]), ("LNG", sh[p])):
                     if w > 1e-9:
                         gen_rows.append({"scenario": name, "period": p, "tech": part,
                                          "energy_gwh": round(e * w, 2),
-                                         "capacity_mw": round(c if part == "Oil" else 0, 1),
+                                         "capacity_mw": 0.0,
                                          "emissions_tco2": round(em * w, 0)})
+                gen_rows.append({"scenario": name, "period": p,
+                                 "tech": "Thermal (oil/LNG)",
+                                 "energy_gwh": 0.0,
+                                 "capacity_mw": round(c, 1),
+                                 "emissions_tco2": 0.0})
             else:
                 gen_rows.append({"scenario": name, "period": p, "tech": g,
                                  "energy_gwh": round(e, 2),
@@ -655,9 +687,9 @@ def main():
         "matrix_cells": sum(1 for r in scen_rows if r["kind"] == "model"),
         "plan_cells": sum(1 for r in scen_rows if r["kind"] == "plan"),
         "skipped_non_fleet": skipped,
-        "refined_010": sum(1 for r in scen_rows if r["mip_gap"] == 0.001),
-        "refined_0015": sum(1 for r in scen_rows if r["mip_gap"] == 0.0015),
-        "first_pass_0025": sum(1 for r in scen_rows if r["mip_gap"] == 0.0025),
+        "refined_010": sum(1 for r in scen_rows if r["mip_gap_requested"] == 0.001),
+        "refined_0015": sum(1 for r in scen_rows if r["mip_gap_requested"] == 0.0015),
+        "first_pass_0025": sum(1 for r in scen_rows if r["mip_gap_requested"] == 0.0025),
         "hourly_scenarios": sorted({r["scenario"] for r in hr_rows}),
         "sample_days": SAMPLE_DAYS,
         # Bump on every release. This literal is the explorer's only version

@@ -135,7 +135,7 @@ def plot_by_premium(axes):
             if ref is None:
                 continue
             for name, color, _, template in plans:
-                p = point(template.format(suff=suff))
+                p = point(for_design(template).format(suff=suff))
                 if p is None:
                     continue
                 dx, dy = p[0] - ref[0], p[1] - ref[1]
@@ -144,7 +144,7 @@ def plot_by_premium(axes):
         ax.axhline(0, color="0.6", lw=0.8)
         ax.axvline(0, color="0.6", lw=0.8)
         ax.set_ylim(bottom=-0.15)
-        ax.set_title(f"solar+battery at {plabel} mainland ATB", fontsize=10)
+        ax.set_title(f"utility solar at {plabel} mainland ATB", fontsize=10)
         ax.set_xlabel("CO$_2$ vs least-cost (Mt)", fontsize=9)
         ax.plot(0, 0, "o", color="0.4", ms=5, zorder=3)
         ax.annotate("least-cost", (0, 0), textcoords="offset points",
@@ -161,7 +161,7 @@ def main():
     ap.add_argument("-o", "--out",
                     default=str(REPO / "report/figures/fig_4_5_plan_price_tags.png"))
     ap.add_argument("--design", choices=("hybrid", "firmfloor", "windband", "floors"),
-                    default="firmfloor",
+                    default="hybrid",
                     help="which plan-quota revision's cells to plot")
     ap.add_argument("--layout", choices=("family", "premium"),
                     default="family")

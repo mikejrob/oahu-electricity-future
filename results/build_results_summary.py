@@ -42,6 +42,18 @@ for p in REPO.iterdir():
         names.add(m.group(2))
 names = {n for n in names if any(f"_{o}" in n for o in OIL)}
 names = {n for n in names if "_plan_" not in n}
+# EFOR-pilot cells have their own register (results/EFOR_PILOT.csv, report
+# 6.3); battfix dirs are local correction-test artifacts, not fleet cells
+names = {n for n in names if "_efor_" not in n and "battfix" not in n}
+
+# Achieved gaps come from solver-log evidence (solve/build_solve_manifest.py),
+# never from the directory prefix: a completed output file proves the solve
+# wrote results, not that it reached the requested tolerance (external-audit
+# finding 5 — 12 published cells hit the 24 h time limit above 0.1%).
+manifest = {}
+mpath = REPO / "results" / "SOLVE_MANIFEST.csv"
+if mpath.exists():
+    manifest = {r["outputs_dir"]: r for r in csv.DictReader(open(mpath))}
 
 rows = []
 for name in sorted(names):
@@ -50,19 +62,32 @@ for name in sorted(names):
         tc = REPO / f"{pre}{name}" / "total_cost.txt"
         if tc.exists():
             ts = datetime.datetime.fromtimestamp(tc.stat().st_mtime, HST)
+            ev = manifest.get(f"{pre}{name}", {})
             rows.append({
                 "scenario": name,
                 "total_cost_npv": f"{float(tc.read_text()):.2f}",
-                "mipgap": gap,
+                "mipgap_requested": gap,
+                "mipgap_achieved": ev.get("relmipgap_achieved", ""),
+                "termination": ev.get("phrase", ""),
                 "solved_at_hst": ts.strftime("%Y-%m-%d %H:%M"),
             })
             break
 
+if not rows:
+    raise SystemExit("no result directories found — refusing to overwrite "
+                     "RESULTS_SUMMARY.csv with an empty table")
+
 out = REPO / "results" / "RESULTS_SUMMARY.csv"
 with open(out, "w", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=["scenario", "total_cost_npv", "mipgap",
-                                      "solved_at_hst"], lineterminator="\n")
+    w = csv.DictWriter(f, fieldnames=["scenario", "total_cost_npv",
+                                      "mipgap_requested", "mipgap_achieved",
+                                      "termination", "solved_at_hst"],
+                       lineterminator="\n")
     w.writeheader()
     w.writerows(rows)
-n010 = sum(1 for r in rows if r["mipgap"] == "0.001")
-print(f"RESULTS_SUMMARY.csv: {len(rows)} scenarios ({n010} at 0.1%)")
+n010 = sum(1 for r in rows if r["mipgap_requested"] == "0.001")
+nov = sum(1 for r in rows if r["mipgap_achieved"]
+          and float(r["mipgap_achieved"]) > float(r["mipgap_requested"]) * 1.001)
+nev = sum(1 for r in rows if r["mipgap_achieved"])
+print(f"RESULTS_SUMMARY.csv: {len(rows)} scenarios ({n010} at 0.1% requested; "
+      f"{nev} with achieved-gap evidence, {nov} above their requested gap)")

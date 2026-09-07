@@ -24,7 +24,7 @@ LISTFILE="${LISTFILE:?set LISTFILE via --export}"
 CMD=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" "$LISTFILE")
 [ -z "$CMD" ] && { echo "no command for task $SLURM_ARRAY_TASK_ID"; exit 0; }
 
-CPUS=${SLURM_CPUS_PER_TASK:-4}
+CPUS=${SLURM_CPUS_PER_TASK:-1}
 export OMP_NUM_THREADS=${CPUS} CPLEX_THREADS=${CPUS}
 BASE="${TMPDIR:-/tmp/$USER/$SLURM_JOB_ID}"; mkdir -p "$BASE"
 CACHE="${SOLVE_ENV_CACHE:-$PROJECT_DIR/solve_env}"

@@ -128,7 +128,7 @@ def table(title, rows):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--design", choices=("hybrid", "firmfloor", "windband", "floors"),
-                    default="firmfloor",
+                    default="hybrid",
                     help="which plan-quota revision's cells to price; "
                          "'floors' reproduces the discarded floors-only tags")
     args = ap.parse_args()

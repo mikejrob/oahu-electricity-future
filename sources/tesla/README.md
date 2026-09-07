@@ -5,7 +5,10 @@
 solar panel costs by state, for 8kW solar systems or larger, based on
 Tesla Energy's internal data." It is the only single-vendor,
 standardized, state-resolved residential price observation that includes
-Hawaiʻi: LBNL *Tracking the Sun* has no Hawaiʻi residential sample, and
+Hawaiʻi: LBNL *Tracking the Sun* carries essentially no Hawaiʻi price
+observations (its price sample excludes battery-paired systems, and
+virtually all new Hawaiʻi rooftop systems attach storage — see
+`sources/lbnl_tts/README.md`), and
 marketplace aggregators (EnergySage, SolarReviews) mix samples that
 differ by market.
 

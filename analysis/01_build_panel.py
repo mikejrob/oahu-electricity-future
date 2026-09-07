@@ -25,9 +25,21 @@ import os
 import numpy as np
 import pandas as pd
 
-ANA = "/mnt/lustre/koa/koastore/gtg_group/oahu-electricity-v1-corrected/analysis"
-PUDL = "/tmp/claude-7344/-mnt-lustre-koa-koastore-gtg-group/b6223e7a-0462-4b26-95ed-29833bf62633/scratchpad/pudl_714_hourly.parquet"
-DER = "/mnt/lustre/koa/koastore/gtg_group/oahu-grid/data/intermediates/der_points.parquet"
+# Paths overridable by env (audit finding 6: PUDL previously pointed at a
+# purgeable session temp dir, since purged). Re-pulled 2026-09-06 to durable
+# scratch (sha256 8fa79daa...); fresh annual aggregates match the vendored
+# 2026-07-24 pull in sources/ferc714/ to <0.05 MW — the nightly build is
+# stable for respondent 178. Full table, not a pre-sliced file: the
+# respondent filter below does the slicing.
+ANA = os.environ.get("OAHU_ANA", os.path.dirname(os.path.abspath(__file__)))
+PUDL = os.environ.get(
+    "OAHU_PUDL_714",
+    "/mnt/lustre/koa/scratch/mjrobert/pudl/"
+    "out_ferc714__hourly_planning_area_demand.parquet")
+_REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DER = os.environ.get(
+    "OAHU_DER_POINTS",
+    os.path.join(_REPO, "sources", "der", "der_points.parquet"))
 os.makedirs(ANA, exist_ok=True)
 
 # ---------------------------------------------------------------- load 714

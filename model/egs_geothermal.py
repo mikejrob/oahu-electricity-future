@@ -68,11 +68,12 @@ from pyomo.environ import Constraint
 def define_arguments(argparser):
     """
     --egs-max-capacity:
-        Override the maximum installed Oahu EGS capacity (MW). If unset,
-        the model uses gen_capacity_limit_mw from
-        generation_projects_info.csv (100 MW). Useful for scenarios that
-        test sensitivity to the conservative 104.2 MW NREL reV resource
-        estimate.
+        TIGHTEN the maximum installed Oahu EGS capacity (MW). The input
+        cap (gen_capacity_limit_mw in gen_info.csv, 100 MW) is enforced
+        by core Switch regardless, so this option can only lower the
+        ceiling; requesting a value above the input cap raises an error
+        rather than silently keeping the input cap (external-audit
+        finding 7). Raising the ceiling requires editing the input file.
 
     --egs-earliest-period:
         Earliest investment period in which EGS can be built. If unset,
@@ -110,21 +111,30 @@ def define_components(m):
     """
 
     if m.options.egs_max_capacity is not None:
-        # Override capacity ceiling. The default
-        # gen_capacity_limit_mw=100 in gen_info.csv already binds; this
-        # provides a way to study tighter or looser caps without editing
-        # the input file.
+        # TIGHTENING-ONLY cap: the input gen_capacity_limit_mw constraint
+        # is constructed by core Switch and binds regardless, so this
+        # option cannot raise the ceiling — it errors on such a request
+        # instead of silently under-delivering (audit finding 7). The
+        # constraint applies in EVERY period the project can be operating,
+        # not only build years (the old GEN_BLD_YRS skip left capacity
+        # built earlier unconstrained in later periods).
         limit = m.options.egs_max_capacity
 
         def EGS_Capacity_Limit_rule(m, p):
             if "Oahu_EGS" not in m.GENERATION_PROJECTS:
                 return Constraint.Skip
-            if ("Oahu_EGS", p) not in m.GEN_BLD_YRS:
-                return Constraint.Skip
+            cap = (m.gen_capacity_limit_mw["Oahu_EGS"]
+                   if "Oahu_EGS" in m.gen_capacity_limit_mw else None)
+            if cap is not None and float(limit) > float(cap):
+                raise ValueError(
+                    f"--egs-max-capacity {limit} exceeds the input cap "
+                    f"gen_capacity_limit_mw={cap}; the input cap still "
+                    f"binds, so this option cannot raise the ceiling. "
+                    f"Edit gen_info.csv instead.")
             return m.GenCapacity["Oahu_EGS", p] <= limit
 
         m.EGS_Capacity_Limit = Constraint(m.PERIODS, rule=EGS_Capacity_Limit_rule)
-        print(f"EGS capacity limited to {limit} MW via --egs-max-capacity")
+        print(f"EGS capacity tightened to {limit} MW via --egs-max-capacity")
 
     if m.options.egs_earliest_period is not None:
         # Force BuildGen[Oahu_EGS, p] = 0 for periods before the

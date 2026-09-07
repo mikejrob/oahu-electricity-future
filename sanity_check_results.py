@@ -129,38 +129,83 @@ if all(x is not None for x in nts):
 # =====================================================================
 # 7. COMPREHENSIVE STRICT-DOMINANCE SWEEP over the full solved set.
 # Each rule pairs a cell with a version of itself that differs in exactly
-# one cost input made MORE expensive; the cheaper cell must cost <= dearer.
-# Any inversion is a stuck/suboptimal solve (the "cheaper" one over-solved).
-# This catches degeneracy-induced bad incumbents anywhere, not just headline.
+# one cost input made MORE expensive; the cheaper cell must cost <= dearer
+# (raising a cost coefficient cannot lower a minimum). Any larger inversion
+# is a stuck/suboptimal solve (the "cheaper" one over-solved).
+#
+# Until 2026-09-06 this sweep globbed only the first-pass outputs_* dirs —
+# bypassing the R010>R0015>outputs published basis that cost() implements
+# and the banner below advertises — matched premium pairs only on legacy
+# unprefixed names, and used a flat $2M tolerance that its comment
+# misdescribed as "~2x the gap" (external-audit finding 4). It now sweeps
+# the same basis as every other check, at the only defensible tolerance:
+# one proven optimality gap of the CHEAPER cell (the dearer incumbent
+# already bounds its optimum from above, so only the cheaper cell's gap
+# can produce a legitimate inversion).
 # =====================================================================
 import glob as _glob
-_all = {}
-for _p in _glob.glob(str(REPO / f"{PFX}*" / "total_cost.txt")):
-    _n = _p.split(f"{PFX}", 1)[1].rsplit("/", 1)[0]
-    try:
-        _all[_n] = float(open(_p).read()) / 1e9
-    except Exception:
-        pass
+_PREFIX_GAP = (("R010_outputs_", 0.001), ("R0015_outputs_", 0.0015),
+               ("outputs_", 0.0025))
+if FIRST_PASS:
+    _sweep_basis = (("outputs_", 0.0025),)
+elif PFX != "outputs_":                       # --p001 legacy mode
+    _sweep_basis = ((PFX, 0.001),)
+else:
+    _sweep_basis = _PREFIX_GAP
+# achieved gaps, where the solver logs prove them, override the requested
+# tier: 12 published cells hit the time limit above 0.1% (SOLVE_MANIFEST)
+_achieved = {}
+_mpath = REPO / "results" / "SOLVE_MANIFEST.csv"
+if _mpath.exists():
+    for _r in csv.DictReader(open(_mpath)):
+        if _r["relmipgap_achieved"]:
+            _achieved[_r["outputs_dir"]] = float(_r["relmipgap_achieved"])
 
-def _dom(cheaper, dearer, why, tol=0.002):
-    # tol: 0.25% solver gap can put a dearer cell slightly under; flag only
-    # inversions bigger than ~2x the gap (a real stuck solve, not gap slop).
-    if cheaper in _all and dearer in _all and _all[cheaper] > _all[dearer] + tol:
-        viol.append(f"DOMINANCE {why}: {cheaper} ({_all[cheaper]:.3f}) > {dearer} ({_all[dearer]:.3f})")
+_all = {}                                     # name -> (cost_B, proven gap)
+for _pre, _gap in _sweep_basis:
+    for _p in _glob.glob(str(REPO / f"{_pre}*" / "total_cost.txt")):
+        _n = _p.split(_pre, 1)[1].rsplit("/", 1)[0]
+        # outputs_* also matches legacy p001 and local test dirs — exclude
+        if _n.startswith("p001_") or "battfix" in _n or _n in _all:
+            continue
+        try:
+            _g = max(_gap, _achieved.get(f"{_pre}{_n}", 0.0))
+            _all[_n] = (float(open(_p).read()) / 1e9, _g)
+        except Exception:
+            pass
 
-_dompairs = 0
+def _dom(cheaper, dearer, why):
+    if cheaper not in _all or dearer not in _all:
+        return
+    (cc, gc), (cd, _gd) = _all[cheaper], _all[dearer]
+    if cc > cd + gc * cd:                     # beyond the cheaper cell's gap
+        viol.append(f"DOMINANCE {why}: {cheaper} ({cc:.3f}) > {dearer} ({cd:.3f})")
+
+_dompairs = {"bare<=+20%": 0, "adv<=baseline": 0, "pv15<=pv17": 0}
 for _n in list(_all):
     # (a) bare-EPC <= +20% capital (identical but JERA capital x1.2)
     if not _n.endswith("_j120") and f"{_n}_j120" in _all:
-        _dom(_n, f"{_n}_j120", "bare<=+20%"); _dompairs += 1
-    # (b) Advanced renewables <= baseline renewables (adv is strictly cheaper)
+        _dom(_n, f"{_n}_j120", "bare<=+20%"); _dompairs["bare<=+20%"] += 1
+    # (b) Advanced renewables <= baseline renewables. NOTE: a true identity
+    # only while the _adv inputs differ from baseline SOLELY by cheaper
+    # technology costs — restored by the 2026-09-06 advsolar credit fix.
     if _n.endswith("_adv") and _n[:-4] in _all:
-        _dom(_n, _n[:-4], "adv<=baseline"); _dompairs += 1
-    # (c) solar-premium ordering: pv15 <= pv17 (identical but higher premium)
-    if _n.startswith("be_pv15_") and ("be_pv17_" + _n[8:]) in _all:
-        _dom(_n, "be_pv17_" + _n[8:], "pv15<=pv17"); _dompairs += 1
+        _dom(_n, _n[:-4], "adv<=baseline"); _dompairs["adv<=baseline"] += 1
+    # (c) solar-premium ordering: pv15 <= pv17 (identical but higher premium);
+    # substring match covers the family-prefixed published names
+    if "be_pv15_" in _n and _n.replace("be_pv15_", "be_pv17_") in _all:
+        _dom(_n, _n.replace("be_pv15_", "be_pv17_"), "pv15<=pv17")
+        _dompairs["pv15<=pv17"] += 1
 
-print(f"  dominance sweep: {_dompairs} pairs checked across {len(_all)} solved cells")
+# a rule that matches nothing is a broken rule, not a passing one
+if not FIRST_PASS and PFX == "outputs_":
+    for _why, _npairs in _dompairs.items():
+        if _npairs == 0 and _all:
+            viol.append(f"DOMINANCE sweep: rule '{_why}' matched ZERO pairs "
+                        f"across {len(_all)} cells — pairing logic broken")
+print(f"  dominance sweep: {sum(_dompairs.values())} pairs "
+      f"({', '.join(f'{k}={v}' for k, v in _dompairs.items())}) "
+      f"across {len(_all)} cells on the swept basis")
 
 print(f"== sanity check ({'first-pass ' + PFX if FIRST_PASS or PFX != 'outputs_' else 'published basis: R010>R0015>outputs'}) ==")
 if missing:

@@ -48,7 +48,14 @@ def main():
         (resolved if done else pending).append(od)
         for pre in ("R010_", "R0015_"):
             d = REPO / (pre + od)
-            if (d / "total_cost.txt").exists():
+            rtc = d / "total_cost.txt"
+            if rtc.exists():
+                # a refinement NEWER than the corrected first-pass was
+                # (re)built on the corrected inputs — do not touch it
+                # (external-audit finding 8: the old rule marked EVERY
+                # refinement stale once the first-pass was re-solved)
+                if done and rtc.stat().st_mtime > tc.stat().st_mtime:
+                    continue
                 # a still-solving cell warm-starts from its own stale dir,
                 # so hold those back until that cell lands
                 (stale if done else held).append(pre + od)
@@ -67,9 +74,15 @@ def main():
         print(f"held back (their cell is still solving and warm-starts from "
               f"them): {len(held)}")
     if args.quarantine:
+        moved = 0
         for d in stale:
-            os.rename(REPO / d, REPO / ("STALE_" + d))
-        print(f"\nquarantined {len(stale)} dirs (STALE_ prefix; reversible)")
+            dst = REPO / ("STALE_" + d)
+            if dst.exists():
+                print(f"  SKIP {d}: STALE_ destination already exists")
+                continue
+            os.rename(REPO / d, dst)
+            moved += 1
+        print(f"\nquarantined {moved} dirs (STALE_ prefix; reversible)")
         if held:
             print(f"{len(held)} left in place; re-run once those cells land")
     elif stale:

@@ -129,6 +129,67 @@ case is mildly optimistic relative to ATB Moderate.
   (page undated, 2024–25 authorship indicated, certified-installer
   transition).
 
+- `dotax/HI_DOTAX_Tax_Credits_Claimed_TY2023.pdf` — Hawaiʻi DOTAX,
+  *Tax Credits Claimed by Hawaiʻi Taxpayers — Tax Year 2023*; sha256
+  5bc3afb8…; renewable energy technologies income tax credit claims of
+  $100.1 million (16.1% of all credits). Feeds §2.3's "roughly $100
+  million per year" state-subsidy figure; see `dotax/README.md`.
+
+- `rooftop_intl/` — international rooftop-cost benchmarks (retrieved
+  2026-09-06; hashes and page cites in `rooftop_intl/README.md`):
+  Fraunhofer ISE *Photovoltaics Report* July 2026 (German 10 kWp
+  rooftop 900–1,500 €/kWp end-2025) and *Recent Facts* Aug 2026
+  (small-rooftop LCOE 6–14 ct€/kWh); IEA PVPS *NSR Australia 2024*
+  (residential turnkey AU$1.20/W pre-subsidy, total soft costs
+  AU$0.55/W, accredited-installer regime); IEA PVPS *Trends 2025*
+  (2024 residential range 0.65–3.15 USD/W across reporting countries);
+  Seel-Barbose-Wiser LBNL-6614E (2012 US $5.29 vs Germany $2.59/W,
+  gap ≈ all soft costs incl. permitting/interconnection/inspection).
+  Feeds the planned §2 rooftop-cost comparison.
+
+- `lbnl_tts/LBNL_TrackingTheSun_2024_Report.pdf` — LBNL *Tracking the
+  Sun* 2024 edition, slide-deck report (data through 2023); sha256
+  4b08d214…; installed-price sample excludes battery-paired, TPO, and
+  self-installed systems (p. 9); quote benchmarks align with its 20th
+  percentile, loan dealer fees add 5–50% to reported prices (p. 32);
+  state-median residential range $3.2–5.2/W (p. 37); state fixed
+  effects span ~$2/W (p. 42); HI storage attachment ~100% (p. 20).
+  Feeds report §2.3; see `lbnl_tts/README.md`.
+- `lbnl_tts/LBNL_TrackingTheSun_2024_ExecSummary.pdf` — the matching
+  technical brief; sha256 2c8f8511…; carries the benchmark-comparison
+  and dealer-fee sentences quoted in `lbnl_tts/README.md`.
+
+- `IRENA_24-7_Renewables_2026.pdf` — IRENA, *24/7 Renewables: The
+  economics of firm solar and wind* (2026); sha256 aeae024e…; §2's firm
+  solar+storage cost decline (~30 percent, 2020–2025, high-quality
+  sites) and the 2010–2024 declines quoted alongside it (solar LCOE
+  −90 percent, BESS −93 percent to $197/kWh, p. 9).
+
+- `IRENA_RPGC_in_2024_Summary_2025.pdf` — IRENA, *Renewable Power
+  Generation Costs in 2024*, summary (July 2025); sha256 4056554016…;
+  battery storage total installed cost −93 percent 2010–2024, to
+  $192/kWh (pp. 3, 9).
+- `IRENA_RPGC_in_2024_ch9_slice.pdf` — chapter 9 ("Enabling
+  Technologies", printed pp. 176–187) plus cover and copyright pages of
+  the full report; slice sha256 dd2b8e6f…; the year-over-year sentence
+  (p. 182): "Battery storage costs decreased 38% for a 2-hour system
+  and 32% for a 4-hour system compared to 2023" — the 30-percent end of
+  the §2 box's "fallen 30–45 percent." The full report is 51.5 MB, so
+  this repo vendors the slice; to reproduce, download
+  <https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2025/Jul/IRENA_TEC_RPGC_in_2024_2025.pdf>
+  (confirm sha256
+  `ffe8ce4bde29616f3edf9ef1a86dbb6ae2d5381a0ecb9bb1f71bb20204b6bada`)
+  and extract PDF pages 1–2 and 176–187 (page numbering is 1:1 with the
+  printed report).
+
+- `bnef/bnef_battery_price_survey_2025_pressrelease.html` — BloombergNEF
+  press release for its *2025 Lithium-Ion Battery Price Survey*
+  (2025-12-09, lead author Evelina Stoikou), retrieved 2026-09-06;
+  sha256 f0e80fe2…; stationary-storage pack prices $70/kWh in 2025, 45
+  percent below 2024 — the 45-percent end of the §2 box's "fallen 30–45
+  percent." Pack price, not installed cost; see `bnef/README.md` for
+  scope caveats.
+
 - **Companion land study**: github.com/mikejrob/solar-wind-landuse —
   land-availability GIS (cap scenarios, slope, grid proximity), ownership,
   and the legislative/documentary record of HRS §205-2/§205-4.5; cited in
@@ -191,3 +252,11 @@ case is mildly optimistic relative to ATB Moderate.
   and §6 findings; the no-new-wind sensitivity there (+1.1 percent) is
   the 2020 estimate of the world the 2023 county setback ordinance later
   created.
+- **Oʻahu distributed PV/battery install records** —
+  `der/der_points.parquet` (121,246 per-system records compiled from
+  public permit and interconnection records; per author, no privacy
+  restriction); sha256 c37de6bb…; vendored 2026-09-06 from the oahu-grid
+  compilation. The series behind Appendix A.11's installed-capacity
+  inputs (793 MW PV, ~250 MWh storage at mid-2025) and
+  `analysis/01_build_panel.py`, which consumes only the island-level
+  cumulative sums. See `der/README.md` for columns.

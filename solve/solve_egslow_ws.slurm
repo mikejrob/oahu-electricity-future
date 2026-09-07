@@ -7,7 +7,7 @@
 #SBATCH --partition=kill-shared
 #SBATCH --time=2-00:00:00
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=12G
 #SBATCH --array=0-0
 #SBATCH --output=logs/%x_%A_%a.out
@@ -21,7 +21,7 @@ mkdir -p logs tmp results
 
 JOB_ID=${SLURM_ARRAY_JOB_ID:-${SLURM_JOB_ID}}
 TASK_ID=${SLURM_ARRAY_TASK_ID:-0}
-CPUS=${SLURM_CPUS_PER_TASK:-4}
+CPUS=${SLURM_CPUS_PER_TASK:-1}
 export OMP_NUM_THREADS=${CPUS}
 export CPLEX_THREADS=${CPUS}
 QUEUE="sq/${JOB_ID}"

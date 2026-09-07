@@ -193,6 +193,58 @@ def poly_period_averages(df, deg=3):
                     "p95_poly3": res["p95"][sel].mean()})
     return pd.DataFrame(out)
 
+# ----------------------------------------------------------------------------
+# The ACTIVE model input: brent_10_90_fut_by_period.json (10th/90th, z=1.2816)
+# ----------------------------------------------------------------------------
+Z_ACTIVE = 1.2816            # 10th/90th percentiles — author decision 2026-07-27
+MODEL_PERIOD_WINDOWS = {     # the model's own investment-period windows
+    "2027": (2027, 2029), "2030": (2030, 2034), "2035": (2035, 2039),
+    "2040": (2040, 2044), "2045": (2045, 2049), "2050": (2050, 2054)}
+
+
+def period_json(z=Z_ACTIVE):
+    """Per-model-period Brent cases for apply_market_band.py: contract-level
+    real-2024$ futures and z-band percentiles, averaged over each model
+    period's delivery-year window; periods past the last listed contract
+    (Jan 2035) carry that contract's values, flat in real terms.
+
+    This is the recipe behind the committed
+    sources/market/brent_10_90_fut_by_period.json: until 2026-09-06 the JSON
+    had no in-repo writer (external-audit finding 6 — this script emitted
+    only the 5th/95th product). Regenerating from the vendored raw inputs
+    reproduces the committed values to <$0.001/bbl (the original ad-hoc run
+    read rounded CSV intermediates)."""
+    saved = globals()["Z90"]
+    globals()["Z90"] = z
+    df = build()
+    globals()["Z90"] = saved
+    years = pd.Series([d.year for d in df.delivery])
+    out = {}
+    for py, (y0, y1) in MODEL_PERIOD_WINDOWS.items():
+        sel = df[(years >= y0) & (years <= y1)]
+        if len(sel) == 0:
+            sel = df.iloc[[-1]]
+        out[py] = {"fut": sel.F_real24.mean(), "lo": sel.p5_real24.mean(),
+                   "hi": sel.p95_real24.mean()}
+    return out
+
+
+def check_or_write_json(write=False):
+    import json
+    path = os.path.join(OUT, "brent_10_90_fut_by_period.json")
+    new = period_json()
+    if os.path.exists(path) and not write:
+        old = json.load(open(path))
+        worst = max(abs(new[p][k] - old[p][k]) for p in old for k in old[p])
+        print(f"brent_10_90_fut_by_period.json: committed values reproduced "
+              f"to {worst:.6f} $/bbl (--write-json to replace)")
+        return worst < 0.01
+    with open(path, "w") as f:
+        json.dump(new, f, indent=1)
+    print(f"wrote {path} (z={Z_ACTIVE}, model-period windows)")
+    return True
+
+
 def main():
     df = build()
     per, months, grid = period_averages(df)
@@ -269,4 +321,9 @@ def main():
     print("\nWrote:", p_out, c_out, os.path.join(OUT, "brent_market_band.png"))
 
 if __name__ == "__main__":
+    import sys as _sys
+    if "--json-only" in _sys.argv:
+        ok = check_or_write_json(write="--write-json" in _sys.argv)
+        _sys.exit(0 if ok else 1)
     main()
+    check_or_write_json(write="--write-json" in _sys.argv)

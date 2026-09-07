@@ -99,7 +99,7 @@ def for_design(plan_dir, design):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--design", choices=DESIGNS, default="firmfloor")
+    ap.add_argument("--design", choices=DESIGNS, default="hybrid")
     args = ap.parse_args()
 
     print(f"design: {args.design}")

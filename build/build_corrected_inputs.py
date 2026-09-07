@@ -488,8 +488,14 @@ def _set_jera(out_dir):
 
 
 def egs_variant(out_dir, tag, scenario):
-    """gen_build_costs_egs_<tag>.csv = the corrected base with Oahu_EGS rows
-    swapped to the <case> cost trajectory (low/high)."""
+    """gen_build_costs_egs_<tag>.csv = the credited base with ONLY the
+    Oahu_EGS rows swapped to the <case> cost trajectory (low/high).
+
+    MUST be called after the 48E credit is applied to gen_build_costs.csv:
+    every non-EGS row is copied verbatim from the base on disk (asserted
+    below). Before 2026-09-05 this ran on the pre-credit table, so the EGS
+    sensitivities priced utility batteries x1/0.70 in 2027-2035 vintages
+    (external-audit finding 2; repaired by repair_egs_variant_credits.py)."""
     h, base = read_rows(out_dir / "gen_build_costs.csv")
     gp, by = h.index("GENERATION_PROJECT"), h.index("build_year")
     m = {yr: (ocst, fom) for (yr, ocst, fom) in egs_costs(scenario)}
@@ -504,7 +510,27 @@ def egs_variant(out_dir, tag, scenario):
             rows.append(["Oahu_EGS", r[by], ocst, ".", m[r[by]][1]])
         else:
             rows.append(r[:])
+    for a, b in zip(base, rows):
+        assert a[gp] == "Oahu_EGS" or a == b, \
+            f"egs_variant changed a non-EGS row: {a} -> {b}"
     write_rows(out_dir / f"gen_build_costs_egs_{tag}.csv", h, rows)
+
+
+def egs100_variant(out_dir):
+    """gen_info_egs100.csv = gen_info.csv with Oahu_EGS pinned to build 0 or
+    100 MW (gen_min_build_capacity=100). The EGS-sensitivity cells load it
+    via --input-alias to remove the degenerate marginal EGS decision that
+    stalled those MIPs (commit 644b5f1). Until 2026-09-06 it existed only as
+    a committed artifact with no producer (audit finding 3)."""
+    h, rows = read_rows(out_dir / "gen_info.csv")
+    gp, mb = h.index("GENERATION_PROJECT"), h.index("gen_min_build_capacity")
+    out = []
+    for r in rows:
+        r = r[:]
+        if r[gp] == "Oahu_EGS":
+            r[mb] = "100.0"
+        out.append(r)
+    write_rows(out_dir / "gen_info_egs100.csv", h, out)
 
 
 def modules_txt(out_dir):
@@ -525,8 +551,6 @@ def build_dir(base_dir, out_dir, slopes):
     rb = rebase_base_to_2024(out_dir)          # Ethan's ENTIRE 2027$ base -> 2024$
     ns, nb = correct_costs(out_dir)            # overwrite solar/battery with 2024$ source
     add_generators(out_dir)                    # append EGS/JERA/Waiau/comparators in 2024$
-    for tag, scen in [("low", "low"), ("high", "high")]:
-        egs_variant(out_dir, tag, scen)
     # break-even PV-cost sensitivity: solar capital+FOM x1.5 / x1.7 of the baseline
     # Battery-ITC variant (supplement): 30% federal storage credit (48E,
     # retained post-OBBB) modeled as utility-scale battery capital x0.70 —
@@ -561,8 +585,13 @@ def build_dir(base_dir, out_dir, slopes):
                     r[c] = f"{float(r[c]) * 0.70:.6f}"
         out.append(r)
     write_rows(out_dir / "gen_build_costs.csv", h, out)
+    # EGS variants AFTER the credit, so they inherit credited battery rows
+    # (ordering was the cause of external-audit finding 2)
+    for tag, scen in [("low", "low"), ("high", "high")]:
+        egs_variant(out_dir, tag, scen)
     for tag, mult in [("pv15", 1.5), ("pv17", 1.7)]:
         _pv_variant(out_dir, tag, mult)
+    egs100_variant(out_dir)
     modules_txt(out_dir)
     print(f"   rebased 2027$->2024$: {rb}; solar rows={ns} battery rows={nb}; "
           f"+EGS/JERA/Waiau/comparators; egs_low/ref/high + pv15/pv17 variants")
@@ -599,7 +628,11 @@ def jera_contingency_variant(out_dir, uplift=1.20):
         write_rows(out_dir / base.replace(".csv", "_jera120.csv"), h, out)
     # fuel curves (each Brent variant): LNG-tier fixed_cost (FSRU/pipeline) x uplift
     for fuel in ("fuel_supply_curves.csv", "fuel_supply_curves_lowbrent.csv",
-                 "fuel_supply_curves_highbrent.csv"):
+                 "fuel_supply_curves_highbrent.csv",
+                 # futures-strip central case (market band, 1c29a6d); was
+                 # missing here — the committed futbrent_jera120 files came
+                 # from a hand-extended call (audit finding 3)
+                 "fuel_supply_curves_futbrent.csv"):
         fp = out_dir / fuel
         if not fp.exists():
             continue
@@ -681,36 +714,120 @@ def verify(out_dir, expect_slopes):
     assert not fails, f"verification failed for {out_dir.name}"
 
 
-def main(targets=("reference", "lc"), atb_scen="Moderate", suffix=""):
+def verify_fuels(out_dir):
+    """The fuel-side checks verify() lacked (audit finding 3): the complete
+    expected file set, and two values anchored to the vendored market JSON
+    so a rebuild that silently regressed to the AEO fan would fail here."""
+    import json
+    expect = ["fuel_supply_curves.csv", "fuel_supply_curves_jera120.csv",
+              "fuel_supply_curves_lowbrent_aeo.csv",
+              "fuel_supply_curves_highbrent_aeo.csv", "gen_info_egs100.csv",
+              "gen_build_costs_noitc.csv"]
+    for case in ("lowbrent", "highbrent", "futbrent"):
+        expect += [f"fuel_supply_curves_{case}.csv",
+                   f"fuel_supply_curves_{case}_jera120.csv"]
+    missing = [f for f in expect if not (out_dir / f).exists()]
+    assert not missing, f"{out_dir.name}: rebuild missing {missing}"
+    PER = json.load(open(REPO / "sources" / "market" / "brent_10_90_fut_by_period.json"))
+
+    def lsfo(name, per):
+        for r in csv.DictReader(open(out_dir / name)):
+            if (r["fuel"] == "LSFO" and r["tier"] == "base"
+                    and r["period"] == str(per)):
+                return float(r["unit_cost"])
+
+    for per, name, key in ((2050, "fuel_supply_curves_lowbrent.csv", "lo"),
+                           (2035, "fuel_supply_curves_futbrent.csv", "fut")):
+        ref = lsfo("fuel_supply_curves.csv", per)
+        brent_ref = (ref * 6.22 - 37.30) / 0.7388
+        want = ref + (0.7388 / 6.22) * (PER[str(per)][key] - brent_ref)
+        got = lsfo(name, per)
+        assert abs(got - want) < 1e-5, (name, per, got, want)
+    print(f"   VERIFY-FUELS {out_dir.name}: file set complete; lowbrent-2050 and "
+          f"futbrent-2035 LSFO anchored to sources/market JSON -> OK")
+
+
+def compare_tree(staged, committed):
+    """Byte-compare a staged rebuild against the committed directory."""
+    import filecmp
+    s = {p.name for p in staged.iterdir() if p.is_file()}
+    c = {p.name for p in committed.iterdir() if p.is_file()}
+    diff = [n for n in sorted(s & c)
+            if not filecmp.cmp(staged / n, committed / n, shallow=False)]
+    only_c, only_s = sorted(c - s), sorted(s - c)
+    ok = not (diff or only_c or only_s)
+    print(f"== compare {staged.name} vs committed: "
+          f"{'BYTE-IDENTICAL (' + str(len(s)) + ' files)' if ok else 'DIFFERS'}")
+    for n in diff:
+        print(f"     differs: {n}")
+    for n in only_c:
+        print(f"     missing from rebuild: {n}")
+    for n in only_s:
+        print(f"     extra in rebuild: {n}")
+    return ok
+
+
+def main(targets=("reference", "lc"), atb_scen="Moderate", suffix="", in_place=False):
     """Build the input dirs.  atb_scen selects the ATB UtilityPV scenario for
     solar CAPEX/FOM ("Moderate" base, "Advanced" for the low-solar supplement);
-    suffix is appended to the output dir names (e.g. "_advsolar")."""
+    suffix is appended to the output dir names (e.g. "_advsolar").
+
+    By default builds into rebuild_staging/ and BYTE-COMPARES against the
+    committed directories, touching nothing live — this is the reproduction
+    check REVIEWER_GUIDE promises. Pass --in-place to overwrite the live
+    inputs_* directories (the only behavior before 2026-09-06, which also
+    lacked the market-band step and so would have silently restored the
+    superseded AEO low/high fuel cases: audit finding 3)."""
     global ATB_RENEW_SCEN
     ATB_RENEW_SCEN = atb_scen
+    root = REPO if in_place else REPO / "rebuild_staging"
+    root.mkdir(exist_ok=True)
     ref_dir, lc_dir = f"inputs{suffix}", f"inputs_lu_constrained_c{suffix}"
     if "reference" in targets:
-        build_dir(EHW_IGP / "reference_wslope" / "inputs", REPO / ref_dir, slopes=True)
-        verify(REPO / ref_dir, expect_slopes=True)
+        build_dir(EHW_IGP / "reference_wslope" / "inputs", root / ref_dir, slopes=True)
+        verify(root / ref_dir, expect_slopes=True)
     if "lc" in targets:
         build_dir(EHW_IGP / "constrained_c" / "inputs",
-                  REPO / lc_dir, slopes=False)
-        verify(REPO / lc_dir, expect_slopes=False)
+                  root / lc_dir, slopes=False)
+        verify(root / lc_dir, expect_slopes=False)
     built = [d for t, d in (("reference", ref_dir),
                             ("lc", lc_dir)) if t in targets]
     print(f"== regenerate real 2024$ low/high-Brent variants for: {', '.join(built)} ==")
-    subprocess.run(["python", str(REPO / "build" / "build_brent_variants.py"), *built], check=True)
-    for d in built:                            # needs the Brent fuel variants to exist first
-        jera_contingency_variant(REPO / d)     # +20% JERA-contingency (*_jera120) inputs
+    subprocess.run(["python", str(REPO / "build" / "build_brent_variants.py"),
+                    *[str(root / d) for d in built]], check=True)
+    # Market band ON TOP of the AEO fan, archiving the AEO files as *_aeo.csv
+    # — the committed layering (script existed since 1c29a6d but was only
+    # ever run by hand; the omission here was audit finding 3).
+    print("== apply market band (10th pct / futures / 90th pct; sources/market) ==")
+    subprocess.run(["python", str(REPO / "build" / "market_band" / "apply_market_band.py"),
+                    *[str(root / d) for d in built]], check=True)
+    for d in built:                            # needs ALL fuel variants to exist first
+        jera_contingency_variant(root / d)     # +20% JERA-contingency (*_jera120) inputs
     print(f"== wrote +20% JERA-contingency variants (gen_build_costs_jera120 + fuel *_jera120) ==")
+    for d in built:
+        verify_fuels(root / d)
+    if not in_place:
+        ok = True
+        for d in built:
+            if (REPO / d).exists():
+                ok = compare_tree(root / d, REPO / d) and ok
+        print("\nDONE (staging) — " + (
+            "rebuild reproduces the committed inputs byte-for-byte."
+            if ok else "DIFFERENCES FOUND (see above); live inputs untouched."))
+        return ok
     print("\nDONE — all inputs regenerated in real 2024$ (NPV valued 2027) from primary sources.")
+    return True
 
 
 if __name__ == "__main__":
     import sys
     argv = sys.argv[1:]
     adv = "advsolar" in argv                        # low-solar supplement (ATB Advanced)
-    targets = tuple(a for a in argv if a != "advsolar") or ("reference", "lc")
+    in_place = "--in-place" in argv
+    targets = tuple(a for a in argv if a not in ("advsolar", "--in-place")) \
+        or ("reference", "lc")
     if adv:
-        main(targets, atb_scen="Advanced", suffix="_advsolar")
+        ok = main(targets, atb_scen="Advanced", suffix="_advsolar", in_place=in_place)
     else:
-        main(targets)
+        ok = main(targets, in_place=in_place)
+    sys.exit(0 if ok else 1)

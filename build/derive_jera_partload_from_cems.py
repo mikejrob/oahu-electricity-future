@@ -58,10 +58,20 @@ for (pid, uid), g in df.groupby(["plant_id_eia", "emissions_unit_id_epa"]):
     if len(op) < MIN_HOURS:
         continue
     lmax = op.gross_load_mw.quantile(0.99)
-    # steady hours: both neighbors present and within RAMP_TOL of Lmax
+    # steady hours: both neighbors CONSECUTIVE (exactly one hour away) and
+    # within RAMP_TOL of Lmax. The old filter shifted on the already-filtered
+    # frame without checking timestamps, so an hour flanked by an outage,
+    # startup, or data gap could count as steady (audit finding 12). The
+    # committed curve predates this fix; refit awaits a CEMS re-pull (the
+    # national parquet is not retained locally) and any change flows into
+    # the correction re-solve wave with the rest of the JERA cells.
+    dt = op.operating_datetime_utc
+    adj_prev = (dt - dt.shift(1)).dt.total_seconds().eq(3600)
+    adj_next = (dt.shift(-1) - dt).dt.total_seconds().eq(3600)
     d_prev = (op.gross_load_mw - op.gross_load_mw.shift(1)).abs()
     d_next = (op.gross_load_mw - op.gross_load_mw.shift(-1)).abs()
-    steady = op[(d_prev <= RAMP_TOL * lmax) & (d_next <= RAMP_TOL * lmax)
+    steady = op[adj_prev & adj_next
+                & (d_prev <= RAMP_TOL * lmax) & (d_next <= RAMP_TOL * lmax)
                 & (op.gross_load_mw >= 0.25 * lmax)
                 & (op.gross_load_mw <= 1.02 * lmax)]
     if len(steady) < MIN_HOURS:
@@ -131,4 +141,4 @@ print(f"Oahu_JERA,{lmin:g},.,.,{a_j + b_j*lmin:.1f}")
 edges = [lmin, 75, 100, 125]
 edges = sorted(set(e for e in edges if e >= lmin))
 for lo, hi in zip(edges[:-1], edges[1:]):
-    print(f"Oahu_JERA,{lo}.0,{hi}.0,{b_j:.3f},.")
+    print(f"Oahu_JERA,{lo:g},{hi:g},{b_j:.3f},.")

@@ -134,3 +134,74 @@ This repository is built against it: vendored and hashed sources,
 byte-reproducible inputs, one-command verification (`verify_claims.py`),
 public scenario definitions, and a public comment process
 (`COMMENT_POLICY.md`).
+
+## September 2026: corrections from a code audit
+
+We audited the repository's code in early September — an automated
+external review plus our own follow-up verification — and found four
+errors. This is a pre-release, so we state them plainly here; every
+affected scenario has been re-solved, and the notes below record how
+the numbers moved.
+
+1. **Rooftop battery accounting created energy (the one that matters
+   most).** The script converting our estimated rooftop-battery behavior
+   into the model's loads wrote daily energy into a power column without
+   dividing by the two-hour block length, and spread each day's charging
+   allowance across the whole period rather than within the day. The
+   loads the model served therefore embodied rooftop batteries
+   delivering about twice the estimated 0.45 MWh per installed MWh per
+   day while drawing about a seventh of the charge that delivery
+   requires — free evening energy of roughly 146 GWh per year on the
+   conservative rooftop path, 314 on the trend path, and 840 on the
+   accelerated path by 2050. Re-solved, the correction raises levels by
+   about one percent: the base no-new-plant case moves from $25.83 to
+   $26.14 billion (+1.1 percent), and the median standard-cost cell
+   moves +1.25 percent (range +0.6 to +5.0 percent; the largest moves
+   sit on the accelerated-rooftop trajectory, which carried the most
+   free energy). Comparisons between scenarios shared the error on both
+   sides and moved less: the JERA-500 midpoint premium from +$0.75 to
+   +$0.68 billion, the repower penalty from $1.40 to $1.39 billion, the
+   net conversion saving from −$0.60 to −$0.65 billion. Rooftop growth
+   offsets less utility-scale solar than the published figures showed,
+   because part of that offset was the phantom energy: the 2050 utility
+   build is now about 4,200/3,800/3,400 MW across the conservative/
+   trend/accelerated rooftop trajectories (was 4,100/3,600/3,000), about
+   0.7 MW displaced per megawatt of rooftop capacity. The load builder
+   now proves daily energy conservation every time it runs, and an
+   independent checker verifies every built input directory from
+   physics.
+
+2. **The geothermal cost sensitivities overpriced batteries.** The
+   low/high EGS variant files were derived before the federal storage
+   credit was applied to the base table, so those 34 cells priced
+   utility batteries at 1/0.70 of the correct cost in 2027–2035 build
+   years. The base-case EGS finding used the correct table. Re-solved,
+   the affected cells move by up to about 1.8 percent in either
+   direction; the base-case saving is $0.56 billion before and after.
+
+3. **The low-solar-cost supplement was built on a stale tree.** The
+   ATB-Advanced inputs predated both the current-law storage/geothermal
+   credit and the continuous-EGS change; the tree was rebuilt and its
+   216 cells re-solved, moving −2.9 to +1.5 percent (median −0.5): the
+   missing credits pull those costs down while the load correction
+   pushes them up.
+
+4. **Twelve cells' solver tolerances were overstated.** The results
+   table reported the requested optimality gap as if achieved; the
+   retained solver logs show twelve cells stopped at their time limit
+   with gaps between 0.10 and 0.18 percent. The table now reports
+   requested and achieved gaps per cell from log evidence.
+
+The audit also surfaced reproduction and presentation defects that do
+not change published numbers, all fixed: the documented input rebuild
+would have regenerated a superseded oil-price basis (the committed
+inputs were correct; the pipeline now reproduces them byte-for-byte and
+verifies itself), the dominance-check gate validated first-pass rather
+than published solutions (re-run correctly on the published basis: no
+violations), the explorer's capacity view attributed all thermal
+capacity to oil, and Figure 5.1's demand line omitted flexible
+vehicle-charging and hydrogen loads (it now shows and verifies the full
+balance). One item stays flagged rather than resolved: the JERA
+part-load fuel curve rests on a source-data filter that could bridge
+gaps between operating hours; the filter is fixed, the refit awaits a
+re-pull of the raw data, and the affected scenarios re-solve regardless.

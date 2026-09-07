@@ -143,3 +143,24 @@ last listed contract (Jan 2035); the 95th at long horizons is dominated by the
 σ_long assumption (see sensitivities); quote date falls inside an active
 geopolitical-risk episode, which raises the front of the futures curve and
 front-tenor vols relative to a calm market.
+
+## The active model input: `brent_10_90_fut_by_period.json`
+
+The four oil cases the model actually solves on (author decision
+2026-07-27) use the **10th/90th percentiles** (z = 1.2816), not the
+5th/95th band documented above — the wider band was judged too extreme
+for headline sensitivity cases and is retained in
+`brent_market_percentiles.csv` for reference. The JSON carries, per model
+investment period (2027–29, 2030–34, ..., five-year windows), the
+contract-level real-2024$ futures (`fut`) and the z-band percentiles
+(`lo`/`hi`), averaged over contracts delivering in the window; periods
+beyond the last listed contract (Jan 2035) carry that contract's values,
+flat in real terms. `apply_market_band.py` maps these Brent cases onto
+the fuel supply curves.
+
+Writer: `build_market_percentiles.py --json-only` (compare mode; add
+`--write-json` to replace). Until 2026-09-06 the JSON had no in-repo
+writer (external-audit finding 6); the restored recipe reproduces the
+committed values to <$0.001/bbl from the vendored `raw/` inputs — the
+residue traces to the original ad-hoc run reading rounded CSV
+intermediates.

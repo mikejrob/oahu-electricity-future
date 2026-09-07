@@ -199,9 +199,22 @@ def fig_reliability():
     for r in csv.DictReader(open(D / "load_balance.csv")):
         ts = r["timestamp"]
         if ts[:10] in (EASY, HARD):
-            dem[ts] = float(r["zone_demand_mw"])
+            # the demand line must carry ALL non-storage withdrawals —
+            # flexible EV charging and hydrogen production were omitted
+            # before (audit finding 11: generation exceeded the line by up
+            # to ~280 MW with no visible reason), and fuel-cell supply
+            # joins the stack. Per-timepoint balance asserted below.
+            ev = float(r["ChargeEVs"] or 0)
+            h2 = (float(r["RunElectrolyzerMW"] or 0)
+                  + float(r["LiquifyHydrogenMW"] or 0))
+            fc = float(r["DispatchFuelCellMW"] or 0)
+            dem[ts] = float(r["zone_demand_mw"]) + ev + h2
             dist[ts] = float(r["ZoneTotalDistributedDispatch"])
             charge[ts] = float(r["StorageNetCharge"])
+            cen[ts]["FuelCell"] += fc
+            resid = (float(r["ZoneTotalCentralDispatch"]) + dist[ts] + fc
+                     - dem[ts] - charge[ts])
+            assert abs(resid) < 1.0, (ts, resid)
     # NET battery: in surplus hours the solver may charge and discharge the
     # same battery simultaneously (free disposal of surplus through round-trip
     # losses); the net flow is the meaningful display, with curtailment shown
@@ -230,7 +243,8 @@ def fig_reliability():
     for ts in dem:
         vd = cen[ts].get("SUN", 0.0) + cen[ts].get("WND", 0.0)
         cen[ts]["Curtailed"] = max(pot.get(ts, 0.0) - vd, 0.0) + disposal_loss[ts]
-    bands = [("Geothermal", "Geothermal", "#756bb1"),
+    bands = [("Hydrogen fuel cell", "FuelCell", "#c994c7"),
+             ("Geothermal", "Geothermal", "#756bb1"),
              ("Waste-to-energy", "MSW", "#7f7f7f"),
              ("Thermal (oil/LNG)", "multiple", "#843c39"),
              ("Wind", "WND", "#5fa2ce"),
@@ -261,7 +275,7 @@ def fig_reliability():
         edges = [int(t[11:13]) for t in ts] + [24]
         dvals = [dem[t] for t in ts] + [dem[ts[-1]]]
         ax.step(edges, dvals, where="post", color="black", lw=2.2,
-                label="Demand")
+                label="Demand (incl. EV + H\u2082 loads)")
         ax.axhline(0, color="black", lw=0.6)
         ax.set_title(title, fontsize=11)
         ax.set_xlabel("Hour of day")
