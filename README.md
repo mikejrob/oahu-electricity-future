@@ -64,7 +64,7 @@ tablet; the markdown remains the version of record.
   re-anchored to the corrected references (plan cells at 0.25 percent,
   refining). The LNG greenhouse ledger now nets the fuel cycle at NETL
   stage values: plant configurations trail the clean path before any
-  methane leakage. Reviewer edits from Jim Lazar's comments (unit
+  methane leakage. Edits from reviewer comments (unit
   configuration, mandate-bounded amortization, supply geography, Lazard
   v19 capital range), the land-screen perspective passage, and
   consistency fixes from an external repository audit.

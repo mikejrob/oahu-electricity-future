@@ -54,8 +54,13 @@ def drop(pool, keep, why):
     return keep
 
 
-names = drop(names, {n for n in names if any(f"_{o}" in n for o in OIL)},
-             "no oil token — jeraopt-style; add a sidecar entry if report-facing")
+# Report-facing cells without an oil token in the name (solved at
+# reference oil); the register carries them explicitly instead of
+# dropping them — the 2026-09 audit's jeraopt finding.
+ALWAYS = {"nlv2b_norps_lngconv_heco_jeraopt"}
+names = drop(names, {n for n in names
+                     if any(f"_{o}" in n for o in OIL) or n in ALWAYS},
+             "no oil token — jeraopt-style; add to ALWAYS if report-facing")
 names = drop(names, {n for n in names if "_plan_" not in n},
              "plan cells, registered via the plan tables")
 names = drop(names, {n for n in names if "_efor_" not in n and "battfix" not in n},
@@ -106,3 +111,35 @@ nov = sum(1 for r in rows if r["mipgap_achieved"]
 nev = sum(1 for r in rows if r["mipgap_achieved"])
 print(f"RESULTS_SUMMARY.csv: {len(rows)} scenarios ({n010} at 0.1% requested; "
       f"{nev} with achieved-gap evidence, {nov} above their requested gap)")
+
+
+# Sidecar register for the 14 constrained plan-pricing cells (Table 4.1):
+# they are excluded from the matrix above by design, and this file is the
+# audit trail that supports the table (2026-09 audit, open end closed).
+plan_rows = []
+for p in sorted(REPO.iterdir()):
+    m = re.match(r"^(R010_|R0015_)?outputs_(nlv2[bsa]_plan_.+hybrid.+)$", p.name)
+    if not m or not (p / "total_cost.txt").exists():
+        continue
+    name = m.group(2)
+    if any(r["scenario"] == name for r in plan_rows):
+        continue
+    for pre, gap in (("R010_outputs_", "0.001"), ("R0015_outputs_", "0.0015"),
+                     ("outputs_", "0.0025")):
+        tc = REPO / f"{pre}{name}" / "total_cost.txt"
+        if tc.exists():
+            ev = manifest.get(f"{pre}{name}", {})
+            plan_rows.append({
+                "scenario": name,
+                "total_cost_npv": f"{float(tc.read_text()):.2f}",
+                "mipgap_requested": gap,
+                "mipgap_achieved": ev.get("relmipgap_achieved", ""),
+                "termination": ev.get("phrase", ""),
+            })
+            break
+with open(REPO / "results" / "PLAN_CELLS.csv", "w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=list(plan_rows[0].keys()))
+    w.writeheader()
+    w.writerows(plan_rows)
+print(f"PLAN_CELLS.csv: {len(plan_rows)} plan cells "
+      f"({sum(1 for r in plan_rows if r['mipgap_requested']=='0.001')} at 0.1% requested)")

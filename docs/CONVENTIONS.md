@@ -111,7 +111,7 @@ cases. No Hawaiʻi premium on EGS capital.
   case already builds EGS (~$0.58B saving); the GeoVision low case raises the
   saving to ~$1.0B, which is why it is kept rather than pushed up to ATB.
   (EGS builds all-or-nothing at its resource cap, so the cost sensitivity is
-  a clean capital reprice; see SOLVER_NOTES.md.)
+  a clean capital reprice; the corrected fleet solves the low corner directly — see SOLVER_NOTES.md.)
 - **Open items:** an island premium for EGS capital (if warranted) is not
   applied; the 100 MW resource (NREL reV, GDR 1702, 2.5 km) is not yet vendored.
 

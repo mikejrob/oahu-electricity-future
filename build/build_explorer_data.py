@@ -697,7 +697,7 @@ def main():
         # wrong release number on the live site. It sat at pre-v1.02 through
         # the whole pre-v1.03 release because that release touched no file
         # under explorer/.
-        "version": "pre-v1.031",
+        "version": "pre-v1.032",
     }
     (OUT / "meta.json").write_text(json.dumps(meta, indent=1))
     print(f"  meta.json: {meta['scenarios']} scenarios = "

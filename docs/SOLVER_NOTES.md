@@ -88,7 +88,14 @@ sensitivity is a **capital reprice** off two clean base cells:
 - reported value = `min(skip, built corner)`; EGS builds iff the built
   corner is cheaper.
 
-At reference oil: high cost → skip (27.30, 0 MW); ref → build (26.72,
+**Corrected-fleet status (September 2026):** the low corner is now
+solved directly at 0.1 percent (25.80 against the 26.67 blocked cell, a
+$0.88B saving — the reprice had estimated ~$1.0B); the high corner
+remains the skip identity, and the reference corner is the baseline
+itself (26.11, $0.56B saving). The reprice machinery below is kept as
+the method for any EGS price not solved.
+
+At reference oil on the OLD fleet: high cost → skip (27.30, 0 MW); ref → build (26.72,
 $0.58B saving); low → build (~26.30, ~$1.0B). Report EGS numbers are
 derived this way; `sanity_check_results.py` treats these cells as
 optional.

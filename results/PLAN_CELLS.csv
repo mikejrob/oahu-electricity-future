@@ -1,0 +1,15 @@
+scenario,total_cost_npv,mipgap_requested,mipgap_achieved,termination
+nlv2s_plan_hseo_lng_pv17_hybrid_refbrent,30013885924.72,0.001,0.00091144,optimal (non-)integer solution within mipgap or absmipgap
+nlv2a_plan_igp_alt_xf_hybrid_refbrent,27120409978.23,0.0025,0.00179286,optimal integer solution within mipgap or absmipgap
+nlv2a_plan_igp_pref_hybrid_refbrent,27705737546.67,0.0025,0.0065395,time limit with integer solution
+nlv2a_plan_igp_pref_pv15_hybrid_refbrent,28770943316.06,0.0025,0.00233696,optimal (non-)integer solution within mipgap or absmipgap
+nlv2a_plan_igp_pref_pv17_hybrid_refbrent,29223655285.35,0.0025,0.00504696,time limit with integer solution
+nlv2b_plan_igp_alt_hybrid_refbrent,28295633882.18,0.0025,0.00226122,optimal integer solution within mipgap or absmipgap
+nlv2b_plan_igp_alt_pv15_hybrid_refbrent,30459747337.77,0.0025,0.00212887,optimal integer solution within mipgap or absmipgap
+nlv2b_plan_igp_alt_pv17_hybrid_refbrent,31252831638.90,0.0025,0.00154959,optimal integer solution within mipgap or absmipgap
+nlv2b_plan_igp_pref_xf_hybrid_refbrent,29028797567.23,0.0025,0.00239637,optimal integer solution within mipgap or absmipgap
+nlv2s_plan_hseo_lng_hybrid_refbrent,28562238820.56,0.0025,0.00246333,optimal (non-)integer solution within mipgap or absmipgap
+nlv2s_plan_hseo_lng_pv15_hybrid_refbrent,29648788935.50,0.0025,0.00231213,optimal integer solution within mipgap or absmipgap
+nlv2s_plan_hseo_oil_hybrid_refbrent,29338250417.22,0.0025,0.00248187,optimal integer solution within mipgap or absmipgap
+nlv2s_plan_hseo_oil_pv15_hybrid_refbrent,30485276693.43,0.0025,0.00245938,optimal (non-)integer solution within mipgap or absmipgap
+nlv2s_plan_hseo_oil_pv17_hybrid_refbrent,30902843097.43,0.0025,0.00244761,optimal integer solution within mipgap or absmipgap

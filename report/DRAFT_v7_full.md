@@ -33,7 +33,7 @@ batteries.** Solar delivered here costs far more than other states. The
 evidence points mainly to soft costs: long procurement cycles, permitting,
 interconnection queues, and customer acquisition. Note that soft costs 
 are already high in the United States as compared to other countries, owing 
-mainly to a very large interconnection queue, but Hawai‘i's costs considerably
+mainly to a large interconnection queue, but Hawai‘i's costs considerably
 higher, even though the size of its queue is paltry. The size of the cost gap is
 hard to measure precisely. If solar and battery costs stay 50 percent above
 our baseline for the whole period, total system cost rises by about $2.1
@@ -184,7 +184,7 @@ The repower's six small units carry a resiliency argument the model does not
 formally test: no unit in v1 ever suffers a forced outage, but all hours carry 
 reserves large enough to survive a forced outage of the largest plant. Section 6.3
 provides some approximate and likely conservative reliability measures. Systems 
-without the repower appear to be very resilient to a wide range of extreme 
+without the repower appear resilient to a wide range of extreme 
 events, but we have not tested this formally with simulation exercises. Pricing 
 outages would cut hardest against large units and against plants whose units share 
 one site and one fuel supply. If a new plant is built at all, 500 MW is larger 
@@ -3251,12 +3251,6 @@ better evidence, and we commit to publishing whatever the numbers say.
   canopy structures over parking lots, on buildings, and over public and
   private walkways.
   
-We thank Jim Lazar for detailed review comments spanning unit sizing
-and contingency, the Waiau repower's operating envelope, distributed
-solar policy, and the LNG fuel cycle; his push to price the liquefaction
-and shipping energy rather than footnote it reshaped Section 4.9's
-ledger. Remaining errors are ours.
-
 The model, inputs, code, and every number here are public. We invite
 specific, sourced challenges to any input or finding — from Hawaiian
 Electric, HSEO, JERA, and every other reader. The findings can be

@@ -155,13 +155,15 @@ the numbers moved.
    conservative rooftop path, 314 on the trend path, and 840 on the
    accelerated path by 2050. Re-solved, the correction raises levels by
    about one percent: the base no-new-plant case moves from $25.83 to
-   $26.14 billion (+1.1 percent), and the median standard-cost cell
-   moves +1.25 percent (range +0.6 to +5.0 percent; the largest moves
-   sit on the accelerated-rooftop trajectory, which carried the most
-   free energy). Comparisons between scenarios shared the error on both
+   $26.11 billion (+1.1 percent), and the median standard-cost cell
+   moves +1.3 percent (the largest moves, to +4.6 percent, sit on the
+   accelerated-rooftop trajectory, which carried the most free energy;
+   the four optimistic-EGS cells fall up to 1.7 percent because their
+   published values were capital reprices and the corrected fleet
+   solves them directly). Comparisons between scenarios shared the error on both
    sides and moved less: the JERA-500 midpoint premium from +$0.75 to
-   +$0.68 billion, the repower penalty from $1.40 to $1.39 billion, the
-   net conversion saving from −$0.60 to −$0.65 billion. Rooftop growth
+   +$0.70 billion, the repower penalty from $1.40 to $1.39 billion, the
+   net conversion saving from −$0.60 to −$0.63 billion. Rooftop growth
    offsets less utility-scale solar than the published figures showed,
    because part of that offset was the phantom energy: the 2050 utility
    build is now about 4,200/3,800/3,400 MW across the conservative/

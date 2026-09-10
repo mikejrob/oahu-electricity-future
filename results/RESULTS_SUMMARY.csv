@@ -206,6 +206,7 @@ nlv2b_norps_LNG500_refbrent,25811129956.41,0.001,0.00099973,optimal (non-)intege
 nlv2b_norps_LNG500_refbrent_j120,26343839241.41,0.001,0.00099963,optimal integer solution within mipgap or absmipgap,2026-09-06 15:36
 nlv2b_norps_LNGOPT_refbrent,25662063845.02,0.001,0.0013086,time limit with integer solution,2026-09-07 11:32
 nlv2b_norps_NOTHERMAL_refbrent,25853856006.27,0.001,0.00131188,time limit with integer solution,2026-09-07 11:35
+nlv2b_norps_lngconv_heco_jeraopt,24293068707.48,0.001,0.0012896,time limit with integer solution,2026-09-07 14:35
 nlv2b_norps_lngconv_heco_refbrent,24353484242.49,0.001,0.000989056,optimal integer solution within mipgap or absmipgap,2026-09-06 18:27
 nlv2b_norps_lngconv_opt_refbrent,25254773621.23,0.001,0.00137466,time limit with integer solution,2026-09-07 11:41
 nlv2b_sq_lngfree_refbrent,27163310440.02,0.001,0.000988611,optimal (non-)integer solution within mipgap or absmipgap,2026-09-07 04:29

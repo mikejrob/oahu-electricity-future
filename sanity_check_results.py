@@ -26,10 +26,10 @@ PFX = "outputs_p001_" if "--p001" in sys.argv else "outputs_"
 BR = ["lowbrent", "refbrent", "highbrent"]
 viol, missing = [], []
 
-# The EGS cost-sensitivity corners are DERIVED (a capital reprice off the
-# clean egs_none/egs_ref cells — docs/SOLVER_NOTES.md "EGS sensitivity is
-# analytical"), not required solves. If a legacy solved cell exists it is
-# still checked for monotonicity; if absent it is not a missing solve.
+# The EGS cost-sensitivity corners were DERIVED on the old fleet (a
+# capital reprice off the clean egs_none/egs_ref cells — SOLVER_NOTES.md);
+# the corrected fleet solves the low corner directly. Solved cells are
+# checked for monotonicity; an absent corner is not a missing solve.
 OPTIONAL = {"egs_high_no_lng_refbrent", "egs_low_no_lng_refbrent"}
 
 
