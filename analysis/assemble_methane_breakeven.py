@@ -25,6 +25,15 @@ REPO = Path(__file__).resolve().parent.parent
 YRS = {2027: 3, 2030: 5, 2035: 5, 2040: 5, 2045: 5, 2050: 5}
 KG_CH4_PER_MMBTU = 19.3
 GWP100, GWP20 = 30.0, 82.5
+# LNG-specific fuel-cycle CO2e (liquefaction + ocean transport +
+# regasification), per MMBtu delivered: NETL 2019 LNG export study
+# (sources/NETL_LNG_LCA_2019.pdf, sha256 d2af3657...), Exhibit 6-3
+# (U.S. Gulf to Rotterdam, ~9,000 km — comparable to Gulf-to-Hawaii):
+# 38 + 28 + 4 = 70 kg CO2e/MWh generated at the study's 46.4% net plant
+# efficiency = 70 * 1.0551/3.6 * 0.464 = 9.5 kg CO2e per MMBtu of
+# delivered gas. Stage CH4 (boil-off, terminal fugitives) is inside this
+# figure and OUTSIDE Sherwin's basin measurements, so no double count.
+KG_FUELCYCLE_CO2_PER_MMBTU = 9.5
 
 # (label, LNG cell, matched comparator)
 OWN = [
@@ -105,7 +114,8 @@ def lng_mmbtu(d):
 def table(title, rows):
     print(f"\n== {title}")
     print(f"{'pathway':34s} {'imports':>9} {'CH4 Mt':>7} {'edge Mt':>8} "
-          f"{'BE 100yr':>9} {'BE 20yr':>8}")
+          f"{'net Mt':>7} {'BE 100yr':>9} {'BE 20yr':>8} "
+          f"{'netBE100':>9} {'netBE20':>8}")
     for label, lng_cell, ref_cell in rows:
         ld, rd = best(lng_cell), best(ref_cell)
         if ld is None or rd is None:
@@ -115,14 +125,15 @@ def table(title, rows):
         imp = lng_mmbtu(ld)
         thr = imp * KG_CH4_PER_MMBTU / 1e9
         edge = cum_co2_mt(rd) - cum_co2_mt(ld)
+        net = edge - imp * KG_FUELCYCLE_CO2_PER_MMBTU / 1e9
         if thr <= 0:
             continue
-        if edge <= 0:
-            print(f"{label:34s} {imp/1e6:8.1f}M {thr:7.2f} {edge:+8.2f} "
-                  f"{'—':>9} {'—':>8}   (no combustion edge to erase)")
-            continue
+
+        def be(e, g):
+            return f"{e/(thr*g)*100:8.2f}%" if e > 0 else f"{'behind':>9}"
         print(f"{label:34s} {imp/1e6:8.1f}M {thr:7.2f} {edge:+8.2f} "
-              f"{edge/(thr*GWP100)*100:8.2f}% {edge/(thr*GWP20)*100:7.2f}%")
+              f"{net:+7.2f} {be(edge, GWP100)} {be(edge, GWP20):>8} "
+              f"{be(net, GWP100)} {be(net, GWP20):>8}")
 
 
 def main():

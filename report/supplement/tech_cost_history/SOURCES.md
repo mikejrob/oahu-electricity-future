@@ -18,7 +18,7 @@ cited). Every number in `tech_cost_history.md` and the figures traces to an entr
 Standardized "ATBe" long-format CSVs, one per vintage, from NREL's Open Energy Data Initiative
 (OEDI) data lake on AWS S3. Same schema as the repo's existing 2024 slice.
 
-| ATB vintage | File (in data/atbe_csv/) | Source URL | Dollar-year* |
+| ATB vintage | File (in data/atbe_csv.tar.xz (extracts to data/atbe_csv/): ) | Source URL | Dollar-year* |
 |---|---|---|---|
 | 2019 | ATBe_2019.csv | https://oedi-data-lake.s3.amazonaws.com/ATB/electricity/csv/2019/ATBe.csv | 2017$ (DC basis) |
 | 2020 | ATBe_2020.csv | https://oedi-data-lake.s3.amazonaws.com/ATB/electricity/csv/2020/ATBe.csv | 2018$ |

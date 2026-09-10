@@ -3,12 +3,12 @@ title: "Hawaiʻi's Electricity Future: Solar Reform, Enhanced Geothermal, and th
 author:
  - "Ethan Hartley, *University of Hawaiʻi Department of Economics*"
  - "Michael J. Roberts, *University of Hawaiʻi Department of Economics, Sea Grant, and UHERO*"
-date: "pre-v1.031 DRAFT — August 2026 · open for comment"
-note: "This is a preliminary release, pre-v1.031, open for public comment; we ask that comments and suggestions arrive by September 15, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; the changes relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
-  results are at 0.1% optimization tolerance, with a handful of degenerate
-  cells at 0.15% pending tighter re-solves (docs/HARD_CELLS.md) and the EGS
-  cost sensitivity carried as a documented capital reprice
-  (docs/SOLVER_NOTES.md)."
+date: "pre-v1.032 DRAFT — September 2026 · open for comment"
+note: "This is a preliminary release, pre-v1.032, open for public comment; we ask that comments and suggestions arrive by September 15, 2026 (tentative; the repository README carries the current date). After the comment period and our responses, the report will be locked as version 1, and further suggestions will be directed to the v2 regional-grid model. This report supersedes the authors' 2026 working paper; the changes relative to it are documented in docs/CORRECTIONS.md. All dollar figures are real 2024 US$, present value as of 2027. Scenario
+  results are at 0.1% optimization tolerance; a handful of hard cells
+  stopped marginally above it at their time limit, and
+  results/RESULTS_SUMMARY.csv records each cell's requested and achieved
+  gap (docs/HARD_CELLS.md)."
 ---
 
 ## Executive Summary
@@ -59,7 +59,7 @@ hours each day (Appendix A.11). Because each megawatt of rooftop capacity
 displaces about 0.7 MW of utility-scale solar, rooftop growth determines how 
 much open land is needed for grid-scale solar. Limited further growth of rooftop solar leads to 
 about 4,200 MW of utility-scale solar on about 20,900 acres by 2050; continuing
-the current trend requires only about 3,800 MW on about 19,100 acres.
+the current trend requires only about 3,800 MW on about 19,000 acres.
 Removing sellback limits could grow rooftop capacity much faster: pay
 households and businesses the full value of all the power they export, even
 when it exceeds the value of what they draw from the grid, instead of
@@ -100,7 +100,7 @@ not the plant. The same modern plant burning today's fuel oil costs even more,
 while LNG burned in existing plants saves money. JERA's new plant, even in 
 its best case — its lowest capital estimate, with solar at twice mainland 
 cost — roughly breaks even. Converting the independent Kalaeloa plant alone 
-saves $0.40 billion, and converting Hawaiian Electric's Kahe 5 and 6 and 
+saves $0.39 billion, and converting Hawaiian Electric's Kahe 5 and 6 and 
 its Campbell Industrial Park (CIP) combustion turbine as well saves nearly 
 three times as much, with no new construction. The savings hold up under conservative accounting: charging Hawaiian Electric's entire 2016 multi-island
 conversion budget ($450 million in today's dollars) against just the three
@@ -132,8 +132,12 @@ the same way. The proposal commits Oʻahu to a single supplier for two
 decades: twenty years of operation for the floating import terminal (FSRU),
 under supply-contract terms not yet public that are likely written to 
 protect the supplier, so the quoted price is best read as a floor. It 
-defers roughly a decade of clean-energy deployment and likely increases 
-greenhouse gas emissions. And it strands Hawaiian Electric's generation 
+defers roughly a decade of clean-energy deployment, and it increases 
+total greenhouse emissions: pricing the liquefaction, shipping, and 
+regasification energy at the Department of Energy's own stage values 
+erases the combustion advantage before any methane leakage is counted, 
+and measured U.S. leakage — 2.95 percent production-weighted — pushes 
+the LNG path further behind (Section 4.9). And it strands Hawaiian Electric's generation 
 assets, a loss that falls on the utility's already fragile finances if 
 capital recovery is disallowed, or on its customers if it is allowed 
 (Sections 4 and 8).
@@ -144,8 +148,9 @@ its own underground reservoir rather than relying on natural steam, enters
 the cheapest build under the federal geothermal tax credit: the model
 develops the full ~100 MW of identified Oʻahu resource in the base case,
 lowering system cost by about $0.56 billion. At the optimistic cost
-projection the saving roughly doubles; at the pessimistic projection the
-model builds nothing and loses nothing, so the downside is bounded.
+projection the saving rises to about $0.9 billion; at the pessimistic
+projection the model builds nothing and loses nothing, so the downside is
+bounded.
 Enhanced Geothermal is therefore part of the cheapest way to run the
 island, provided a first demonstration project proves the resource works
 here (Section 3) and development proceeds in partnership with Native Hawaiian 
@@ -168,7 +173,7 @@ Ultimately, the LNG question is largely separate from the land-use question: Haw
 Next, reliability. Every scenario keeps the lights on at every modeled hour, 
 across weather drawn from the 2007–2008 record (where we have the best-quality data), including its single hardest day of low sun, weak winds, and an evening peak, plus a reserve margin that can survive the largest plant falling offline. Oʻahu does not need additional thermal generation for reliability: the existing fleet, plus the planned 99 MW Puʻuloa thermal plant, suffices. Some claim a high-renewable grid still needs enough firm capacity to meet peak demand. It does not. What it needs is approximately enough firm resources to cover the highest daily average demand net of solar and wind. Ample battery storage moves energy within the day and gross demand is generally lower on low-sun, low-wind days, and even the worst days produce some solar energy (Section 5). 
 
-Last, the mandate itself. Keeping the 2045 clean-energy requirement costs about $0.27 billion, roughly two-tenths of a cent per kilowatt-hour, because the cheapest path runs ahead of the requirement through 2040 anyway and builds 91 percent of the solar even if the requirement is removed. Abandoning it saves about $0.47 billion (about 0.3 cents per kilowatt-hour) if the replacement is a new gas plant and import terminal, and up to about $0.7 billion if existing plants are converted to LNG instead, the cheaper route Finding 3 identifies. We tested whether a new, more efficient plant can pay for itself in a no-mandate world when the model may choose freely: it declines the 2030 plant entirely and adds at most about 250 MW around 2045, as the converted units age out, for a savings that lies within the solve tolerance (Section 4.8). Either way, capturing this modest saving requires abandoning the clean-energy mandate, committing to a long-term contract, hoping (awkwardly) that geothermal and solar don't overperform, and hoping the contract price, or better, holds throughout. That last hope looks dubious: today's spot price (JKM, the Asian spot-LNG marker, July 2026) hovers around $21–22/MMBtu, nearly double the reference contract price we assume (Section 4.8).
+Last, the mandate itself. Keeping the 2045 clean-energy requirement costs about $0.26 billion, roughly two-tenths of a cent per kilowatt-hour, because the cheapest path runs ahead of the requirement through 2040 anyway and builds 91 percent of the solar even if the requirement is removed. Abandoning it saves about $0.45 billion (about 0.3 cents per kilowatt-hour) if the replacement is a new gas plant and import terminal, and up to about $0.7 billion if existing plants are converted to LNG instead, the cheaper route Finding 3 identifies. We tested whether a new, more efficient plant can pay for itself in a no-mandate world when the model may choose freely: it declines the 2030 plant entirely and adds at most about 250 MW around 2045, as the converted units age out, for a savings that lies within the solve tolerance (Section 4.8). Either way, capturing this modest saving requires abandoning the clean-energy mandate, committing to a long-term contract, hoping (awkwardly) that geothermal and solar don't overperform, and hoping the contract price, or better, holds throughout. That last hope looks dubious: today's spot price (JKM, the Asian spot-LNG marker, July 2026) hovers around $21–22/MMBtu, nearly double the reference contract price we assume (Section 4.8).
 
 **Also decisive.** The Waiau Repower, Hawaiian Electric's proposal to
 rebuild its old Waiau oil units, raises system cost by $1.35 to $1.49 
@@ -187,8 +192,7 @@ than the system wants: a 375 MW version does modestly better in every configurat
 
 **Table ES.1 — Total 2027–2050 system cost by trajectory and oil price
 (present value, billions of 2024$; difference vs. no new fuel plant in
-parentheses; current-law base case, 0.1% solve tolerance — two LSFO
-oil-path entries pending refinement at 0.25%).** JERA rows show
+parentheses; current-law base case, 0.1% solve tolerance).** JERA rows show
 the midpoint of the bare construction estimate (bare-EPC: engineering,
 procurement, and construction, excluding contingency and similar items) and
 the +20% capital case; the band spans the two (Figure ES.1). The conversion
@@ -213,7 +217,7 @@ above zero cost more than building no new plant.
 |---|---:|---:|---:|---:|
 | No new fuel plant | 21.35 | 24.54 | 26.11 | 27.62 |
 | LNG conversions, no new plant — net of conversion capital | — | — | 25.48 (−0.63) *[−0.37]* | — |
-| Modern LSFO plant (250 MW) | 22.02 (+0.68) | 25.04 (+0.50) | 26.53 (+0.42) | 28.21 (+0.60) |
+| Modern LSFO plant (250 MW) | 22.00 (+0.65) | 25.00 (+0.46) | 26.53 (+0.42) | 28.21 (+0.60) |
 | JERA LNG 500 MW — midpoint | 22.96 (+1.61) | 25.16 (+0.62) | 26.81 (+0.70) | 28.78 (+1.16) |
 | *…JERA band [bare-EPC, +20%]* | *[+1.40, +1.82]* | *[+0.41, +0.83]* | *[+0.49, +0.91]* | *[+0.95, +1.37]* |
 | Waiau Repower only | 22.73 (+1.38) | 25.93 (+1.39) | 27.50 (+1.39) | 29.10 (+1.49) |
@@ -317,8 +321,8 @@ At the baseline cost basis — NREL ATB 2024 Moderate for solar and battery,
 plus a 20 percent Hawaiʻi premium, with the battery's co-location saving taken
 from NREL's own PV-plus-battery hybrid — total 2027–2050 system cost is $26.11
 billion at reference oil prices. Holding solar and battery costs 50 percent
-above that baseline for the full horizon raises system cost to $28.29 billion
-(+$2.1B); 70 percent above raises it to $29.01 billion (+$2.9B). The
+above that baseline for the full horizon raises system cost to $28.26 billion
+(+$2.1B); 70 percent above raises it to $28.98 billion (+$2.9B). The
 baseline already includes the 20 percent Hawaiʻi premium, so these cases
 correspond to roughly 1.8× and 2.0× the mainland ATB benchmark; the 1.5×
 case approximates the effective cost level implied by recently approved
@@ -637,7 +641,7 @@ in merit order, and 41 of the 54 land tranches are built to their caps in
 the least-cost 2050 build, so a worse acreage requirement shrinks every
 tranche's cap and pushes construction outward into steeper, costlier,
 lower-capacity-factor land. At five acres per megawatt, the 2050 build needs 
-about 20,900 acres (about 19,100 on the trend rooftop trajectory).² The model 
+about 20,900 acres (about 19,000 on the trend rooftop trajectory).² The model 
 assumes tracking solar throughout, because that is
 what the optimization selects. If land constraints were ever to bite, the
 next step is parcel-level characterization and a wider technology menu —
@@ -1008,7 +1012,11 @@ these surfaces. Rooftop and canopy solar is also a partial escape from the
 soft-cost problem itself: Honolulu rooftop pricing is near mainland levels
 (Section 2.3), and larger commercial-scale installations would improve its
 economies further. Among the levers in this report, liberalizing
-distributed-solar tariffs is the easiest. Concern about the land requirement 
+distributed-solar tariffs is the easiest. Between tariff reform and the
+full retail wheeling of Act 266 sits a smaller step: letting a rooftop
+serve the building next door on the same parcel. Jurisdictions with high
+rooftop penetration are testing this now, South Australia first among
+them. Concern about the land requirement 
 is itself an argument for the rooftop reform: every megawatt added on a roof 
 or canopy reduces the utility-scale build and the land it needs.
 
@@ -1086,9 +1094,9 @@ mandated build — and oil's share of grid supply falls under 5 percent
 by 2050 on economics alone. What the mandate buys is pace at the end: without
 it the model keeps about 22 percent oil in 2040 and 9 percent in 2045,
 retiring it over the following decade as solar and storage costs decline.
-The system-cost difference is about $0.27 billion in present value, roughly
-0.2 cents per kilowatt-hour (both cells at the 0.1 percent solve
-tolerance). Achieved efficiently, the mandate is cheap insurance on pace;
+The system-cost difference is about $0.26 billion in present value, roughly
+0.2 cents per kilowatt-hour — several times both cells' solve gaps
+(recorded per cell in results/RESULTS_SUMMARY.csv). Achieved efficiently, the mandate is cheap insurance on pace;
 the paths converge to nearly the same place either way. Figure 4.4 sets
 the no-mandate path beside HECO's and HSEO's published plans.
 
@@ -1220,21 +1228,22 @@ resource in the base case.
 |---|---:|---|---:|
 | Option off / none | 26.67 | 0 MW | — |
 | High ($14.7M/MW gross) | ~26.67 | 0 MW | ~$0 |
-| Reference ($10M/MW gross) | 26.15 | 100 MW | $0.53B |
-| Low ($6.2M/MW gross) | ~25.7 | 100 MW | ~$1.0B |
+| Reference ($10M/MW gross) | 26.11 | 100 MW | $0.56B |
+| Low ($6.2M/MW gross) | 25.80 | 100 MW | $0.88B |
 
 At reference cost — the base-case assumption — Enhanced Geothermal is part of
-the cheapest build: the no-new-plant baseline of $26.14 billion already contains 
+the cheapest build: the no-new-plant baseline of $26.11 billion already contains 
 100 MW of it, and blocking it would raise that baseline by $0.56 billion. At the 
-optimistic cost, the saving roughly doubles. At the pessimistic cost, the model builds 
+optimistic cost, the saving rises to $0.88 billion. At the pessimistic cost, the model builds 
 nothing and loses nothing, so the downside is bounded. Because Enhanced Geothermal 
 builds all-or-nothing at its resource cap and its dispatch does not change with its 
-capital cost, the sensitivity is a capital reprice off the reference and blocked
-cases; see docs/SOLVER_NOTES.md in the repository. 
+capital cost, the high case (which builds nothing) reproduces the blocked
+case, and the optimistic case is solved directly; see docs/SOLVER_NOTES.md
+in the repository. 
 
 Enhanced Geothermal also saves land. Against its no-EGS counterpart, the
-solved base case's 100 MW block displaces about 490 MW of utility solar —
-about 2,400 acres at five acres per MW — along with about 170 MW (1,400
+solved base case's 100 MW block displaces about 480 MW of utility solar —
+about 2,400 acres at five acres per MW — along with about 230 MW (1,600
 MWh) of storage. And if the developable resource on Oʻahu proves larger than the
 roughly 100 MW modeled here, both cost and land requirements fall further.
 
@@ -1294,8 +1303,8 @@ valuable when it stalls.
 
 ### 3.3 What EGS does for the system
 
-When built, the ~100 MW of flat zero-carbon baseload displaces about 490 MW of
-utility solar and 170 MW (1,400 MWh) of storage in the solved base case and, in
+When built, the ~100 MW of flat zero-carbon baseload displaces about 480 MW of
+utility solar and 230 MW (1,600 MWh) of storage in the solved base case and, in
 LNG-forced scenarios, displaces the most expensive LNG dispatch hours.
 Reliability is preserved at every modeled hour in either case; what changes is
 the build mix and its cost.
@@ -1358,6 +1367,15 @@ increase. One caution attaches. We price the smaller plant at the same
 dollars-per-kilowatt as the 500 MW proposal, while JERA attributes its
 attractive unit cost partly to scale (proposal p. 17), so the 375 MW figure
 may understate what a smaller plant would actually cost.
+
+Configuration matters for reliability as well as price. The model builds
+the 500 MW as four 125 MW units and holds spinning reserve against the
+largest unit online — in line with the existing fleet, whose largest
+machines are Kahe 5 and 6 at about 130 MW. The proposal does not specify
+a unit configuration. A monolithic single-shaft build would put more
+capacity on one contingency than the island has ever carried and raise
+the reserve the rest of the system must hold; the modular assumption
+here is the generous one.
 
 **The JERA-500 versus no-new-plant comparison favors no new plant, and the
 margin moves with solar costs.** At the midpoint of JERA's capital range the
@@ -1477,14 +1495,23 @@ consider this fair and still conservative: across 401 electricity projects
 studied, three in four exceeded their cost estimates, with thermal plants
 averaging about 13 percent overruns (Sovacool, Gilbert & Nugent 2014). The
 band's +20 percent top therefore sits above the thermal-plant average, on an
-estimate that itself excludes contingency.
+estimate that itself excludes contingency. The plant is amortized over a
+15-year life ending in 2045, the same lease-to-the-mandate structure
+applied to the terminal (Appendix A.8). It could run past 2045 on
+renewable fuel (biodiesel, or hydrogen after conversion), but with
+biodiesel prices near $33/MMBtu and many other plants available, the
+residual duty is worth little.
 
 The quoted price deserves comment in the current market. Gas-turbine supply
 chains are strained: Lazard's June 2025 review reports the cost of a new
 combined cycle at a ten-year high, with recently observed market quotes of
 $2,400–2,600/kW for mainland projects entering service after 2028 and
 turbine shortages driving long lead times (Lazard LCOE+ June 2025, pp. 4, 8,
-vendored in `sources/`). Hawaiʻi construction carries its own premium on
+vendored in `sources/`). Lazard's 2026 edition carries the combined-cycle
+capital range at $1,450–2,100/kW with a 24-month build (LCOE+ v19,
+assumptions p. 28, vendored in `sources/`). Our $2,900/kW basis for a
+Hawaiʻi build (Section 4.3) sits above the top of that range and above
+the mainland quotes. Hawaiʻi construction carries its own premium on
 top. Against that backdrop, $3,020/kW for a Hawaiʻi CCGT is an attractive
 price, if JERA can deliver it. For reference, HECO's 2016 planning assumptions priced a
 small (152 MW) unit at $4,050/kW (nominal; ≈$3,900/kW in 2024$), roughly a
@@ -1543,7 +1570,7 @@ against building no new fuel plant, in billions of 2024$ at reference oil:
 
 | | Burns LSFO (today's fuel) | Burns LNG (terminal built) |
 |---|---:|---:|
-| **Existing plants only** | baseline (0) | −0.40 (Kalaeloa converted) to −1.08 (also Kahe 5 & 6, CIP CT); −0.63 net of the full 2016 conversion-program charge |
+| **Existing plants only** | baseline (0) | −0.39 (Kalaeloa converted) to −1.08 (also Kahe 5 & 6, CIP CT); −0.63 net of the full 2016 conversion-program charge |
 | **New 500 MW combined cycle** | +1.21 | +0.49 bare-EPC; +0.70 at the capital midpoint |
 
 *Conversion capital is set to zero in the solved conversion cells; the −0.65
@@ -1582,7 +1609,7 @@ $16.7 at reference Brent (Table 1.1): roughly a third cheaper per unit of
 heat, an edge as large as the new plant's heat-rate advantage and available
 (up to conversion feasibility and cost) without building anything but the
 terminal. Burned in the existing fleet
-alone it saves $0.40 billion through Kalaeloa and $1.08 billion when Kahe 5
+alone it saves $0.39 billion through Kalaeloa and $1.08 billion when Kahe 5
 and 6 and the CIP combustion turbine convert as well. The model even routes gas through the CIP turbine, at 11.7 MMBtu/MWh one of
 the least efficient units on the island: with a fuel-price gap this large, plant
 efficiency is a secondary consideration.
@@ -1830,7 +1857,7 @@ runs ahead of the requirement on its own — and split only at the end:
 without the mandate the model keeps about 9 percent fossil generation in
 2045 and retires it over the following decade
 on economics alone. That last step is what the mandate buys, and it costs
-about $0.27 billion in present value, roughly 0.2 cents per kilowatt-hour
+about $0.26 billion in present value, roughly 0.2 cents per kilowatt-hour
 (Sections 2.7 and 4.8).
 
 **Pricing the plans.** The mixes in Figure 4.4 can be priced. For each
@@ -1866,10 +1893,10 @@ the fossil band), and the tolerance basis.
 
 | Plan (vs least cost, same settings) | 20% Hawaiʻi premium | 104% Hawaiʻi premium |
 |---|---|---|
-| IGP land-constrained (plan of record) | +$2.55B | +$1.73B |
-| IGP base | +$2.17B | +$2.27B |
-| HSEO oil | +$3.60B | +$2.50B |
-| HSEO LNG | +$2.86B | +$1.70B |
+| IGP land-constrained (plan of record) | +$2.74B | +$1.71B |
+| IGP base | +$2.19B | +$2.27B |
+| HSEO oil | +$3.72B | +$2.58B |
+| HSEO LNG | +$2.94B | +$1.72B |
 
 *Table 4.1 — Plan price tags: NPV system cost above the least-cost build
 at the same utility-solar premium over mainland ATB costs (2024$,
@@ -2157,7 +2184,7 @@ combustion turbine.
 | Configuration (reference oil) | System cost ($B) | vs no-new-plant |
 |---|---:|---:|
 | No new fuel plant, no LNG | 26.11 | — |
-| FSRU + Kalaeloa conversion, no new plant | 25.74 | −0.37 |
+| FSRU + Kalaeloa conversion, no new plant | 25.72 | −0.39 |
 | FSRU + Kalaeloa, Kahe 5 & 6, CIP CT conversions, no new plant | 25.03 | **−1.08** |
 | *…same, net of the full 2016 conversion-program charge ($0.45B)* | *25.48* | ***−0.63*** |
 | *…same, also charging the entire 2016 onshore package ($0.26B)* | *25.74* | *−0.37* |
@@ -2165,7 +2192,7 @@ combustion turbine.
 | JERA 500 (bare-EPC) + Kalaeloa conversion | 26.14 | +0.03 |
 
 At JERA's cost quote, the conversion configurations beat building the
-new plant. Kalaeloa alone saves $0.40 billion where the new plant adds
+new plant. Kalaeloa alone saves $0.39 billion where the new plant adds
 $0.49: the model
 routes about 200 million MMBtu of LNG through Kalaeloa's existing units —
 running them at 80–90 percent capacity factor into the early 2030s and 60–80
@@ -2175,7 +2202,7 @@ cheapest LNG arrangement tested; on the credited basis the bare-EPC plant does
 not save at all (+0.49). And the terminal needs no mandate to be used this way: 
 in a variant where LNG import is offered as an option rather than forced, the 
 model activates the terminal and the Kalaeloa conversion on its own, reaching
-the same saving (−0.41, identical to the forced case within tolerance). At the quoted fuel 
+the same saving (−0.39, identical to the forced case within tolerance). At the quoted fuel 
 price, the terminal pays for itself through conversions alone.
 
 Because conversion capital is set to zero, each saving doubles as a
@@ -2274,25 +2301,27 @@ past 2044, and the model chooses plant size and fuel volumes freely.
 
 | No-mandate configuration (reference oil) | System cost ($B) | vs no-mandate baseline |
 |---|---:|---:|
-| No new fuel plant (no gas available) | 25.87 | — |
-| LNG unrestricted (model's choice) | 25.67 | −0.20 |
-| JERA 500 forced — bare-EPC / +20% | 25.85 / 26.27 | −0.03 / +0.39 |
+| No new fuel plant (no gas available) | 25.85 | — |
+| LNG unrestricted (model's choice) | 25.66 | −0.19 |
+| JERA 500 forced — bare-EPC / +20% | 25.81 / 26.34 | −0.04 / +0.49 |
 
-Without the mandate, the model builds 500 MW of gas capacity, imports 16–21
-million MMBtu of LNG per year through 2050, and the LNG advantage is $0.20
+Without the mandate, the model builds 375 MW of gas capacity — offered any
+size, it declines the full 500 — imports 16–21
+million MMBtu of LNG per year through 2050, and the LNG advantage is $0.19
 billion against the no-gas baseline. Even with the mandate gone,
 *forcing* the JERA bundle does not pay: at the vendor's own bare-EPC quote it
-roughly breaks even (−$0.03 billion), and at the +20 percent sensitivity it
-costs $0.39 billion. Sunshine keeps most of the market either way: the
+roughly breaks even (−$0.04 billion), and at the +20 percent sensitivity it
+costs $0.49 billion. Sunshine keeps most of the market either way: the
 no-mandate system still builds about 2,300 MW of utility solar (55 percent
-of the mandated build) with gas fully available, and 3,850 MW (92 percent) without it.
+of the mandated build) with gas fully available, and 3,830 MW (92 percent) without it.
 
 Little is at stake either way. With no gas option on
-the menu, dropping the rule saves $0.27 billion (26.14 against 25.87) — about
+the menu, dropping the rule saves $0.26 billion (26.11 against 25.85) — about
 0.20 cents per kilowatt-hour; the larger figure arises only because
-abandonment also unlocks unrestricted gas: **abandoning the mandate saves about $0.47 billion over twenty-four years —
+abandonment also unlocks unrestricted gas: **abandoning the mandate saves about $0.45 billion over twenty-four years —
 roughly three tenths of a cent per kilowatt-hour — when the replacement is
-a 500 MW gas plant with an import terminal.** The configurations in this table exclude the conversion
+a gas plant with an import terminal (offered any size, the model builds
+375 MW).** The configurations in this table exclude the conversion
 of existing plants, which Section 4.7 shows is the cheaper use of LNG.
 Solving the no-mandate case with conversions on the menu completes the
 picture. Without the mandate, the model converts Kalaeloa, Kahe 5 and 6,
@@ -2330,10 +2359,10 @@ and the decisions that dominate bills lie elsewhere.
 ### 4.9 Emissions and the pace of decarbonization
 
 Counting only combustion on Oʻahu — the accounting most favorable to LNG,
-with no upstream methane — the two paths run close: 30.2 Mt for JERA
-(bare-EPC), 30.4 for the +20% case, against 30.8 for no-new-plant over
-2027–2050, so the LNG path is about 0.4–0.7 Mt lower on combustion CO₂. LNG
-displaces oil early (about 0.8 Mt/yr cleaner around 2030) and displaces
+with no upstream methane — the two paths run close: 29.6 Mt for JERA
+at either capital case, against 31.1 for no-new-plant over
+2027–2050, so the LNG path is about 1.3–1.5 Mt lower on combustion CO₂. LNG
+displaces oil early (about 0.9 Mt/yr cleaner around 2030) and displaces
 solar and geothermal in the middle years (about 0.6 Mt/yr dirtier around
 2035), with the RPS forcing both paths to zero by 2045 (Figure 4.1). The
 credited base case pulls both totals well below the earlier no-credit
@@ -2350,7 +2379,7 @@ under the clean-energy mandate.
 
 The clearer difference is the pace of the transition. In 2035 the
 no-new-plant path generates 83 percent of Oʻahu's electricity from
-renewables; the JERA path, 59 percent — a 24-point gap (by the model's own
+renewables; the JERA path, 58 percent — a 25-point gap (by the model's own
 renewable-share metric) that narrows through the 2040s. The LNG path defers
 roughly a decade of clean-energy deployment, and its cumulative-CO₂ parity
 depends on the mandate forcing the same endpoint.
@@ -2359,15 +2388,16 @@ Upstream methane overcomes LNG's combustion edge, by an amount that depends on a
 debatable question of incidence. Natural gas is mostly methane, and
 some share leaks from wells, gathering, processing, liquefaction, and
 shipping. Appendix A.10 carries the calculation: the JERA path imports about
-247 million MMBtu of LNG over the horizon, roughly 4.8 million tonnes of
+250 million MMBtu of LNG over the horizon, roughly 4.9 million tonnes of
 methane throughput. Each percentage point of supply-chain leakage adds about
-1.4 Mt CO₂-equivalent at a 100-year warming potential, or about 3.9 Mt at the
-20-year potential — against a combustion gap of 0.4–0.7 Mt in LNG's favor. LNG's
-greenhouse advantage therefore reverses at leakage above roughly half
-of one percent (100-year basis) or one-sixth of one percent (20-year basis) —
-thresholds below every published measurement of U.S. supply chains
-(Sherwin et al. 2024: the lowest basin measured, Appalachia, sits at 0.75
-percent and the production-weighted average at 2.95 percent).
+1.5 Mt CO₂-equivalent at a 100-year warming potential, or about 4.0 Mt at the
+20-year potential — against a combustion gap of 1.3–1.5 Mt in LNG's favor. LNG's
+greenhouse advantage therefore reverses at leakage above roughly one
+percent (100-year basis) or a third of one percent (20-year basis). The
+20-year threshold sits below every published measurement of U.S. supply
+chains; the 100-year threshold sits below all but the single
+lowest-leaking basin measured (Sherwin et al. 2024: Appalachia at 0.75
+percent, against a production-weighted average of 2.95 percent).
 
 How far above depends on whose gas is counted. Counting only the literal
 cargoes Hawaiʻi would buy — plausibly sourced from lower-leakage suppliers —
@@ -2384,7 +2414,22 @@ to 9.6 percent (New Mexico Permian), with a production-weighted average of
 2.95 percent across the six regions measured. On the literal accounting the LNG
 path's greenhouse effect is somewhat worse than the clean path's; on the
 marginal accounting it is much worse. Appendix A.10 tabulates the range
-at 1, 3, and 6 percent leakage under both warming potentials.
+at 1, 3, and 6 percent leakage under both warming potentials. The
+ledger so far counts no liquefaction or shipping energy for LNG. That
+term is far from zero: the Department of Energy's life-cycle study of
+U.S. LNG exports (NETL 2019, Exhibit 6-3; vendored in sources/) puts
+liquefaction, ocean transport, and regasification together at about
+9.5 kg CO₂e per MMBtu delivered on a Gulf-to-Rotterdam route comparable
+in distance to Hawaiʻi's. Charged to the JERA path's imports, that is
+about 2.4 Mt — more than the entire combustion edge — so on the netted
+ledger the plant paths fall behind the clean path before any methane
+leakage is counted. The leanest conversion paths keep a 0.3–0.5 Mt
+netted edge, and even their break-evens fall to 0.2–0.4 percent leakage,
+below the lowest-leaking U.S. basin measured. The oil side of the ledger
+has its own uncounted terms — refining energy for locally produced fuel
+oil, and where that co-product of Oʻahu's refinery would burn if power
+plants here stopped buying it — which pull the other way; the report
+carries no default value for them, and a sourced one is invited.
 
 ---
 
@@ -2827,7 +2872,16 @@ it take to learn whether Oʻahu's EGS resource lands on the favorable cost
 trajectory before the 2034–36 demonstration window closes? Should the
 plant, the terminal, and the fuel contract in the JERA proposal be
 evaluated as separable decisions (Sections 4.7–4.8 make the case that they
-are)? Is the Waiau scope still the least-cost answer to the need it was approved
+are)? Where would the fuel physically come from — Gulf cargoes need a
+foreign-flag carrier under a Jones Act accommodation, today a temporary
+suspension, and Pacific sources such as Kitimat concentrate supply in a
+few loading points? The answer probably moves neither price nor total
+emissions much: LNG is fungible once loaded, world prices vary little by
+port, and the climate ledger depends on the marginal source that global
+demand calls forth, not the port of origin (Section 4.9). It matters for
+logistics and for the State's official carbon accounting, where a
+low-leakage supplier improves the reported lifecycle numbers without
+changing the marginal ones. Is the Waiau scope still the least-cost answer to the need it was approved
 for, and how should the resiliency value of many small units be weighed
 against batteries, the Puʻuloa engine plant, and existing units held in
 reserve (Section 6.3)? And how should LSFO-contract renewals be evaluated so the
@@ -3197,6 +3251,12 @@ better evidence, and we commit to publishing whatever the numbers say.
   canopy structures over parking lots, on buildings, and over public and
   private walkways.
   
+We thank Jim Lazar for detailed review comments spanning unit sizing
+and contingency, the Waiau repower's operating envelope, distributed
+solar policy, and the LNG fuel cycle; his push to price the liquefaction
+and shipping energy rather than footnote it reshaped Section 4.9's
+ledger. Remaining errors are ours.
+
 The model, inputs, code, and every number here are public. We invite
 specific, sourced challenges to any input or finding — from Hawaiian
 Electric, HSEO, JERA, and every other reader. The findings can be
@@ -3346,21 +3406,33 @@ Coffman et al. 2022).
 
 ### A.10 Upstream methane calculation
 
-The JERA path imports ≈247 million MMBtu of LNG over 2027–2050 (model
-dispatch). At ≈19.3 kg CH₄ per MMBtu, that is ≈4.8 Mt of methane throughput.
+The JERA path imports ≈250 million MMBtu of LNG over 2027–2050 (model
+dispatch). At ≈19.3 kg CH₄ per MMBtu, that is ≈4.9 Mt of methane throughput.
 CO₂-equivalent added by supply-chain leakage = throughput × leak rate × GWP:
 
 | Leak rate | GWP₁₀₀ = 30 | GWP₂₀ = 82.5 |
 |---|---:|---:|
-| 1% | 1.4 Mt | 3.9 Mt |
-| 3% | 4.3 Mt | 11.8 Mt |
-| 6% | 8.5 Mt | 23.5 Mt |
+| 1% | 1.5 Mt | 4.0 Mt |
+| 3% | 4.4 Mt | 12.0 Mt |
+| 6% | 8.7 Mt | 24.0 Mt |
 
-On the current-law base case the combustion ledger gives LNG a ≈0.7 Mt edge
-(30.2 Mt JERA bare-EPC versus 30.8 no-new-plant), implying break-even
-leakage of ≈0.5 percent (100-year basis) or ≈0.2 percent (20-year basis) —
-below every measured U.S. basin, so on the marginal-source reading the
-LNG path is behind on total greenhouse effect.
+On the current-law base case the combustion ledger gives LNG a ≈1.3–1.5 Mt
+edge (29.6 Mt JERA versus 31.1 no-new-plant), implying break-even
+leakage of ≈0.9–1.0 percent (100-year basis) or ≈0.3–0.4 percent (20-year
+basis). The 20-year threshold is below every measured U.S. basin; the
+100-year threshold is below all but the lowest-leaking basin measured
+(Appalachia, 0.75 percent), so on the marginal-source reading the
+LNG path is behind on total greenhouse effect. Netting the LNG fuel
+cycle moves every threshold down: NETL (2019, Exhibit 6-3) puts
+liquefaction, ocean transport, and regasification at 70 kg CO₂e per MWh
+generated at the study's 46.4 percent plant efficiency — 9.5 kg CO₂e per
+MMBtu delivered — which charges the JERA path ≈2.4 Mt against its
+≈1.3–1.5 Mt combustion edge. On the netted ledger the plant
+configurations are behind at zero leakage; the optimized and
+Kalaeloa-only conversion paths keep ≈0.3–0.5 Mt, with netted break-evens
+of 0.2–0.4 percent (100-year), below every measured basin. Stage methane
+in the NETL figure (boil-off, terminal fugitives) lies outside Sherwin's
+basin measurements, so the two do not double count.
 
 **Break-even leakage depends on the comparator.** A cleaner alternative
 leaves LNG a smaller combustion edge to defend, so the threshold falls. Each
@@ -3368,20 +3440,25 @@ row prices the LNG configuration against the no-new-thermal least-cost path
 carrying the same Waiau decision, at reference oil on the base rooftop
 trajectory (`analysis/assemble_methane_breakeven.py`).
 
-| pathway | imports (M MMBtu) | CH₄ (Mt) | edge (Mt) | 100-yr | 20-yr |
-|---|---:|---:|---:|---:|---:|
-| JERA 500 MW, bare-EPC | 247 | 4.8 | 0.7 | 0.46% | 0.17% |
-| JERA 500 MW, +20% capital | 249 | 4.8 | 0.4 | 0.30% | 0.11% |
-| JERA 375 MW, bare-EPC | 216 | 4.2 | 1.6 | 1.24% | 0.45% |
-| JERA 375 MW, +20% capital | 215 | 4.2 | 1.6 | 1.32% | 0.48% |
-| Conversion, optimized | 197 | 3.8 | 3.1 | 2.68% | 0.97% |
-| Conversion, no new plant | 199 | 3.8 | 3.0 | 2.61% | 0.95% |
-| Conversion, HECO configuration | 360 | 6.9 | 2.6 | 1.23% | 0.45% |
+The edge column is combustion only; the net column charges the NETL
+fuel-cycle value (9.5 kg CO₂e/MMBtu) against it, and "behind" marks
+configurations whose netted edge is negative — behind the clean path at
+zero leakage.
+
+| pathway | imports (M MMBtu) | CH₄ (Mt) | edge (Mt) | net (Mt) | 100-yr | 20-yr | net 100-yr | net 20-yr |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| JERA 500 MW, bare-EPC | 251 | 4.9 | 1.3 | −1.1 | 0.90% | 0.33% | behind | behind |
+| JERA 500 MW, +20% capital | 249 | 4.8 | 1.5 | −0.9 | 1.03% | 0.38% | behind | behind |
+| JERA 375 MW, bare-EPC | 215 | 4.2 | 1.4 | −0.7 | 1.09% | 0.40% | behind | behind |
+| JERA 375 MW, +20% capital | 216 | 4.2 | 1.3 | −0.8 | 1.04% | 0.38% | behind | behind |
+| Conversion, optimized | 200 | 3.9 | 2.2 | +0.3 | 1.87% | 0.68% | 0.23% | 0.08% |
+| Conversion, no new plant | 199 | 3.8 | 2.4 | +0.5 | 2.05% | 0.75% | 0.41% | 0.15% |
+| Conversion, HECO configuration | 355 | 6.9 | 2.7 | −0.7 | 1.29% | 0.47% | behind | behind |
 
 **The same calculation inside HSEO's own comparison.** HSEO sets its LNG
 case against its oil case rather than against a least-cost clean path, and
 that oil case burns oil at scale through 2044. LNG's combustion edge over
-that comparator is therefore much larger — about 5.7 Mt at every solar
+that comparator is therefore much larger — about 5.9 to 6.1 Mt at every solar
 premium, since both plan cells hold their mixes fixed as solar costs move —
 and the break-even leak rate correspondingly higher: 3.3 percent on the
 100-year basis, nearly flat across the 20, 80, and 104 percent solar
@@ -3389,10 +3466,13 @@ premiums (1.2 percent on the 20-year basis). Measured U.S. supply chains average
 2.95 percent, production weighted. So on the comparison most favorable to
 it, HSEO's LNG emissions advantage survives average U.S. gas — narrowly,
 and only on the century timescale. Against a least-cost clean path the
-break-even is 2.5 percent at the study's baseline solar premium — below
+break-even is 2.3 percent at the study's baseline solar premium — below
 the U.S. production-weighted average, so the edge does not survive
-average gas there — and clears it only if solar is expensive (4.7
-to 5.8 percent at the 80 and 104 percent premiums). (Plan cells here are the
+average gas there — and clears it only if solar is expensive (4.8
+to 5.9 percent at the 80 and 104 percent premiums). These oil-comparator
+rows are unnetted on both sides: charging LNG's fuel cycle without
+charging oil's refining would bias the pairing, and the report carries
+no oil-side default (Section 4.9). (Plan cells here are the
 Section 4.5 pricing cells: mixes pinned to each plan, firm energy
 delivered as biodiesel in both cases, so the comparison is free of the
 study's hydrogen-price asymmetry.)
@@ -3666,11 +3746,12 @@ trajectory, so the two IGP plans can be compared serving the same
 demand; a cell read against the wrong trajectory's reference mixes
 demands that differ by a quarter and is not a price tag.
 
-**Tolerance.** Plan cells and their least-cost references are all
-solved to 0.1 percent MIP gap. Because the quota bands leave the dispatch
+**Tolerance.** The plan cells are at a 0.25 percent MIP gap on the
+corrected fleet, refining to 0.1 percent; their least-cost references
+are at 0.1 percent. Because the quota bands leave the dispatch
 some freedom, a cell's cumulative emissions are more sensitive to the
-solve tolerance than its cost is; the figures here are from the 0.1 percent
-solutions.
+solve tolerance than its cost is; emissions figures will firm as the
+plan refinements land.
 
 ## Appendix B — references
 
@@ -3746,7 +3827,7 @@ February 2025 and April 16, 2026.
 
 ## Appendix C — data and reproducibility
 
-This report is release pre-v1.031: the single-node (copper-plate) model
+This report is release pre-v1.032: the single-node (copper-plate) model
 with the rebuilt distributed-solar treatment of Appendices A.11–A.12,
 issued as a preliminary version open for comment (requested by
 September 15, 2026, tentative). After the comment period, responses, and
@@ -3763,5 +3844,7 @@ scripts that regenerate them from vendored primary sources, the scenario
 definitions, the solve scripts, and `verify_claims.py`, which re-derives
 every headline input from the vendored sources and fails loudly on any
 mismatch. Scenario results are aggregated in `results/RESULTS_SUMMARY.csv`
-(0.1 percent optimization tolerance, with a handful of degenerate cells at
-0.15 percent documented in docs/HARD_CELLS.md).
+(0.1 percent optimization tolerance; a handful of hard cells stopped at
+their 24-hour limit marginally above it, worst 0.16 percent, and the file
+records each cell's requested and achieved gap; solve history in
+docs/HARD_CELLS.md).

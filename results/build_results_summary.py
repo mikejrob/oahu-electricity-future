@@ -40,11 +40,26 @@ for p in REPO.iterdir():
     m = re.match(r"^(R010_|R0015_)?outputs_(nlv2[bsa]_.+)$", p.name)
     if m and (p / "total_cost.txt").exists():
         names.add(m.group(2))
-names = {n for n in names if any(f"_{o}" in n for o in OIL)}
-names = {n for n in names if "_plan_" not in n}
-# EFOR-pilot cells have their own register (results/EFOR_PILOT.csv, report
-# 6.3); battfix dirs are local correction-test artifacts, not fleet cells
-names = {n for n in names if "_efor_" not in n and "battfix" not in n}
+# Every exclusion prints what it drops: cells leaving the register
+# silently is how the jeraopt sentence went stale (no oil token in the
+# name), and 54 manifest cells were absent with no trace at the
+# 2026-09-08 audit. Plan cells belong to build/build_igp_plan_tables.py;
+# EFOR-pilot cells to results/EFOR_PILOT.csv; battfix dirs are local
+# correction-test artifacts.
+def drop(pool, keep, why):
+    gone = sorted(pool - keep)
+    if gone:
+        print(f"register: dropping {len(gone)} cells ({why}): "
+              + ", ".join(gone[:6]) + (" …" if len(gone) > 6 else ""))
+    return keep
+
+
+names = drop(names, {n for n in names if any(f"_{o}" in n for o in OIL)},
+             "no oil token — jeraopt-style; add a sidecar entry if report-facing")
+names = drop(names, {n for n in names if "_plan_" not in n},
+             "plan cells, registered via the plan tables")
+names = drop(names, {n for n in names if "_efor_" not in n and "battfix" not in n},
+             "EFOR pilot / battfix artifacts")
 
 # Achieved gaps come from solver-log evidence (solve/build_solve_manifest.py),
 # never from the directory prefix: a completed output file proves the solve

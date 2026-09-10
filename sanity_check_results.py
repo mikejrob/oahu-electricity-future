@@ -206,6 +206,15 @@ if not FIRST_PASS and PFX == "outputs_":
 print(f"  dominance sweep: {sum(_dompairs.values())} pairs "
       f"({', '.join(f'{k}={v}' for k, v in _dompairs.items())}) "
       f"across {len(_all)} cells on the swept basis")
+# A green gate that swept nothing verified nothing: on a partial checkout
+# the MISSING branch fires first, but if outputs were ever partially
+# synced past it, this floor keeps the gate honest about coverage
+# (2026-09-08 audit note; full fleet sweeps ~1,100+ cells / 600+ pairs).
+if sum(_dompairs.values()) < 400 or len(_all) < 800:
+    print(f"FAIL: dominance sweep coverage below floor "
+          f"({sum(_dompairs.values())} pairs / {len(_all)} cells; "
+          f"need >=400 / >=800) — refusing to pass on a sliver")
+    raise SystemExit(1)
 
 print(f"== sanity check ({'first-pass ' + PFX if FIRST_PASS or PFX != 'outputs_' else 'published basis: R010>R0015>outputs'}) ==")
 if missing:

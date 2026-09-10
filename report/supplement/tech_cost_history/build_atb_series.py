@@ -4,7 +4,8 @@ Build the ATB-vintage projection series for utility-scale PV and 4-hour battery,
 for fixed future target years 2030 and 2050, Moderate (mid) scenario, Market case.
 
 INPUTS (all downloaded directly, see data/SOURCES in SOURCES.md):
-  data/atbe_csv/ATBe_{2019..2023}.csv, ATBe_2024_v3.csv   -- OEDI data-lake structured CSVs
+  data/atbe_csv.tar.xz (auto-extracted): ATBe_{2019..2023}.csv,
+  ATBe_2024_v3.csv                                        -- OEDI data-lake structured CSVs
   data/cpi_u_annual.csv                                    -- BLS CPI-U annual avg (from FRED CPIAUCSL)
 
 METRIC CHOICES (documented for reviewer):
@@ -34,6 +35,15 @@ import pandas as pd, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CSVDIR = os.path.join(HERE, "data", "atbe_csv")
+# The raw OEDI CSVs (~322 MB) live in data/atbe_csv.tar.xz (13 MB,
+# sha256 dc97fb42...); the extracted directory is gitignored. Extract on
+# first run so a fresh clone works without any manual step.
+if not os.path.isdir(CSVDIR):
+    import tarfile
+    arc = os.path.join(HERE, "data", "atbe_csv.tar.xz")
+    print(f"extracting {arc} -> {CSVDIR}")
+    with tarfile.open(arc, "r:xz") as tf:
+        tf.extractall(os.path.join(HERE, "data"))
 
 # ATB vintage -> (file, dollar-year of that vintage)
 VINTAGES = {

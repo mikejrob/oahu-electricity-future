@@ -1,5 +1,17 @@
 # Hard-to-solve cells (ITC cost-cliff)
 
+**Corrected fleet (September 2026).** The list below is the published
+OLD-fleet record and its cell names carry no family prefix; it is kept as
+solve history. On the corrected fleet (nlv2b/nlv2s/nlv2a) every one of
+the 513 matrix cells reached the 0.1 percent gap — no 0.15 percent
+fallback was needed. One cell stalled pathologically
+(nlv2s_be_pv15_C4_NOTHERMAL_lowbrent: incumbents rejected as infeasible
+on the original model, gap parked at 7.4 percent for 7+ hours) and
+closed after a cold restart with the warm start dropped (mipstart=0),
+the same lever recorded below. The 14 plan-pricing cells are refining
+from 0.25 percent.
+
+
 These scenarios are degenerate on the current-law tax-credit basis (the storage
 and geothermal cost cliff — see docs/SOLVER_NOTES.md) and stall approaching the
 0.1% MIP gap: the solver reaches ~0.11% and cannot close the last sliver in

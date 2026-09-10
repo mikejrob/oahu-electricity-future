@@ -56,7 +56,19 @@ tablet; the markdown remains the version of record.
 > `sources/market/`, report Appendix A.14). The former EIA AEO case spread
 > is archived (`*_aeo.csv`, `aeo_archive/`).
 
-- **pre-v1.031 (current)** — a midweek correction to the reliability
+- **pre-v1.032 (current)** — the corrected-fleet rebuild completed: all
+  513 scenario-matrix cells re-solved at the 0.1 percent tolerance on the
+  corrected net-load inputs (a handful of hard cells stopped marginally
+  above at their time limit; per-cell gaps in
+  `results/RESULTS_SUMMARY.csv`). Plan price tags rebuilt on quotas
+  re-anchored to the corrected references (plan cells at 0.25 percent,
+  refining). The LNG greenhouse ledger now nets the fuel cycle at NETL
+  stage values: plant configurations trail the clean path before any
+  methane leakage. Reviewer edits from Jim Lazar's comments (unit
+  configuration, mandate-bounded amortization, supply geography, Lazard
+  v19 capital range), the land-screen perspective passage, and
+  consistency fixes from an external repository audit.
+- **pre-v1.031** — a midweek correction to the reliability
   comparison in Sections 5.3 and 6.3. The earlier text compared this
   system's outage odds against a European hours-per-year standard and a
   North American days-per-year standard without converting between them,

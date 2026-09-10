@@ -27,3 +27,4 @@ noitc_archive/
 analysis/*.parquet
 rebuild_staging/
 inputs_nlv2b_battfix/
+report/supplement/tech_cost_history/data/atbe_csv/

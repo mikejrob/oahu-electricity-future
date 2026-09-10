@@ -2041,11 +2041,11 @@ nlv2b_lngconv_opt_refbrent,2035-08-18,2,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,2,Demand,639.5
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,4,Thermal (oil/LNG),113.1
+nlv2b_lngconv_opt_refbrent,2035-08-18,4,Thermal (oil/LNG),198.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Wind,18.4
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Utility solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Rooftop solar,0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,4,Battery discharge (net),448.5
+nlv2b_lngconv_opt_refbrent,2035-08-18,4,Battery discharge (net),363.5
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Battery charging (net),0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,EV charging,-6.4
@@ -2053,11 +2053,11 @@ nlv2b_lngconv_opt_refbrent,2035-08-18,4,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,4,Demand,709.5
 nlv2b_lngconv_opt_refbrent,2035-08-18,6,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,6,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,6,Thermal (oil/LNG),113.1
+nlv2b_lngconv_opt_refbrent,2035-08-18,6,Thermal (oil/LNG),241.6
 nlv2b_lngconv_opt_refbrent,2035-08-18,6,Wind,27.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,6,Utility solar,40.9
+nlv2b_lngconv_opt_refbrent,2035-08-18,6,Utility solar,39.7
 nlv2b_lngconv_opt_refbrent,2035-08-18,6,Rooftop solar,0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,6,Battery discharge (net),665.9
+nlv2b_lngconv_opt_refbrent,2035-08-18,6,Battery discharge (net),538.8
 nlv2b_lngconv_opt_refbrent,2035-08-18,6,Battery charging (net),0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,6,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,6,EV charging,-7.8
@@ -2066,23 +2066,23 @@ nlv2b_lngconv_opt_refbrent,2035-08-18,6,Demand,975.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,8,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,8,Waste-to-energy,42.8
 nlv2b_lngconv_opt_refbrent,2035-08-18,8,Thermal (oil/LNG),103.1
-nlv2b_lngconv_opt_refbrent,2035-08-18,8,Wind,14.4
-nlv2b_lngconv_opt_refbrent,2035-08-18,8,Utility solar,1733.2
+nlv2b_lngconv_opt_refbrent,2035-08-18,8,Wind,21.6
+nlv2b_lngconv_opt_refbrent,2035-08-18,8,Utility solar,1690.7
 nlv2b_lngconv_opt_refbrent,2035-08-18,8,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,8,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,8,Battery charging (net),-974.6
-nlv2b_lngconv_opt_refbrent,2035-08-18,8,Curtailed solar & wind,16.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,8,EV charging,-100.7
+nlv2b_lngconv_opt_refbrent,2035-08-18,8,Battery charging (net),-982.8
+nlv2b_lngconv_opt_refbrent,2035-08-18,8,Curtailed solar & wind,2.2
+nlv2b_lngconv_opt_refbrent,2035-08-18,8,EV charging,-57.2
 nlv2b_lngconv_opt_refbrent,2035-08-18,8,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,8,Demand,911.2
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,10,Thermal (oil/LNG),104.5
+nlv2b_lngconv_opt_refbrent,2035-08-18,10,Thermal (oil/LNG),113.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,Wind,29.7
-nlv2b_lngconv_opt_refbrent,2035-08-18,10,Utility solar,1468.1
+nlv2b_lngconv_opt_refbrent,2035-08-18,10,Utility solar,1440.4
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,10,Battery charging (net),-825.3
+nlv2b_lngconv_opt_refbrent,2035-08-18,10,Battery charging (net),-806.2
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,EV charging,-20.4
 nlv2b_lngconv_opt_refbrent,2035-08-18,10,Hydrogen production,-0.0
@@ -2090,46 +2090,46 @@ nlv2b_lngconv_opt_refbrent,2035-08-18,10,Demand,892.6
 nlv2b_lngconv_opt_refbrent,2035-08-18,12,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,12,Waste-to-energy,42.8
 nlv2b_lngconv_opt_refbrent,2035-08-18,12,Thermal (oil/LNG),103.1
-nlv2b_lngconv_opt_refbrent,2035-08-18,12,Wind,19.2
-nlv2b_lngconv_opt_refbrent,2035-08-18,12,Utility solar,1664.7
+nlv2b_lngconv_opt_refbrent,2035-08-18,12,Wind,28.8
+nlv2b_lngconv_opt_refbrent,2035-08-18,12,Utility solar,1614.2
 nlv2b_lngconv_opt_refbrent,2035-08-18,12,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,12,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,12,Battery charging (net),-974.6
-nlv2b_lngconv_opt_refbrent,2035-08-18,12,Curtailed solar & wind,9.6
-nlv2b_lngconv_opt_refbrent,2035-08-18,12,EV charging,-185.3
+nlv2b_lngconv_opt_refbrent,2035-08-18,12,Battery charging (net),-982.8
+nlv2b_lngconv_opt_refbrent,2035-08-18,12,Curtailed solar & wind,0.0
+nlv2b_lngconv_opt_refbrent,2035-08-18,12,EV charging,-136.2
 nlv2b_lngconv_opt_refbrent,2035-08-18,12,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,12,Demand,763.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,14,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,14,Waste-to-energy,42.8
 nlv2b_lngconv_opt_refbrent,2035-08-18,14,Thermal (oil/LNG),103.1
-nlv2b_lngconv_opt_refbrent,2035-08-18,14,Wind,26.1
-nlv2b_lngconv_opt_refbrent,2035-08-18,14,Utility solar,1578.7
+nlv2b_lngconv_opt_refbrent,2035-08-18,14,Wind,10.3
+nlv2b_lngconv_opt_refbrent,2035-08-18,14,Utility solar,1695.2
 nlv2b_lngconv_opt_refbrent,2035-08-18,14,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,14,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,14,Battery charging (net),-974.6
-nlv2b_lngconv_opt_refbrent,2035-08-18,14,Curtailed solar & wind,155.9
-nlv2b_lngconv_opt_refbrent,2035-08-18,14,EV charging,-28.5
+nlv2b_lngconv_opt_refbrent,2035-08-18,14,Battery charging (net),-982.8
+nlv2b_lngconv_opt_refbrent,2035-08-18,14,Curtailed solar & wind,15.8
+nlv2b_lngconv_opt_refbrent,2035-08-18,14,EV charging,-121.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,14,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,14,Demand,840.7
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,16,Thermal (oil/LNG),107.7
+nlv2b_lngconv_opt_refbrent,2035-08-18,16,Thermal (oil/LNG),113.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Wind,34.2
-nlv2b_lngconv_opt_refbrent,2035-08-18,16,Utility solar,1452.4
+nlv2b_lngconv_opt_refbrent,2035-08-18,16,Utility solar,1398.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,16,Battery charging (net),-650.9
+nlv2b_lngconv_opt_refbrent,2035-08-18,16,Battery charging (net),-602.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,EV charging,-30.7
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,16,Demand,1048.7
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,18,Thermal (oil/LNG),198.1
+nlv2b_lngconv_opt_refbrent,2035-08-18,18,Thermal (oil/LNG),113.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,Wind,43.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,18,Utility solar,133.5
+nlv2b_lngconv_opt_refbrent,2035-08-18,18,Utility solar,130.6
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,Rooftop solar,0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,18,Battery discharge (net),699.0
+nlv2b_lngconv_opt_refbrent,2035-08-18,18,Battery discharge (net),787.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,Battery charging (net),0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,EV charging,-49.4
@@ -2137,11 +2137,11 @@ nlv2b_lngconv_opt_refbrent,2035-08-18,18,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,18,Demand,1160.9
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-08-18,20,Thermal (oil/LNG),198.1
+nlv2b_lngconv_opt_refbrent,2035-08-18,20,Thermal (oil/LNG),113.1
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,Wind,29.6
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,Utility solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,Rooftop solar,0.0
-nlv2b_lngconv_opt_refbrent,2035-08-18,20,Battery discharge (net),795.9
+nlv2b_lngconv_opt_refbrent,2035-08-18,20,Battery discharge (net),880.9
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,Battery charging (net),0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,20,EV charging,-45.8
@@ -2161,26 +2161,26 @@ nlv2b_lngconv_opt_refbrent,2035-08-18,22,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-08-18,22,Demand,855.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-11-22,0,Thermal (oil/LNG),521.2
+nlv2b_lngconv_opt_refbrent,2035-11-22,0,Thermal (oil/LNG),533.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Wind,16.9
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Utility solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,0,Battery charging (net),-23.1
+nlv2b_lngconv_opt_refbrent,2035-11-22,0,Battery charging (net),-33.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Curtailed solar & wind,0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,0,EV charging,-8.8
+nlv2b_lngconv_opt_refbrent,2035-11-22,0,EV charging,-9.9
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,0,Demand,642.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-11-22,2,Thermal (oil/LNG),521.2
+nlv2b_lngconv_opt_refbrent,2035-11-22,2,Thermal (oil/LNG),533.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Wind,1.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Utility solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,2,Battery charging (net),-69.3
+nlv2b_lngconv_opt_refbrent,2035-11-22,2,Battery charging (net),-65.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Curtailed solar & wind,0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,2,EV charging,-21.8
+nlv2b_lngconv_opt_refbrent,2035-11-22,2,EV charging,-37.9
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,2,Demand,567.9
 nlv2b_lngconv_opt_refbrent,2035-11-22,4,Geothermal,93.1
@@ -2190,9 +2190,9 @@ nlv2b_lngconv_opt_refbrent,2035-11-22,4,Wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,4,Utility solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,4,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,4,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,4,Battery charging (net),-57.1
+nlv2b_lngconv_opt_refbrent,2035-11-22,4,Battery charging (net),-51.9
 nlv2b_lngconv_opt_refbrent,2035-11-22,4,Curtailed solar & wind,0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,4,EV charging,-6.4
+nlv2b_lngconv_opt_refbrent,2035-11-22,4,EV charging,-11.6
 nlv2b_lngconv_opt_refbrent,2035-11-22,4,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,4,Demand,593.6
 nlv2b_lngconv_opt_refbrent,2035-11-22,6,Geothermal,93.1
@@ -2211,9 +2211,9 @@ nlv2b_lngconv_opt_refbrent,2035-11-22,8,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,8,Waste-to-energy,42.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,8,Thermal (oil/LNG),545.5
 nlv2b_lngconv_opt_refbrent,2035-11-22,8,Wind,7.7
-nlv2b_lngconv_opt_refbrent,2035-11-22,8,Utility solar,57.7
+nlv2b_lngconv_opt_refbrent,2035-11-22,8,Utility solar,56.6
 nlv2b_lngconv_opt_refbrent,2035-11-22,8,Rooftop solar,0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,8,Battery discharge (net),68.3
+nlv2b_lngconv_opt_refbrent,2035-11-22,8,Battery discharge (net),69.4
 nlv2b_lngconv_opt_refbrent,2035-11-22,8,Battery charging (net),0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,8,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,8,EV charging,-11.9
@@ -2223,10 +2223,10 @@ nlv2b_lngconv_opt_refbrent,2035-11-22,10,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,Waste-to-energy,42.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,Thermal (oil/LNG),521.2
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,Wind,3.1
-nlv2b_lngconv_opt_refbrent,2035-11-22,10,Utility solar,198.2
+nlv2b_lngconv_opt_refbrent,2035-11-22,10,Utility solar,191.5
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,10,Battery charging (net),-136.5
+nlv2b_lngconv_opt_refbrent,2035-11-22,10,Battery charging (net),-129.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,EV charging,-20.4
 nlv2b_lngconv_opt_refbrent,2035-11-22,10,Hydrogen production,-0.0
@@ -2235,34 +2235,34 @@ nlv2b_lngconv_opt_refbrent,2035-11-22,12,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Waste-to-energy,42.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Thermal (oil/LNG),521.2
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Wind,3.1
-nlv2b_lngconv_opt_refbrent,2035-11-22,12,Utility solar,378.5
+nlv2b_lngconv_opt_refbrent,2035-11-22,12,Utility solar,362.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,12,Battery charging (net),-207.6
+nlv2b_lngconv_opt_refbrent,2035-11-22,12,Battery charging (net),-201.2
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Curtailed solar & wind,0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,12,EV charging,-215.0
+nlv2b_lngconv_opt_refbrent,2035-11-22,12,EV charging,-204.9
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,12,Demand,616.2
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Waste-to-energy,42.8
-nlv2b_lngconv_opt_refbrent,2035-11-22,14,Thermal (oil/LNG),509.8
+nlv2b_lngconv_opt_refbrent,2035-11-22,14,Thermal (oil/LNG),522.5
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Wind,8.5
-nlv2b_lngconv_opt_refbrent,2035-11-22,14,Utility solar,370.9
+nlv2b_lngconv_opt_refbrent,2035-11-22,14,Utility solar,366.5
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,14,Battery charging (net),-338.1
+nlv2b_lngconv_opt_refbrent,2035-11-22,14,Battery charging (net),-358.7
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Curtailed solar & wind,0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,14,EV charging,-72.3
+nlv2b_lngconv_opt_refbrent,2035-11-22,14,EV charging,-59.9
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Hydrogen production,-0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,14,Demand,614.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Geothermal,93.1
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Waste-to-energy,42.8
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Thermal (oil/LNG),521.2
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Wind,15.5
-nlv2b_lngconv_opt_refbrent,2035-11-22,16,Utility solar,296.1
+nlv2b_lngconv_opt_refbrent,2035-11-22,16,Utility solar,288.6
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Rooftop solar,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Battery discharge (net),0.0
-nlv2b_lngconv_opt_refbrent,2035-11-22,16,Battery charging (net),-64.0
+nlv2b_lngconv_opt_refbrent,2035-11-22,16,Battery charging (net),-56.4
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Curtailed solar & wind,0.0
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,EV charging,-30.7
 nlv2b_lngconv_opt_refbrent,2035-11-22,16,Hydrogen production,-0.0
@@ -3207,71 +3207,71 @@ nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Thermal (oil/LNG),103.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Wind,27.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Utility solar,38.8
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Utility solar,49.3
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Rooftop solar,0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Battery discharge (net),690.7
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Battery discharge (net),667.6
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Battery charging (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Curtailed solar & wind,10.6
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,EV charging,-20.4
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Curtailed solar & wind,0.1
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,EV charging,-7.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,6,Demand,975.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Thermal (oil/LNG),103.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Wind,16.5
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Utility solar,1730.0
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Wind,17.8
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Utility solar,1607.9
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Battery charging (net),-1053.9
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Curtailed solar & wind,335.8
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,EV charging,-20.4
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Battery charging (net),-690.8
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Curtailed solar & wind,461.3
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,EV charging,-262.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,8,Demand,911.2
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Thermal (oil/LNG),103.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Wind,29.7
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Utility solar,1659.5
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Wind,26.0
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Utility solar,1578.2
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Battery charging (net),-1015.3
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Curtailed solar & wind,0.0
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Battery charging (net),-930.2
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Curtailed solar & wind,89.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,EV charging,-20.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,10,Demand,892.6
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Thermal (oil/LNG),103.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Wind,19.2
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Utility solar,1345.3
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Wind,16.8
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Utility solar,1694.9
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Battery charging (net),-591.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Curtailed solar & wind,698.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,EV charging,-249.5
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Battery charging (net),-1164.2
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Curtailed solar & wind,298.0
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,EV charging,-23.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,12,Demand,763.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Thermal (oil/LNG),103.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Wind,16.8
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Utility solar,1778.9
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Wind,26.1
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Utility solar,1762.2
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Battery charging (net),-1165.6
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Curtailed solar & wind,236.5
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Battery charging (net),-1158.1
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Curtailed solar & wind,248.9
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,EV charging,-28.5
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,14,Demand,840.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Thermal (oil/LNG),103.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Wind,34.2
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Utility solar,1702.6
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Wind,20.9
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Utility solar,1527.9
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Battery charging (net),-896.5
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Curtailed solar & wind,0.0
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Battery charging (net),-708.5
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Curtailed solar & wind,193.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,EV charging,-30.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,16,Demand,1048.7
@@ -3279,24 +3279,24 @@ nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Thermal (oil/LNG),103.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Wind,43.8
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Utility solar,159.4
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Utility solar,148.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Rooftop solar,0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Battery discharge (net),768.1
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Battery discharge (net),779.2
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Battery charging (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Curtailed solar & wind,0.1
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Curtailed solar & wind,11.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,EV charging,-49.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,18,Demand,1160.9
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Thermal (oil/LNG),103.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Wind,29.6
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Wind,19.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Utility solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Rooftop solar,0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Battery discharge (net),894.5
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Battery discharge (net),900.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Battery charging (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Curtailed solar & wind,0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,EV charging,-49.4
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Curtailed solar & wind,9.8
+nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,EV charging,-45.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,20,Demand,1113.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-08-18,22,Geothermal,93.1
@@ -3325,12 +3325,12 @@ nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,0,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,0,Demand,642.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Waste-to-energy,42.8
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Thermal (oil/LNG),497.3
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Thermal (oil/LNG),489.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Wind,1.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Utility solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Battery charging (net),-60.8
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Battery charging (net),-53.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Curtailed solar & wind,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,EV charging,-6.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,2,Hydrogen production,-0.0
@@ -3375,10 +3375,10 @@ nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Thermal (oil/LNG),489.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Wind,3.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Utility solar,232.7
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Utility solar,234.3
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Battery charging (net),-139.5
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Battery charging (net),-141.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Curtailed solar & wind,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,EV charging,-20.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,10,Hydrogen production,-0.0
@@ -3387,34 +3387,34 @@ nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Thermal (oil/LNG),489.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Wind,3.1
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Utility solar,449.5
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Utility solar,451.5
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Battery charging (net),-252.3
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Battery charging (net),-380.4
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Curtailed solar & wind,0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,EV charging,-209.7
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,EV charging,-83.6
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,12,Demand,616.2
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Waste-to-energy,42.8
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Thermal (oil/LNG),489.7
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Thermal (oil/LNG),490.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Wind,8.5
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Utility solar,423.6
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Utility solar,425.3
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Battery charging (net),-350.0
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Battery charging (net),-226.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Curtailed solar & wind,0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,EV charging,-92.9
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,EV charging,-219.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Hydrogen production,-0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,14,Demand,614.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Geothermal,93.1
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Waste-to-energy,42.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Thermal (oil/LNG),489.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Wind,15.5
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Utility solar,324.8
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Utility solar,326.8
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Rooftop solar,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Battery discharge (net),0.0
-nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Battery charging (net),-61.1
+nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Battery charging (net),-63.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Curtailed solar & wind,0.0
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,EV charging,-30.7
 nlv2b_norps_NOTHERMAL_refbrent,2035-11-22,16,Hydrogen production,-0.0
@@ -3782,12 +3782,12 @@ nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,4,Demand,709.5
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Thermal (oil/LNG),103.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Wind,21.4
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Utility solar,45.4
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Wind,26.3
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Utility solar,44.9
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Rooftop solar,0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Battery discharge (net),672.9
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Battery discharge (net),668.5
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Battery charging (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Curtailed solar & wind,5.6
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Curtailed solar & wind,0.7
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,EV charging,-7.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,6,Demand,970.9
@@ -3795,59 +3795,59 @@ nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Thermal (oil/LNG),103.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Wind,17.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Utility solar,1620.1
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Utility solar,1853.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Battery charging (net),-1010.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Curtailed solar & wind,298.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,EV charging,-11.9
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Battery charging (net),-992.3
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Curtailed solar & wind,54.2
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,EV charging,-262.7
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,8,Demand,854.9
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Thermal (oil/LNG),103.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Wind,29.7
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Utility solar,1430.9
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Wind,19.0
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Utility solar,1612.3
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Battery charging (net),-853.4
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Curtailed solar & wind,153.6
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Battery charging (net),-1024.1
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Curtailed solar & wind,10.7
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,EV charging,-20.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,10,Demand,825.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Thermal (oil/LNG),103.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Wind,28.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Utility solar,1332.7
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Wind,21.6
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Utility solar,1534.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Battery charging (net),-911.6
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Curtailed solar & wind,490.8
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Battery charging (net),-1106.6
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Curtailed solar & wind,283.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,EV charging,-23.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,12,Demand,665.5
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Thermal (oil/LNG),103.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Wind,26.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Utility solar,1845.4
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Wind,10.7
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Utility solar,1217.9
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Battery charging (net),-1073.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Curtailed solar & wind,49.3
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,EV charging,-279.3
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Battery charging (net),-681.8
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Curtailed solar & wind,731.8
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,EV charging,-28.5
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,14,Demand,757.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Thermal (oil/LNG),103.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Wind,34.2
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Utility solar,1487.2
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Utility solar,1579.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Battery charging (net),-724.7
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Curtailed solar & wind,86.0
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Battery charging (net),-816.5
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Curtailed solar & wind,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,EV charging,-30.7
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,16,Demand,1005.1
@@ -3855,9 +3855,9 @@ nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Thermal (oil/LNG),103.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Wind,43.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Utility solar,149.5
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Utility solar,144.7
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Rooftop solar,0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Battery discharge (net),768.2
+nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Battery discharge (net),773.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Battery charging (net),0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,Curtailed solar & wind,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-08-18,18,EV charging,-49.4
@@ -3901,12 +3901,12 @@ nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,0,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,0,Demand,642.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Waste-to-energy,42.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Thermal (oil/LNG),446.3
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Thermal (oil/LNG),449.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Wind,1.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Utility solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Battery charging (net),-9.8
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Battery charging (net),-13.3
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Curtailed solar & wind,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,EV charging,-6.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,2,Hydrogen production,-0.0
@@ -3939,9 +3939,9 @@ nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Waste-to-energy,42.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Thermal (oil/LNG),545.5
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Wind,7.7
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Utility solar,62.7
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Utility solar,63.5
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Rooftop solar,0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Battery discharge (net),32.3
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Battery discharge (net),31.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Battery charging (net),0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Curtailed solar & wind,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,EV charging,-11.9
@@ -3949,50 +3949,50 @@ nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,8,Demand,772.2
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Waste-to-energy,42.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Thermal (oil/LNG),458.8
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Thermal (oil/LNG),451.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Wind,3.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Utility solar,213.1
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Utility solar,212.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Battery charging (net),-140.6
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Battery charging (net),-143.9
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Curtailed solar & wind,0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,EV charging,-31.3
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,EV charging,-20.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,10,Demand,638.9
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Waste-to-energy,42.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Thermal (oil/LNG),451.4
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Thermal (oil/LNG),458.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Wind,3.1
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Utility solar,407.9
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Utility solar,407.3
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Battery charging (net),-234.5
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Battery charging (net),-231.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Curtailed solar & wind,0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,EV charging,-223.4
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,EV charging,-233.6
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,12,Demand,540.3
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Waste-to-energy,42.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Thermal (oil/LNG),447.6
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Thermal (oil/LNG),446.3
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Wind,8.5
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Utility solar,404.4
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Utility solar,401.4
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Battery discharge (net),0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Battery charging (net),-420.0
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Battery charging (net),-415.8
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Curtailed solar & wind,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,EV charging,-28.5
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,14,Demand,547.9
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Geothermal,93.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Waste-to-energy,42.8
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Thermal (oil/LNG),458.8
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Thermal (oil/LNG),458.7
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Wind,15.5
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Utility solar,308.3
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Utility solar,309.1
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Rooftop solar,0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Battery discharge (net),0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Battery charging (net),0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Curtailed solar & wind,0.0
-nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,EV charging,-70.5
+nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,EV charging,-71.2
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,16,Demand,848.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,18,Geothermal,93.1
@@ -4033,11 +4033,11 @@ nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,22,Hydrogen production,-0.0
 nlv2s_C4_NOTHERMAL_refbrent,2035-11-22,22,Demand,728.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Thermal (oil/LNG),108.1
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Thermal (oil/LNG),107.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Wind,46.2
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Battery discharge (net),412.4
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Battery discharge (net),412.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,0,EV charging,-8.8
@@ -4057,11 +4057,11 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,2,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,2,Demand,639.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Thermal (oil/LNG),113.1
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Thermal (oil/LNG),103.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Wind,18.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Battery discharge (net),448.5
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Battery discharge (net),458.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,EV charging,-6.4
@@ -4069,11 +4069,11 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,4,Demand,709.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Thermal (oil/LNG),113.1
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Thermal (oil/LNG),103.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Wind,27.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Utility solar,40.9
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Utility solar,42.2
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Battery discharge (net),657.6
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Battery discharge (net),666.3
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,EV charging,-7.8
@@ -4082,70 +4082,70 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,6,Demand,966.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Waste-to-energy,42.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Thermal (oil/LNG),103.1
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Wind,14.4
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Utility solar,1649.2
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Wind,23.8
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Utility solar,1437.2
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Battery charging (net),-841.4
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Curtailed solar & wind,103.8
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Battery charging (net),-632.9
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Curtailed solar & wind,370.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,EV charging,-262.7
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Hydrogen production,-0.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Hydrogen production,-5.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,8,Demand,798.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Waste-to-energy,42.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Thermal (oil/LNG),103.1
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Wind,11.4
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Utility solar,1479.9
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Wind,29.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Utility solar,1503.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Battery charging (net),-907.9
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Curtailed solar & wind,18.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Battery charging (net),-943.6
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,EV charging,-20.4
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Hydrogen production,-0.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Hydrogen production,-5.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,10,Demand,802.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Waste-to-energy,42.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Thermal (oil/LNG),103.1
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Wind,28.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Utility solar,1266.2
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Wind,16.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Utility solar,1345.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Battery charging (net),-879.9
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Curtailed solar & wind,401.2
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Battery charging (net),-940.1
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Curtailed solar & wind,391.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,EV charging,-23.4
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Hydrogen production,-0.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Hydrogen production,-5.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,12,Demand,630.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Waste-to-energy,42.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Thermal (oil/LNG),103.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Wind,26.1
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Utility solar,1441.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Utility solar,1541.9
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Battery charging (net),-950.2
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Curtailed solar & wind,297.8
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Battery charging (net),-1045.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Curtailed solar & wind,249.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,EV charging,-28.5
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Hydrogen production,-0.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Hydrogen production,-5.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,14,Demand,727.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Waste-to-energy,42.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Thermal (oil/LNG),103.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Wind,34.2
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Utility solar,1446.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Utility solar,1507.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Battery charging (net),-727.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Battery charging (net),-782.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,EV charging,-30.7
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Hydrogen production,-0.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Hydrogen production,-5.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,16,Demand,961.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Thermal (oil/LNG),107.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Thermal (oil/LNG),106.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Wind,43.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Utility solar,133.4
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Utility solar,137.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Battery discharge (net),769.8
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Battery discharge (net),767.3
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,18,EV charging,-49.4
@@ -4165,11 +4165,11 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,20,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,20,Demand,980.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Thermal (oil/LNG),113.1
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Thermal (oil/LNG),107.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Wind,28.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Battery discharge (net),475.6
+nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Battery discharge (net),480.9
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,EV charging,-11.5
@@ -4177,11 +4177,11 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-08-18,22,Demand,741.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Thermal (oil/LNG),495.3
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Wind,16.9
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Battery discharge (net),39.8
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Battery discharge (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,EV charging,-8.8
@@ -4189,26 +4189,26 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,0,Demand,642.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Thermal (oil/LNG),433.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Wind,1.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Battery discharge (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Curtailed solar & wind,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,EV charging,-28.2
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,EV charging,-6.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,2,Demand,567.9
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Thermal (oil/LNG),545.5
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Thermal (oil/LNG),461.3
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Battery charging (net),-80.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Curtailed solar & wind,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,EV charging,-7.5
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,EV charging,-6.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,4,Demand,593.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Geothermal,93.1
@@ -4217,7 +4217,7 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Thermal (oil/LNG),545.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Wind,1.3
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Battery discharge (net),66.2
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Battery discharge (net),63.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,6,EV charging,-7.8
@@ -4227,9 +4227,9 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Waste-to-energy,42.8
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Thermal (oil/LNG),545.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Wind,7.7
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Utility solar,57.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Utility solar,54.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Battery discharge (net),6.1
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Battery discharge (net),6.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,EV charging,-11.9
@@ -4237,59 +4237,59 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,8,Demand,741.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Thermal (oil/LNG),391.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Wind,3.1
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Utility solar,200.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Utility solar,204.2
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Battery charging (net),-161.0
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Battery charging (net),-90.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Curtailed solar & wind,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,EV charging,-20.4
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,EV charging,-30.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,10,Demand,616.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Thermal (oil/LNG),391.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Wind,3.1
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Utility solar,379.2
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Utility solar,394.2
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Battery charging (net),-219.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Battery charging (net),-224.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Curtailed solar & wind,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,EV charging,-243.9
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,EV charging,-189.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,12,Demand,513.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Thermal (oil/LNG),393.4
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Wind,8.5
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Utility solar,375.4
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Utility solar,377.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Battery charging (net),-425.6
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Battery charging (net),-290.2
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Curtailed solar & wind,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,EV charging,-28.5
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,EV charging,-104.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,14,Demand,524.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Thermal (oil/LNG),402.9
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Wind,15.5
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Utility solar,297.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Utility solar,299.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Rooftop solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Battery discharge (net),0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Battery charging (net),-47.4
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Battery charging (net),-4.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Curtailed solar & wind,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,EV charging,-38.1
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,EV charging,-30.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,16,Demand,821.9
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Thermal (oil/LNG),545.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Wind,30.6
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Battery discharge (net),464.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Battery discharge (net),374.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,EV charging,-49.4
@@ -4297,11 +4297,11 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,18,Demand,1040.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Thermal (oil/LNG),545.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Wind,37.5
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Battery discharge (net),193.9
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Battery discharge (net),103.9
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,EV charging,-45.8
@@ -4309,11 +4309,11 @@ nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Hydrogen production,-0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,20,Demand,779.7
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Geothermal,93.1
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Waste-to-energy,42.8
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Thermal (oil/LNG),458.3
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Thermal (oil/LNG),525.2
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Wind,3.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Utility solar,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Rooftop solar,0.0
-nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Battery discharge (net),69.7
+nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Battery discharge (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Battery charging (net),0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,Curtailed solar & wind,0.0
 nlv2a_C4_NOTHERMAL_refbrent,2035-11-22,22,EV charging,-11.5

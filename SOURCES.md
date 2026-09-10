@@ -107,6 +107,7 @@ case is mildly optimistic relative to ATB Moderate.
   `docs/OPEN_constrained_c_wslope.md`.
 
 - `Lazard_LCOEplus_June2025.pdf` — Lazard LCOE+ (June 2025); sha256 63a3376a…; CCGT capital-cost context (pp. 4, 8).
+- `NETL_LNG_LCA_2019.pdf` — NETL, *Life Cycle GHG Perspective on Exporting LNG from the U.S.: 2019 Update* (DOE/NETL-2019/2041); sha256 d2af3657…; LNG fuel-cycle stage emissions (Exhibit 6-3: liquefaction 38, ocean transport 28, regasification 4 kg CO₂e/MWh at 46.4% plant efficiency), the §4.9/A.10 netted-ledger basis. Fetched 2026-09-08 from energy.gov.
 
 - `heco_aos/Adequacy-of-Supply-HECO-2021.pdf` — Hawaiian Electric AOS filing
   (2021-01-29); sha256 cd3f84dc…; Table 3 forward EFORd (p. 10), four-year

@@ -98,12 +98,15 @@ with the full range shown. (Section 4.2.)
 
 **Isn't gas cleaner than oil? Wouldn't LNG cut emissions?**
 Burned on Oʻahu, roughly yes and roughly no: LNG displaces dirtier oil
-early but also displaces solar and storage, leaving the island about 24
+early but also displaces solar and storage, leaving the island about 25
 points less renewable through the mid-2030s; on combustion CO₂ alone the
-LNG path is marginally cleaner (about 30.2–30.4 Mt against 30.8 for
-no-new-plant). Upstream methane reverses that: at leakage rates below every
-published measurement of U.S. supply chains, the LNG path's total
-greenhouse effect exceeds the clean path's. Whose leakage counts is a
+LNG path is marginally cleaner (about 29.6 Mt against 31.1 for
+no-new-plant). The rest of the fuel cycle closes the gap
+before leakage enters: liquefaction, shipping, and regasification at the
+Department of Energy's stage values (about 9.5 kg CO₂e per MMBtu
+delivered) exceed the combustion edge on their own, and measured U.S.
+supply-chain leakage — 2.95 percent production-weighted — pushes the LNG
+path further behind. Whose leakage counts is a
 question of incidence: some count the literal cargoes Hawaiʻi would buy,
 but LNG trades on a global market, so one more buyer means more production
 somewhere — most likely the U.S. Gulf supply chain, whose measured leakage
@@ -287,7 +290,7 @@ pathways for the biofuel volumes every 2045 scenario needs (Section 4.6)
 **Did you look at replacing all oil generation with LNG?**
 Yes — it is the cheapest LNG configuration tested. Section 4.7's
 conversion cases build the import terminal and no new plant: converting
-Kalaeloa alone saves $0.40 billion against no-new-plant at reference oil;
+Kalaeloa alone saves $0.39 billion against no-new-plant at reference oil;
 extending conversion to Kahe 5 and 6 and the CIP turbine displaces
 Hawaiian Electric's LSFO demand nearly completely and saves $1.08 billion
 gross, $0.63 billion net of the full 2016 conversion-program charge. What

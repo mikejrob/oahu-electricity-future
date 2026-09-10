@@ -1,5 +1,11 @@
 # Pre-lock work queue (closed)
 
+**September 2026 status.** The netting correction (docs/CORRECTIONS.md)
+reopened the refinement line below: the corrected fleet re-solved from
+scratch, and all 513 matrix cells are again at 0.1 percent (the plan
+cells are refining). The closed items in this file describe the
+original, pre-correction fleet.
+
 Historical record. The work planned between public release and the v1 lock
 was posted as public GitHub issues, and all are closed:
 
